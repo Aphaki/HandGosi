@@ -34,13 +34,15 @@ struct QuestionView: View {
                     Text("\(num)" + ".")
                     Text(questionText)
                 }
-                Text(reference ?? "")
-                    .padding(8)
-                    .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
-                NumberButton(number: "①", text: num1Text)
-                NumberButton(number: "②", text: num2Text)
-                NumberButton(number: "③", text: num3Text)
-                NumberButton(number: "④", text: num4Text)
+                if reference != nil {
+                    Text(reference!)
+                        .padding(8)
+                        .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
+                }
+                NumberButton(number: "①", numberInt: 1, text: num1Text)
+                NumberButton(number: "②", numberInt: 2, text: num2Text)
+                NumberButton(number: "③", numberInt: 3, text: num3Text)
+                NumberButton(number: "④", numberInt: 4, text: num4Text)
             }
         }.padding(.horizontal, 10)
     }

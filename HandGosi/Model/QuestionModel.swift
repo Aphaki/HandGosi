@@ -7,7 +7,7 @@
 
 import Foundation
 
-class QuestionModel {
+class QuestionModel: Identifiable {
     let num: Int
     let questionText: String
     let reference: String?
