@@ -37,12 +37,13 @@ struct QuestionView: View {
                 if reference != nil {
                     Text(reference!)
                         .padding(8)
+                        .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
-                NumberButton(number: "①", numberInt: 1, text: num1Text)
-                NumberButton(number: "②", numberInt: 2, text: num2Text)
-                NumberButton(number: "③", numberInt: 3, text: num3Text)
-                NumberButton(number: "④", numberInt: 4, text: num4Text)
+                NumberButtonView(number: "①", text: num1Text)
+                NumberButtonView(number: "②", text: num2Text)
+                NumberButtonView(number: "③", text: num3Text)
+                NumberButtonView(number: "④", text: num4Text)
             }
         }.padding(.horizontal, 10)
     }

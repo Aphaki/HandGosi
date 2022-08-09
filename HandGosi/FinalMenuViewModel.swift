@@ -13,6 +13,6 @@ class FinalMenuViewModel: ObservableObject {
     
     func fetchQuestion() {
         
-        
+        questions = DevPreview.shared.examSample.questions
     }
 }

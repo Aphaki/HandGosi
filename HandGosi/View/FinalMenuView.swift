@@ -12,6 +12,7 @@ struct FinalMenuView: View {
     let year: Int
     @State var selectedExam: ExamModel?
     @StateObject var vm = FinalMenuViewModel()
+    @State var showExamView = false
     
     init(year: Int) {
         self.year = year
@@ -26,6 +27,7 @@ struct FinalMenuView: View {
                     .onTapGesture {
                         vm.fetchQuestion()
                         selectedExam = ExamModel(year: year, examTypeID: 1, subjectID: 1, questions: vm.questions)
+                        showExamView.toggle()
                     }
                 Text("영어")
                 Text("한국사")
@@ -54,6 +56,11 @@ struct FinalMenuView: View {
                     )
             }
         }
+        .background(
+            NavigationLink(isActive: $showExamView, destination: {
+                ExamView(questions: selectedExam?.questions ?? [])
+            }, label: { EmptyView() } )
+        )
         .font(.headline)
         .navigationTitle("\(year.description)")
         

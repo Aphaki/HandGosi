@@ -8,10 +8,10 @@
 import Foundation
 
 class NumButtonVM: ObservableObject {
-    @Published var numberContent: NumButtonModel? = nil
+
+    @Published var button: NumButtonModel
     
-    
-    init(numButtonContent: NumButtonModel) {
-        self.numberContent = numButtonContent
+    init(button: NumButtonModel) {
+        self.button = button
     }
 }

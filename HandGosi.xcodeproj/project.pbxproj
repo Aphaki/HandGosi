@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */; };
 		7F49086328A15FAF002896DB /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086228A15FAF002896DB /* ExamView.swift */; };
+		7F70B51228A23F6100148779 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
@@ -22,13 +23,15 @@
 		7FDDF227289CFDCB00EE3FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */; };
 		7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */; };
 		7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */; };
-		7FDDF233289CFE2300EE3FB7 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* ButtonView.swift */; };
+		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
 		7FE038B6289EC26C008E629B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE038B5289EC26C008E629B /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMenuViewModel.swift; sourceTree = "<group>"; };
 		7F49086228A15FAF002896DB /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
+		7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
+		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
@@ -43,7 +46,7 @@
 		7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7FDDF232289CFE2300EE3FB7 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F70B51028A23F4C00148779 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7F8CD08028A0CE6500776238 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,7 +82,7 @@
 		7F8CD08B28A149E800776238 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7FDDF232289CFE2300EE3FB7 /* ButtonView.swift */,
+				7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */,
 				7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */,
 				7F8CD08728A0E87A00776238 /* FinalMenuView.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
@@ -109,12 +120,14 @@
 		7FDDF223289CFDCB00EE3FB7 /* HandGosi */ = {
 			isa = PBXGroup;
 			children = (
+				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F8CD08B28A149E800776238 /* View */,
 				7F8CD08128A0D21400776238 /* NumButtonVM.swift */,
 				7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
+				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
 				7FDDF22A289CFDCD00EE3FB7 /* Preview Content */,
@@ -190,6 +203,7 @@
 			files = (
 				7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */,
 				7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */,
+				7F70B51228A23F6100148779 /* NanumMyeongjo-YetHangul.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +224,7 @@
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
 				7F49086328A15FAF002896DB /* ExamView.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
-				7FDDF233289CFE2300EE3FB7 /* ButtonView.swift in Sources */,
+				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
 				7F8CD08828A0E87A00776238 /* FinalMenuView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
@@ -346,6 +360,7 @@
 				DEVELOPMENT_TEAM = JSZ2KS27AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandGosi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -375,6 +390,7 @@
 				DEVELOPMENT_TEAM = JSZ2KS27AG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HandGosi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class NumButtonModel {
+struct NumButtonModel {
     let numInt: Int
     let text: String
     let isClicked: Bool
