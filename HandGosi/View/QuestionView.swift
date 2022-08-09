@@ -9,12 +9,12 @@ import SwiftUI
 
 struct QuestionView: View {
     let num: Int
-    let questionText: String
-    let reference: String?
-    let num1Text: String
-    let num2Text: String
-    let num3Text: String
-    let num4Text: String
+    let questionText: AttributedString
+    let reference: AttributedString?
+    let num1Text: AttributedString
+    let num2Text: AttributedString
+    let num3Text: AttributedString
+    let num4Text: AttributedString
     @State var selectedNum: [Int] = []
     
     init(question: QuestionModel) {

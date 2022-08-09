@@ -10,6 +10,7 @@
 		7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */; };
 		7F49086328A15FAF002896DB /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086228A15FAF002896DB /* ExamView.swift */; };
 		7F70B51228A23F6100148779 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */; };
+		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
@@ -32,6 +33,7 @@
 		7F49086228A15FAF002896DB /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
 		7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				7FE038B5289EC26C008E629B /* Color.swift */,
 				7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */,
+				7F70B51628A2D08800148779 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				7F8CD08828A0E87A00776238 /* FinalMenuView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
+				7F70B51728A2D08800148779 /* String.swift in Sources */,
 				7F8CD08228A0D21400776238 /* NumButtonVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

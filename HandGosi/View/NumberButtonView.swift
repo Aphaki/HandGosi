@@ -11,7 +11,7 @@ struct NumberButtonView: View {
     
     @State var isSelected: Bool = false
     let number: String
-    let text: String
+    let text: AttributedString
     
     
     var body: some View {

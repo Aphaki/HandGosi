@@ -9,14 +9,14 @@ import Foundation
 
 class QuestionModel: Identifiable {
     let num: Int
-    let questionText: String
-    let reference: String?
-    let num1Text: String
-    let num2Text: String
-    let num3Text: String
-    let num4Text: String
+    let questionText: AttributedString
+    let reference: AttributedString?
+    let num1Text: AttributedString
+    let num2Text: AttributedString
+    let num3Text: AttributedString
+    let num4Text: AttributedString
     
-    init(num: Int, questionText: String, reference: String? = nil, num1Text: String, num2Text: String, num3Text: String, num4Text: String) {
+    init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString) {
         self.num = num
         self.questionText = questionText
         self.reference = reference
