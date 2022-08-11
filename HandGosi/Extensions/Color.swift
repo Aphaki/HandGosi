@@ -8,7 +8,12 @@
 import Foundation
 import SwiftUI
 
+extension Color {
+    static let theme = MyColor()
+}
 
-struct myColor {
-    let customFontColor = Color("")
+struct MyColor {
+    let myFontColor = Color("MyFontColor")
+    let myAccentColor = Color("MyAccentColor")
+    let myBackgroundColor = Color("MyBackgroundColor")
 }

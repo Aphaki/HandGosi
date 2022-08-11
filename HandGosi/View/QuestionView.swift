@@ -53,7 +53,7 @@ struct QuestionView: View {
                 NumberButtonView(number: "③", text: num3Text)
                 NumberButtonView(number: "④", text: num4Text)
             }
-        }.padding(.horizontal, 10)
+        }.padding(15)
     }
 }
 

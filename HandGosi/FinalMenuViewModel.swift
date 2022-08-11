@@ -6,13 +6,21 @@
 //
 
 import Foundation
+import Combine
 
 class FinalMenuViewModel: ObservableObject {
     @Published var questions: [QuestionModel] = []
-    let examStore = ExamStore.shared
+    
+    let examStoreDataService = ExamStoreDataService()
+    var subscription = Set<AnyCancellable>()
     
     func fetchQuestion() {
-        
-        questions = examStore.exam202211
+        examStoreDataService.fetchExam202211()
+        examStoreDataService.$questions
+            .sink { [weak self] storeQuestions in
+                guard let self = self else { return }
+                self.questions = storeQuestions
+            }
+            .store(in: &subscription)
     }
 }

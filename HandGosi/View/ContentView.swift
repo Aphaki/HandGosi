@@ -45,7 +45,6 @@ struct ContentView: View {
                         .padding()
                         .foregroundColor(.pink)
                         .shadow(color: .secondary, radius: 5, x: 0, y: 5)
-                    
                     Spacer()
                 }
                 .opacity(isClicked ? 1.0 : 0)
@@ -54,7 +53,9 @@ struct ContentView: View {
             }
             .navigationBarHidden(true)
             .background(
-                NavigationLink(isActive: $showYearSection, destination: { YearsSelectMenuView() }, label: { EmptyView() } )
+                NavigationLink(isActive: $showYearSection,
+                               destination: { YearsSelectMenuView() },
+                               label: { EmptyView() } )
             )
         }
     }
@@ -66,11 +67,15 @@ extension ContentView {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
-                .foregroundColor(Color("CustomFontColor"))
+                .foregroundColor(Color.theme.myFontColor)
             Text("2011\n2012\n2013...")
                 .padding()
         }
-        .background( RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: .black, radius: 5, x: 0, y: 5) )
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(.white)
+                .shadow(color: .black, radius: 5, x: 0, y: 5)
+        )
         
     }
     private var typeSection: some View {
@@ -79,11 +84,15 @@ extension ContentView {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
-                .foregroundColor(Color("CustomFontColor"))
+                .foregroundColor(Color.theme.myFontColor)
             Text("국가직\n지방직\n서울시")
                 .padding()
         }
-        .background( RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: .black, radius: 5, x: 0, y: 5) )
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(.white)
+                .shadow(color: .black, radius: 5, x: 0, y: 5)
+        )
     }
     private var subjectSection: some View {
         VStack {
@@ -91,11 +100,15 @@ extension ContentView {
                 .font(.title)
                 .fontWeight(.bold)
                 .padding()
-                .foregroundColor(Color("CustomFontColor"))
+                .foregroundColor(Color.theme.myFontColor)
             Text("국어\n영어\n한국사\n")
                 .padding()
         }
-        .background( RoundedRectangle(cornerRadius: 10).foregroundColor(.white).shadow(color: .black, radius: 5, x: 0, y: 5) )
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(.white)
+                .shadow(color: .black, radius: 5, x: 0, y: 5)
+        )
     }
 }
 
