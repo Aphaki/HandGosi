@@ -58,7 +58,7 @@ struct FinalMenuView: View {
         }
         .background(
             NavigationLink(isActive: $showExamView, destination: {
-                ExamView(questions: selectedExam?.questions ?? [])
+                ExamView(exam: selectedExam ?? DevPreview.shared.examSample)
             }, label: { EmptyView() } )
         )
         .font(.headline)

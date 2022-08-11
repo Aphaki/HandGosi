@@ -9,10 +9,10 @@ import Foundation
 
 class FinalMenuViewModel: ObservableObject {
     @Published var questions: [QuestionModel] = []
-    
+    let examStore = ExamStore.shared
     
     func fetchQuestion() {
         
-        questions = DevPreview.shared.examSample.questions
+        questions = examStore.exam202211
     }
 }

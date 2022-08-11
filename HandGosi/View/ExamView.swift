@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ExamView: View {
     
-    let questions: [QuestionModel]
+    let exam: ExamModel
     
     var body: some View {
         
         ScrollView(showsIndicators: true) {
             
             VStack(spacing: 40) {
-                ForEach(questions) { question in
+                ForEach(exam.questions) { question in
                     QuestionView(question: question)
                 }
             }
@@ -26,6 +26,6 @@ struct ExamView: View {
 
 struct ExamView_Previews: PreviewProvider {
     static var previews: some View {
-        ExamView(questions: dev.examSample.questions)
+        ExamView(exam: dev.examSample)
     }
 }

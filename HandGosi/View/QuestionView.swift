@@ -11,6 +11,7 @@ struct QuestionView: View {
     let num: Int
     let questionText: AttributedString
     let reference: AttributedString?
+    let reference2: AttributedString?
     let num1Text: AttributedString
     let num2Text: AttributedString
     let num3Text: AttributedString
@@ -21,6 +22,7 @@ struct QuestionView: View {
         self.num = question.num
         self.questionText = question.questionText
         self.reference = question.reference
+        self.reference2 = question.reference2
         self.num1Text = question.num1Text
         self.num2Text = question.num2Text
         self.num3Text = question.num3Text
@@ -36,6 +38,12 @@ struct QuestionView: View {
                 }
                 if reference != nil {
                     Text(reference!)
+                        .padding(8)
+                        .font(.custom("NanumMyeongjo-YetHangul", size: 15))
+                        .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
+                }
+                if reference2 != nil {
+                    Text(reference2!)
                         .padding(8)
                         .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))

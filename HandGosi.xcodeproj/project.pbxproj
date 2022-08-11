@@ -20,6 +20,7 @@
 		7F8CD08628A0E21600776238 /* YearsSelectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */; };
 		7F8CD08828A0E87A00776238 /* FinalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08728A0E87A00776238 /* FinalMenuView.swift */; };
 		7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08928A0F81300776238 /* ExamModel.swift */; };
+		7F9F0FEC28A4DA4000D2ABE5 /* ExamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */; };
 		7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */; };
 		7FDDF227289CFDCB00EE3FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */; };
 		7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearsSelectMenuView.swift; sourceTree = "<group>"; };
 		7F8CD08728A0E87A00776238 /* FinalMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMenuView.swift; sourceTree = "<group>"; };
 		7F8CD08928A0F81300776238 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
+		7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore.swift; sourceTree = "<group>"; };
 		7FDDF221289CFDCB00EE3FB7 /* HandGosi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandGosi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGosiApp.swift; sourceTree = "<group>"; };
 		7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				7F8CD08128A0D21400776238 /* NumButtonVM.swift */,
 				7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
+				7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */,
 				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9F0FEC28A4DA4000D2ABE5 /* ExamStore.swift in Sources */,
 				7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */,
 				7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */,
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,

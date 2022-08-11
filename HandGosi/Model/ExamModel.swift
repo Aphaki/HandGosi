@@ -14,7 +14,7 @@ struct ExamModel {
     // 1 = 국가직, 2 = 서울시, 3 = 지방직
     let examTypeID: Int
     
-    // 1 = 국어, 2 = 영어 , 3 = 한국사
+    // 1 = 국어, 2 = 영어, 3 = 한국사
     let subjectID: Int
     let questions: [QuestionModel]
 }
