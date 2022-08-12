@@ -12,6 +12,7 @@ struct SubjectSelectView: View {
     @Binding var year: Int?
     @State var showNextView: Bool = false
     @State var selectedSubject: String?
+    @StateObject var vm = SubjectSelectVM()
     
     var body: some View {
         VStack(spacing: 20) {
@@ -25,6 +26,7 @@ struct SubjectSelectView: View {
                 )
                 .onTapGesture {
                     selectedSubject = "국어"
+                    vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
                     showNextView.toggle()
                 }
             HStack {
@@ -35,12 +37,22 @@ struct SubjectSelectView: View {
                     .background(
                         Circle().opacity(0.1)
                     )
+                    .onTapGesture {
+                        selectedSubject = "영어"
+                        vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
+                        showNextView.toggle()
+                    }
                 Text("한국사")
                     .font(.largeTitle)
                     .padding(30)
                     .background(
                         Circle().opacity(0.1)
                     )
+                    .onTapGesture {
+                        selectedSubject = "한국사"
+                        vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
+                        showNextView.toggle()
+                    }
                 Spacer()
             }
             Spacer()
@@ -49,7 +61,7 @@ struct SubjectSelectView: View {
         }
         .background(
             NavigationLink(isActive: $showNextView,
-                           destination: { ExamSelectView(exams: DevPreview.shared.exams) },
+                           destination: { ExamSelectView(exams: vm.exams, subjectID: $selectedSubject) },
                            label: { EmptyView() })
         )
         .navigationTitle(year?.description ?? "")

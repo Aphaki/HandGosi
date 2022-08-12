@@ -13,7 +13,7 @@ struct ExamView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
                 ForEach(exam.questions) { question in
                     QuestionView(question: question)
                 }

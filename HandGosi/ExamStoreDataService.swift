@@ -9,18 +9,13 @@ import Foundation
 
 class ExamStoreDataService {
     
-    var allExams: [ExamModel] = []
-    
-    init() {
-        saveExam202211()
-        saveExam202212()
-        saveExam202213()
-    }
+    @Published var allExams: [ExamModel] = []
     
     func saveExam202211() {
         if allExams.filter({ exam in
             return exam.id == 202211
         }).isEmpty {
+            allExams = [] // 수정부
             let questions =
              [
                  QuestionModel(num: 1,
@@ -173,6 +168,7 @@ class ExamStoreDataService {
         if allExams.filter({ exam in
             return exam.id == 202212
         }).isEmpty {
+            allExams = [] // 수정부
             let questions = [
             
                 QuestionModel(num: 1,
@@ -258,16 +254,16 @@ class ExamStoreDataService {
                               num4Text: "We are open until 7 p.m. on Saturdays"),
                 QuestionModel(num: 13,
                               questionText: "우리말을 영어로 잘못 옮긴 것을 고르시오.[13~14]",
-                              num1Text: "우리가 영어를 단시간에 배우는 것은 결코 쉬운 일이 아니다. → It is by no means easy for us to learn English in a short time.",
-                              num2Text: "우리 인생에서 시간보다 더 소중한 것은 없다. → Nothing is more precious as time in our life.",
-                              num3Text: "아이들은 길을 건널 때 아무리 조심해도 지나치지 않다. → Children cannot be too careful when crossing the street.",
-                              num4Text: "그녀는 남들이 말하는 것을 쉽게 믿는다. → She easily believes what others say."),
+                              num1Text: "우리가 영어를 단시간에 배우는 것은 결코 쉬운 일이 아니다.\n→ It is by no means easy for us to learn English in a short time.",
+                              num2Text: "우리 인생에서 시간보다 더 소중한 것은 없다.\n→ Nothing is more precious as time in our life.",
+                              num3Text: "아이들은 길을 건널 때 아무리 조심해도 지나치지 않다.\n→ Children cannot be too careful when crossing the street.",
+                              num4Text: "그녀는 남들이 말하는 것을 쉽게 믿는다.\n→ She easily believes what others say."),
                 QuestionModel(num: 14,
                               questionText: "",
-                              num1Text: "커피 세 잔을 마셨기 때문에, 그녀는 잠을 이룰 수 없다. → Having drunk three cups of coffee, she can’t fall asleep.",
-                              num2Text: "친절한 사람이어서, 그녀는 모든 이에게 사랑받는다. → Being a kind person, she is loved by everyone.",
-                              num3Text: "모든 점이 고려된다면, 그녀가 그 직위에 가장 적임인 사람이다. → All things considered, she is the best-qualified person for the position.",
-                              num4Text: "다리를 꼰 채로 오랫동안 앉아 있는 것은 혈압을 상승시킬 수 있다. → Sitting with the legs crossing for a long period can raise blood pressure."),
+                              num1Text: "커피 세 잔을 마셨기 때문에, 그녀는 잠을 이룰 수 없다.\n→ Having drunk three cups of coffee, she can’t fall asleep.",
+                              num2Text: "친절한 사람이어서, 그녀는 모든 이에게 사랑받는다.\n→ Being a kind person, she is loved by everyone.",
+                              num3Text: "모든 점이 고려된다면, 그녀가 그 직위에 가장 적임인 사람이다.\n→ All things considered, she is the best-qualified person for the position.",
+                              num4Text: "다리를 꼰 채로 오랫동안 앉아 있는 것은 혈압을 상승시킬 수 있다.\n→ Sitting with the legs crossing for a long period can raise blood pressure."),
                 QuestionModel(num: 15,
                               questionText: "밑줄 친 (A), (B)에 들어갈 말로 가장 적절한 것은?",
                               reference: "Beliefs about maintaining ties with those who have died vary from culture to culture. For example, maintaining ties with the deceased is accepted and sustained in the religious rituals of Japan. Yet among the Hopi Indians of Arizona, the deceased are forgotten as quickly as possible and life goes on as usual. (A) , the Hopi funeral ritual concludes with a break-off between mortals and spirits. The diversity of grieving is nowhere clearer than in two Muslim societies-one in Egypt, the other in Bali. Among Muslims in Egypt, the bereaved are encouraged to dwell at length on their grief, surrounded by others who relate to similarly tragic accounts and express their sorrow. (B) , in Bali, bereaved Muslims are encouraged to laugh and be joyful rather than be sad",
@@ -323,6 +319,7 @@ class ExamStoreDataService {
         if allExams.filter({ exam in
             return exam.id == 202213
         }).isEmpty {
+            allExams = [] // 수정부
             let questions
             = [
             QuestionModel(num: 1,
@@ -443,7 +440,7 @@ class ExamStoreDataService {
                           num4Text: "일본에 진 빚을 갚자는 국채 보상 운동을 일으켰다."),
             QuestionModel(num: 18,
                           questionText: "(가) 시기의 사실로 옳지 않은 것은?",
-                          reference: "무신정권 몰락\n⇩\n[ (가) ]\n공민왕 즉위",
+                          reference: "무신정권 몰락\n\n  ⇩\n\n[ (가) ]\n\n  ⇩\n\n공민왕 즉위",
                           num1Text: "만권당이 만들어졌다.",
                           num2Text: "정동행성이 설치되었다.",
                           num3Text: "쌍성총관부가 수복되었다.",
@@ -457,7 +454,7 @@ class ExamStoreDataService {
                           num4Text: "‘소’라는 행정구역의 주민이 국가에서 필요로 하는 물품을 생산하였다."),
             QuestionModel(num: 20,
                           questionText: "(가) 시기에 있었던 일로 옳은 것은?",
-                          reference: "신미양요 - [(가)] - 갑오개혁",
+                          reference: "신미양요 - [ (가) ] - 갑오개혁",
                           num1Text: "을사늑약 체결",
                           num2Text: "정미 의병 발생",
                           num3Text: "오페르트 도굴 미수 사건",

@@ -11,6 +11,7 @@ struct ExamSelectView: View {
     
     let exams: [ExamModel]
     
+    @Binding var subjectID: String?
     @State var selectedExam: ExamModel?
     @State var showQuestionView: Bool = false
     
@@ -33,14 +34,14 @@ struct ExamSelectView: View {
                            label: { EmptyView() })
         )
         .listStyle(.plain)
-        .navigationTitle(exams.first?.subjectID ?? "")
+        .navigationTitle(subjectID ?? "실패야")
     }
 }
 
 struct ExamSelectView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ExamSelectView(exams: dev.exams)
+            ExamSelectView(exams: dev.exams, subjectID: .constant("국어"))
         }
     }
 }

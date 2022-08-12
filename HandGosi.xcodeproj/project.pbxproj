@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */; };
+		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
 		7F70B51228A23F6100148779 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
@@ -30,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMenuViewModel.swift; sourceTree = "<group>"; };
+		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F8CD08B28A149E800776238 /* View */,
 				7F8CD08128A0D21400776238 /* NumButtonVM.swift */,
-				7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */,
+				7F49086028A14FC8002896DB /* SubjectSelectVM.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
 				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
 				7F70B51028A23F4C00148779 /* Fonts */,
@@ -228,7 +228,7 @@
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
 				7F8CD07F28A0CE5B00776238 /* NumButtonModel.swift in Sources */,
-				7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */,
+				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
