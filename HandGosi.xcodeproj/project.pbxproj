@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */; };
-		7F49086328A15FAF002896DB /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086228A15FAF002896DB /* ExamView.swift */; };
 		7F70B51228A23F6100148779 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
@@ -16,15 +15,14 @@
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
 		7F88E7F128A577EB001C0463 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F028A577EB001C0463 /* MainView.swift */; };
 		7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */; };
+		7F88E7F528A62C13001C0463 /* ExamSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F428A62C13001C0463 /* ExamSelectView.swift */; };
+		7F88E7F728A636C8001C0463 /* ExamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F628A636C8001C0463 /* ExamView.swift */; };
 		7F8CD07F28A0CE5B00776238 /* NumButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD07E28A0CE5B00776238 /* NumButtonModel.swift */; };
 		7F8CD08228A0D21400776238 /* NumButtonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08128A0D21400776238 /* NumButtonVM.swift */; };
 		7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08328A0DA1100776238 /* QuestionVM.swift */; };
-		7F8CD08628A0E21600776238 /* YearsSelectMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */; };
-		7F8CD08828A0E87A00776238 /* FinalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08728A0E87A00776238 /* FinalMenuView.swift */; };
 		7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08928A0F81300776238 /* ExamModel.swift */; };
-		7F9F0FEC28A4DA4000D2ABE5 /* ExamStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */; };
+		7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */; };
 		7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */; };
-		7FDDF227289CFDCB00EE3FB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */; };
 		7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */; };
 		7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */; };
 		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
@@ -33,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMenuViewModel.swift; sourceTree = "<group>"; };
-		7F49086228A15FAF002896DB /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
 		7F70B51128A23F6100148779 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -42,16 +39,15 @@
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
 		7F88E7F028A577EB001C0463 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectView.swift; sourceTree = "<group>"; };
+		7F88E7F428A62C13001C0463 /* ExamSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSelectView.swift; sourceTree = "<group>"; };
+		7F88E7F628A636C8001C0463 /* ExamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamView.swift; sourceTree = "<group>"; };
 		7F8CD07E28A0CE5B00776238 /* NumButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumButtonModel.swift; sourceTree = "<group>"; };
 		7F8CD08128A0D21400776238 /* NumButtonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumButtonVM.swift; sourceTree = "<group>"; };
 		7F8CD08328A0DA1100776238 /* QuestionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVM.swift; sourceTree = "<group>"; };
-		7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearsSelectMenuView.swift; sourceTree = "<group>"; };
-		7F8CD08728A0E87A00776238 /* FinalMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalMenuView.swift; sourceTree = "<group>"; };
 		7F8CD08928A0F81300776238 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
-		7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore.swift; sourceTree = "<group>"; };
+		7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStoreDataService.swift; sourceTree = "<group>"; };
 		7FDDF221289CFDCB00EE3FB7 /* HandGosi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandGosi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGosiApp.swift; sourceTree = "<group>"; };
-		7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
@@ -91,13 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */,
-				7F8CD08528A0E21600776238 /* YearsSelectMenuView.swift */,
-				7F8CD08728A0E87A00776238 /* FinalMenuView.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
-				7F49086228A15FAF002896DB /* ExamView.swift */,
-				7FDDF226289CFDCB00EE3FB7 /* ContentView.swift */,
+				7F88E7F628A636C8001C0463 /* ExamView.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
 				7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */,
+				7F88E7F428A62C13001C0463 /* ExamSelectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,7 +132,7 @@
 				7F8CD08128A0D21400776238 /* NumButtonVM.swift */,
 				7F49086028A14FC8002896DB /* FinalMenuViewModel.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
-				7F9F0FEB28A4DA4000D2ABE5 /* ExamStore.swift */,
+				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
 				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
@@ -226,23 +220,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F9F0FEC28A4DA4000D2ABE5 /* ExamStore.swift in Sources */,
+				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
+				7F88E7F528A62C13001C0463 /* ExamSelectView.swift in Sources */,
 				7F88E7F128A577EB001C0463 /* MainView.swift in Sources */,
 				7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */,
 				7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */,
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
-				7F8CD08628A0E21600776238 /* YearsSelectMenuView.swift in Sources */,
-				7FDDF227289CFDCB00EE3FB7 /* ContentView.swift in Sources */,
 				7F8CD07F28A0CE5B00776238 /* NumButtonModel.swift in Sources */,
 				7F49086128A14FC8002896DB /* FinalMenuViewModel.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
-				7F49086328A15FAF002896DB /* ExamView.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
-				7F8CD08828A0E87A00776238 /* FinalMenuView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
+				7F88E7F728A636C8001C0463 /* ExamView.swift in Sources */,
 				7F70B51728A2D08800148779 /* String.swift in Sources */,
 				7F8CD08228A0D21400776238 /* NumButtonVM.swift in Sources */,
 			);

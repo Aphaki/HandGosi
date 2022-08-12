@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SubjectSelectView: View {
     
-    let year: Int
+    @Binding var year: Int?
     @State var showNextView: Bool = false
     @State var selectedSubject: String?
     
@@ -48,17 +48,18 @@ struct SubjectSelectView: View {
             Spacer()
         }
         .background(
-            NavigationLink(isActive: $showNextView, destination: {  },
+            NavigationLink(isActive: $showNextView,
+                           destination: { ExamSelectView(exams: DevPreview.shared.exams) },
                            label: { EmptyView() })
         )
-        .navigationTitle(year.description)
+        .navigationTitle(year?.description ?? "")
     }
 }
 
 struct SubjectSelectMenu_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            SubjectSelectView(year: 2022)
+            SubjectSelectView(year: .constant(2022))
         }
     }
 }

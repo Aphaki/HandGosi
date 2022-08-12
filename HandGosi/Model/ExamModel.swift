@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct ExamModel {
-    
+struct ExamModel: Identifiable {
+    let id: Int // 연도 + 타입 + 과목 (ex. 202211 = 22년도 국가직 국어)
     let year: Int
-    
-    // 1 = 국가직, 2 = 서울시, 3 = 지방직
-    let examTypeID: Int
-    
-    // 1 = 국어, 2 = 영어, 3 = 한국사
-    let subjectID: Int
+    let examTypeID: String
+    let subjectID: String
     let questions: [QuestionModel]
 }
