@@ -34,7 +34,7 @@ struct ExamSelectView: View {
                            label: { EmptyView() })
         )
         .listStyle(.plain)
-        .navigationTitle(subjectID ?? "실패야")
+        .navigationTitle(subjectID ?? "실패야 실패라고")
     }
 }
 
