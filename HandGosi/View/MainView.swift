@@ -41,6 +41,10 @@ struct MainView: View {
                             }
                         Text("2021")
                             .yearText()
+                            .onTapGesture {
+                                selectedYear = 2021
+                                goToNextView.toggle()
+                            }
                         Text("2020")
                             .yearText()
                     }.font(.title)

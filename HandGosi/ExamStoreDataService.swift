@@ -465,8 +465,7 @@ class ExamStoreDataService {
             let questions2 = [
             QuestionModel(num: 1,
                           questionText: "밑줄 친 부분의 의미와 가장 가까운것을 고르시오. [1~3]",
-                          reference: "",
-                          reference2: "School teachers have to be " + "flexible".underLined + " to cope with different ability levels of the students.",
+                          reference: "School teachers have to be " + "flexible".underLined + " to cope with different ability levels of the students.",
                           num1Text: "strong",
                           num2Text: "adaptable",
                           num3Text: "honest",
@@ -845,11 +844,139 @@ class ExamStoreDataService {
                           num1Text: "이종무가 왜구의 소굴인 대마도를 정벌하였다.",
                           num2Text: "삼별초가 반란을 일으켜 대몽 항쟁을 계속하였다.",
                           num3Text: "쌍성총관부를 공격해 철령 이북 지역을 수복하였다.",
-                          num4Text: "요동 정벌을 위해 출병한 이성계가 위화도에서 회군하였다.")
+                          num4Text: "요동 정벌을 위해 출병한 이성계가 위화도에서 회군하였다."),
+            QuestionModel(num: 13,
+                          questionText: "다음과 관련된 운동에 대한 설명으로 옳은 것은?",
+                          imgString: "ChosunMoolSan",
+                          num1Text: "가뭄과 홍수로 인해 중단되었다.",
+                          num2Text: "조선총독부의 〖회사령〗에 맞서기 위해 전개되었다.",
+                          num3Text: "일부 사회주의자는 자본가 계급을 위한 운동이라고 비판하였다.",
+                          num4Text: "조선에 사는 일본인이 일본 자본에 대항하기 위해 일으켰다."),
+            QuestionModel(num: 14,
+                          questionText: "다음과 같은 대통령 선출 방식이 포함된 헌법의 내용으로 옳지 않은 것은?",
+                          reference: "제39조 ① 대통령은 통일주체국민회의에서 토론없이 무기명 투표로 선거한다.\n② 통일주체국민회의에서 재적 대의원 과반수의 찬성을 얻은 자를 대통령당선자로 한다.",
+                          num1Text: "대통령은 국회를 해산할 수 있다.",
+                          num2Text: "대통령의 임기는 7년으로 하며, 중임할 수 없다.",
+                          num3Text: "대법원장은 대통령이 국회의 동의를 얻어 임명한다.",
+                          num4Text: "대통령은 국정 전반에 걸쳐 필요한 긴급조치를 할 수 있다."),
+            QuestionModel(num: 15,
+                          questionText: "다음 사건을 시기순으로 바르게 나열한 것은?",
+                          reference: "(가) 신라의 한강 유역 확보\n(나) 관산성 전투\n(다) 백제의 웅진 천도\n(라) 고구려의 평양 천도",
+                          num1Text: "(가)→(라)→(나)→(다)",
+                          num2Text: "(나)→(다)→(가)→(라)",
+                          num3Text: "(다)→(나)→(가)→(라)",
+                          num4Text: "(라)→(다)→(가)→(나)"),
+            QuestionModel(num: 16,
+                          questionText: "(가) 인물에 대한 설명으로 옳은 것은?",
+                          reference: "군대를 이끌고 통주성 남쪽으로 나가 진을 친 [ (가) ]은/는 거란군에게 여러 번 승리를 거두었다. 하지만 자만하게 된 그는 결국 패해 거란군의 포로가 되었다. 거란의 임금이 그의 결박을 풀어 주며 “내 신하가 되겠느냐?”라고 물으니, [ (가) ]은/는 “나는 고려 사람인데 어찌 너의 신하가 되겠느냐?”라고 대답하였다. 재차 물었으나 같은 대답이었으며, 칼로 살을 도려내며 물어도 대답은 같았다. 거란은 마침내 그를 처형하였다.",
+                          num1Text: "묘청의 난을 진압하였다.",
+                          num2Text: "별무반의 편성을 건의하였다.",
+                          num3Text: "목종을 폐위하고 현종을 옹립하였다.",
+                          num4Text: "거란과 협상하여 강동 6주 지역을 고려 영토로 확보하였다."),
+            QuestionModel(num: 17,
+                          questionText: "밑줄 친 ‘저’에 대한 설명으로 옳은 것은?",
+                          reference: "올해 초가을에 비로소 " + "저".underLined + "는 책을 완성하여 그 이름을 〖성학집요〗라고 하였습니다. 이 책에는 임금이 공부해야 할 내용과 방법, 정치하는 방법, 덕을 쌓아 실천하는 방법과 백성을 새롭게 하는 방법이 실려 있습니다. 또한 작은 것을 미루어 큰 것을 알게 하고 이것을 미루어 저것을 밝혔으니, 천하의 이치가 여기에서 벗어나지 않을 것입니다. 따라서 이것은 " + "저".underLined + "의 글이 아니라 성현의 글이옵니다.",
+                          num1Text: "예안향약을 만들었다.",
+                          num2Text: "〖동호문답〗을 저술하였다.",
+                          num3Text: "백운동서원을 건립하였다.",
+                          num4Text: "왕자의 난 때 죽임을 당했다."),
+            QuestionModel(num: 18,
+                          questionText: "밑줄 친 ‘나’에 대한 설명으로 옳은 것만을 모두 고르면?",
+                          reference: "오늘날 사람은 모두 법에 의하여 생활하고 있는데 실제로 사람을 죽인 자가 벌을 받지 않고 생존할 도리는 없는 것이다. ...(중략)... " + "나".underLined + "는 한국의 의병이며 지금 적군의 포로가 되어 와 있으므로 마땅히 만국공법에 의해 처단 되어야 할 것으로 생각한다.",
+                          reference2: "ᄀ. 일본에서 순국하였다.\nᄂ. 한인 애국단 소속이었다.\nᄃ.〖동양평화론〗을 집필하였다.\nᄅ. 연해주에서 의병 투쟁을 전개하였다.",
+                          num1Text: "ᄀ, ᄂ",
+                          num2Text: "ᄀ, ᄅ",
+                          num3Text: "ᄂ, ᄃ",
+                          num4Text: "ᄃ, ᄅ"),
+            QuestionModel(num: 19,
+                          questionText: "다음 조항을 포함한 법률에 대한 설명으로 옳지 않은 것은?",
+                          reference: "제1조 일본 정부와 통모하여 한일 합병에 적극 협력한 자, 한국의 주권을 침해하는 조약 또는 문서에 조인한 자와 이를 모의한 자는 사형 또는 무기 징역에 처하고, 그 재산과 유산의 전부 혹은 2분의 1 이상을 몰수한다.",
+                          num1Text: "이 법률은 제헌국회에서 제정되었다.",
+                          num2Text: "이 법률은 농지개혁법이 제정된 후 제정되었다.",
+                          num3Text: "이 법률에 의해 반민특위와 특별 재판부가 구성되었다.",
+                          num4Text: "이 법률에 의해 친일 경력을 지닌 고위 경찰 간부가 체포되었다."),
+            QuestionModel(num: 20,
+                          questionText: "다음 글은 (가)의 부탁을 받고 (나)가 지은 것이다. (가)와 (나)에 대한 설명으로 옳은 것은?",
+                          reference: "우리는 ‘외교’, ‘준비’ 등의 미련한 꿈을 버리고 민중 직접 혁명의 수단을 취함을 선언하노라. 조선 민족의 생존을 유지 하자면 강도 일본을 쫓아내야 하고, 강도 일본을 쫓아내려면 오직 혁명으로써만 가능하니, 혁명이 아니고는 강도 일본을 쫓아낼 방법이 없는 바이다.",
+                          num1Text: "(가)는 조선 의용대를 결성하였고, (나)는 ‘국혼’을 강조하였다.",
+                          num2Text: "(가)는 신흥 무관 학교를 세웠고, (나)는 형평사를 창립하였다.",
+                          num3Text: "(가)는 조선 건국 동맹을 조직하였고, (나)는 식민 사학의 한국사 정체성론을 반박하였다.",
+                          num4Text: "(가)는 황포 군관 학교에서 훈련받았고, (나)는 민족주의 역사 서술의 기본 틀을 제시하였다.")
+            
+            
             ]
             let exam2 = ExamModel(id: 202223, year: 2022, examTypeID: "지방직", subjectID: "한국사", questions: questions2)
             
             allExams.append(contentsOf: [exam, exam2])
+        }
+    }
+    
+    func saveExam202111() {
+        if allExams.filter({ exam in
+            return exam.id == 202111
+        }).isEmpty {
+            allExams = []
+            
+            let questions
+            = [
+               QuestionModel(num: 1,
+                             questionText: "맞춤법에 맞는 것만으로 묶은 것은?",
+                             num1Text: "돌나물, 꼭지점, 페트병, 낚시꾼",
+                             num2Text: "흡입량, 구름양, 정답란, 칼럼난",
+                             num3Text: "오뚝이, 싸라기, 법석, 딱다구리",
+                             num4Text: "찻간(車間), 홧병(火病), 셋방(貰房), 곳간(庫間)"),
+               QuestionModel(num: 2,
+                             questionText: "㉠의 단어와 의미가 같은 것은?",
+                             reference: "친구에게 줄 선물을 예쁜 포장지에 ㉠" + "싼다.".underLined,
+                             num1Text: "사람들이 안채를 겹겹이 " + "싸고".underLined + " 있다.",
+                             num2Text: "사람들은 봇짐을 " + "싸고".underLined + " 산길로 향한다.",
+                             num3Text: "아이는 몇 권의 책을 " + "싼".underLined + " 보퉁이를 들고 있다.",
+                             num4Text: "내일 학교에 가려면 책가방을 미리 " + "싸".underLined + " 두어라."),
+               QuestionModel(num: 3,
+                             questionText: "가장 자연스러운 문장은?",
+                             num1Text: "날씨가 선선해지니 역시 책이 잘 읽힌다.",
+                             num2Text: "이렇게 어려운 책을 속독으로 읽는 것은 하늘의 별 따기이다.",
+                             num3Text: "내가 이 일의 책임자가 되기보다는 직접 찾기로 의견을 모았다.",
+                             num4Text: "그는 시화전을 홍보하는 일과 시화전의 진행에 아주 열성적이다."),
+               QuestionModel(num: 4,
+                             questionText: "다음 글의 설명 방식으로 적절하지 않은 것은?",
+                             reference: "빛 공해란 인공조명의 과도한 빛이나 조명 영역 밖으로 누출되는 빛이 인간의 건강하고 쾌적한 생활을 방해하거나 환경에 피해를 주는 상태를 말한다. 국제 과학 저널인 〖사이언스 어드밴스〗의 ‘전 세계 빛 공해 지도’에 따르면, 우리나라는 빛 공해가 심각한 국가이다. 빛 공해는 멜라토닌 부족을 초래해 인간에게 수면 부족과 면역력 저하 등의 문제를 유발하고, 농작물의 생산량 저하, 생태계 교란 등의 문제를 일으킨다.",
+                             num1Text: "빛 공해의 정의를 제시하고 있다.",
+                             num2Text: "빛 공해의 주요 요인인 인공조명의 누출 원인을 제시하고 있다.",
+                             num3Text: "자료를 인용하여 빛 공해가 심각한 국가로 우리나라를 제시하고 있다.",
+                             num4Text: "사례를 들어 빛 공해의 악영향을 제시하고 있다."),
+               QuestionModel(num: 5,
+                             questionText: "㉠,㉡의 사례로 옳은 것만을 짝 지은 것은?",
+                             reference: "용언의 불규칙활용은 크게 ㉠어간만 불규칙하게 바뀌는 부류, ㉡어미만 불규칙하게 바뀌는 부류, 어간과 어미 둘 다 불규칙하게 바뀌는 부류로 나눌 수 있다.",
+                             num1Text: "걸음이 " + "빠름".underLined + " - 꽃이 " + "노람".underLined,
+                             num2Text: "잔치를 " + "치름".underLined + " - 공부를 " + "함".underLined,
+                             num3Text: "라면이 " + "불음".underLined + " - 합격을 " + "바람".underLined,
+                             num4Text: "우물물을 " + "품".underLined + " - 목적지에 " + "이름".underLined),
+               QuestionModel(num: 6,
+                             questionText: "㉠~㉣의 의미로 적절하지 않은 것은?",
+                             reference: "二月人 보로매 아으 노피 ㉠" + "현".underLined + " 燈ᄉ블 다호라\n萬人 비취실 즈샷​다 아으 動動다리\n三月 나며 開​ 아​으 滿春  욋​고​지여\n​ ​브롤 ㉡" + "즈".underLined + " ​디​녀 나샷다 아으 動動다리\n四月 아니 ㉢" + "니저".underLined + " 아으 오실셔  곳고리새여\n㉣" + "므슴다".underLined + " 錄事니​ 녯 ​나​ 닛​고신뎌 아으 動動다리\n\n-작자 미상, 〖動動〗에서-",
+                             num1Text: "㉠은 ‘켠’을 의미한다.",
+                             num2Text: "㉡은 ‘모습을’을 의미한다.",
+                             num3Text: "㉢은 ‘잊어’를 의미한다.",
+                             num4Text: "㉣은 ‘무심하구나’를 의미한다."),
+               QuestionModel(num: 7,
+                             questionText: "한자 표기가 옳은 것은?",
+                             num1Text: "그분은 냉혹한 현실(現室)을 잘 견뎌 냈다.",
+                             num2Text: "첫 손님을 야박(野薄)하게 대해서는 안 된다.",
+                             num3Text: "그에게서 타고난 승부 근성(謹性)이 느껴진다.",
+                             num4Text: "그는 평소 희망했던 기관에 채용(債用)되었다."),
+               QuestionModel(num: 8,
+                             questionText: "다음 토의에 대한 설명으로 적절하지 않은 것은?",
+                             reference: "사회자: 오늘의 토의 주제는 ‘통일 시대의 남북한 언어가 나아갈 길’입니다. 먼저 최○○ 교수님께서 ‘남북한 언어 차이와 의사소통’이라는 제목으로 발표해 주시겠습니다.\n\n최 교수:남한과 북한의 말은 비슷하지만 다른 점이 있습니다. 남한과 북한의 어휘 차이가 대표적입니다. 남한과 북한의 어휘 차이를 분석한 결과, ...(중략)... 앞으로도 남북한 언어 차이에 대한 연구가 지속 되어야 합니다.\n\n사회자:이로써 최 교수님의 발표를 마치겠습니다. 다음은 정○○ 박사님의 ‘남북한 언어의 동질성 회복 방안’에 대한 발표가 있겠습니다.\n\n정 박사: 앞으로 통일을 대비해 남북한 언어의 다른 점을 줄여 나가는 노력이 필요합니다. 실제로도 남한과 북한의 학자들로 구성된 ‘겨레말큰사전 편찬위원회’ 에서는 남북한 공통의 사전인 〖겨레말큰사전〗을 만들며 서로의 차이를 이해하고 받아들이기 위한 노력을 하고 있습니다. ... (중략) ...\n\n사회자:그러면 질의응답이 있겠습니다. 시간상 간략하게 질문해 주시기 바랍니다.\n\n청중A: 두분의 말씀 잘 들었습니다. 남북한 언어의 차이와 이를 극복하는 방안을 말씀하셨는데요. 그렇다면 통일 시대에 대비한 언어 정책에는 무엇이 있을까요?",
+                             num1Text: "학술적인 주제에 대해 발표 형식으로 진행되고 있다.",
+                             num2Text: "사회자는 발표자 간의 이견을 조정하여 의사결정을 유도하고 있다.",
+                             num3Text: "발표자는 주제에 대한 자신의 견해를 밝혀 청중에게 정보를 제공하고 있다.",
+                             num4Text: "청중 A는 발표자의 발표 내용을 확인하고 주제와 관련된 질문을 하고 있다."),
+               
+            ]
+            let exam = ExamModel(id: 202111, year: 2021, examTypeID: "국가직", subjectID: "국어", questions: questions)
+            
+            allExams.append(contentsOf: [exam])
         }
     }
     
