@@ -25,6 +25,7 @@ struct SubjectSelectView: View {
                     Circle().opacity(0.1)
                 )
                 .onTapGesture {
+                    vm.exams.removeAll()
                     selectedSubject = "국어"
                     vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
                     showNextView.toggle()
@@ -38,6 +39,7 @@ struct SubjectSelectView: View {
                         Circle().opacity(0.1)
                     )
                     .onTapGesture {
+                        vm.exams.removeAll()
                         selectedSubject = "영어"
                         vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
                         showNextView.toggle()
@@ -49,6 +51,7 @@ struct SubjectSelectView: View {
                         Circle().opacity(0.1)
                     )
                     .onTapGesture {
+                        vm.exams.removeAll()
                         selectedSubject = "한국사"
                         vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
                         showNextView.toggle()
