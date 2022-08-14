@@ -16,7 +16,7 @@ class ExamStoreDataService {
     }
     
     
-    // 2022 국어
+//MARK: - 2022 국어
     func saveExam2022Korean() {
         if allExams.filter({ exam in
             return exam.id == 202211
@@ -315,9 +315,7 @@ class ExamStoreDataService {
             allExams.append(contentsOf: [exam, exam2])
         }
     }
-    
-    
-    // 2022 영어
+//MARK: - 2022 영어
     func saveExam2022English() {
         if allExams.filter({ exam in
             return exam.id == 202212
@@ -612,9 +610,7 @@ class ExamStoreDataService {
             allExams.append(contentsOf: [exam, exam2])
         }
     }
-    
-    
-    // 2022 한국사
+//MARK: - 2022 한국사
     func saveExam2022History() {
         if allExams.filter({ exam in
             return exam.id == 202213
@@ -852,7 +848,7 @@ class ExamStoreDataService {
                           num4Text: "요동 정벌을 위해 출병한 이성계가 위화도에서 회군하였다."),
             QuestionModel(num: 13,
                           questionText: "다음과 관련된 운동에 대한 설명으로 옳은 것은?",
-                          imgString: "ChosunMoolSan",
+                          imgModel: ImageModel(imageString: "ChosunMoolSan", imgWidth: 150, imgHeight: 200),
                           num1Text: "가뭄과 홍수로 인해 중단되었다.",
                           num2Text: "조선총독부의 〖회사령〗에 맞서기 위해 전개되었다.",
                           num3Text: "일부 사회주의자는 자본가 계급을 위한 운동이라고 비판하였다.",
@@ -915,7 +911,7 @@ class ExamStoreDataService {
             allExams.append(contentsOf: [exam, exam2])
         }
     }
-    
+//MARK: - 2021 국어
     func saveExam2021Korean() {
         if allExams.filter({ exam in
             return exam.id == 202111
@@ -1069,7 +1065,7 @@ class ExamStoreDataService {
             allExams.append(contentsOf: [exam])
         }
     }
-    
+//MARK: - 2021 영어
     func saveExam2021English() {
         if allExams.filter({ exam in
             return exam.id == 202112
@@ -1223,7 +1219,7 @@ class ExamStoreDataService {
             allExams.append(contentsOf: [exam])
         }
     }
-    
+//MARK: - 2021 한국사
     func saveExam2021History() {
         if allExams.filter({ exam in
             return exam.id == 202113
@@ -1288,77 +1284,87 @@ class ExamStoreDataService {
                           num3Text: "ᄀ, ᄂ, ᄃ",
                           num4Text: "ᄀ, ᄃ, ᄅ"),
             QuestionModel(num: 9,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "다음은 발해 수도에 대한 답사 계획이다. 각 수도에 소재하는 유적에 대한 탐구 내용으로 옳은 것만을 모두 고르면?",
+                          imgModel: ImageModel(imageString: "2021History9", imgWidth: 300, imgHeight: 600),
+                          num1Text: "㉠,㉡",
+                          num2Text: "㉠,㉣",
+                          num3Text: "㉡,㉢",
+                          num4Text: "㉢,㉣"),
             QuestionModel(num: 10,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "다음 상소문을 올린 왕대에 있었던 사실은?",
+                          reference: "석교(釋敎)를 행하는 것은 수신(修身)의 근본이요, 유교를 행하는 것은 이국(理國)의 근원입니다. 수신은 내생의 자(資)요, 이국은 금일의 요무(要務)로서, 금일은 지극히 가깝고 내생은 지극히 먼 것인데도 가까움을 버리고 먼 것을 구함은 또한 잘못이 아니겠습니까.",
+                          num1Text: "양경과 12목에 상평창을 설치하였다.",
+                          num2Text: "균여를 귀법사 주지로 삼아 불교를 정비하였다.",
+                          num3Text: "국자감에 7재를 두어 관학을 부흥하고자 하였다.",
+                          num4Text: "전지(田地)와 시지(柴地)를 지급하는 경정 전시과를 실시하였다"),
             QuestionModel(num: 11,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "이승만 정부의 경제 정책으로 옳지 않은 것은?",
+                          num1Text: "한미 원조 협정을 체결하였다.",
+                          num2Text: "농지개혁에 따른 지가증권을 발행하였다.",
+                          num3Text: "제분, 제당, 면방직 등 삼백 산업을 적극 지원하였다.",
+                          num4Text: "제1차 경제개발 5개년 계획을 추진하였다."),
             QuestionModel(num: 12,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "중일전쟁 이후 조선총독부가 시행한 민족 말살 정책이 아닌 것은?",
+                          num1Text: "아침마다 궁성요배를 강요하였다.",
+                          num2Text: "일본에 충성하자는 황국 신민 서사를 암송하게 하였다.",
+                          num3Text: "공업 자원의 확보를 위하여 남면북양 정책을 시행하였다.",
+                          num4Text: "황국 신민 의식을 강화하고자 소학교를 국민학교로 개칭하였다."),
             QuestionModel(num: 13,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "밑줄 친 ‘조약’에 대한 설명으로 옳지 않은 것은?",
+                          reference: "1905년 8월 4일 오후 3시, 우리가 앉아있는 곳은 새거모어 힐의 대기실. 루스벨트의 저택이다. 새거모어 힐은 루스벨트의 여름용 대통령 관저로 3층짜리 저택이다. ...(중략) ... 대통령과 마주하자 나는 말했다. “감사합니다. 각하. 저는 대한제국 황제의 친필 밀서를 품고 지난 2월에 헤이 장관을 만난 사람입니다. 그 밀서에서 우리 황제는 1882년에 맺은 " + "조약".underLined + "의 거중조정 조항에 따른 귀국의 지원을 간곡히 부탁했습니다.”",
+                          num1Text: "영사재판권이 인정되었다.",
+                          num2Text: "임오군란을 계기로 체결되었다.",
+                          num3Text: "최혜국 대우 조항이 포함되었다.",
+                          num4Text: "〖조선책략〗의 영향을 받았다."),
             QuestionModel(num: 14,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "고려시대 향리에 대한 설명으로 옳은 것만을 모두 고르면?",
+                          reference: "ᄀ. 부호장 이하의 향리는 사심관의 감독을 받았다.\nᄂ. 상층 향리는 과거로 중앙 관직에 진출할 수 있었다.\nᄃ. 일부 향리의 자제들은 기인으로 선발되어 개경으로 보내졌다.\nᄅ. 속현의 행정 실무는 향리가 담당하였다.",
+                          num1Text: "ㄱ",
+                          num2Text: "ㄱ,ㄴ",
+                          num3Text: "ㄴ,ㄷ,ㄹ",
+                          num4Text: "ㄱ,ㄴ,ㄷ,ㄹ"),
             QuestionModel(num: 15,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "밑줄 친 ‘이농법’에 대한 설명으로 옳은 것만을 모두 고르면?",
+                          reference: "대개 " + "이 농법을".underLined + " 귀중하게 여기는 이유는 다음과 같다. 두 땅의 힘으로 하나의 모를 서로 기르는 것이고, ...(중략) ... 옛 흙을 떠나 새 흙으로 가서 고갱이를 씻어 내어 더러운 것을 제거하는 것이다. 무릇 벼를 심는 논에는 물을 끌어들일 수 있는 하천이나 물을 댈 수 있는 저수지가 꼭 필요하다. 이러한 것이 없다면 볏논이 아니다.\n-〖임원경제지〗-",
+                          reference2: "ᄀ. 세종 때 편찬된 〖농사직설〗에도 등장한다.\nᄂ. 고랑에 작물을 심도록 하였다.\nᄃ. 〖경국대전〗의 수령칠사 항목에서도 강조되었다.\nᄅ. 직파법보다 풀 뽑는 노동력을 절약할 수 있었다.",
+                          num1Text: "ㄱ,ㄴ",
+                          num2Text: "ㄱ,ㄹ",
+                          num3Text: "ㄴ,ㄷ",
+                          num4Text: "ㄷ,ㄹ"),
             QuestionModel(num: 16,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "밑줄 친 ‘헌법’이 시행 중인 시기에 일어난 사건은?",
+                          reference: "이 " + "헌법".underLined + "은 한 사람의 집권자가 긴급조치라는 형식적인 법 절차와 권력 남용으로 양보할 수 없는 국민의 기본 인권과 존엄성을 억압하였다. 그리고 이러한 권력 남용에 형식적인 합법성을 부여하고자 ...(중략)... 입법, 사법, 행정 3권을 한 사람의 집권자에게 집중시키고 있다.",
+                          num1Text: "부.마 민주 항쟁이 일어났다.",
+                          num2Text: "국민교육헌장을 선포하였다.",
+                          num3Text: "7.4 남북공동성명이 발표되었다.",
+                          num4Text: "한일 협정 체결을 반대하는 6.3 시위가 있었다."),
             QuestionModel(num: 17,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "밑줄 친 ‘회의’에서 있었던 사실은?",
+                          reference: "본 " + "회의".underLined + "는 2천만 민중의 공정한 뜻에 바탕을 둔 국민적 대화합으로 최고의 권위를 가지고 국민의 완전한 통일을 공고하게 하며, 광복 대업의 근본 방침을 수립하여 우리 민족의 자유를 만회하며 독립을 완성하기를 기도하고 이에 선언하노라. ...(중략)...본대표등은국민이위탁한사명을 받들어 국민적 대단결에 힘쓰며 독립운동이 나아갈 방향을 확립하여 통일적 기관 아래에서 대업을 완성하고자 하노라.",
+                          num1Text: "대한민국 건국 강령이 상정되었다.",
+                          num2Text: "박은식이 임시대통령으로 선출되었다.",
+                          num3Text: "민족유일당운동 차원에서 조선혁명당이 참가하였다.",
+                          num4Text: "임시정부를 대체할 새로운 조직을 만들자는 주장이 나왔다."),
             QuestionModel(num: 18,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "다음 법령에 따라 시행된 사업에 대한 설명으로 옳은 것은?",
+                          reference: "제1조 토지의 조사 및 측량은 본령에 따른다.\n제4조 토지 소유자는 조선 총독이 정한 기간 내에 주소, 성명 또는 명칭 및 소유지의 소재, 지목, 자번호, 사표, 등급, 지적, 결수를 임시토지조사국장에게 신고해야 한다. 단 국유지는 보관 관청이 임시토지조사국장에게 통지해야 한다.",
+                          num1Text: "농상공부를 주무 기관으로 하였다.",
+                          num2Text: "역둔토, 궁장토를 총독부 소유로 만들었다.",
+                          num3Text: "토지약탈을 위해 동양척식회사를 설립하였다.",
+                          num4Text: "춘궁 퇴치, 농가 부채 근절을 목표로 내세웠다."),
             QuestionModel(num: 19,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "개항기 무역에 대한 설명으로 옳지 않은 것은?",
+                          num1Text: "개항장에서 조선인 객주가 중개 활동을 하였다.",
+                          num2Text: "조.청 무역장정으로 청국에서의 수입액이 일본을 앞질렀다.",
+                          num3Text: "일본 상인은 면제품을 팔고, 쇠가죽.쌀.콩 등을 구입하였다.",
+                          num4Text: "조.일 통상장정의 개정으로 곡물 수출이 금지되기도 하였다."),
             QuestionModel(num: 20,
-                          questionText: <#T##AttributedString#>,
-                          num1Text: <#T##AttributedString#>,
-                          num2Text: <#T##AttributedString#>,
-                          num3Text: <#T##AttributedString#>,
-                          num4Text: <#T##AttributedString#>),
+                          questionText: "밑줄 친 ‘그’에 대한 설명으로 옳은 것은?",
+                          reference: "군역에 뽑힌 장정에게 군포를 거두었는데, 그 폐단이 많아서 백성들이 뼈를 깎는 원한을 가졌다. 그런데 사족들은 한평생 한가하게 놀며 신역(身役)이 없었다. ...(중략)... 그러나 유속(流俗)에 끌려 이행되지 못하였으나 갑자년 초에 그가 강력히 나서서 귀천이 동일하게 장정 한 사람마다 세납전 (歲納錢) 2민(緡)을 바치게 하니, 이를 동포전(洞布錢)이라고 하였다.\n\n-〖매천야록〗-",
+                          num1Text: "만동묘 건립을 주도하였다.",
+                          num2Text: "군국기무처 총재를 역임하였다.",
+                          num3Text: "통리기무아문을 폐지하고 5군영을 부활하였다.",
+                          num4Text: "탕평 정치를 정리한 〖만기요람〗을 편찬하였다.")
             
             ]
             let exam = ExamModel(id: 202113, year: 2021, examTypeID: "국가직", subjectID: "한국사", questions: questions)

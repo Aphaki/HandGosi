@@ -12,7 +12,8 @@ struct QuestionView: View {
     let questionText: AttributedString
     let reference: AttributedString?
     let reference2: AttributedString?
-    let imgString: String?
+//    let imgString: String?
+    let imgModel: ImageModel?
     let num1Text: AttributedString
     let num2Text: AttributedString
     let num3Text: AttributedString
@@ -24,7 +25,8 @@ struct QuestionView: View {
         self.questionText = question.questionText
         self.reference = question.reference
         self.reference2 = question.reference2
-        self.imgString = question.imgString
+//        self.imgString = question.imgString
+        self.imgModel = question.imgModel
         self.num1Text = question.num1Text
         self.num2Text = question.num2Text
         self.num3Text = question.num3Text
@@ -52,12 +54,12 @@ struct QuestionView: View {
                         .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
-                if imgString != nil {
+                if imgModel != nil {
                     HStack {
                         Spacer()
-                        Image(imgString!)
+                        Image(imgModel!.imageString)
                             .resizable()
-                            .frame(width: 150, height: 200, alignment: .center)
+                            .frame(width: imgModel!.imgWidth, height: imgModel!.imgHeight)
                         Spacer()
                     }
                 }
