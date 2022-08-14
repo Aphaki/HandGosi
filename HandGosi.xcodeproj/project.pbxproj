@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
-		7F6441AB28A6DC3100C19014 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F6441AA28A6DC3100C19014 /* NanumMyeongjo-YetHangul.ttf */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
@@ -28,11 +27,11 @@
 		7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */; };
 		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
 		7FE038B6289EC26C008E629B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE038B5289EC26C008E629B /* Color.swift */; };
+		7FEDEBB328A964B9006F91AA /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FEDEBB228A964B9006F91AA /* NanumMyeongjo-YetHangul.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
-		7F6441AA28A6DC3100C19014 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7FEDEBB228A964B9006F91AA /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		7F70B51028A23F4C00148779 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7F6441AA28A6DC3100C19014 /* NanumMyeongjo-YetHangul.ttf */,
+				7FEDEBB228A964B9006F91AA /* NanumMyeongjo-YetHangul.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			files = (
 				7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */,
 				7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */,
-				7F6441AB28A6DC3100C19014 /* NanumMyeongjo-YetHangul.ttf in Resources */,
+				7FEDEBB328A964B9006F91AA /* NanumMyeongjo-YetHangul.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
