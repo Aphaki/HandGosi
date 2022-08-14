@@ -30,13 +30,13 @@ class SubjectSelectVM: ObservableObject {
     }
     func fetchExamStoreData(year: Int, subjectID: String) {
         if year == 2022 && subjectID == "국어" {
-            examStoreDataService.saveExam202211()
+            examStoreDataService.saveExam2022Korean()
         } else if year == 2022 && subjectID == "영어" {
-            examStoreDataService.saveExam202212()
+            examStoreDataService.saveExam2022English()
         } else if year == 2022 && subjectID == "한국사" {
-            examStoreDataService.saveExam202213()
+            examStoreDataService.saveExam2022History()
         } else if year == 2021 && subjectID == "국어" {
-            examStoreDataService.saveExam202111()
+            examStoreDataService.saveExam2021Korean()
         }
     }
 }

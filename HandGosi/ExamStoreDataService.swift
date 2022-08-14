@@ -11,12 +11,17 @@ class ExamStoreDataService {
     
     @Published var allExams: [ExamModel] = []
     
-    // 2022 국어들 추가하기
-    func saveExam202211() {
+    func saveExam(year: Int, subjectID: String) {
+        
+    }
+    
+    
+    // 2022 국어
+    func saveExam2022Korean() {
         if allExams.filter({ exam in
             return exam.id == 202211
         }).isEmpty {
-            allExams = []
+            allExams.removeAll()
             
             // 국가직 국어 추가하기
             let questions =
@@ -313,11 +318,11 @@ class ExamStoreDataService {
     
     
     // 2022 영어
-    func saveExam202212() {
+    func saveExam2022English() {
         if allExams.filter({ exam in
             return exam.id == 202212
         }).isEmpty {
-            allExams = [] // 수정부
+            allExams.removeAll()
             
             let questions = [
                 
@@ -610,11 +615,11 @@ class ExamStoreDataService {
     
     
     // 2022 한국사
-    func saveExam202213() {
+    func saveExam2022History() {
         if allExams.filter({ exam in
             return exam.id == 202213
         }).isEmpty {
-            allExams = []
+            allExams.removeAll()
             
             let questions
             = [
@@ -911,11 +916,12 @@ class ExamStoreDataService {
         }
     }
     
-    func saveExam202111() {
+    func saveExam2021Korean() {
         if allExams.filter({ exam in
             return exam.id == 202111
         }).isEmpty {
-            allExams = []
+            
+            allExams.removeAll()
             
             let questions
             = [
@@ -1064,5 +1070,301 @@ class ExamStoreDataService {
         }
     }
     
+    func saveExam2021English() {
+        if allExams.filter({ exam in
+            return exam.id == 202112
+        }).isEmpty {
+            allExams.removeAll()
+            
+            let questions
+            = [
+            QuestionModel(num: 1,
+                          questionText: "밑줄 친 부분의 의미와 가장 가까운 것을 고르시오. [1~3]",
+                          reference: "Privacy as a social practice shapes individual behavior " + "in conjunction with".underLined + " other social practices and is therefore central to social life.",
+                          num1Text: "in combination with",
+                          num2Text: "in comparison with",
+                          num3Text: "in place of",
+                          num4Text: "in case of"),
+            QuestionModel(num: 2,
+                          questionText: "",
+                          reference: "The influence of Jazz has been so " + "pervasive".underLined + " that most popular music owes its stylistic roots to jazz.",
+                          num1Text: "deceptive",
+                          num2Text: "ubiquitous",
+                          num3Text: "persuasive",
+                          num4Text: "disastrous"),
+            QuestionModel(num: 3,
+                          questionText: "",
+                          reference: "This novel is about the " + "vexed".underLined + " parents of an unruly teenager who quits school to start a business.",
+                          num1Text: "callous",
+                          num2Text: "annoyed",
+                          num3Text: "reputable",
+                          num4Text: "confident"),
+            QuestionModel(num: 4,
+                          questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것은?",
+                          reference: "A group of young demonstrators attempted to _________ the police station.",
+                          num1Text: "line up",
+                          num2Text: "give out",
+                          num3Text: "carry on",
+                          num4Text: "break into"),
+            QuestionModel(num: 5,
+                          questionText: "다음 글의 내용과 일치하는 것은?",
+                          reference: "The most notorious case of imported labor is of course the Atlantic slave trade, which brought as many as ten million enslaved Africans to the New World to work the plantations. But although the Europeans may have practiced slavery on the largest scale, they were by no means the only people to bring slaves into their communities: earlier, the ancient Egyptians used slave labor to build their pyramids, early Arab explorers were often also slave traders, and Arabic slavery continued into the twentieth century and indeed still continues in a few places. In the Americas some native tribes enslaved members of other tribes, and slavery was also an institution in many African nations, especially before the colonial period.",
+                          num1Text: "African laborers voluntarily moved to the New World.",
+                          num2Text: "Europeans were the first people to use slave labor.",
+                          num3Text: "Arabic slavery no longer exists in any form.",
+                          num4Text: "Slavery existed even in African countries."),
+            QuestionModel(num: 6,
+                          questionText: "어법상 옳은 것은?",
+                          num1Text: "This guide book tells you where should you visit in Hong Kong.",
+                          num2Text: "I was born in Taiwan, but I have lived in Korea since I started work.",
+                          num3Text: "The novel was so excited that I lost track of time and missed the bus.",
+                          num4Text: "It’s not surprising that book stores don’t carry newspapers any more, doesn’t it?"),
+            QuestionModel(num: 7,
+                          questionText: "다음 글의 제목으로 가장 적절한 것은?",
+                          reference: "Warming temperatures and loss of oxygen in the sea will shrink hundreds of fish species―from tunas and groupers to salmon, thresher sharks, haddock and cod―even more than previously thought, a new study concludes. Because warmer seas speed up their metabolisms, fish, squid and other water- breathing creatures will need to draw more oxygen from the ocean. At the same time, warming seas are already reducing the availability of oxygen in many parts of the sea. A pair of University of British Columbia scientists argue that since the bodies of fish grow faster than their gills, these animals eventually will reach a point where they can’t get enough oxygen to sustain normal growth. “What we found was that the body size of fish decreases by 20 to 30 percent for every 1 degree Celsius increase in water temperature,” says author William Cheung.",
+                          num1Text: "Fish Now Grow Faster than Ever",
+                          num2Text: "Oxygen’s Impact on Ocean Temperatures",
+                          num3Text: "Climate Change May Shrink the World’s Fish",
+                          num4Text: "How Sea Creatures Survive with Low Metabolism"),
+            QuestionModel(num: 8,
+                          questionText: "밑줄 친 부분 중 어법상 옳지 않은 것은?",
+                          reference: "Urban agriculture (UA) has long been dismissed as a fringe activity that has no place in cities; however, its potential is beginning to ①" + "be realized".underLined + ". In fact, UA is about food self-reliance: it involves ②" + "creating".underLined + " work and is a reaction to food insecurity, particularly for the poor. Contrary to ③" + "which".underLined + " many believe, UA is found in every city, where it is sometimes hidden, sometimes obvious. If one looks carefully, few spaces in a major city are unused. Valuable vacant land rarely sits idle and is often taken over―either formally, or informally―and made ④" + "productive.".underLined,
+                          num1Text: "",
+                          num2Text: "",
+                          num3Text: "",
+                          num4Text: ""),
+            QuestionModel(num: 9,
+                          questionText: "주어진 문장이 들어갈 위치로 가장 적절한 것은?",
+                          reference: "For example, the state archives of New Jersey hold more than 30,000 cubic feet of paper and 25,000 reels of microfilm.",
+                          reference2: "Archives are a treasure trove of material: from audio to video to newspapers, magazines and printed material―which makes them indispensable to any History Detective investigation. While libraries and archives may appear the same, the differences are important. ( 1 ) An archive collection is almost always made up of primary sources, while a library contains secondary sources. ( 2 ) To learn more about the Korean War, you’d go to a library for a history book. If you wanted to read the government papers, or letters written by Korean War soldiers, you’d go to an archive. ( 3 ) If you’re searching for information, chances are there’s an archive out there for you. Many state and local archives store public records―which are an amazing, diverse resource. ( 4 ) An online search of your state’s archives will quickly show you they contain much more than just the minutes of the legislature―there are detailed land grant information to be found, old town maps, criminal records and oddities such as peddler license applications.\n\n * treasure trove: 귀중한 발굴물(수집물)\n * land grant: (대학.철도 등을 위해) 정부가 주는 땅",
+                          num1Text: "",
+                          num2Text: "",
+                          num3Text: "",
+                          num4Text: ""),
+            QuestionModel(num: 10,
+                          questionText: "다음 글의 흐름상 가장 어색한 문장은?",
+                          reference: "The term burnout refers to a “wearing out” from the pressures of work. Burnout is a chronic condition that results as daily work stressors take their toll on employees. ①" + "The most widely adopted conceptualization of burnout has been developed by Maslach and her colleagues in their studies of human service workers.".underLined + " Maslach sees burnout as consisting of three interrelated dimensions. The first dimension―emotional exhaustion―is really the core of the burnout phenomenon. ②" + "Workers suffer from emotional exhaustion when they feel fatigued, frustrated, used up, or unable to face another day on the job.".underLined + " The second dimension of burnout is a lack of personal accomplishment. ③" + "This aspect of the burnout phenomenon refers to workers who see themselves as failures, incapable of effectively accomplishing job requirements.".underLined + " ④" + "Emotional labor workers enter their occupation highly motivated although they are physically exhausted.".underLined + " The third dimension of burnout is depersonalization. This dimension is relevant only to workers who must communicate interpersonally with others (e.g. clients, patients, students) as part of the job.",
+                          num1Text: "",
+                          num2Text: "",
+                          num3Text: "",
+                          num4Text: ""),
+            QuestionModel(num: 11,
+                          questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것을 고르시오. [11~12]",
+                          reference: "A: Were you here last night?\n\nB: Yes. I worked the closing shift. Why?\n\nA: The kitchen was a mess this morning. There was foodspattered on the stove, and the ice trays were not in the freezer.\n\nB: I guess I forgot to go over the cleaning checklist.\n\nA: You know how important a clean kitchen is.\n\nB: I’m sorry. _________________________",
+                          num1Text: "I won’t let it happen again.",
+                          num2Text: "Would you like your bill now?",
+                          num3Text: "That’s why I forgot it yesterday.",
+                          num4Text: "I’ll make sure you get the right order."),
+            QuestionModel(num: 12,
+                          questionText: "",
+                          reference: "A: Have you taken anything for your cold?\nB: No, I just blow my nose a lot.\nA: Have you tried nose spray?\nB: ____________________________\nA: It works great.\nB: No, thanks. I don’t like to put anything in my nose, so I’ve never used it.",
+                          num1Text: "Yes, but it didn’t help.",
+                          num2Text: "No, I don’t like nose spray.",
+                          num3Text: "No, the pharmacy was closed.",
+                          num4Text: "Yeah, how much should I use?"),
+            QuestionModel(num: 13,
+                          questionText: "다음 글의 내용과 일치하지 않는 것은?",
+                          reference: "Deserts cover more than one-fifth of the Earth’s land area, and they are found on every continent. A place that receives less than 25 centimeters (10 inches) of rain per year is considered a desert. Deserts are part of a wider class of regions called drylands. These areas exist under a “moisture deficit,” which means they can frequently lose more moisture through evaporation than they receive from annual precipitation. Despite the common conceptions of deserts as hot, there are cold deserts as well. The largest hot desert in the world, northern Africa’s Sahara, reaches temperatures of up to 50 degrees Celsius (122 degrees Fahrenheit) during the day. But some deserts are always cold, like the Gobi Desert in Asia and the polar deserts of the Antarctic and Arctic, which are the world’s largest. Others are mountainous. Only about 20 percent of deserts are covered by sand. The driest deserts, such as Chile’s Atacama Desert, have parts that receive less than two millimeters (0.08 inches) of precipitation a year. Such environments are so harsh and otherworldly that scientists have even studied them for clues about life on Mars. On the other hand, every few years, an unusually rainy period can produce “super blooms,” where even the Atacama becomes blanketed in wildflowers.",
+                          num1Text: "There is at least one desert on each continent.",
+                          num2Text: "The Sahara is the world’s largest hot desert.",
+                          num3Text: "The Gobi Desert is categorized as a cold desert.",
+                          num4Text: "The Atacama Desert is one of the rainiest deserts."),
+            QuestionModel(num: 14,
+                          questionText: "우리말을 영어로 가장 잘 옮긴 것을 고르시오. [14~15]",
+                          num1Text: "나는 너의 답장을 가능한 한 빨리받기를 고대한다.\n→ I look forward to receive your reply as soon as possible.",
+                          num2Text: "그는 내가 일을 열심히 했기 때문에 월급을 올려 주겠다고 말했다.\n→ He said he would rise my salary because I worked hard.",
+                          num3Text: "그의 스마트 도시 계획은 고려할 만했다.\n→ His plan for the smart city was worth considered.",
+                          num4Text: "Cindy는 피아노 치는 것을 매우 좋아했고 그녀의 아들도 그랬다.\n→ Cindy loved playing the piano, and so did her son."),
+            QuestionModel(num: 15,
+                          questionText: "",
+                          num1Text: "당신이 부자일지라도 당신은 진실한 친구들을 살 수는 없다.\n→ Rich as if you may be, you can’t buy sincere friends.",
+                          num2Text: "그것은 너무나 아름다운 유성 폭풍이어서 우리는 밤새 그것을 보았다.\n→ It was such a beautiful meteor storm that we watched it all night.",
+                          num3Text: "학위가 없는 것이 그녀의 성공을 방해했다.\n→ Her lack of a degree kept her advancing.",
+                          num4Text: "그는 사형이 폐지되어야 하는지 아닌지에 대한 에세이를 써야 한다.\n→ He has to write an essay on if or not the death penalty should be abolished."),
+            QuestionModel(num: 16,
+                          questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것을 고르시오.[16~17]",
+                          reference: "Social media, magazines and shop windows bombard people daily with things to buy, and British consumers are buying more clothes and shoes than ever before. Online shopping means it is easy for customers to buy without thinking, while major brands offer such cheap clothes that they can be treated like disposable items―worn two or three times and then thrown away. In Britain, the average person spends more than £1,000 on new clothes a year, which is around four percent of their income. That might not sound like much, but that figure hides two far more worrying trends for society and for the environment. First, a lot of that consumer spending is via credit cards. British people currently owe approximately £670 per adult to credit card companies. That’s 66 percent of the average wardrobe budget. Also, not only are people spending money they don’t have, they’re using it to buy things __________________. Britain throws away 300,000 tons of clothing a year, most of which goes into landfill sites.",
+                          num1Text: "they don’t need",
+                          num2Text: "that are daily necessities",
+                          num3Text: "that will be soon recycled",
+                          num4Text: "they can hand down to others"),
+            QuestionModel(num: 17,
+                          questionText: "",
+                          reference: "Excellence is the absolute prerequisite in fine dining because the prices charged are necessarily high. An operator may do everything possible to make the restaurant efficient, but the guests still expect careful, personal service: food prepared to order by highly skilled chefs and delivered by expert servers. Because this service is, quite literally, manual labor, only marginal improvements in productivity are possible. For example, a cook, server, or bartender can move only so much faster before she or he reaches the limits of human performance. Thus, only moderate savings are possible through improved efficiency, which makes an escalation of prices _______. (It is an axiom of economics that as prices rise, consumers become more discriminating.) Thus, the clientele of the fine-dining restaurant expects, demands, and is willing to pay for excellence.",
+                          num1Text: "ludicrous",
+                          num2Text: "inevitable",
+                          num3Text: "preposterous",
+                          num4Text: "inconceivable"),
+            QuestionModel(num: 18,
+                          questionText: "주어진 글 다음에 이어질 글의 순서로 가장 적절한 것은?",
+                          reference: "To be sure, human language stands out from the decidedly restricted vocalizations of monkeys and apes. Moreover, it exhibits a degree of sophistication that far exceeds any other form of animal communication.",
+                          reference2: "(A) That said, many species, while falling far short of human language, do nevertheless exhibit impressively complex communication systems in natural settings.\n\n(B) And they can be taught far more complex systems in artificial contexts, as when raised alongside humans.\n\n(C) Even our closest primate cousins seem incapable of acquiring anything more than a rudimentary communicative system, even after intensive training over several years. The complexity that is language is surely a species-specific trait.",
+                          num1Text: "(A)-(B)-(C)",
+                          num2Text: "(B)-(C)-(A)",
+                          num3Text: "(C)-(A)-(B)",
+                          num4Text: "(C)-(B)-(A)"),
+            QuestionModel(num: 19,
+                          questionText: "다음 글의 주제로 가장 적절한 것은?",
+                          reference: "During the late twentieth century socialism was on the retreat both in the West and in large areas of the developing world. During this new phase in the evolution of market capitalism, global trading patterns became increasingly interlinked, and advances in information technology meant that deregulated financial markets could shift massive flows of capital across national boundaries within seconds. ‘Globalization’ boosted trade, encouraged productivity gains and lowered prices, but critics alleged that it exploited the low-paid, was indifferent to environmental concerns and subjected the Third World to a monopolistic form of capitalism. Many radicals within Western societies who wished to protest against this process joined voluntary bodies, charities and other non-governmental organizations, rather than the marginalized political parties of the left. The environmental movement itself grew out of the recognition that the world was interconnected, and an angry, if diffuse, international coalition of interests emerged.",
+                          num1Text: "The affirmative phenomena of globalization in the developing world in the past",
+                          num2Text: "The decline of socialism and the emergence of capitalism in the twentieth century",
+                          num3Text: "The conflict between the global capital market and the political organizations of the left",
+                          num4Text: "The exploitative characteristics of global capitalism and diverse social reactions against it"),
+            QuestionModel(num: 20,
+                          questionText: "다음 글에 나타난 Johnbull의 심경으로 가장 적절한 것은?",
+                          reference: "In the blazing midday sun, the yellow egg-shaped rock stood out from a pile of recently unearthed gravel. Out of curiosity, sixteen-year-old miner Komba Johnbull picked it up and fingered its flat, pyramidal planes. Johnbull had never seen a diamond before, but he knew enough to understand that even a big find would be no larger than his thumbnail. Still, the rock was unusual enough to merit a second opinion. Sheepishly, he brought it over to one of the more experienced miners working the muddy gash deep in the jungle. The pit boss’s eyes widened when he saw the stone. “Put it in your pocket,” he whispered. “Keep digging.” The older miner warned that it could be dangerous if anyone thought they had found something big. So Johnbull kept shoveling gravel until nightfall, pausing occasionally to grip the heavy stone in his fist. Could it be?",
+                          num1Text: "thrilled and excited",
+                          num2Text: "painful and distressed",
+                          num3Text: "arrogant and convinced",
+                          num4Text: "detached and indifferent"),
+            ]
+            let exam = ExamModel(id: 202112, year: 2021, examTypeID: "국가직", subjectID: "영어", questions: questions)
+            
+            allExams.append(contentsOf: [exam])
+        }
+    }
+    
+    func saveExam2021History() {
+        if allExams.filter({ exam in
+            return exam.id == 202113
+        }).isEmpty {
+            allExams.removeAll()
+            
+            let questions
+            = [
+            QuestionModel(num: 1,
+                          questionText: "다음 시가를 지은 왕의 재위기간에 있었던 사실은?",
+                          reference: "펄펄 나는 저 꾀꼬리\n암수 서로 정답구나\n외로울사 이 내 몸은\n뉘와 더불어 돌아가랴",
+                          num1Text: "진대법을 시행하였다.",
+                          num2Text: "낙랑군을 축출하였다.",
+                          num3Text: "졸본에서 국내성으로 천도하였다.",
+                          num4Text: "율령을 반포하여 중앙집권 체제를 강화하였다."),
+            QuestionModel(num: 2,
+                          questionText: "밑줄 친‘유학자’에 대한 설명으로 옳은 것은?",
+                          reference: "풍기군수 주세붕은 고려시대 " + "유학자".underLined + "의 고향인 경상도 순흥면 백운동에 회헌사(晦軒祠)를 세우고, 1543년에 교육시설을 더해서 백운동 서원을 건립하였다.",
+                          num1Text: "해주향약을 보급하였다.",
+                          num2Text: "원 간섭기에 성리학을 국내로 소개하였다.",
+                          num3Text: "〖성학십도〗를 저술하여 경연에서 강의하였다.",
+                          num4Text: "일본의 동정을 담은 〖해동제국기〗를 저술하였다."),
+            QuestionModel(num: 3,
+                          questionText: "밑줄 친 ‘왕’에 대한 설명으로 옳은 것은?",
+                          reference: "1919년 3월 1일 탑골 공원에서 민족대표 33인이 서명한 독립 선언서가 낭독되었다. 이 공원에 있는 탑은 " + "왕".underLined + "이 세운 것으로 경천사 10층 석탑의 영향을 받았다.",
+                          num1Text: "우리나라 전쟁사를 정리한 〖동국병감〗을 편찬하였다.",
+                          num2Text: "우리나라 역대 문장의 정수를 모은 〖동문선〗을 편찬하였다.",
+                          num3Text: "6조 직계제를 실시하여 국왕 중심의 정치체제를 구축하였다.",
+                          num4Text: "한양으로 다시 천도하면서 이궁인 창덕궁을 창건하였다."),
+            QuestionModel(num: 4,
+                          questionText: "(가)인물에 대한 설명으로 옳은 것은?",
+                          reference: "(가)이/가 올립니다. “지방의 경우에는 관찰사와 수령, 서울의 경우에는 홍문관과 육경(六卿), 그리고 대간(臺諫)들이 모두능력있는사람을천거하게하십시오. 그후대궐에 모아 놓고 친히 여러 정책과 관련된 대책 시험을 치르게 한다면인물을많이얻을수있을것입니다. 이는역대 선왕께서 하지 않으셨던 일이요, 한나라의 현량과와 방정과의 뜻을 이은 것입니다. 덕행은 여러 사람이 천거하는 바이므로 반드시 헛되거나 그릇되는 일이 없을 것입니다.”",
+                          num1Text: "기묘사화로 탄압받았다.",
+                          num2Text: "조의제문을 사초에 실었다.",
+                          num3Text: "문정왕후의 수렴청정을 지지하였다.",
+                          num4Text: "연산군의 생모 윤씨를 폐비하는 데 동조하였다."),
+            QuestionModel(num: 5,
+                          questionText: "신석기시대 유적과 유물을 바르게 연결한 것만을 모두 고르면?",
+                          reference: "ᄀ. 양양 오산리 유적-덧무늬토기\nᄂ. 서울 암사동 유적-빗살무늬토기\nᄃ. 공주 석장리 유적-미송리식토기\nᄅ. 부산 동삼동 유적-아슐리안형 주먹도끼",
+                          num1Text: "ㄱ,ㄴ",
+                          num2Text: "ㄱ,ㄹ",
+                          num3Text: "ㄴ,ㄷ",
+                          num4Text: "ㄷ,ㄹ"),
+            QuestionModel(num: 6,
+                          questionText: "(가) 시기에 신라에서 있었던 사실은?",
+                          reference: "[ 고구려의 침입으로 한성이 함락되자, 수도를 웅진으로 옮겼다. ]\n\n   ⬇︎\n\n[   (가)   ]\n\n   ⬇︎\n\n[ 성왕은 사비로 도읍을 옮겼다. ]",
+                          num1Text: "대가야를 정복하였다.",
+                          num2Text: "황초령순수비를 세웠다.",
+                          num3Text: "거칠부가 〖국사〗를 편찬하였다.",
+                          num4Text: "이차돈의 순교를 계기로 불교가 공인되었다."),
+            QuestionModel(num: 7,
+                          questionText: "시기별 대외 교류에 관한 설명으로 옳지 않은 것은?",
+                          num1Text: "백제: 노리사치계가 일본에 불경과 불상을 전하였다.",
+                          num2Text: "통일신라: 장보고가 청해진을 설치하여 해상권을 장악하였다.",
+                          num3Text: "고려: 예성강 하구의 벽란도가 국제항으로 번성하였다.",
+                          num4Text: "조선: 명과의 교류에서 중강개시와 책문후시가 전개되었다."),
+            QuestionModel(num: 8,
+                          questionText: "우리나라 세계유산과 세계기록유산에 대한 설명으로 옳은 것만을 모두 고르면?",
+                          reference: "ᄀ. 공주 송산리 고분군에는 전축분인 6호분과 무령왕릉이 있다.\n\nᄂ. 양산 통도사는 금강계단 불사리탑이 있는 삼보 사찰이다.\n\nᄃ. 남한산성은 병자호란 때 인조가 피난했던 산성이다.\n\nᄅ. 〖승정원일기〗는 역대 왕의 훌륭한 언행을 〖실록〗에서 뽑아 만든 사서이다.",
+                          num1Text: "ᄀ, ᄂ",
+                          num2Text: "ᄂ, ᄃ",
+                          num3Text: "ᄀ, ᄂ, ᄃ",
+                          num4Text: "ᄀ, ᄃ, ᄅ"),
+            QuestionModel(num: 9,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 10,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 11,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 12,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 13,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 14,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 15,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 16,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 17,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 18,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 19,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            QuestionModel(num: 20,
+                          questionText: <#T##AttributedString#>,
+                          num1Text: <#T##AttributedString#>,
+                          num2Text: <#T##AttributedString#>,
+                          num3Text: <#T##AttributedString#>,
+                          num4Text: <#T##AttributedString#>),
+            
+            ]
+            let exam = ExamModel(id: 202113, year: 2021, examTypeID: "국가직", subjectID: "한국사", questions: questions)
+            
+            allExams.append(contentsOf: [exam])
+        }
+    }
 }
     
