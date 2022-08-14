@@ -19,7 +19,7 @@ struct ExamSelectView: View {
     var body: some View {
         List {
             ForEach(exams) { exam in
-                Text(exam.examTypeID)
+                Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
                     .onTapGesture {
                         selectedExam = exam
                         showQuestionView.toggle()

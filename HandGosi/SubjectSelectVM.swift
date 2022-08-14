@@ -37,6 +37,10 @@ class SubjectSelectVM: ObservableObject {
             examStoreDataService.saveExam2022History()
         } else if year == 2021 && subjectID == "국어" {
             examStoreDataService.saveExam2021Korean()
+        } else if year == 2021 && subjectID == "영어" {
+            examStoreDataService.saveExam2021English()
+        } else if year == 2021 && subjectID == "한국사" {
+            examStoreDataService.saveExam2021History()
         }
     }
 }
