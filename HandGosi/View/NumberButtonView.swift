@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NumberButtonView: View {
     
-    @State var isSelected: Bool = false
+    @Binding var isSelected: Bool
     let number: String
     let text: AttributedString
     
@@ -35,7 +35,7 @@ struct NumberButtonView: View {
 
 struct NumberButton_Previews: PreviewProvider {
     static var previews: some View {
-        NumberButtonView(isSelected: false, number: "①", text: "1번입니다.")
+        NumberButtonView(isSelected: .constant(false), number: "①", text: "1번입니다.")
         
     }
 }

@@ -12,7 +12,6 @@ struct QuestionView: View {
     let questionText: AttributedString
     let reference: AttributedString?
     let reference2: AttributedString?
-//    let imgString: String?
     let imgModel: ImageModel?
     let num1Text: AttributedString
     let num2Text: AttributedString
@@ -20,12 +19,16 @@ struct QuestionView: View {
     let num4Text: AttributedString
     @State var selectedNum: [Int] = []
     
+    @State var isSelected1 = false
+    @State var isSelected2 = false
+    @State var isSelected3 = false
+    @State var isSelected4 = false
+    
     init(question: QuestionModel) {
         self.num = question.num
         self.questionText = question.questionText
         self.reference = question.reference
         self.reference2 = question.reference2
-//        self.imgString = question.imgString
         self.imgModel = question.imgModel
         self.num1Text = question.num1Text
         self.num2Text = question.num2Text
@@ -63,10 +66,10 @@ struct QuestionView: View {
                         Spacer()
                     }
                 }
-                NumberButtonView(number: "①", text: num1Text)
-                NumberButtonView(number: "②", text: num2Text)
-                NumberButtonView(number: "③", text: num3Text)
-                NumberButtonView(number: "④", text: num4Text)
+                NumberButtonView(isSelected: $isSelected1, number: "①", text: num1Text)
+                NumberButtonView(isSelected: $isSelected2, number: "②", text: num2Text)
+                NumberButtonView(isSelected: $isSelected3, number: "③", text: num3Text)
+                NumberButtonView(isSelected: $isSelected4, number: "④", text: num4Text)
             }
         }.padding(15)
     }
