@@ -55,6 +55,10 @@ struct MainView: View {
                     HStack(spacing: 30) {
                         Text("2019")
                             .yearText()
+                            .onTapGesture {
+                                selectedYear = 2019
+                                goToNextView.toggle()
+                            }
                         Text("2018")
                             .yearText()
                     }.font(.title2)
