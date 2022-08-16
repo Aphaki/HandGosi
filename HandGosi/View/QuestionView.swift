@@ -8,68 +8,50 @@
 import SwiftUI
 
 struct QuestionView: View {
-    let num: Int
-    let questionText: AttributedString
-    let reference: AttributedString?
-    let reference2: AttributedString?
-    let imgModel: ImageModel?
-    let num1Text: AttributedString
-    let num2Text: AttributedString
-    let num3Text: AttributedString
-    let num4Text: AttributedString
-    @State var selectedNum: [Int] = []
     
-    @State var isSelected1 = false
-    @State var isSelected2 = false
-    @State var isSelected3 = false
-    @State var isSelected4 = false
+    @State var selectedNum: Int = 0
+    
+    @StateObject var vm: QuestionVM
     
     init(question: QuestionModel) {
-        self.num = question.num
-        self.questionText = question.questionText
-        self.reference = question.reference
-        self.reference2 = question.reference2
-        self.imgModel = question.imgModel
-        self.num1Text = question.num1Text
-        self.num2Text = question.num2Text
-        self.num3Text = question.num3Text
-        self.num4Text = question.num4Text
+        _vm = StateObject(wrappedValue: QuestionVM(question: question))
+
     }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
                 HStack {
-                    Text("\(num)" + ".")
-                    Text(questionText)
+                    Text("\(vm.question.num)" + ".")
+                    Text(vm.question.questionText)
                 }
-                if reference != nil {
-                    Text(reference!)
+                if vm.question.reference != nil {
+                    Text(vm.question.reference!)
                         .lineSpacing(5)
                         .padding(8)
                         .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
-                if reference2 != nil {
-                    Text(reference2!)
+                if vm.question.reference2 != nil {
+                    Text(vm.question.reference2!)
                         .lineSpacing(5)
                         .padding(8)
                         .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
-                if imgModel != nil {
+                if vm.question.imgModel != nil {
                     HStack {
                         Spacer()
-                        Image(imgModel!.imageString)
+                        Image(vm.question.imgModel!.imageString)
                             .resizable()
-                            .frame(width: imgModel!.imgWidth, height: imgModel!.imgHeight)
+                            .frame(width: vm.question.imgModel!.imgWidth, height: vm.question.imgModel!.imgHeight)
                         Spacer()
                     }
                 }
-                NumberButtonView(isSelected: $isSelected1, number: "①", text: num1Text)
-                NumberButtonView(isSelected: $isSelected2, number: "②", text: num2Text)
-                NumberButtonView(isSelected: $isSelected3, number: "③", text: num3Text)
-                NumberButtonView(isSelected: $isSelected4, number: "④", text: num4Text)
+                NumberButtonView(selectedNum: $selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
+                NumberButtonView(selectedNum: $selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
+                NumberButtonView(selectedNum: $selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
+                NumberButtonView(selectedNum: $selectedNum, number: "④", numberInt: 4, text: vm.question.num4Text)
             }
         }.padding(15)
     }

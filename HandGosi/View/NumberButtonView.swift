@@ -9,8 +9,9 @@ import SwiftUI
 
 struct NumberButtonView: View {
     
-    @Binding var isSelected: Bool
+    @Binding var selectedNum: Int
     let number: String
+    let numberInt: Int
     let text: AttributedString
     
     
@@ -19,10 +20,13 @@ struct NumberButtonView: View {
             HStack {
                 Text(number)
                     .font(.largeTitle)
-                    .overlay(Circle().opacity(isSelected ? 1 : 0))
+                    .overlay(Circle().opacity(selectedNum == numberInt ? 1 : 0))
                     .onTapGesture {
-                        isSelected.toggle()
-                        
+                        if selectedNum != numberInt {
+                        selectedNum = numberInt
+                        } else {
+                            selectedNum = 0
+                        }
                     }
                 Text(text)
                     .font(.headline)
@@ -35,7 +39,7 @@ struct NumberButtonView: View {
 
 struct NumberButton_Previews: PreviewProvider {
     static var previews: some View {
-        NumberButtonView(isSelected: .constant(false), number: "①", text: "1번입니다.")
+        NumberButtonView(selectedNum: .constant(1), number: "①", numberInt: 1, text: "1번입니다.")
         
     }
 }

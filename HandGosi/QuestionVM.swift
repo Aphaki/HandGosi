@@ -9,5 +9,9 @@ import Foundation
 
 class QuestionVM: ObservableObject {
     
+    @Published var question: QuestionModel
     
+    init(question: QuestionModel) {
+        self.question = question
+    }
 }
