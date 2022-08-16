@@ -9,20 +9,24 @@ import SwiftUI
 
 struct ExamSelectView: View {
     
-    let exams: [ExamModel]
+//    @Binding var subjectID: String?
+//    @State var selectedExam: ExamModel?
     
-    @Binding var subjectID: String?
-    @State var selectedExam: ExamModel?
+    @StateObject var vm: ExamSelectVM
     @State var showQuestionView: Bool = false
+    
+    init(exams: [ExamModel]) {
+        _vm = StateObject(wrappedValue: ExamSelectVM(exams: exams))
+    }
     
     
     var body: some View {
         List {
-            ForEach(exams) { exam in
+            ForEach(vm.yearSubjectFilteredExam) { exam in
                 Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
                     .font(.headline)
                     .onTapGesture {
-                        selectedExam = exam
+                        vm.selectedExam = exam
                         showQuestionView.toggle()
                     }
             }
@@ -30,19 +34,19 @@ struct ExamSelectView: View {
         .background(
             NavigationLink(isActive: $showQuestionView,
                            destination: {
-                               ExamView(exam: selectedExam ?? DevPreview.shared.examSample)
+                               ExamView(exam: vm.selectedExam ?? DevPreview.shared.examSample)
                            },
                            label: { EmptyView() })
         )
         .listStyle(.plain)
-        .navigationTitle(subjectID ?? "실패야 실패라고")
+        .navigationTitle(vm.yearSubjectFilteredExam.first?.subjectID ?? "실패야 실패라고")
     }
 }
 
 struct ExamSelectView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ExamSelectView(exams: dev.exams, subjectID: .constant("국어"))
+            ExamSelectView(exams: dev.exams)
         }
     }
 }

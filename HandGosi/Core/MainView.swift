@@ -10,7 +10,7 @@ import SwiftUI
 struct YearTextViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(10)
+            .padding(15)
             .background(
                 Capsule().opacity(0.1)
             )
@@ -24,9 +24,12 @@ extension View {
 
 struct MainView: View {
     
+    @StateObject var vm = MainVM()
+    
     @State private var isClicked: Bool = false
     @State private var goToNextView: Bool = false
-    @State var selectedYear: Int?
+    
+//    @State var selectedYear: Int?
     
     var body: some View {
         NavigationView {
@@ -36,19 +39,25 @@ struct MainView: View {
                         Text("2022")
                             .yearText()
                             .onTapGesture {
-                                selectedYear = 2022
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2022
+                                }
                                 goToNextView.toggle()
                             }
                         Text("2021")
                             .yearText()
                             .onTapGesture {
-                                selectedYear = 2021
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2021
+                                }
                                 goToNextView.toggle()
                             }
                         Text("2020")
                             .yearText()
                             .onTapGesture {
-                                selectedYear = 2020
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2020
+                                }
                                 goToNextView.toggle()
                             }
                     }.font(.title)
@@ -56,7 +65,9 @@ struct MainView: View {
                         Text("2019")
                             .yearText()
                             .onTapGesture {
-                                selectedYear = 2019
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2019
+                                }
                                 goToNextView.toggle()
                             }
                         Text("2018")
@@ -100,7 +111,7 @@ struct MainView: View {
                 }
             } // VStack
             .background(
-                NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(year: $selectedYear) },
+                NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams) },
                                label: { EmptyView() })
             )
             .navigationBarHidden(true)

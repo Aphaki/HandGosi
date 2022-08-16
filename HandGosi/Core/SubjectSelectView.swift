@@ -9,10 +9,13 @@ import SwiftUI
 
 struct SubjectSelectView: View {
     
-    @Binding var year: Int?
     @State var showNextView: Bool = false
-    @State var selectedSubject: String?
-    @StateObject var vm = SubjectSelectVM()
+    @StateObject var vm: SubjectSelectVM
+    
+    init(exams: [ExamModel]) {
+        _vm = StateObject(wrappedValue: SubjectSelectVM(exams: exams))
+    }
+    
     
     var body: some View {
         VStack(spacing: 20) {
@@ -25,8 +28,9 @@ struct SubjectSelectView: View {
                     Circle().opacity(0.1)
                 )
                 .onTapGesture {
-                    selectedSubject = "국어"
-                    vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
+                    vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                        return exam.subjectID == "국어"
+                    }
                     showNextView.toggle()
                 }
             HStack {
@@ -38,8 +42,9 @@ struct SubjectSelectView: View {
                         Circle().opacity(0.1)
                     )
                     .onTapGesture {
-                        selectedSubject = "영어"
-                        vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
+                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                            return exam.subjectID == "영어"
+                        }
                         showNextView.toggle()
                     }
                 Text("한국사")
@@ -49,8 +54,9 @@ struct SubjectSelectView: View {
                         Circle().opacity(0.1)
                     )
                     .onTapGesture {
-                        selectedSubject = "한국사"
-                        vm.fetchExamStoreData(year: year!, subjectID: selectedSubject!)
+                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                            return exam.subjectID == "한국사"
+                        }
                         showNextView.toggle()
                     }
                 Spacer()
@@ -61,17 +67,17 @@ struct SubjectSelectView: View {
         }
         .background(
             NavigationLink(isActive: $showNextView,
-                           destination: { ExamSelectView(exams: vm.exams, subjectID: $selectedSubject) },
+                           destination: { ExamSelectView(exams: vm.yearSubjectFilteredExams)},
                            label: { EmptyView() })
         )
-        .navigationTitle(year?.description ?? "")
+        .navigationTitle(vm.yearFilteredExams.first?.year.description ?? "")
     }
 }
 
 struct SubjectSelectMenu_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            SubjectSelectView(year: .constant(2022))
+            SubjectSelectView(exams: dev.exams)
         }
     }
 }
