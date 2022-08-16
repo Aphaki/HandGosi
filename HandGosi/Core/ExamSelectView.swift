@@ -20,6 +20,7 @@ struct ExamSelectView: View {
         List {
             ForEach(exams) { exam in
                 Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+                    .font(.headline)
                     .onTapGesture {
                         selectedExam = exam
                         showQuestionView.toggle()

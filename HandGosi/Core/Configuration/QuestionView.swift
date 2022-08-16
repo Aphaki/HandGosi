@@ -9,8 +9,6 @@ import SwiftUI
 
 struct QuestionView: View {
     
-    @State var selectedNum: Int = 0
-    
     @StateObject var vm: QuestionVM
     
     init(question: QuestionModel) {
@@ -48,10 +46,10 @@ struct QuestionView: View {
                         Spacer()
                     }
                 }
-                NumberButtonView(selectedNum: $selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
-                NumberButtonView(selectedNum: $selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
-                NumberButtonView(selectedNum: $selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
-                NumberButtonView(selectedNum: $selectedNum, number: "④", numberInt: 4, text: vm.question.num4Text)
+                NumberButtonView(selectedNum: $vm.question.selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
+                NumberButtonView(selectedNum: $vm.question.selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
+                NumberButtonView(selectedNum: $vm.question.selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
+                NumberButtonView(selectedNum: $vm.question.selectedNum, number: "④", numberInt: 4, text: vm.question.num4Text)
             }
         }.padding(15)
     }

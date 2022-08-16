@@ -14,7 +14,7 @@ class SubjectSelectVM: ObservableObject {
     
     let examStoreDataService = ExamStoreDataService()
     
-    var subscription = Set<AnyCancellable>()
+    private var subscription = Set<AnyCancellable>()
     
     init() {
         subscribeExamStoreExams()
