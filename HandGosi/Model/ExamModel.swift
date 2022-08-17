@@ -12,5 +12,5 @@ struct ExamModel: Identifiable {
     let year: Int
     let examTypeID: String
     let subjectID: String
-    let questions: [QuestionModel]
+    var questions: [QuestionModel]
 }

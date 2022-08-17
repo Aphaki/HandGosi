@@ -9,11 +9,7 @@ import SwiftUI
 
 struct ExamSelectView: View {
     
-//    @Binding var subjectID: String?
-//    @State var selectedExam: ExamModel?
-    
     @StateObject var vm: ExamSelectVM
-    @State var showQuestionView: Bool = false
     
     init(exams: [ExamModel]) {
         _vm = StateObject(wrappedValue: ExamSelectVM(exams: exams))
@@ -23,22 +19,15 @@ struct ExamSelectView: View {
     var body: some View {
         List {
             ForEach(vm.yearSubjectFilteredExam) { exam in
-                Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
-                    .font(.headline)
-                    .onTapGesture {
-                        vm.selectedExam = exam
-                        showQuestionView.toggle()
-                    }
+                NavigationLink {
+                    ExamView(exam: exam)
+                } label: {
+                    Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+                        .font(.headline)
+                }
             }
         }
-        .background(
-            NavigationLink(isActive: $showQuestionView,
-                           destination: {
-                               ExamView(exam: vm.selectedExam ?? DevPreview.shared.examSample)
-                           },
-                           label: { EmptyView() })
-        )
-        .listStyle(.plain)
+        .listStyle(.automatic)
         .navigationTitle(vm.yearSubjectFilteredExam.first?.subjectID ?? "실패야 실패라고")
     }
 }

@@ -9,23 +9,27 @@ import SwiftUI
 
 struct ExamView: View {
     
-    let exam: ExamModel
+    @StateObject var vm: ExamVM
+    
+    init(exam: ExamModel) {
+        _vm = StateObject(wrappedValue: ExamVM(exam: exam))
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                ForEach(exam.questions) { question in
+                ForEach(vm.finalExam.questions) { question in
                     QuestionView(question: question)
                 }
             }
-        }.navigationTitle( exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+        }.navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
     }
 }
 
 struct ExamView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-        ExamView(exam: dev.examSample)
+            ExamView(exam: dev.examSample)
         }
     }
 }

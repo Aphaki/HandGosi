@@ -17,9 +17,10 @@ class QuestionModel: Identifiable {
     let num2Text: AttributedString
     let num3Text: AttributedString
     let num4Text: AttributedString
+    let answer: Int
     var selectedNum: Int
     
-    init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, reference2: AttributedString? = nil, imgModel: ImageModel? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString, selectedNum: Int = 0) {
+    init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, reference2: AttributedString? = nil, imgModel: ImageModel? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString, answer: Int, selectedNum: Int = 0) {
         self.num = num
         self.questionText = questionText
         self.reference = reference
@@ -29,6 +30,7 @@ class QuestionModel: Identifiable {
         self.num2Text = num2Text
         self.num3Text = num3Text
         self.num4Text = num4Text
+        self.answer = answer
         self.selectedNum = selectedNum
     }
 }
