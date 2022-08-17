@@ -358,7 +358,7 @@ class DevPreview {
                   num2Text: "‘양소유’는 인간 세상에 환멸을 느껴 스스로 ‘성진’의 모습으로 되돌아왔다.",
                   num3Text: "‘성진’이 있는 곳은 인간 세상이 아니다.",
                   num4Text: "‘성진’은 자신의 외양을 통해 꿈에서 돌아왔음을 인식한다.",
-                  answer: 0)
+                  answer: 2)
     let examSample = ExamModel(id: 202211, year: 2022, examTypeID: "국가직", subjectID: "국어",
                                questions:
                                 [

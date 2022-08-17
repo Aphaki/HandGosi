@@ -24,6 +24,7 @@
 		7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7728AC139E0070B0A4 /* MainVM.swift */; };
 		7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */; };
 		7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */; };
+		7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7D28AD2F720070B0A4 /* ScoredQuestionView.swift */; };
 		7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */; };
 		7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */; };
 		7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		7FD21D7728AC139E0070B0A4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSelectVM.swift; sourceTree = "<group>"; };
 		7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamVM.swift; sourceTree = "<group>"; };
+		7FD21D7D28AD2F720070B0A4 /* ScoredQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoredQuestionView.swift; sourceTree = "<group>"; };
 		7FDDF221289CFDCB00EE3FB7 /* HandGosi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandGosi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandGosiApp.swift; sourceTree = "<group>"; };
 		7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				7F88E7F628A636C8001C0463 /* ExamView.swift */,
 				7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
+				7FD21D7D28AD2F720070B0A4 /* ScoredQuestionView.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
 				7F87FB4228AB904D00E57AC9 /* Configuration */,
 			);
@@ -244,6 +247,7 @@
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,
 				7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
+				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,

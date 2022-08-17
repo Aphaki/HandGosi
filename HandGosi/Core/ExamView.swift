@@ -16,13 +16,29 @@ struct ExamView: View {
     }
     
     var body: some View {
+        
         ScrollView {
             VStack(alignment: .leading) {
                 ForEach(vm.finalExam.questions) { question in
+                    if vm.isScored == false {
                     QuestionView(question: question)
+                    } else {
+                        ScoredQuestionView(question: question)
+                    }
                 }
+                HStack {
+                    Spacer()
+                    Text("채점하기")
+                        .yearText()
+                        .onTapGesture {
+                            vm.isScored.toggle()
+                        }
+                }
+                
             }
         }.navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
+        
+        
     }
 }
 
