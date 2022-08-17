@@ -21,22 +21,24 @@ struct ExamView: View {
             VStack(alignment: .leading) {
                 ForEach(vm.finalExam.questions) { question in
                     if vm.isScored == false {
-                    QuestionView(question: question)
+                        QuestionView(question: question)
                     } else {
                         ScoredQuestionView(question: question)
                     }
                 }
-                HStack {
-                    Spacer()
-                    Text("채점하기")
-                        .yearText()
-                        .onTapGesture {
-                            vm.isScored.toggle()
-                        }
-                }
-                
             }
-        }.navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
+        }
+        .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Text(vm.isScored ? "시험지로" : "채점하기")
+                    .padding(8)
+                    .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
+                    .onTapGesture {
+                        vm.isScored.toggle()
+                    }
+            }
+        }
         
         
     }
