@@ -12,8 +12,10 @@ struct YearTextViewModifier: ViewModifier {
         content
             .padding(15)
             .background(
-                Capsule().opacity(0.1)
+                Capsule().opacity(0.3)
+                    .shadow(color: .black, radius: 10, x: 0, y: 10)
             )
+            
     }
 }
 extension View {
@@ -78,15 +80,29 @@ struct MainView: View {
                             .yearText()
                     }.font(.title3)
                 }
-                Image("HandGosiRed")
-                    .resizable()
-                    .frame(width: 60, height: 100)
-                    .scaleEffect(isClicked ? 0.3 : 1.5)
-                    .onTapGesture {
-                        withAnimation(.easeInOut) {
-                            isClicked.toggle()
+                ZStack {
+                    Image("HandGosiRed")
+                        .resizable()
+                        .frame(width: 60, height: 100)
+                        .scaleEffect(isClicked ? 0.3 : 1.5)
+                        .onTapGesture {
+                            withAnimation(.easeInOut) {
+                                isClicked.toggle()
+                            }
                         }
+                    if isClicked {
+                    Text("오답노트")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding(10)
+                        .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
+                        
+                        .offset(x: 120, y: 0)
                     }
+                }
+                    
+                
+                
                 if isClicked {
                     HStack(spacing: 30) {
                         Text("2016")

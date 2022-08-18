@@ -22,6 +22,12 @@ struct ScoredQuestionView: View {
             ZStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
+                        Spacer()
+                        Text("오답노트 추가")
+                            .padding(5)
+                            .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
+                    }
+                    HStack {
                         Text("\(vm.question.num)" + ".")
                         Text(vm.question.questionText)
                     }
