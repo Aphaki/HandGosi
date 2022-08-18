@@ -23,7 +23,10 @@ struct ExamView: View {
                     if vm.isScored == false {
                         QuestionView(question: question)
                     } else {
-                        ScoredQuestionView(question: question)
+                        ScoredQuestionView(question: question,
+                                           year: vm.finalExam.year,
+                                           type: vm.finalExam.examTypeID,
+                                           subject: vm.finalExam.subjectID)
                     }
                 }
             }

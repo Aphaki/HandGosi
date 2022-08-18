@@ -12,9 +12,11 @@ struct ScoredQuestionView: View {
     
     @StateObject var vm: QuestionVM
     
-    init(question: QuestionModel) {
-        _vm = StateObject(wrappedValue: QuestionVM(question: question))
-
+    init(question: QuestionModel, year: Int, type: String, subject: String) {
+        _vm = StateObject(wrappedValue: QuestionVM(question: question,
+                                                  year: year,
+                                                  type: type,
+                                                  subject: subject))
     }
     
     var body: some View {
@@ -26,6 +28,15 @@ struct ScoredQuestionView: View {
                         Text("오답노트 추가")
                             .padding(5)
                             .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
+                            .onTapGesture {
+                                let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
+                                vm.addNoteText = addNoteString
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                    withAnimation(.easeInOut) {
+                                        vm.addNoteText = nil
+                                    }
+                                }
+                            }
                     }
                     HStack {
                         Text("\(vm.question.num)" + ".")
@@ -70,7 +81,17 @@ struct ScoredQuestionView: View {
                     }
                     Spacer()
                 }
-                
+                if vm.addNoteText != nil {
+                    HStack {
+                        Spacer()
+                        Text(vm.addNoteText!)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
+                        Spacer()
+                    }
+                    
+                }
             }
         }.padding(15)
     }
@@ -97,6 +118,6 @@ struct ScoredQuestionView_Previews: PreviewProvider {
     @StateObject var vm: QuestionVM
     
     static var previews: some View {
-        ScoredQuestionView(question: dev.questionSample)
+        ScoredQuestionView(question: dev.questionSample, year: 2022, type: "국가직", subject: "국어")
     }
 }
