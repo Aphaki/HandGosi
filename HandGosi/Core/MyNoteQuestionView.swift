@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MyNoteQuestionView: View {
     
-    
     @StateObject var vm: MyNoteQuestionVM
     
     init(myNoteQuestion: MyNoteQuestion) {
@@ -17,6 +16,9 @@ struct MyNoteQuestionView: View {
     }
     
     var body: some View {
+        if vm.isDeleted {
+            EmptyView()
+        } else {
         ScrollView {
             ZStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 10) {
@@ -24,13 +26,14 @@ struct MyNoteQuestionView: View {
                         Text("[\(vm.myNoteQuestion.year.description) \(vm.myNoteQuestion.type) \(vm.myNoteQuestion.subject) ]")
                             .font(.headline)
                         Spacer()
-                        Text("오답노트에서 제거")
-                            .padding(5)
-                            .background(RoundedRectangle(cornerRadius: 10).opacity(0.2).shadow(color: .black, radius: 10, x: 0, y: 10))
-                            .onTapGesture {
-                                // 해당 문제 오답노트에서 제거
-                                vm.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)
-                            }
+                        Button {
+                            vm.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)
+                            vm.isDeleted.toggle()
+                        } label: {
+                            Text("오답노트에서 제거")
+                                .padding(5)
+                                .background(RoundedRectangle(cornerRadius: 10).opacity(0.2).shadow(color: .black, radius: 10, x: 0, y: 10))
+                        }
                     }
                     HStack {
                         Text("\(vm.myNoteQuestion.question.num)" + ".")
@@ -80,6 +83,7 @@ struct MyNoteQuestionView: View {
                 
             }
         }.padding(15)
+        }
     }
 }
 extension MyNoteQuestionView {

@@ -24,19 +24,35 @@ struct ScoredQuestionView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Spacer()
-                        Text("오답노트 추가")
-                            .padding(5)
-                            .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
-                            .onTapGesture {
-                                let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
-                                vm.addNoteText = addNoteString
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                    withAnimation(.easeInOut) {
-                                        vm.addNoteText = nil
-                                    }
+                        if vm.addNoteText != nil {
+                            HStack {
+                                Spacer()
+                                Text(vm.addNoteText!)
+                                    .padding(8)
+                                    .font(.caption)
+                                    .foregroundColor(.white)
+                                    .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
+                                Spacer()
+                            }
+                            
+                        }
+                        Button {
+                            let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
+                            vm.addNoteText = addNoteString
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                withAnimation(.easeInOut) {
+                                    vm.addNoteText = nil
                                 }
                             }
+                        } label: {
+                            Text("오답노트 추가")
+                                .padding(5)
+                                .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
+                        }
+                        
                     }
+                    
+                    
                     HStack {
                         Text("\(vm.question.num)" + ".")
                         Text(vm.question.questionText)
@@ -80,17 +96,17 @@ struct ScoredQuestionView: View {
                     }
                     Spacer()
                 }
-                if vm.addNoteText != nil {
-                    HStack {
-                        Spacer()
-                        Text(vm.addNoteText!)
-                            .padding()
-                            .foregroundColor(.white)
-                            .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
-                        Spacer()
-                    }
-                    
-                }
+//                if vm.addNoteText != nil {
+//                    HStack {
+//                        Spacer()
+//                        Text(vm.addNoteText!)
+//                            .padding()
+//                            .foregroundColor(.white)
+//                            .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
+//                        Spacer()
+//                    }
+//
+//                }
             }
         }.padding(15)
     }
