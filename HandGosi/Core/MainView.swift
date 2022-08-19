@@ -29,6 +29,7 @@ struct MainView: View {
     @StateObject var vm = MainVM()
     
     @State private var isClicked: Bool = false
+    @State private var showMyNote: Bool = false
     @State private var goToNextView: Bool = false
     
 //    @State var selectedYear: Int?
@@ -91,15 +92,23 @@ struct MainView: View {
                             }
                         }
                     if isClicked {
-                    Text("오답노트")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
-                        
-                        .offset(x: 120, y: 0)
-                    }
+                        NavigationLink(isActive: $showMyNote) {
+                            MyNoteSubjectSelectView()
+                        } label: {
+                            Text("오답노트")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
+                                .position(CGPoint(x: UIScreen.main.bounds.width * 0.83, y: UIScreen.main.bounds.height * 0.1))
+                                .onTapGesture {
+                                    showMyNote.toggle()
+                                }
+                            }
+                        }
+
+                    
                 }
                     
                 

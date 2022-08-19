@@ -18,10 +18,12 @@ class ExamStoreDataService {
     //MARK: - 오답노트 저장
     func myNoteSave(myNoteQuestion: MyNoteQuestion) -> String {
         if myNoteQuestion.subject == "국어" {
-            if myNoteKorean.filter({ noteQuestion in
+            let idFilteredNote = myNoteKorean.filter({ noteQuestion in
                 return noteQuestion.question.id == myNoteQuestion.question.id
-            }).isEmpty {
+            })
+            if idFilteredNote.isEmpty {
                 myNoteKorean.append(myNoteQuestion)
+                print("국어 오답노트:  \(myNoteKorean.count)")
                 return "국어 오답노트에 추가되었습니다."
             } else {
                 return "해당 문제가 이미 오답노트에 존재합니다."

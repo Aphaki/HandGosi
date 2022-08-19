@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
+		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
+		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
 		7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */; };
 		7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */; };
@@ -36,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
+		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
+		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestion.swift; sourceTree = "<group>"; };
 		7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
 				7F4E198E28AEB32300BB6FDE /* MyNoteQuestionView.swift */,
 				7F4E199028AEB49100BB6FDE /* MyNoteQuestionVM.swift */,
+				7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */,
+				7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */,
+				7F17A20F28AF281F006B3B21 /* MyNoteView.swift */,
 				7F87FB4228AB904D00E57AC9 /* Configuration */,
 			);
 			path = Core;
@@ -247,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
+				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
 				7F4E199128AEB49100BB6FDE /* MyNoteQuestionVM.swift in Sources */,
 				7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */,
@@ -261,11 +271,13 @@
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
+				7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
 				7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */,
 				7F4E198F28AEB32300BB6FDE /* MyNoteQuestionView.swift in Sources */,
+				7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
 				7F88E7F728A636C8001C0463 /* ExamView.swift in Sources */,
 				7F70B51728A2D08800148779 /* String.swift in Sources */,

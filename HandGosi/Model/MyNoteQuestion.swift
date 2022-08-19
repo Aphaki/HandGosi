@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MyNoteQuestion {
+class MyNoteQuestion: Identifiable {
     let year: Int
     let type: String
     let subject: String
