@@ -1018,23 +1018,15 @@ class ExamStoreDataService {
         allExams.append(exam)
     }
     
-    func saveExam2022Korean() {
+    func saveExam2022() {
         saveExam202211()
         saveExam202221()
-    }
-    func saveExam2022English() {
         saveExam202212()
         saveExam202222()
-    }
-    func saveExam2022History() {
         saveExam202213()
         saveExam202223()
     }
-    func saveExam2022() {
-        saveExam2022Korean()
-        saveExam2022English()
-        saveExam2022History()
-    }
+    
     //MARK: - 2021
     //2021 국어
     func saveExam202111() {
@@ -2033,23 +2025,16 @@ class ExamStoreDataService {
         let exam = ExamModel(id: 202123, year: 2021, examTypeID: "지방직", subjectID: "한국사", questions: questions)
         allExams.append(exam)
     }
-    func saveExam2021Korean() {
+
+    func saveExam2021() {
         saveExam202111()
         saveExam202121()
-    }
-    func saveExam2021English() {
         saveExam202112()
         saveExam202122()
-    }
-    func saveExam2021History() {
         saveExam202113()
         saveExam202123()
     }
-    func saveExam2021() {
-        saveExam2021Korean()
-        saveExam2021English()
-        saveExam2021History()
-    }
+    
     //MARK: - 2020
     //2020 국어
     func saveExam202011() {
@@ -3046,24 +3031,16 @@ class ExamStoreDataService {
         let exam = ExamModel(id: 202023, year: 2020, examTypeID: "지방직", subjectID: "한국사", questions: questions)
         allExams.append(exam)
     }
-    
-    func saveExam2020Korean() {
+
+    func saveExam2020() {
         saveExam202011()
         saveExam202021()
-    }
-    func saveExam2020English() {
         saveExam202012()
         saveExam202022()
-    }
-    func saveExam2020History() {
         saveExam202013()
         saveExam202023()
     }
-    func saveExam2020() {
-        saveExam2020Korean()
-        saveExam2020English()
-        saveExam2020History()
-    }
+    
     //MARK: - 2019
     //2019 국어
     func saveExam201911() {
@@ -4064,22 +4041,515 @@ class ExamStoreDataService {
         allExams.append(exam)
     }
     
-    func saveExam2019Korean() {
+    func saveExam2019() {
         saveExam201911()
         saveExam201921()
-    }
-    func saveExam2019English() {
         saveExam201912()
         saveExam201922()
-    }
-    func saveExam2019History() {
         saveExam201913()
         saveExam201923()
     }
-    func saveExam2019() {
-        saveExam2019Korean()
-        saveExam2019English()
-        saveExam2019History()
+    
+    //MARK: - 2018
+    //국가직
+    func saveExam201811() {
+        let questions
+        = [
+        QuestionModel(num: 1,
+                      questionText: "로마자 표기법에 관한 다음 규정이 적용된 것은?",
+                      reference: "  발음상 혼동의 우려가 있을 때에는 음절 사이에 붙임표(-)를 쓸 수 있다.",
+                      num1Text: "독도: Dok-do",
+                      num2Text: "반구대: Ban-gudae",
+                      num3Text: "독립문: Dok-rip-mun",
+                      num4Text: "인왕리: Inwang-ri",
+                      answer: 2),
+        QuestionModel(num: 2,
+                      questionText: "다음 글의 중심 내용으로 가장 적절한 것은?",
+                      reference: "  ‘언문’은 실용 범위에 제약이 있었는데, 이런 현실은 ‘언간’에도 적용된다. ‘언간’ 사용의 제약은 무엇보다 이것을 주고받은 사람의 성별(性別)에서 뚜렷이 드러난다. 15세기 후반 이래로 숱한 언간이 현전하지만 남성 간에 주고받은 언간은 찾아보기 어렵다. 이는 남성 간에는 한문 간찰이 오간 때문이나 남성이 공적인 영역을 독점했던 당시의 현실을 감안하면 ‘언문’이 공식성을 인정받지 못했던 사실과 상통한다. 결국 조선시대에는 언간의 발신자나 수신자 어느 한쪽으로 반드시 여성이 관여하는 특징을 보인다고 할 수 있다.\n  이러한 사용자의 성별 특징으로 인하여 종래 ‘언간’은 ‘내간’으로 일컬어지기도 하였다. 그러나 이러한 명칭 때문에 내간이 부녀자만을 상대로 하거나 부녀자끼리만 주고받은 편지로 오해되어서는 안 된다. 16, 17세기의 것만 하더라도 수신자는 왕이나 사대부를 비롯하여 한글 해독 능력이 있는 하층민에 이르기까지 거의 전 계층의 남성이 될 수 있었기 때문이다. 한문 간찰이 사대부 계층 이상 남성만의 전유물 이었다면 언간은 특정 계층에 관계없이 남녀 모두의 공유물 이었다고 할 수 있다.",
+                      num1Text: "‘언문’과 마찬가지로 ‘언간’의 실용 범위에는 제약이 있었다.",
+                      num2Text: "사용자의 성별 특징으로 인해 ‘언간’은 ‘내간’으로 일컬어졌다.",
+                      num3Text: "언간은 특정 계층과 성별에 관계없이 이용된 의사소통 수단이었다.",
+                      num4Text: "조선시대에는 언간의 발신자나 수신자 어느 한쪽으로 반드시 여성이 관여하는 특징을 보인다.",
+                      answer: 3),
+        QuestionModel(num: 3,
+                      questionText: "(가)~(라)에 대한 고쳐쓰기 방안으로 옳지 않은 것은?",
+                      reference: "(가) 수학 성적은 참 좋군. 국어 성적도 좋고.\n(나) 친구가 “난 학교에 안 가겠다.”고 말했다.\n(다) 동생은 가던 길을 멈추면서 나에게 달려왔다.\n(라) 대통령은 진지한 연설로서 국민을 설득했다.",
+                      num1Text: "(가): ‘수학 성적은 참 좋군.’은 국어 성적이 좋을 가능성을 배제하는 의미가 포함되어 있다. 따라서 보조사 ‘은’을 주격 조사 ‘이’로 바꿔 쓴다.",
+                      num2Text: "(나): 직접 인용문 다음이므로 인용 조사는 ‘고’가 아닌 ‘라고’를 쓴다.",
+                      num3Text: "(다): 어미 ‘-면서’는 두 동작의 동시성을 나타내지 못하므로 ‘-고’로 바꿔 쓴다.",
+                      num4Text: "(라): ‘로서’는 자격을 나타내는 기능을 하므로 수단을 나타내는 기능을 하는 조사 ‘로써’로 바꿔 쓴다.",
+                      answer: 3),
+        QuestionModel(num: 4,
+                      questionText: "<보기>를 근거로 판단할 때, ㉠~㉣ 중 적절하지 않은 것은?",
+                      reference: "  통일성은 글의 내용이 하나의 주제로 긴밀하게 관련되는 특성을 말한다. 초고의 적절성을 평가할 때에는 글의 내용이 하나의 주제를 드러낼 수 있도록 선정되었는지, 그리고 중심 내용에 부합하는 하위 내용들로 선정되었는지를 검토한다.",
+                      reference2: "  사람들은 대개 수학 과목이 어렵다고 한다. 하지만 나는 수학 시간이 재미있다. ㉠"+"바로 수업을 재미있게 진행하시는 수학 선생님 덕분이다. 수학 선생님은 유머로 딱딱한 수학 시간을 웃음바다로 만들곤 한다.".underLined+" ㉡"+"졸리는 오후 시간에 뜬금없이 외국으로 수학여행을 가자고 하여 분위기를 부드럽게 만든 후 어려운 수학 문제를 쉽게 설명한 적도 있다.".underLined+" 그래서 우리 학교에서는 수학 선생님의 인기가 시들 줄 모른다. ㉢"+"그리고 수학 선생님의 아들이 수학을 굉장히 잘한다는 소문이 나 있다.".underLined+" ㉣"+"내 수학 성적이 좋아진 것도 수학 선생님의 재미있는 수업 덕택이다.".underLined,
+                      num1Text: "㉠",
+                      num2Text: "㉡",
+                      num3Text: "㉢",
+                      num4Text: "㉣",
+                      answer: 3),
+        QuestionModel(num: 5,
+                      questionText: "다음 글에 대한 이해로 가장 적절한 것은?",
+                      reference: "(가)\n내 마음 베어 내어 저 달을 만들고져\n구만 리 장천(長天)의 번듯이 걸려 있어\n고운 님 계신 곳에 가 비추어나 보리라\n\n(나)\n열다섯 아리따운 아가씨가\n남부끄러워 이별의 말 못 하고\n돌아와 겹겹이 문을 닫고는\n배꽃 비친 달 보며 흐느낀다",
+                      num1Text: "(가)와 (나)에서 ‘달’은 사랑하는 마음을 임에게 전달하는 매개체이다.",
+                      num2Text: "(가)의 ‘고운 님’과, (나)의 ‘아리따운 아가씨’는 화자가 사랑하는 대상이다.",
+                      num3Text: "(가)의 ‘나’는 적극적인 태도로, (나)의 ‘아가씨’는 소극적인 태도로 정서를 드러낸다.",
+                      num4Text: "(가)의 ‘장천(長天)’은 사랑하는 임이 머무르는 공간이고, (나)의 ‘문’은 사랑하는 임에 대한 마음을 숨기는 공간이다.",
+                      answer: 3),
+        QuestionModel(num: 6,
+                      questionText: "㉠~㉣에 대한 이해로 가장 적절한 것은?",
+                      reference: "막차는 좀처럼 오지 않았다\n대합실 밖에는 밤새 송이눈이 쌓이고\n㉠"+"흰 보라 수수꽃 눈시린 유리창마다\n톱밥난로가 지펴지고 있었다".underLined+"\n그믐처럼 몇은 졸고\n몇은 감기에 쿨럭이고\n그리웠던 순간들을 생각하며 나는\n한 줌의 톱밥을 불빛 속에 던져 주었다\n내면 깊숙이 할 말들은 가득해도\n㉡"+"청색의 손바닥을 불빛 속에 적셔 두고\n모두들 아무 말도 하지 않았다".underLined+"\n산다는 것이 때론 술에 취한 듯\n한 두릅의 굴비 한 광주리의 사과를\n만지작거리며 귀향하는 기분으로\n침묵해야 한다는 것을\n모두들 알고 있었다\n㉢"+"오래 앓은 기침소리와\n쓴 약 같은 입술담배 연기 속에서".underLined+"\n싸륵싸륵 눈꽃은 쌓이고\n그래 지금은 모두들\n눈꽃의 화음에 귀를 적신다\n자정 넘으면\n낯설음도 뼈아픔도 다 설원인데\n단풍잎 같은 몇 잎의 차창을 달고\n밤열차는 또 어디로 흘러가는지\n㉣"+"그리웠던 순간들을 호명하며 나는\n한 줌의 눈물을 불빛 속에 던져 주었다".underLined+"\n\n-곽재구, 〖사평역에서〗-",
+                      num1Text: "㉠ - 여러 개의 난로가 지펴져 안온한 대합실의 상황을 비유적으로 표현하였다.",
+                      num2Text: "㉡ - 대조적 색채 이미지를 통해, 눈 오는 겨울 풍경의 서정적 정취를 강조하였다.",
+                      num3Text: "㉢ - 오랜 병마에 시달린 이들의 비관적 심리와 무례한 행동을 묘사하였다.",
+                      num4Text: "㉣ - 화자가 그리워하는 지난 때를 떠올리며 느끼는 정서를 화자의 행위에 투영하였다.",
+                      answer: 4),
+        QuestionModel(num: 7,
+                      questionText: "다음 글에 대한 이해로 적절하지 않은 것은?",
+                      reference: "  우리 장인님은 약이 오르면 이렇게 손버릇이 아주 못됐다. 또 사위에게 이 자식 저 자식 하는 이놈의 장인님은 어디 있느냐. 오죽해야 우리 동리에서 누굴 물론하고 그에게 욕을 안 먹는 사람은 명이 짜르다 한다. 조그만 아이들까지도 그를 돌아세 놓고 욕필이(본 이름이 봉필이니까), 욕필이, 하고 손가락질을 할 만치 두루 인심을 잃었다. 하나 인심을 정말 잃었다면 욕보다 읍의 배참봉 댁 마름으로 더 잃었다. 번이 마름이란 욕 잘 하고 사람 잘 치고 그리고 생김 생기길 호박개 같아야 쓰는 거지만 장인님은 외양에 똑 됐다. 장인께 닭 마리나 좀 보내지 않는다든가 애벌논 때 품을 좀 안 준다든가 하면 그해 가을에는 영락없이 땅이 뚝뚝 떨어진다. 그러면 미리부터 돈도 먹이고 술도 먹이고 안달재신으로 돌아치던 놈이 그 땅을 슬쩍 돌아앉는다.- 김유정, 〖봄봄〗 -",
+                      num1Text: "마름의 특성을 동물의 외양에 빗대어 낮잡아 표현했다.",
+                      num2Text: "비속어와 존칭어를 혼용하여 해학적 표현을 구사했다.",
+                      num3Text: "여러 정황을 거론하며 장인의 됨됨이가 마땅치 않음을 드러냈다.",
+                      num4Text: "장인과 소작인들 사이의 뒷거래 장면을 생생하게 묘사하여 제시했다.",
+                      answer: 4),
+        QuestionModel(num: 8,
+                      questionText: "밑줄 친 부분에 들어갈 한자어로 가장 적절한 것은?",
+                      reference: "___(이)란 이익과 관련된 갈등을 인식한 둘 이상의 주체들이 이를 해결할 의사를 가지고 모여서 합의에 이르기 위해 대안들을 조정하고 구성하는 공동 의사 결정 과정을 말한다.",
+                      num1Text: "協贊",
+                      num2Text: "協奏",
+                      num3Text: "協助",
+                      num4Text: "協商",
+                      answer: 4),
+        QuestionModel(num: 9,
+                      questionText: "밑줄 친 한자어의 쓰임이 문맥상 적절한 것은?",
+                      num1Text: "초고를 校訂하여 책을 완성하였다.",
+                      num2Text: "내용이 올바른지 서로 交差 검토하시오.",
+                      num3Text: "전자 문서에 決濟를 받아 합격자를 확정하겠습니다.",
+                      num4Text: "지금 제안한 계획은 수용할 수 없으니 提高 바랍니다.",
+                      answer: 1),
+        QuestionModel(num: 10,
+                      questionText: "㉠~㉣의 예를 추가할 때 가장 적절한 것은?",
+                      reference: "  논리학에서 비형식적 오류 유형에는 우연의 오류, 애매어의 오류, 결합의 오류, 분해의 오류 등이 있다.\n  우선 ㉠"+"우연".underLined+"의 오류란 거의 대부분의 경우에 적용되는 일반적인 원리나 규칙을 우연적인 상황으로 인해 생긴 예외적인 특수한 경우에까지도 무차별적으로 적용할 때 생기는 오류이다. 그 예로 “인간은 이성적인 동물이다. 중증 정신 질환자는 인간이다. 그러므로 중증 정신 질환자는 이성적인 동물이다.”를 들 수 있다. ㉡"+"애매어의 오류".underLined+"는 동일한 한 단어가 한 논증에서 맥락마다 서로 다른 의미를 지니는 것으로 사용될 때 생기는 오류를 말한다. “김 씨는 성격이 직선적이다. 직선적인 모든 것들은 길이를 지닌다. 고로 김 씨의 성격은 길이를 지닌다.”가 그 예이다. 한편 각각의 원소들이 개별적으로 어떤 성질을 지니고 있다는 내용의 전제로부터 그 원소들을 결합한 집합 전체도 역시 그 성질을 지니고 있다는 결론을 도출하는 경우가 ㉢"+"결합의 오류".underLined+"이고, 반대로 집합이 어떤 성질을 지니고 있다는 내용의 전제로부터 그 집합의 각각의 원소들 역시 개별적으로 그 성질을 지니고 있다는 결론을 도출하는 경우가 ㉣"+"분해의 오류".underLined+"이다. 전자의 예로는 “그 연극단 단원들 하나하나가 다 훌륭하다. 고로 그 연극단은 훌륭하다.”를, 후자의 예로는 “그 연극단은 일류급이다. 박 씨는 그 연극단 일원이다. 그러므로 박 씨는 일류급이다.”를 들 수 있다.",
+                      num1Text: "㉠ - 모든 사람은 죽는다. 소크라테스는 사람이다. 그러므로 소크라테스는 죽는다.",
+                      num2Text: "㉡ - 부패하기 쉬운 것들은 냉동 보관해야 한다. 세상은 부패하기 쉽다. 고로 세상은 냉동 보관해야 한다.",
+                      num3Text: "㉢ - 미국 아이스하키 선수단이 이번 올림픽에서 금메달을 차지했다. 그러므로 미국 선수 각자는 세계 최고 기량을 갖고 있다.",
+                      num4Text: "㉣ - 그 학생의 논술 시험 답안은 탁월하다. 그의 답안에 있는 문장 하나하나가 탁월하기 때문이다.",
+                      answer: 2),
+        QuestionModel(num: 11,
+                      questionText: "다음 글의 주된 설명 방식이 적용된 것으로 가장 적절한 것은?",
+                      reference: "  문학이 구축하는 세계는 실제 생활과 다르다. 즉 실제 생활은 허구의 세계를 구축하는 데 필요한 재료가 되지만 이 재료들이 일단 한 구조의 구성 분자가 되면 그 본래의 재료로서의 성질과 모습은 확연히 달라진다. 건축가가 집을 짓는 것을 떠올려 보자. 건축가는 어떤 완성된 구조를 생각하고 거기에 필요한 재료를 모아서 적절하게 집을 짓게 되는데, 이때 건물이라고 하는 하나의 구조를 완성하게 되면 이 완성된 구조의 구성 분자가 된 재료들은 본래의 재료와 전혀 다른 것이 된다.",
+                      num1Text: "르네상스 시대의 화가들은 원근법을 사용하여 세상을 향한 창과 같은 사실적인 그림을 그렸다. 현대 회화를 출발시켰다고 평가되는 인상주의자들이 의식적으로 추구한 것도 이러한 사실성이었다.",
+                      num2Text: "소설을 구성하는 요소는 물론 많지만 그중에서도 인물, 배경, 사건을들수있다. 인물은사건의주체, 배경은인물이행동을 벌이는 시간과 공간, 분위기 등이고, 사건은 인물이 배경 속에서 벌이는 행동의 세계이다.",
+                      num3Text: "목적을 지닌 인생은 의미 있다. 목적 없이 살아가는 사람은 험난한 인생의 노정을 완주하지 못한다. 목적을 갖고 뛰어야 마라톤에서 완주가 가능한 것처럼 우리의 인생에서도 목표를 가지고 꾸준히 노력하는 사람이 성공한다.",
+                      num4Text: "신라의 육두품 출신 가운데 학문적으로 출중한 자들이 많았다. 가령, 강수, 설총, 녹진, 최치원 같은 사람들은 육두품 출신이었다. 이들은 신분적 한계 때문에 정계보다는 예술과 학문 분야에 일찌감치 몰두하게 되었다.",
+                      answer: 3),
+        QuestionModel(num: 12,
+                      questionText: "다음 글의 내용과 부합하지 않는 것은?",
+                      reference: "  세잔이, 사라졌다고 느낀 것은 균형과 질서의 감각이다. 인상주의자들은 순간순간의 감각에만 너무 사로잡힌 나머지 자연의 굳건하고 지속적인 형태는 소홀히했다고 느꼈던 것이다. 반 고흐는 인상주의가 시각적 인상에만 집착하여 빛과 색의 광학적 성질만을 탐구한 나머지 미술의 강렬한 정열을 상실하게 될 위험에 처했다고 느꼈다. 마지막으로 고갱은 그가 본 인생과 예술 전부에 대해 철저하게 불만을 느꼈다. 그는더단순하고더솔직한어떤것을열망했고 그것을 원시인들 속에서 발견할 수 있으리라고 기대했다. 이 세 사람의 화가가 모색했던 제각각의 해법은 세 가지 현대 미술 운동의 이념적 바탕이 되었다. 세잔의 해결 방법은 프랑스에 기원을 둔 입체주의(cubism)를 일으켰고, 반 고흐의 방법은 독일 중심의 표현주의(expressionism)를 일으켰다. 고갱의 해결 방법은 다양한 형태의 프리미티비즘 (primitivism)을 이끌어 냈다.",
+                      num1Text: "세잔은 인상주의가 균형과 질서의 감각을 잃었다고 생각했다.",
+                      num2Text: "고흐는 인상주의가 강렬한 정열을 상실할 위험에 처했다고 생각했다.",
+                      num3Text: "고갱은 인상주의가 충분히 솔직하고 단순했다고 생각했다.",
+                      num4Text: "세잔, 고흐, 고갱은 인상주의의 문제를 극복하고자 각자 새로운 해결 방법을 모색했다.",
+                      answer: 3),
+        QuestionModel(num: 13,
+                      questionText: "밑줄 친 부분의 띄어쓰기가 옳지 않은 것은?",
+                      num1Text: "이처럼 "+"좋은 걸".underLined+" 어떡해?",
+                      num2Text: "제 3장의".underLined+" 내용을 요약해 주세요.",
+                      num3Text: "공사를 "+"진행한 지".underLined+" 꽤 오래되었다.",
+                      num4Text: "결혼 10년 차에".underLined+" 내집을 장만했다.",
+                      answer: 2),
+        QuestionModel(num: 14,
+                      questionText: "‘깎다’의 활용형에 적용된 음운변동에 대한 설명으로 옳은 것은?",
+                      reference: "○교체: 한 음운이 다른 음운으로 바뀌는 현상\n○ 탈락: 한 음운이 없어지는 현상\n○ 첨가: 없던 음운이 생기는 현상\n○ 축약: 두 음운이 합쳐져서 또 다른 음운 하나로 바뀌는 현상\n○도치: 두 음운의 위치가 서로 바뀌는 현상",
+                      num1Text: "‘깎는’은 교체 현상에 의해 ‘깡는’으로 발음된다.",
+                      num2Text: "‘깎아’는 탈락 현상에 의해 ‘까까’로 발음된다.",
+                      num3Text: "‘깎고’는 도치 현상에 의해 ‘깍꼬’로 발음된다.",
+                      num4Text: "‘깎지’는 축약 현상과 첨가 현상에 의해 ‘깍찌’로 발음된다.",
+                      answer: 1),
+        QuestionModel(num: 15,
+                      questionText: "다음 글에서 추론할 수 있는 내용으로 적절하지 않은 것은?",
+                      reference: "  ‘포스트휴먼’은 그 기본적인 능력이 근본적으로 현재의 인간을 넘어서기 때문에 현재의 기준으로는 더 이상 인간이라 부를 수 없는 존재를 가리키는 표현이다. 스웨덴 출신의 철학자 보스트롬은 건강 수명, 인지, 감정이라는, 인간의 세 가지 주요 능력 중 최소한 하나 이상의 능력에서 현재의 인간이 도달할 수 있는 최대한의 한계를 엄청나게 넘어설 경우 이를 ‘포스트휴먼’으로 부르자고 제안하였다.\n\n  현재 가장 뛰어난 인간이 가질 수 있는 지능보다 훨씬 더 뛰어난 지능을 가지며, 더 이상 질병에 시달리지 않고, 노화가 완전히 제거되어서 젊음과 활력을 계속 유지하는 어떤존재를생각해볼수있다. 이존재는스스로의심리 상태에 대한 조절도 자유롭게 할 수 있어서 피곤함이나 지루함을 거의 느끼지 않으며, 미움과 같은 감정을 피하고, 즐거움, 사랑, 미적 감수성, 평정 등의 태도를 유지한다. 이러한 존재가 어떤 존재일지 지금은 정확하게 상상하기 어렵지만 현재 인간의 상태로 접근할 수 없는 새로운 신체나 의식 상태에 놓여 있을 것임은 분명하다.\n\n  이러한 포스트휴먼은 완전히 인위적으로 만들어진 인공 지능일 수도 있고, 신체를 버리고 슈퍼컴퓨터 안의 정보 패턴으로 살기를 선택한 업로드의 형태일 수도 있으며, 또는 생물학적 인간에 대한 개선들이 축적된 결과일 수도 있다. 만약 생물학적 인간이 포스트휴먼이 되고자 한다면 유전 공학, 신경약리학, 항노화술, 컴퓨터-신경 인터페이스, 기억 향상 약물, 웨어러블 컴퓨터, 인지 기술과 같은 다양한 과학 기술을 이용해 우리의 두뇌나 신체에 근본적인 기술적 변형을 가해야만 할 것이다. ‘포스트휴먼’은 ‘내가 이런 능력을 가지고 있었으면 얼마나 좋을까’ 하고 누구나 한 번쯤 상상해 보았을 법한 슈퍼 인간의 모습을 기술한 용어이다.",
+                      num1Text: "포스트휴먼 개념에 따라 제시되는 미래의 존재는 과학 기술의 발전 양상에 따른 영향을 현재의 인간에 비해 더 크게 받을 것이다.",
+                      num2Text: "포스트휴먼 개념은 인간의 신체적 결함을 다양한 과학 기술을 이용해 보완하여 기술적 한계를 극복한 새로운 인간형의 탄생에 귀결될 것이다.",
+                      num3Text: "포스트휴먼은 인간의 현재 상태를 뛰어넘는 능력을 가진 새로운 존재일 것으로 예측되지만 그 형태가 어떠할지 여하는 다양한 가능성에 열려 있다.",
+                      num4Text: "포스트휴먼은 건강 수명, 인지 능력, 감정 등의 측면에서 현재의 인간보다 뛰어나기 때문에 포스트휴먼 사회에서는 인간에 대한 개념이 새로 구성될 것이다.",
+                      answer: 2),
+        QuestionModel(num: 16,
+                      questionText: "반의 관계 어휘에 대한 설명으로 옳지 않은 것은?",
+                      num1Text: "‘크다/작다’의 경우, 두 단어를 동시에 긍정하거나 부정하면 모순이 발생한다.",
+                      num2Text: "‘출발/도착’의 경우, 한 단어의 부정이 다른 쪽 단어의 부정과 모순되지 않는다.",
+                      num3Text: "‘참/거짓’의 경우, 한 단어의 부정은 다른 쪽 단어의 긍정을 함의한다.",
+                      num4Text: "‘넓다/좁다’의 경우, 한 단어의 의미가 다른 쪽 단어의 부정을 함의한다.",
+                      answer: 1),
+        QuestionModel(num: 17,
+                      questionText: "밑줄 친 부분에 대한 설명으로 적절한 것은?",
+                      reference: "말 ㉠"+"리".underLined+" 하 天命을 疑心실 므로 ㉡"+"뵈아시니".underLined+"\n놀애 브르리 ㉢"+"하".underLined+" 天命을 모실 므로 ㉣"+"알외시니".underLined+"\n\n(말씀을 아뢸 사람이 많지만, 天命을 의심하시므로 꿈으로 재촉하시니\n노래를 부를 사람이 많지만, 天命을 모르므로 꿈으로 알리시니)\n\n- 〖용비어천가〗 13장 -",
+                      num1Text: "㉠에서 ‘-이’는 주격을 나타내는 조사로 기능한다.",
+                      num2Text: "㉡에서 ‘-아시-’는 높임을 나타내는 선어말 어미로 기능한다.",
+                      num3Text: "㉢에서 ‘-’는 이유를 나타내는 연결 어미로 기능한다.",
+                      num4Text: "㉣에서 ‘-외-’는 사동을 나타내는 접미사로 기능한다.",
+                      answer: 4),
+        QuestionModel(num: 18,
+                      questionText: "다음 글의 내용과 부합하는 것은?",
+                      reference: "동양의 음식 중에는 특별한 의미가 담긴 것들이 있다. 우리나라 대표적인 명절 음식 중 하나인 송편은 반달의 모습을 본뜬 음식으로 풍년과 발전을 상징한다. 〖삼국사기〗에 따르면, 백제 의자왕 때 궁궐 땅속에서 파낸 거북이등에 쓰여 있는 ‘백제는 만월(滿月) 신라는 반달’이라는 글귀를 두고 점술사가 백제는 만월이라서 다음 날부터 쇠퇴하고 신라는 앞으로 크게 발전할 징표라고 해석했다고 한다. 결과적으로 점술가의 예언이 적중했다. 이때부터 반달은 더 나은 미래를 기원하는 뜻으로 쓰이며, 그러한 뜻을 담아 송편도 반달 모양의 떡으로 빚었다고 한다.\n  중국에서는 반달이 아닌 보름달 모양의 월병을 빚어 즐겨 먹었다. 옛날에 월병은 송편과 마찬가지로 제수 용품이었다. 점차 제례 음식으로서 위상을 잃었지만 모든 가족이 모여 보름달을 바라보면서 함께 나눠 먹는 음식으로 자리 잡았다. 이 때문에 보름달 모양의 월병은 둥근 원탁에 온가족이 모인 것을 상징한다. 한국에서 지역의 단합을 위해 수천 명 분의 비빔밥을 만들듯이 중국에서는 수천 명이 먹을 수 있는 월병을 만들 정도로 이는 의미 있는 음식으로 대접 받고 있다.",
+                      num1Text: "중국의 월병은 제수 음식으로서의 명맥을 유지하고 있다.",
+                      num2Text: "신라인들은 더 나은 미래를 기원하는 마음을 담아 송편을 빚었다.",
+                      num3Text: "중국의 월병은 한국에서 비빔밥을 만들어 먹는 것을 본떠 만든 음식이다.",
+                      num4Text: "〖삼국사기〗에 따르면 점술가의 예언 덕분에 신라가 크게 발전할 수 있었다.",
+                      answer: 2),
+        QuestionModel(num: 19,
+                      questionText: "㉠~㉣을 사건의 시간 순서에 따라 가장 적절하게 배열한 것은?",
+                      reference: "[19~20]\n  잔을 씻어 다시 술을 부으려 하는데 ㉠"+"갑자기 석양에 막대기 던지는 소리가 나거늘".underLined+" 괴이하게 여겨 생각하되, ‘어떤 사람이 올라오는고.’ 하였다. 이윽고 한 중이 오는데 눈썹이 길고 눈이 맑고 얼굴이 특이하더라. 엄숙하게 자리에 이르러 승상을 보고 예하여 왈,\n  “산야(山野) 사람이 대승상께 인사를 드리나이다.” 승상이 이인(異人)인 줄 알고 황망히 답례하여 왈, “사부는 어디에서 오신고?”\n중이 웃으며 왈,\n  “평생의 낯익은 사람을 몰라보시니 귀인이 잘 잊는다는 말이 옳도소이다.”\n  승상이 자세히 보니 과연 낯이 익은 듯하거늘 문득 깨달아 능파 낭자를 돌아보며 왈,\n  “소유가 전에 토번을 정벌할 때 꿈에 동정 용궁에 가서 잔치하고 돌아오는 길에 남악에 가서 놀았는데 한 화상이 법좌에 앉아서 불경을 강론하더니 노부께서 바로 그 노화상이냐?”\n  중이 박장대소하고 말하되,\n  “옳다. 옳다. 비록 옳지만 ㉡"+"꿈속에서 잠깐 만나본 일".underLined+"은 생각하고 ㉢"+"십 년을 같이 살던 일".underLined+"은 알지 못하니 누가 양 장원을 총명하다 하더뇨?”\n  승상이 어리둥절하여 말하되,\n  “소유가 ㉣"+"열대여섯 살 전에는 부모 슬하를 떠나지 않았고,".underLined+" 열여섯에 급제하여 줄곧 벼슬을 하였으니 동으로 연국에 사신을 갔고 서로 토번을 정벌한 것 외에는 일찍이 서울을 떠나지 않았으니 언제 사부와 십 년을 함께 살았으리오?”\n  중이 웃으며 왈,\n  “상공이 아직 춘몽에서 깨어나지 못하였도소이다.” 승상이 왈,\n  “사부는 어떻게 하면 소유를 춘몽에게 깨게 하리오?” 중이 왈,\n  “어렵지 않으니이다.”\n하고 손 가운데 돌 지팡이를 들어 난간을 두어 번 치니 갑자기 사방 산골짜기에서 구름이 일어나 누대 위에 쌓여 지척을 분변하지 못했다. 승상이 정신이 아득하여 마치 꿈에 취한 듯하더니 한참 만에 소리 질러 말하되,\n  “사부는 어찌 소유를 정도로 인도하지 않고 환술(幻術)로 희롱하나뇨?”\n  대답을 듣기도 전에 구름이 날아가니 중은 간 곳이 없고 좌우를 돌아보니 여덟 낭자 또한 간 곳이 없는지라.\n\n- 김만중, 〖구운몽〗 -",
+                      num1Text: "ᄀ→ᄃ→ᄅ→ᄂ",
+                      num2Text: "ᄀ→ᄅ→ᄃ→ᄂ",
+                      num3Text: "ᄃ→ᄅ→ᄂ→ᄀ",
+                      num4Text: "ᄅ→ᄃ→ᄂ→ᄀ",
+                      answer: 3),
+        QuestionModel(num: 20,
+                      questionText: "윗글에 대한 이해로 가장 적절한 것은?",
+                      num1Text: "‘승상’은 꿈에 남악에서 ‘중’을 보았던 기억을 떠올리며 낯이 익은 듯하다고 여기기 시작한다.",
+                      num2Text: "‘승상’은 본디 남악에서 ‘중’의 문하생으로 불도를 닦던 승려였음을 인정한 뒤 꿈에서 깨게 된다.",
+                      num3Text: "‘승상’은 ‘중’이 여덟 낭자를 사라지게 한 환술을 부렸음을 확인하고서 그의 진의를 의심한다.",
+                      num4Text: "‘승상’은 능파 낭자와 어울려 놀던 죄를 징벌한 이가 ‘중’임을 깨닫고서 ‘중’과의 관계를 부정하게 된다.",
+                      answer: 1),
+        
+        ]
+        let exam = ExamModel(id: 201811, year: 2018, examTypeID: "국가직", subjectID: "국어", questions: questions)
+        allExams.append(exam)
+    }
+    func saveExam201812() {
+        let questions
+        = [
+        QuestionModel(num: 1,
+                      questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것을 고르시오. [1~2]",
+                      reference: "A: Can I ask you for a favor?\nB: Yes, what is it?\nA: I need to get to the airport for my business trip, but my car won't start. Can you give me a lift?\nB: Sure. When do you need to be there by?\nA: I have to be there no later than 6:00.\nB: It's 4 : 30 now. ____________________________. We'll have to leave right away.",
+                      num1Text: "That's cutting it close",
+                      num2Text: "I took my eye off the ball",
+                      num3Text: "All that glitters is not gold",
+                      num4Text: "It's water under the bridge",
+                      answer: 1),
+        QuestionModel(num: 2,
+                      questionText: "",
+                      reference: "Fear of loss is a basic part of being human. To the brain, loss is a threat and we naturally take measures to avoid it. We cannot, however, avoid it indefinitely. One way to face loss is with the perspective of a stock trader. Traders accept the possibility of loss as part of the game, not the end of the game. What guides this thinking is a portfolio approach; wins and losses will both happen, but it's the overall portfolio of outcomes that matters most. When you embrace a portfolio approach, you will be __________________________________________________ because you know that they are small parts of a much bigger picture.",
+                      num1Text: "less inclined to dwell on individual losses",
+                      num2Text: "less interested in your investments",
+                      num3Text: "more averse to the losses",
+                      num4Text: "more sensitive to fluctuations in the stock market",
+                      answer: 1),
+        QuestionModel(num: 3,
+                      questionText: "다음 글의 제목으로 가장 적절한 것은?",
+                      reference: "Over the last years of traveling, I've observed how much we humans live in the past. The past is around us constantly, considering that, the minute something is manifested, it is the past. Our surroundings, our homes, our environments, our architecture, our products are all past constructs. We should live with what is part of our time, part of our collective consciousness, those things that were produced during our lives. Of course, we do not have the choice or control to have everything around us relevant or conceived during our time, but what we do have control of should be a reflection of the time in which we exist and communicate the present. The present is all we have, and the more we are surrounded by it, the more we are aware of our own presence and participation.",
+                      num1Text: "Travel: Tracing the Legacies of the Past",
+                      num2Text: "Reflect on the Time That Surrounds You Now",
+                      num3Text: "Manifestation of a Hidden Life",
+                      num4Text: "Architecture of a Futuristic Life",
+                      answer: 2),
+        QuestionModel(num: 4,
+                      questionText: "밑줄 친 부분 중 어법상 옳지 않은 것은?",
+                      reference: "It would be difficult ①"+"to imagine".underLined+" life without the beauty and richness of forests. But scientists warn we cannot take our forest for ②"+"granted.".underLined+" By some estimates, deforestation ③"+"has been resulted".underLined+" in the loss of as much as eighty percent of the natural forests of the world. Currently, deforestation is a global problem, ④"+"affecting".underLined+" wilderness regions such as the temperate rainforests of the Pacific.",
+                      num1Text: "",
+                      num2Text: "",
+                      num3Text: "",
+                      num4Text: "",
+                      answer: 3),
+        QuestionModel(num: 5,
+                      questionText: "밑줄 친 부분의 의미와 가장 가까운 것은?",
+                      reference: " Robert J. Flaherty, a legendary documentary filmmaker, tried to show how indigenous people gathered food.",
+                      num1Text: "native",
+                      num2Text: "ravenous",
+                      num3Text: "impoverished",
+                      num4Text: "itinerant",
+                      answer: 1),
+        QuestionModel(num: 6,
+                      questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것은?",
+                      reference: "Listening to music is ______________ being a rock star. Anyone can listen to music, but it takes talent to become a musician.",
+                      num1Text: "on a par with",
+                      num2Text: "a far cry from",
+                      num3Text: "contingent upon",
+                      num4Text: "a prelude to",
+                      answer: 2),
+        QuestionModel(num: 7,
+                      questionText: "다음 글의 흐름상 가장 어색한 문장은?",
+                      reference: "Biologists have identified a gene that will allow rice plants to survive being submerged in water for up to two weeks―over a week longer than at present. Plants under water for longer than a week are deprived of oxygen and wither and perish. ①"+"The scientists hope their discovery will prolong the harvests of crops in regions that are susceptible to flooding.".underLined+" ②"+"Rice growers in these flood-prone areas of Asia lose an estimated one billion dollars annually to excessively waterlogged rice paddies.".underLined+" ③"+"They hope the new gene will lead to a hardier rice strain that will reduce the financial damage incurred in typhoon and monsoon seasons and lead to bumper harvests.".underLined+" ④"+"This is dreadful news for people in these vulnerable regions, who are victims of urbanization and have a shortage of crops.".underLined+" Rice yields must increase by 30 percent over the next 20 years to ensure a billion people can receive their staple diet.",
+                      num1Text: "",
+                      num2Text: "",
+                      num3Text: "",
+                      num4Text: "",
+                      answer: 4),
+        QuestionModel(num: 8,
+                      questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것은?",
+                      reference: "A: Do you know how to drive?\nB: Of course. I'm a great driver.\nA: Could you teach me how to drive?\nB: Do you have a learner's permit?\nA: Yes, I got it just last week.\nB: Have you been behind the steering wheel yet?\nA: No, but I can't wait to _____________________.",
+                      num1Text: "take a rain check",
+                      num2Text: "get my feet wet",
+                      num3Text: "get an oil change",
+                      num4Text: "change a flat tire",
+                      answer: 2),
+        QuestionModel(num: 9,
+                      questionText: "다음 글의 내용과 일치하는 것은?",
+                      reference: "Sharks are covered in scales made from the same material as teeth. These flexible scales protect the shark and help it swim quickly in water. A shark can move the scales as it swims. This movement helps reduce the water's drag. Amy Lang, an aerospace engineer at the University of Alabama, studies the scales on the shortfin mako, a relative of the great white shark. Lang and her team discovered that the mako shark's scales differ in size and in flexibility in different parts of its body. For instance, the scales on the sides of the body are tapered―wide at one end and narrow at the other end. Because they are tapered, these scales move very easily. They can turn up or flatten to adjust to the flow of water around the shark and to reduce drag. Lang feels that shark scales can inspire designs for machines that experience drag, such as airplanes.",
+                      num1Text: "A shark has scales that always remain immobile to protect itself as it swims.",
+                      num2Text: "Lang revealed that the scales of a mako shark are utilized to lessen drag in water.",
+                      num3Text: "A mako shark has scales of identical size all over its body.",
+                      num4Text: "The scientific designs of airplanes were inspired by shark scales.",
+                      answer: 2),
+        QuestionModel(num: 10,
+                      questionText: "밑줄 친 부분 중 어법상 옳지 않은 것은?",
+                      reference: "Focus means ①"+"getting stuff done.".underLined+" A lot of people have great ideas but don't act on them. For me, the definition of an entrepreneur, for instance, is someone who can combine innovation and ingenuity with the ability to execute that new idea. Some people think that the central dichotomy in life is whether you're positive or negative about the issues ②"+"that interest or concern you.".underLined+" There's a lot of attention ③"+"paying to this question".underLined+" of whether it's better to have an optimistic or pessimistic lens. I think the better question to ask is whether you are going to do something about it or just ④"+"let life pass you by.".underLined,
+                      num1Text: "",
+                      num2Text: "",
+                      num3Text: "",
+                      num4Text: "",
+                      answer: 3),
+        QuestionModel(num: 11,
+                      questionText: "밑줄 친 부분 중 글의 흐름상 가장 어색한 것은?",
+                      reference: "Most people like to talk, but few people like to listen, yet listening well is a ①"+"rare".underLined+" talent that everyone should treasure. Because they hear more, good listeners tend to know more and to be more sensitive to what is going on around them than most people. In addition, good listeners are inclined to accept or tolerate rather than to judge and criticize. Therefore, they have ②"+"fewer".underLined+" enemies than most people. In fact, they are probably the most beloved of people. However, there are ③"+"exceptions".underLined+" to that generality. For example, John Steinbeck is said to have been an excellent listener, yet he was hated by some of the people he wrote about. No doubt his ability to listen contributed to his capacity to write. Nevertheless, the result of his listening didn't make him ④"+"unpopular.".underLined,
+                      num1Text: "",
+                      num2Text: "",
+                      num3Text: "",
+                      num4Text: "",
+                      answer: 4),
+        QuestionModel(num: 12,
+                      questionText: "다음 글의 주제로 가장 적절한 것은?",
+                      reference: "Worry is like a rocking horse. No matter how fast you go, you never move anywhere. Worry is a complete waste of time and creates so much clutter in your mind that you cannot think clearly about anything. The way to learn to stop worrying is by first understanding that you energize whatever you focus your attention on. Therefore, the more you allow yourself to worry, the more likely things are to go wrong! Worrying becomes such an ingrained habit that to avoid it you consciously have to train yourself to do otherwise. Whenever you catch yourself having a fit of worry, stop and change your thoughts. Focus your mind more productively on what you do want to happen and dwell on what's already wonderful in your life so more wonderful stuff will come your way.",
+                      num1Text: "What effects does worry have on life?",
+                      num2Text: "Where does worry originate from?",
+                      num3Text: "When should we worry?",
+                      num4Text: "How do we cope with worrying?",
+                      answer: 4),
+        QuestionModel(num: 13,
+                      questionText: "다음 글의 내용과 일치하지 않는 것은?",
+                      reference: "Students at Macaulay Honors College (MHC) don't stress about the high price of tuition. That's because theirs is free. At Macaulay and a handful of other service academies, work colleges, single-subject schools and conservatories, 100 percent of the student body receive a full tuition scholarship for all four years. Macaulay students also receive a laptop and $7,500 in “opportunities funds” to pursue research, service experiences, study abroad programs and internships. “The most important thing is not the free tuition, but the freedom of studying without the burden of debt on your back,” says Ann Kirschner, university dean of Macaulay Honors College. The debt burden, she says, “really compromises decisions students make in college, and we are giving them the opportunity to be free of that.” Schools that grant free tuition to all students are rare, but a greater number of institutions provide scholarships to enrollees with high grades. Institutions such as Indiana University Bloomington offer automatic awards to high-performing students with stellar GPAs and class ranks.",
+                      num1Text: "MHC에서는 모든 학생이 4년간 수업료를 내지 않는다.",
+                      num2Text: "MHC에서는 학생들에게 컴퓨터 구입 비용과 교외활동 비용을 합하여 $7,500를 지급한다.",
+                      num3Text: "수업료로 인한 빚 부담이 있으면 학생들이 자유롭게 공부할 수 없다고 Kirschner 학장은 말한다.",
+                      num4Text: "MHC와 달리 학업 우수자에게만 장학금을 주는 대학도 있다.",
+                      answer: 2),
+        QuestionModel(num: 14,
+                      questionText: "밑줄 친 부분의 의미와 가장 가까운 것을 고르시오. [14~15]",
+                      reference: "The police spent seven months working on the crime case but were never able to determine the identity of the "+"malefactor.".underLined,
+                      num1Text: "culprit",
+                      num2Text: "dilettante",
+                      num3Text: "pariah",
+                      num4Text: "demagogue",
+                      answer: 1),
+        QuestionModel(num: 15,
+                      questionText: "",
+                      reference: "While at first glance it seems that his friends are just leeches, they prove to be the ones he can depend on "+"through thick and thin.".underLined,
+                      num1Text: "in no time",
+                      num2Text: "from time to time",
+                      num3Text: "n pleasant times",
+                      num4Text: "in good times and bad times",
+                      answer: 4),
+        QuestionModel(num: 16,
+                      questionText: "주어진 문장이 들어갈 위치로 가장 적절한 것은?",
+                      reference: "Some remain intensely proud of their original accent and dialect words, phrases and gestures, while others accommodate rapidly to a new environment by changing their speech habits, so that they no longer “stand out in the crowd.”",
+                      reference2: "Our perceptions and production of speech change with time. ( ① ) If we were to leave our native place for an extended period, our perception that the new accents around us were strange would only be temporary. ( ② ) Gradually, we will lose the sense that others have an accent and we will begin to fit in―to accommodate our speech patterns to the new norm. ( ③ ) Not all people do this to the same degree. ( ④ ) Whether they do this consciously or not is open to debate and may differ from individual to individual, but like most processes that have to do with language, the change probably happens before we are aware of it and probably couldn't happen if we were.",
+                      num1Text: "",
+                      num2Text: "",
+                      num3Text: "",
+                      num4Text: "",
+                      answer: 4),
+        QuestionModel(num: 17,
+                      questionText: "다음 글의 내용과 일치하지 않는 것은?",
+                      reference: "Insomnia can be classified as transient, acute, or chronic. Transient insomnia lasts for less than a week. It can be caused by another disorder, by changes in the sleep environment, by the timing of sleep, severe depression, or by stress. Its consequences such as sleepiness and impaired psychomotor performance are similar to those of sleep deprivation. Acute insomnia is the inability to consistently sleep well for a period of less than a month. Acute insomnia is present when there is difficulty initiating or maintaining sleep or when the sleep that is obtained is not refreshing. These problems occur despite adequate opportunity and circumstances for sleep and they can impair daytime functioning. Acute insomnia is also known as short term insomnia or stress related insomnia. Chronic insomnia lasts for longer than a month. It can be caused by another disorder, or it can be a primary disorder. People with high levels of stress hormones or shifts in the levels of cytokines are more likely than others to have chronic insomnia. Its effects can vary according to its causes. They might include muscular weariness, hallucinations, and/or mental fatigue. Chronic insomnia can also cause double vision.\n\n* cytokines: groups of molecules released by certain cells of the immune system",
+                      num1Text: "Insomnia can be classified according to its duration.",
+                      num2Text: "Transient insomnia occurs solely due to an inadequate sleep environment.",
+                      num3Text: "Acute insomnia is generally known to be related to stress.",
+                      num4Text: "Chronic insomnia patients may suffer from hallucinations.",
+                      answer: 2),
+        QuestionModel(num: 18,
+                      questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것은?",
+                      reference: "Kisha Padbhan, founder of Everonn Education, in Mumbai, looks at his business as nation-building. India's student-age population of 230 million (kindergarten to college) is one of the largest in the world. The government spends $83 billion on instruction, but there are serious gaps. “There aren't enough teachers and enough teacher-training institutes,” says Kisha. “What children in remote parts of India lack is access to good teachers and exposure to good-quality content.” Everonn's solution? The company uses a satellite network, with two-way video and audio ____________________________________________. It reaches 1,800 colleges and 7,800 schools across 24 of India's 28 states. It offers everything from digitized school lessons to entrance exam prep for aspiring engineers and has training for job-seekers, too.",
+                      num1Text: "to improve the quality of teacher training facilities",
+                      num2Text: "to bridge the gap through virtual classrooms",
+                      num3Text: "to get students familiarized with digital technology",
+                      num4Text: "to locate qualified instructors across the nation",
+                      answer: 2),
+        QuestionModel(num: 19,
+                      questionText: "주어진 문장 다음에 이어질 글의 순서로 가장 적절한 것은?",
+                      reference: "A technique that enables an individual to gain some voluntary control over autonomic, or involuntary, body functions by observing electronic measurements of those functions is known as biofeedback.",
+                      reference2: "(A) When such a variable moves in the desired direction (for example, blood pressure down), it triggers visual or audible displays ―feedback on equipment such as television sets, gauges, or lights.\n\n(B) Electronic sensors are attached to various parts of the body to measure such variables as heart rate, blood pressure, and skin temperature.\n\n(C) Biofeedback training teaches one to produce a desired response by reproducing thought patterns or actions that triggered the displays.",
+                      num1Text: "(A)-(B)-(C)",
+                      num2Text: "(B)-(C)-(A)",
+                      num3Text: "(B)-(A)-(C)",
+                      num4Text: "(C)-(A)-(B)",
+                      answer: 3),
+        QuestionModel(num: 20,
+                      questionText: "우리말을 영어로 잘못 옮긴 것은?",
+                      num1Text: "그 연사는 자기 생각을 청중에게 전달하는 데 능숙하지 않았다.\n→ The speaker was not good at getting his ideas across to the audience.",
+                      num2Text: "서울의 교통 체증은 세계 어느 도시보다 심각하다.\n→ The traffic jams in Seoul are more serious than those in any other city in the world.",
+                      num3Text: "네가 말하고 있는 사람과 시선을 마주치는 것은 서양 국가에서 중요하다.\n→ Making eye contact with the person you are speaking to is important in western countries.",
+                      num4Text: "그는 사람들이 생각했던 만큼 인색하지 않았다는 것이 드러났다.\n→ It turns out that he was not so stingier as he was thought to be.",
+                      answer: 4),
+        ]
+        let exam = ExamModel(id: 201812, year: 2018, examTypeID: "국가직", subjectID: "영어", questions: questions)
+        allExams.append(exam)
+    }
+    func saveExam201813() {
+        let questions
+        = [
+        QuestionModel(num: 1,
+                      questionText: "시대별 지방 행정 제도에 대한 설명으로 옳은 것은?",
+                      num1Text: "통일신라 - 촌의 행정은 촌주가 담당하였다.",
+                      num2Text: "발해 - 전국 330여 개의 모든 군현에 수령을 파견하였다.",
+                      num3Text: "고려 - 촌락 지배 방식으로 면리제가 확립되었다.",
+                      num4Text: "조선 - 향리 통제를 위하여 사심관을 파견하였다.",
+                      answer: 1),
+        QuestionModel(num: 2,
+                      questionText: "다음 (갑)과 (을)의 담판 이후에 있었던 (을)의 활동으로 옳은 것은?",
+                      reference: "(갑) 그대 나라는 신라 땅에서 일어났고 고구려 땅은 우리의 소유인데 그대들이 침범했다.\n\n(을) 아니다. 우리야말로 고구려를 이은 나라이다. 그래서 나라 이름도 고려라 했고, 평양에 도읍하였다. 만일 땅의 경계로 논한다면 그대 나라 동경도 모두 우리 강역에 들어 있는 것인데 어찌 침범이라 하겠는가.",
+                      num1Text: "9성 설치",
+                      num2Text: "귀주 대첩",
+                      num3Text: "강동 6주 경략",
+                      num4Text: "천리장성 축조",
+                      answer: 3),
+        QuestionModel(num: 3,
+                      questionText: "밑줄 친 ㉠의 결과에 해당하는 사실로 옳은 것은?",
+                      reference: "(영락) 6년 병신(丙申)에 왕이 직접 수군을 이끌고 백제를 토벌하였다. (백제왕이) 우리 왕에게 항복하면서 “지금 이후로는 영원히 노객(奴客)이 되겠습니다.”라고 맹세하였다. ...(중략) ... ㉠"+"10년 경자(庚子)에 왕이 보병과 기병 5만 명을 보내어 신라를 구원하게 하였다.".underLined,
+                      num1Text: "고구려가 신라 내정간섭을 강화하였다.",
+                      num2Text: "백제가 고구려의 평양성을 공격하였다.",
+                      num3Text: "신라가 관산성 전투에서 백제 성왕을 살해하였다.",
+                      num4Text: "금관가야가 가야 지역의 중심 세력으로 대두하였다.",
+                      answer: 1),
+        QuestionModel(num: 4,
+                      questionText: "(가)와(나)를 주장한 각 인물에 대한 설명으로 옳은 것은?",
+                      reference: "(가) 우리는 남방만이라도 임시 정부 혹은 위원회 같은 것을 조직하여 38도선 이북에서 소련이 철퇴하도록 세계 공론에 호소해야 할 것이다.\n\n(나) 나는 통일된 조국을 달성하려다 38도선을 베고 쓰러질지언정 일신의 구차한 안일을 위하여 단독 정부를 세우는 데는 협력하지 아니하겠다.",
+                      num1Text: "(가) - 5.10 총선거에 불참하였다.",
+                      num2Text: "(가) - 좌우 합작 7원칙을 지지하였다.",
+                      num3Text: "(나) - 탁치 반대 국민 총동원 위원회를 조직하였다.",
+                      num4Text: "(나) - 남조선 과도 입법 의원의 의장을 역임하였다.",
+                      answer: 3),
+        QuestionModel(num: 5,
+                      questionText: "다음 (가)에 대한 설명으로 옳지 않은 것은?",
+                      reference: "예전에 성종이 (가) 시행에 따르는 잡기가 정도(正道)에 어긋나는데다가 번거롭고 요란스럽다 하여 이를 모두 폐지 하였다. ...(중략) ... 이것을 폐지한 지가 거의 30년이나 되었는데, 이때에 와서 정당문학 최항이 청하여 이를 부활시켰다.",
+                      num1Text: "국제 교류의 장이었다.",
+                      num2Text: "정월 보름에 개최되었다.",
+                      num3Text: "토속 신에게 제사를 지냈다.",
+                      num4Text: "훈요 10조에서 시행할 것을 강조하였다.",
+                      answer: 2),
+        QuestionModel(num: 6,
+                      questionText: "다음과 같이 주장한 인물에 대한 설명으로 옳은 것은?",
+                      reference: "달은 하나이나 냇물의 갈래는 만 개가 된다. ...(중략)... 나는그냇물이세상사람들이라는것을안다. 빛을받아 비추어서 드러나는 것은 사람들의 상이다. 달이라는 것은 태극이요, 태극은 나이다.",
+                      num1Text: "〖해동농서〗를 편찬하도록 하였다.",
+                      num2Text: "갑인예송에서 왕권을 강조하며 기년복을 주장하였다.",
+                      num3Text: "이순신에게 현충이라는 시호를 내리고 강감찬 사당을 건립하였다.",
+                      num4Text: "민간의 광산개발 참여를 허용하는 설점수세제를 처음 실시하였다.",
+                      answer: 1),
+        QuestionModel(num: 7,
+                      questionText: "밑줄 친‘국왕’의 재위기간에 있었던 일로 옳은 것은?",
+                      reference: "지금 "+"국왕".underLined+"께서 풍속을 바꾸려는 데에 뜻이 있으므로 신은 지극하신 뜻을 받들어 완악한 풍속을 고치고자 합니다. ...(중략)... 〖이륜행실(二倫行實)〗로 말하면 신이 전에 승지가 되었을 때에 간행할 것을 청했습니다. 삼강이 중한 것은 아무리 어리석은 부부라도 모두 알고 있으나, 붕우. 형제의 이륜에 이르러서는 평범한 사람들이 제대로 모르는 경우가 있습니다.",
+                      num1Text: "주세붕이 백운동 서원을 세웠다.",
+                      num2Text: "김시습이 〖금오신화〗를 저술하였다.",
+                      num3Text: "〖국조오례의〗가 편찬되고 〖동국여지승람〗이 만들어졌다.",
+                      num4Text: "문화와 제도를 유교식으로 갖추기 위해 집현전을 창설하였다.",
+                      answer: 1),
+        QuestionModel(num: 8,
+                      questionText: "다음의 법률에 근거하여 실시된 식민지 정책으로 옳지 않은 것은?",
+                      reference: "제4조 정부는 전시에 국가총동원상 필요하다고 인정될 때에는 칙령이 정하는 바에 따라서 제국 신민을 징용하여 총동원 업무에 종사하도록 할 수 있다.\n\n제7조 정부는 칙령이 정하는 바에 따라 노동 쟁의의 예방 혹은 해결에 관한 명령, 작업소 폐쇄, 작업 혹은 노무의 중지 ... (중략) ... 등을 명할 수 있다.",
+                      num1Text: "물자통제령을 공포하여 배급제를 확대하였다.",
+                      num2Text: "육군특별지원병령을 제정하여 지원병을 선발하였다.",
+                      num3Text: "금속류회수령을 제정하여 주요 군수 물자를 공출하였다.",
+                      num4Text: "국민징용령을 공포하여 강제적인 노무 동원을 실시하였다.",
+                      answer: 2),
+        QuestionModel(num: 9,
+                      questionText: "(가) 시기에 해당되는 사실로 옳은 것은?",
+                      reference: "방금 안핵사 이용태의 보고에 따르면 “죄인들이 대다수 도망치는 바람에 조사하지 못하였다.”라고 하였다.\n- 〖승정원일기〗 -\n    ⬇︎\n   (가)\n    ⬇︎\n전봉준은 금구 원평에 앉아 (전라) 우도에 호령하였으며, 김개남은 남원성에 앉아 좌도를 통솔하였다.\n-〖갑오약력〗 -",
+                      num1Text: "논산에서 남.북접의 동학군이 집결하였다.",
+                      num2Text: "우금치 전투에서 동학군이 일본군과 격전을 벌였다.",
+                      num3Text: "동학교도가 궁궐 앞에서 교조 신원을 주장하는 집회를 열었다.",
+                      num4Text: "백산에서 전봉준이 보국안민을 위해 궐기하라는 통문을 보냈다.",
+                      answer: 4),
+        QuestionModel(num: 10,
+                      questionText: "(가) 기구가 존속한 시기의 사람들이 볼 수 있었던 사실로 적절한 것은?",
+                      reference: "지주는 조선 총독이 정하는 기간 내에 (가) 혹은 그것의 출장소 직원에게 신고해야 한다. 만약 제출을 태만히 하거나 신고서를 제출하지 않을 시에는 당국에서 해당 토지에 대해 소유권의 유무 등을 조사하다가 소유자를 알지 못하는 경우에 지주가 없는 것으로 간주하여 국유지로 편입할 수 있다.",
+                      num1Text: "조선청년연합회에 출입하는 일본인 고문",
+                      num2Text: "신문에 연재중인 소설 무정을 읽는 학생",
+                      num3Text: "연초 전매 제도에 따라 조합에 수매되는 담배",
+                      num4Text: "의열단에 가입하는 신흥 무관 학교 출신 청년",
+                      answer: 2),
+        QuestionModel(num: 11,
+                      questionText: "밑줄 친 ‘이 지도’에 대한 설명으로 옳지 않은 것은?",
+                      reference: "1402년 제작된 "+"이 지도".underLined+"는 조선 학자들에 의해 제작된 세계 지도이다. 권근의 글에 의하면 중국에서 수입한 ‘성교광피도’와 ‘혼일강리도’를 기초로 하고, 우리나라와 일본의 지도를 합해서 제작하였다고 한다.",
+                      num1Text: "유럽과 아프리카 대륙까지 묘사하였다.",
+                      num2Text: "중국이 세계의 중심이라는 중화사상이 반영되었다.",
+                      num3Text: "이 지도의 작성에는 이슬람 지도학의 영향이 있었다.",
+                      num4Text: "우리나라에 해당하는 부분은 백리척을 사용하여 과학화에 기여하였다.",
+                      answer: 4),
+        QuestionModel(num: 12,
+                      questionText: "다음 왕의 재위기간에 있었던 사실로 옳은 것은?",
+                      reference: "○ 왕 원년: 소판 김흠돌, 파진찬 흥원, 대아찬 진공 등이 반역을 도모하다가 사형을 당하였다.\n○ 왕 9년: 달구벌로 서울을 옮기려다 실현하지 못하였다.\n\n - 〖삼국사기〗 -",
+                      num1Text: "사방에 우역을 설치하였다.",
+                      num2Text: "수도에 서시와 남시를 설치하였다.",
+                      num3Text: "국학을 설치하여 유학을 교육하였다.",
+                      num4Text: "관료에게 지급하는 녹읍을 부활하였다.",
+                      answer: 3),
+        QuestionModel(num: 13,
+                      questionText: "다음은 발해사에 대한 중국과 러시아 입장이다. 한국사의 입장에서 이를 반박하는 증거로 적절한 것은?",
+                      reference: "○ 중 국: 소수 민족 지역의 분리 독립 의식을 약화시키려고, 국가라기보다는 당 왕조에 예속된 지방 민족 정권 차원에서 본다.\n\n○ 러시아: 중국 문화보다는 중앙 아시아나 남부 시베리아의 영향을 강조하여 러시아의 역사에 편입시키려 한다.",
+                      num1Text: "신라와의 교통로",
+                      num2Text: "상경성 출토 온돌 장치",
+                      num3Text: "유학 교육 기관인 주자감",
+                      num4Text: "3성 6부의 중앙 행정 조직",
+                      answer: 2),
+        QuestionModel(num: 14,
+                      questionText: "신라 문무왕의 유언이다. 밑줄 친 ᄀ~ᄅ의 내용과 부합하지 않는 것은?",
+                      reference: "과인은 운수가 어지럽고 전쟁을 하여야 하는 때를 만나서 ㉠"+"서쪽을 정벌하고".underLined+" ㉡"+"북쪽을 토벌하여".underLined+" 영토를 안정시켰고, ㉢"+"배반하는 무리를 토벌하고".underLined+" ㉣"+"협조하는 무리를 불러들여".underLined+" 멀고 가까운 곳을 모두 안정시켰다.- 〖삼국사기〗 -",
+                      num1Text: "㉠ - 태자로서 참전하여 백제를 멸망시켰다.",
+                      num2Text: "㉡ - 당나라 군대와 함께 고구려를 멸망시켰다.",
+                      num3Text: "㉢ - 백제 부흥 운동을 주도한 복신을 공격하였다.",
+                      num4Text: "㉣ - 임존성에서 저항하던 지수신의 투항을 받아주었다.",
+                      answer: 4),
+        QuestionModel(num: 15,
+                      questionText: "다음은 대한제국 시기에 설립된 어느 회사에 관한 내용이다. 밑줄 친 ‘이 회사’에 대한 설명으로 옳은 것은?",
+                      reference: "○ "+"이 회사".underLined+"의 고금(股金, 주권)은 액면 50원씩이고, 총 1천만 원을 발행하고, 주당 불입금은 5년간 총 10회 5원씩 나눠서 낸다.\n\n○ "+"이 회사".underLined+"는 국내 진황지 개간, 관개 사무와 산림천택 (山林川澤), 식양채벌(殖養採伐) 등의 사무 이외에 금. 은.동.철.석유 등의 각종 채굴 사무에 종사한다.",
+                      num1Text: "종로의 백목전 상인이 주도가 된 직조 회사였다.",
+                      num2Text: "역둔토나 국유 미간지를 약탈하려는 국책 회사였다.",
+                      num3Text: "황무지 개간권 요구에 대응하여 설립된 특허 회사였다.",
+                      num4Text: "외국 상인과의 상권 경쟁을 위해 시전 상인이 만든 척식 회사였다.",
+                      answer: 3),
+        QuestionModel(num: 16,
+                      questionText: "조선 성리학의 학설이나 동향을 시기순으로 바르게 나열한 것은?",
+                      reference: "ᄀ.현실세계를 구성하는 기를 중시하여 경장(更張)을 주장하였다.\n\nᄂ.우주를 무한하고 영원한 기로 보는 ‘태허(太虛)설’을 제기하였다.\n\nᄃ.정지운의 〖천명도〗 해석을 둘러싸고 사단칠정 논쟁이 시작되었다.\n\nᄅ.향약 보급 운동과 함께 일상에서의 실천 윤리가 담긴 〖소학〗을 중시하였다.",
+                      num1Text: "ᄂ→ᄀ→ᄅ→ᄃ",
+                      num2Text: "ᄂ→ᄅ→ᄀ→ᄃ",
+                      num3Text: "ᄅ→ᄂ→ᄃ→ᄀ",
+                      num4Text: "ᄅ→ᄃ→ᄂ→ᄀ",
+                      answer: 3),
+        QuestionModel(num: 17,
+                      questionText: "일제강점기 조선인의 생활 모습으로 옳지 않은 것은?",
+                      num1Text: "도시 외곽의 토막촌에는 빈민이 살았다.",
+                      num2Text: "번화가에서 최신 유행의 모던걸과 모던보이가 활동하였다.",
+                      num3Text: "몸뻬를 입은 여성들이 근로보국대에서 강제 노동을 하였다.",
+                      num4Text: "상류층이 한식 주택을 2층으로 개량한 영단 주택에 모여 살았다.",
+                      answer: 4),
+        QuestionModel(num: 18,
+                      questionText: "(가)와 (나)는 외국과 맺은 각서이다. 두 각서 사이에 있었던 사실로 옳은 것은?",
+                      reference: "(가) 일본 측은 한국 측에 무상원조 3억 달러, 유상원조 (해외경제협력기금) 2억 달러, 그리고 수출입은행 차관 1억 달러 이상을 제공한다.\n\n(나) 미국 정부가 한국과 약속했던 1억 5천만 달러 규모의 차관 공여와 더불어 ...(중략)... 한국의 경제 발전을 돕기 위한 추가 AID차관을 제공한다.",
+                      num1Text: "경부 고속 국도가 개통되었다.",
+                      num2Text: "마산에 수출 자유 지역이 건설되었다.",
+                      num3Text: "국가 기간 산업인 울산 정유 공장이 가동되었다.",
+                      num4Text: "유엔의 지원으로 충주에 비료 공장을 설립하였다.",
+                      answer: 3),
+        QuestionModel(num: 19,
+                      questionText: "다음은 고려시대 진화의 시이다. 이 시인과 교류를 통해 자부심을 공유한 인물의 작품은?",
+                      reference: "서쪽 송나라는 이미 기울고 북쪽 오랑캐는 아직 잠자고 있네. 앉아서 문명의 아침을 기다려라, 하늘의 동쪽에서 태양이 떠오르네.",
+                      num1Text: "삼국사기",
+                      num2Text: "동명왕편",
+                      num3Text: "제왕운기",
+                      num4Text: "삼국유사",
+                      answer: 2),
+        QuestionModel(num: 20,
+                      questionText: "다음 해외 견문 기록을 시기순으로 바르게 나열한 것은?",
+                      reference: "ᄀ. 〖표해록〗\nᄂ. 〖열하일기〗\nᄃ. 〖서유견문〗\nᄅ. 〖해동제국기〗",
+                      num1Text: "ᄀ→ᄂ→ᄅ→ᄃ",
+                      num2Text: "ᄀ→ᄅ→ᄃ→ᄂ",
+                      num3Text: "ᄅ→ᄀ→ᄂ→ᄃ",
+                      num4Text: "ᄅ→ᄃ→ᄀ→ᄂ",
+                      answer: 3),
+        
+        ]
+        let exam = ExamModel(id: 201813, year: 2018, examTypeID: "국가직", subjectID: "한국사", questions: questions)
+        allExams.append(exam)
     }
 }
     
