@@ -17,41 +17,39 @@ struct MyNoteSubjectSelectView: View {
         VStack(spacing: 20) {
             Spacer()
             Spacer()
-            Text("국  어")
-                .font(.largeTitle)
-                .padding(30)
-                .background(Circle().opacity(0.1))
-                .onTapGesture {
-                    vm.subscribeKorean()
-                    showNextView.toggle()
-                }
+            NavigationLink(destination: {
+                MyNoteView(myNotes: vm.myKoreanNote)
+            },
+                           label: { Text("국  어")
+                    .font(.largeTitle)
+                    .padding(30)
+                .background(Circle().opacity(0.1)) })
             HStack {
                 Spacer()
-                Text("영  어")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(Circle().opacity(0.1))
-                    .onTapGesture {
-                        vm.subscribeEnglish()
-                        showNextView.toggle()
-                    }
-                Text("한국사")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(Circle().opacity(0.1))
-                    .onTapGesture {
-                        vm.subscribeHistory()
-                        showNextView.toggle()
-                    }
+                NavigationLink(
+                    destination: {
+                        MyNoteView(myNotes: vm.myEnglishNote)
+                    },
+                    label: { Text("영  어")
+                            .font(.largeTitle)
+                            .padding(30)
+                            .background(Circle().opacity(0.1)) }
+                )
+                NavigationLink(
+                    destination: {
+                        MyNoteView(myNotes: vm.myHistoryNote)
+                    },
+                    label: { Text("한국사")
+                            .font(.largeTitle)
+                            .padding(30)
+                            .background(Circle().opacity(0.1)) }
+                )
                 Spacer()
             }
             Spacer()
             Spacer()
             Spacer()
         }
-        .background(
-            NavigationLink(isActive: $showNextView, destination: { MyNoteView(myNotes: vm.myNote) }, label: { EmptyView() })
-        )
         .navigationTitle("오답노트")
     }
 }

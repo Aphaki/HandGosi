@@ -9,17 +9,26 @@ import Foundation
 import Combine
 
 class MyNoteSubjectSelectVM: ObservableObject {
-    @Published var myNote: [MyNoteQuestion] = []
+    
+    @Published var myKoreanNote: [MyNoteQuestion] = []
+    @Published var myEnglishNote: [MyNoteQuestion] = []
+    @Published var myHistoryNote: [MyNoteQuestion] = []
     
     var noteService = MyNoteService.shared
     
     private var subscription = Set<AnyCancellable>()
     
+    init() {
+        subscribeKorean()
+        subscribeEnglish()
+        subscribeHistory()
+    }
+    
     func subscribeKorean() {
         noteService.$myNoteKorean
             .receive(on: DispatchQueue.main)
             .sink { myNoteQuestions in
-                self.myNote = myNoteQuestions
+                self.myKoreanNote = myNoteQuestions
             }
             .store(in: &subscription)
     }
@@ -27,7 +36,7 @@ class MyNoteSubjectSelectVM: ObservableObject {
         noteService.$myNoteEnglish
             .receive(on: DispatchQueue.main)
             .sink { myNoteQuestions in
-                self.myNote = myNoteQuestions
+                self.myEnglishNote = myNoteQuestions
             }
             .store(in: &subscription)
     }
@@ -35,7 +44,7 @@ class MyNoteSubjectSelectVM: ObservableObject {
         noteService.$myNoteHistory
             .receive(on: DispatchQueue.main)
             .sink { myNoteQuestions in
-                self.myNote = myNoteQuestions
+                self.myHistoryNote = myNoteQuestions
             }
             .store(in: &subscription)
     }

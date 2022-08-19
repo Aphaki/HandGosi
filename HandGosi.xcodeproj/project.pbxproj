@@ -105,7 +105,6 @@
 				7F88E7F428A62C13001C0463 /* ExamSelectView.swift */,
 				7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */,
 				7F88E7F628A636C8001C0463 /* ExamView.swift */,
-				7F09EFE228AF72BE008F601D /* MyNoteVM.swift */,
 				7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
 				7FD21D7D28AD2F720070B0A4 /* ScoredQuestionView.swift */,
@@ -115,6 +114,7 @@
 				7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */,
 				7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */,
 				7F17A20F28AF281F006B3B21 /* MyNoteView.swift */,
+				7F09EFE228AF72BE008F601D /* MyNoteVM.swift */,
 				7F87FB4228AB904D00E57AC9 /* Configuration */,
 			);
 			path = Core;

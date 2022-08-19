@@ -14,7 +14,6 @@ struct MyNoteQuestionView: View {
     
     init(myNoteQuestion: MyNoteQuestion) {
         _vm = StateObject(wrappedValue: MyNoteQuestionVM(myNoteQuestion: myNoteQuestion))
-
     }
     
     var body: some View {
