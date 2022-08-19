@@ -92,20 +92,23 @@ struct MainView: View {
                             }
                         }
                     if isClicked {
-                        NavigationLink(isActive: $showMyNote) {
-                            MyNoteSubjectSelectView()
-                        } label: {
-                            Text("오답노트")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                                .padding(10)
-                                .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
-                                .position(CGPoint(x: UIScreen.main.bounds.width * 0.83, y: UIScreen.main.bounds.height * 0.1))
-                                .onTapGesture {
-                                    showMyNote.toggle()
+                        HStack {
+                            Spacer()
+                            NavigationLink(isActive: $showMyNote) {
+                                MyNoteSubjectSelectView()
+                            } label: {
+                                Text("오답노트")
+                                    .font(.title3)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .padding(10)
+                                    .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
+                                    .padding(.trailing, 15)
                                 }
-                            }
+                        }
+                        
+                        
+                        
                         }
 
                     

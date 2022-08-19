@@ -11,46 +11,6 @@ class ExamStoreDataService {
     
     @Published var allExams: [ExamModel] = []
     
-    @Published var myNoteKorean: [MyNoteQuestion] = []
-    @Published var myNoteEnglish: [MyNoteQuestion] = []
-    @Published var myNoteHistory: [MyNoteQuestion] = []
-    
-    //MARK: - 오답노트 저장
-    func myNoteSave(myNoteQuestion: MyNoteQuestion) -> String {
-        if myNoteQuestion.subject == "국어" {
-            let idFilteredNote = myNoteKorean.filter({ noteQuestion in
-                return noteQuestion.question.id == myNoteQuestion.question.id
-            })
-            if idFilteredNote.isEmpty {
-                myNoteKorean.append(myNoteQuestion)
-                print("국어 오답노트:  \(myNoteKorean.count)")
-                return "국어 오답노트에 추가되었습니다."
-            } else {
-                return "해당 문제가 이미 오답노트에 존재합니다."
-            }
-        }
-        else if myNoteQuestion.subject == "영어" {
-            if myNoteEnglish.filter({ noteQuestion in
-                return noteQuestion.question.id == myNoteQuestion.question.id
-            }).isEmpty {
-                myNoteEnglish.append(myNoteQuestion)
-                return "영어 오답노트에 추가되었습니다."
-            } else {
-                return "해당 문제가 이미 오답노트에 존재합니다."
-            }
-        }
-        else {
-            if myNoteHistory.filter({ noteQuestion in
-                return noteQuestion.question.id == myNoteQuestion.question.id
-            }).isEmpty {
-                myNoteHistory.append(myNoteQuestion)
-                return "한국사 오답노트에 추가되었습니다."
-            } else {
-                return "해당 문제가 이미 오답노트에 존재합니다."
-            }
-        }
-    }
-    
     //MARK: - 시험지 저장
     func saveAllExam() {
         saveExam2019()

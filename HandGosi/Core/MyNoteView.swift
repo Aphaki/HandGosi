@@ -9,16 +9,20 @@ import SwiftUI
 
 struct MyNoteView: View {
     
-    @State var myNotes: [MyNoteQuestion]
+    @StateObject var vm: MyNoteVM
+    
+    init(myNotes: [MyNoteQuestion]) {
+        _vm = StateObject(wrappedValue: MyNoteVM(myNotes: myNotes))
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                ForEach(myNotes) {myNoteQuestion in
+                ForEach(vm.myNotes) {myNoteQuestion in
                     MyNoteQuestionView(myNoteQuestion: myNoteQuestion)
                 }
             }
-        }.navigationTitle(myNotes.first?.subject ?? "노트가 비어있습니다.")
+        }.navigationTitle(vm.myNotes.first?.subject ?? "노트가 비어있습니다.")
     }
 }
 

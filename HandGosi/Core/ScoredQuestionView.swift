@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ScoredQuestionView: View {
     
-    
     @StateObject var vm: QuestionVM
     
     init(question: QuestionModel, year: Int, type: String, subject: String) {

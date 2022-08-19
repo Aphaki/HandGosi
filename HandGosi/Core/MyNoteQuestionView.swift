@@ -28,6 +28,10 @@ struct MyNoteQuestionView: View {
                         Text("오답노트에서 제거")
                             .padding(5)
                             .background(RoundedRectangle(cornerRadius: 10).opacity(0.2).shadow(color: .black, radius: 10, x: 0, y: 10))
+                            .onTapGesture {
+                                // 해당 문제 오답노트에서 제거
+                                vm.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)
+                            }
                     }
                     HStack {
                         Text("\(vm.myNoteQuestion.question.num)" + ".")
