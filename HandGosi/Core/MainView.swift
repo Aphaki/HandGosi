@@ -75,10 +75,22 @@ struct MainView: View {
                             }
                         Text("2018")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2018
+                                }
+                                goToNextView.toggle()
+                            }
                     }.font(.title2)
                     HStack(spacing: 30) {
                         Text("2017")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2017
+                                }
+                                goToNextView.toggle()
+                            }
                     }.font(.title3)
                 }
                 ZStack {
@@ -120,22 +132,64 @@ struct MainView: View {
                     HStack(spacing: 30) {
                         Text("2016")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2016
+                                }
+                                goToNextView.toggle()
+                            }
                         Text("2015")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2015
+                                }
+                                goToNextView.toggle()
+                            }
                     }.font(.title3)
                     HStack(spacing: 30) {
                         Text("2014")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2014
+                                }
+                                goToNextView.toggle()
+                            }
                         Text("2013")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2013
+                                }
+                                goToNextView.toggle()
+                            }
                     }.font(.title2)
                     HStack(spacing: 30) {
                         Text("2012")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2012
+                                }
+                                goToNextView.toggle()
+                            }
                         Text("2011")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2011
+                                }
+                                goToNextView.toggle()
+                            }
                         Text("2010")
                             .yearText()
+                            .onTapGesture {
+                                vm.filteredExams = vm.allExams.filter { exam in
+                                    return exam.year == 2010
+                                }
+                                goToNextView.toggle()
+                            }
                     }.font(.title)
                 }
             } // VStack

@@ -27,14 +27,14 @@ struct QuestionView: View {
                     Text(vm.question.reference!)
                         .lineSpacing(5)
                         .padding(8)
-                        .font(.custom("NanumMyeongjo-YetHangul", size: 15))
+                        .font(.custom("NanumMyeongjo-YetHangul", size: 16))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
                 if vm.question.reference2 != nil {
                     Text(vm.question.reference2!)
                         .lineSpacing(5)
                         .padding(8)
-                        .font(.custom("NanumMyeongjo-YetHangul", size: 15))
+                        .font(.custom("NanumMyeongjo-YetHangul", size: 16))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
                 if vm.question.imgModel != nil {

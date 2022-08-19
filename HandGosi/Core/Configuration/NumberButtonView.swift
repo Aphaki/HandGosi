@@ -29,7 +29,7 @@ struct NumberButtonView: View {
                         }
                     }
                 Text(text)
-                    .font(.headline)
+                    .font(.custom("NanumMyeongjo-YetHangul", size: 16))
                 
             }
         }
