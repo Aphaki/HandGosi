@@ -96,17 +96,7 @@ struct ScoredQuestionView: View {
                     }
                     Spacer()
                 }
-//                if vm.addNoteText != nil {
-//                    HStack {
-//                        Spacer()
-//                        Text(vm.addNoteText!)
-//                            .padding()
-//                            .foregroundColor(.white)
-//                            .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
-//                        Spacer()
-//                    }
-//
-//                }
+
             }
         }.padding(15)
     }
