@@ -25,33 +25,10 @@ struct ScoredQuestionView: View {
                     HStack {
                         Spacer()
                         if vm.addNoteText != nil {
-                            HStack {
-                                Spacer()
-                                Text(vm.addNoteText!)
-                                    .padding(8)
-                                    .font(.caption)
-                                    .foregroundColor(.white)
-                                    .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
-                                Spacer()
-                            }
-                            
+                            myNoteAddPopUpText
                         }
-                        Button {
-                            let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
-                            vm.addNoteText = addNoteString
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                                withAnimation(.easeInOut) {
-                                    vm.addNoteText = nil
-                                }
-                            }
-                        } label: {
-                            Text("오답노트 추가")
-                                .padding(5)
-                                .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
-                        }
-                        
+                        addMyNoteButton
                     }
-                    
                     
                     HStack {
                         Text("\(vm.question.num)" + ".")
@@ -96,7 +73,6 @@ struct ScoredQuestionView: View {
                     }
                     Spacer()
                 }
-
             }
         }.padding(15)
     }
@@ -115,6 +91,32 @@ extension ScoredQuestionView {
             .rotationEffect(Angle(degrees: 135))
             .foregroundColor(.red).opacity(0.7)
             .offset(y: 50)
+    }
+    var myNoteAddPopUpText: some View {
+        HStack {
+            Spacer()
+            Text(vm.addNoteText!)
+                .padding(8)
+                .font(.caption)
+                .foregroundColor(.white)
+                .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
+            Spacer()
+        }
+    }
+    var addMyNoteButton: some View {
+        Button {
+            let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
+            vm.addNoteText = addNoteString
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                withAnimation(.easeInOut) {
+                    vm.addNoteText = nil
+                }
+            }
+        } label: {
+            Text("오답노트 추가")
+                .padding(5)
+                .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
+        }
     }
 }
 

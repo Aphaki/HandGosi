@@ -11,9 +11,31 @@ class MyNoteService {
     
     static let shared = MyNoteService()
     
-    @Published var myNoteKorean: [MyNoteQuestion] = []
-    @Published var myNoteEnglish: [MyNoteQuestion] = []
-    @Published var myNoteHistory: [MyNoteQuestion] = []
+    @Published var myNoteKorean: [MyNoteQuestion] = [] {
+        didSet {
+            saveMyNoteKorean()
+        }
+    }
+    @Published var myNoteEnglish: [MyNoteQuestion] = [] {
+        didSet {
+            saveMyNoteEnglish()
+        }
+    }
+    @Published var myNoteHistory: [MyNoteQuestion] = [] {
+        didSet {
+            saveMyNoteHistory()
+        }
+    }
+    
+    let noteKeyKorean = "Korean"
+    let noteKeyEnglish = "English"
+    let noteKeyHistory = "History"
+    
+    init() {
+        fetchMyNoteKorean()
+        fetchMyNoteEnglish()
+        fetchMyNoteHistory()
+    }
     
     //MARK: - 오답노트 저장
     func myNoteSave(myNoteQuestion: MyNoteQuestion) -> String {
@@ -68,5 +90,55 @@ class MyNoteService {
         }
     }
     
+    //MARK: - UserDefaults Method
+    func saveMyNoteKorean() {
+        if let encodedData = try? JSONEncoder().encode(myNoteKorean) {
+            UserDefaults.standard.set(encodedData, forKey: noteKeyKorean)
+        } else {
+            print("Encode Error occured")
+        }
+    }
+    func fetchMyNoteKorean() {
+        guard
+            let data = UserDefaults.standard.data(forKey: noteKeyKorean),
+            let savedNotes = try? JSONDecoder().decode([MyNoteQuestion].self, from: data) else {
+            print("Decode Error occured")
+            return }
+        self.myNoteKorean = savedNotes
+    }
     
+    
+    func saveMyNoteEnglish() {
+        if let encodedData = try? JSONEncoder().encode(myNoteEnglish) {
+            UserDefaults.standard.set(encodedData, forKey: noteKeyEnglish)
+        } else {
+            print("Encode Error occured")
+        }
+    }
+    func fetchMyNoteEnglish() {
+        guard
+            let data = UserDefaults.standard.data(forKey: noteKeyEnglish),
+            let savedNotes = try? JSONDecoder().decode([MyNoteQuestion].self, from: data) else {
+            print("Decode Error occured")
+            return }
+        self.myNoteEnglish = savedNotes
+    }
+    
+    
+    
+    func saveMyNoteHistory() {
+        if let encodedData = try? JSONEncoder().encode(myNoteHistory) {
+            UserDefaults.standard.set(encodedData, forKey: noteKeyHistory)
+        } else {
+            print("Encode Error occured")
+        }
+    }
+    func fetchMyNoteHistory() {
+        guard
+            let data = UserDefaults.standard.data(forKey: noteKeyHistory),
+            let savedNotes = try? JSONDecoder().decode([MyNoteQuestion].self, from: data) else {
+            print("Decode Error occured")
+            return }
+        self.myNoteHistory = savedNotes
+    }
 }
