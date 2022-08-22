@@ -99,6 +99,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F56350528B3719F008AD29E /* ExamStore */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
+				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
+				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
+				7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */,
+				7F5634FF28B36E07008AD29E /* ExamStore2019.swift */,
+				7F56350128B36F3D008AD29E /* ExamStore2018.swift */,
+				7F56350328B37040008AD29E /* ExamStore2017.swift */,
+			);
+			path = ExamStore;
+			sourceTree = "<group>";
+		};
 		7F70B51028A23F4C00148779 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +121,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		7F87FB4128AB8FDC00E57AC9 /* Core */ = {
+		7F87FB4128AB8FDC00E57AC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
@@ -129,7 +143,7 @@
 				7F4E199028AEB49100BB6FDE /* MyNoteQuestionVM.swift */,
 				7F87FB4228AB904D00E57AC9 /* Configuration */,
 			);
-			path = Core;
+			path = View;
 			sourceTree = "<group>";
 		};
 		7F87FB4228AB904D00E57AC9 /* Configuration */ = {
@@ -183,14 +197,8 @@
 				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
 				7F8CD08028A0CE6500776238 /* Model */,
-				7F87FB4128AB8FDC00E57AC9 /* Core */,
-				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
-				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
-				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
-				7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */,
-				7F5634FF28B36E07008AD29E /* ExamStore2019.swift */,
-				7F56350128B36F3D008AD29E /* ExamStore2018.swift */,
-				7F56350328B37040008AD29E /* ExamStore2017.swift */,
+				7F87FB4128AB8FDC00E57AC9 /* View */,
+				7F56350528B3719F008AD29E /* ExamStore */,
 				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
 				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
