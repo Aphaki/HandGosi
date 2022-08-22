@@ -56,5 +56,15 @@ class MyNoteService {
                 return aKoreanNote.question.id == myNoteQuestion.question.id
             }
         }
+        else if myNoteQuestion.subject == "영어" {
+            myNoteEnglish.removeAll { aEnglishNote in
+                return aEnglishNote.question.id == myNoteQuestion.question.id
+            }
+        }
+        else if myNoteQuestion.subject == "한국사" {
+            myNoteHistory.removeAll { aHistoryNote in
+                return aHistoryNote.question.id == myNoteQuestion.question.id
+            }
+        }
     }
 }
