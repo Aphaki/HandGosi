@@ -35,6 +35,7 @@
 		7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08928A0F81300776238 /* ExamModel.swift */; };
 		7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */; };
 		7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB7399628A937EB008E4E3A /* ImageModel.swift */; };
+		7FC4643C28B5C56F00C024A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4643B28B5C56E00C024A0 /* View.swift */; };
 		7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7728AC139E0070B0A4 /* MainVM.swift */; };
 		7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */; };
 		7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */; };
@@ -76,6 +77,7 @@
 		7F8CD08928A0F81300776238 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
 		7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStoreDataService.swift; sourceTree = "<group>"; };
 		7FB7399628A937EB008E4E3A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		7FC4643B28B5C56E00C024A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7FD21D7728AC139E0070B0A4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSelectVM.swift; sourceTree = "<group>"; };
 		7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamVM.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		7F56350528B3719F008AD29E /* ExamStore */ = {
 			isa = PBXGroup;
 			children = (
+				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
 				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
 				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
 				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
@@ -171,6 +174,7 @@
 				7FE038B5289EC26C008E629B /* Color.swift */,
 				7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */,
 				7F70B51628A2D08800148779 /* String.swift */,
+				7FC4643B28B5C56E00C024A0 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -199,7 +203,6 @@
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F87FB4128AB8FDC00E57AC9 /* View */,
 				7F56350528B3719F008AD29E /* ExamStore */,
-				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
 				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
@@ -299,6 +302,7 @@
 				7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */,
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,
 				7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */,
+				7FC4643C28B5C56F00C024A0 /* View.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
 				7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,

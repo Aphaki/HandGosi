@@ -21,44 +21,35 @@ struct MyNoteSubjectSelectView: View {
         VStack(spacing: 20) {
             Spacer()
             Spacer()
-            Text("국  어")
-                .font(.largeTitle)
-                .padding(30)
-                .background(
-                    Circle().opacity(0.1)
-                )
-                .onTapGesture {
-                    vm.selectedMyNotes = vm.myNotes.filter({ element in
-                        return element.subject == "국어"
-                    })
-                    showNextView.toggle()
-                }
+            Button {
+                vm.selectedMyNotes = vm.myNotes.filter({ element in
+                    return element.subject == "국어"
+                })
+                showNextView.toggle()
+            } label: {
+                Text("국  어")
+                    .myNoteButton(color: .red)
+            }
             HStack {
                 Spacer()
-                Text("영  어")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(
-                        Circle().opacity(0.1)
-                    )
-                    .onTapGesture {
-                        vm.selectedMyNotes = vm.myNotes.filter({ element in
-                            return element.subject == "영어"
-                        })
-                        showNextView.toggle()
-                    }
-                Text("한국사")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(
-                        Circle().opacity(0.1)
-                    )
-                    .onTapGesture {
-                        vm.selectedMyNotes = vm.myNotes.filter({ element in
-                            return element.subject == "한국사"
-                        })
-                        showNextView.toggle()
-                    }
+                Button {
+                    vm.selectedMyNotes = vm.myNotes.filter({ element in
+                        return element.subject == "영어"
+                    })
+                    showNextView.toggle()
+                } label: {
+                    Text("영  어")
+                        .myNoteButton(color: .red)
+                }
+                Button {
+                    vm.selectedMyNotes = vm.myNotes.filter({ element in
+                        return element.subject == "한국사"
+                    })
+                    showNextView.toggle()
+                } label: {
+                    Text("한국사")
+                        .myNoteButton(color: .red)
+                }
                 Spacer()
             }
             Spacer()

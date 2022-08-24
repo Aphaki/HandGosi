@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-struct YearTextViewModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(15)
-            .background(
-                Capsule().opacity(0.3)
-                    .shadow(color: .black, radius: 10, x: 0, y: 10)
-            )
-            
-    }
-}
-extension View {
-    func yearText() -> some View{
-        modifier(YearTextViewModifier())
-    }
-}
-
 struct MainView: View {
     
     @EnvironmentObject var vm: MainVM
@@ -116,15 +99,15 @@ struct MainView: View {
                                     .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
                                     .padding(.trailing, 15)
                             }
-
+                            
                         }
                         
                         
-                        }
-
+                    }
+                    
                     
                 }
-                    
+                
                 
                 
                 if isClicked {

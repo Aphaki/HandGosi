@@ -21,44 +21,35 @@ struct SubjectSelectView: View {
         VStack(spacing: 20) {
             Spacer()
             Spacer()
-            Text("국  어")
-                .font(.largeTitle)
-                .padding(30)
-                .background(
-                    Circle().opacity(0.1)
-                )
-                .onTapGesture {
-                    vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                        return exam.subjectID == "국어"
-                    }
-                    showNextView.toggle()
+            Button {
+                vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                    return exam.subjectID == "국어"
                 }
+                showNextView.toggle()
+            } label: {
+                Text("국  어")
+                    .myNoteButton(color: .black)
+            }
             HStack {
                 Spacer()
-                Text("영  어")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(
-                        Circle().opacity(0.1)
-                    )
-                    .onTapGesture {
-                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                            return exam.subjectID == "영어"
-                        }
-                        showNextView.toggle()
+                Button {
+                    vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                        return exam.subjectID == "영어"
                     }
-                Text("한국사")
-                    .font(.largeTitle)
-                    .padding(30)
-                    .background(
-                        Circle().opacity(0.1)
-                    )
-                    .onTapGesture {
-                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                            return exam.subjectID == "한국사"
-                        }
-                        showNextView.toggle()
+                    showNextView.toggle()
+                } label: {
+                    Text("영  어")
+                        .myNoteButton(color: .black)
+                }
+                Button {
+                    vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
+                        return exam.subjectID == "한국사"
                     }
+                    showNextView.toggle()
+                } label: {
+                    Text("한국사")
+                        .myNoteButton(color: .black)
+                }
                 Spacer()
             }
             Spacer()
