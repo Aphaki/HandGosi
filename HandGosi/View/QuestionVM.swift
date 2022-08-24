@@ -10,7 +10,6 @@ import Foundation
 class QuestionVM: ObservableObject {
     
     @Published var question: QuestionModel
-    let noteService = MyNoteService.shared
     
     @Published var year: Int
     @Published var type: String
@@ -23,9 +22,5 @@ class QuestionVM: ObservableObject {
         self.year = year
         self.type = type
         self.subject = subject
-    }
-    
-    func saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion) -> String {
-        return noteService.myNoteSave(myNoteQuestion: myNoteQuestion)
     }
 }

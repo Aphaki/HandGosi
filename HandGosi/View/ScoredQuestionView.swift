@@ -10,6 +10,7 @@ import SwiftUI
 struct ScoredQuestionView: View {
     
     @StateObject var vm: QuestionVM
+    @EnvironmentObject var mainVM: MainVM
     
     init(question: QuestionModel, year: Int, type: String, subject: String) {
         _vm = StateObject(wrappedValue: QuestionVM(question: question,
@@ -105,7 +106,7 @@ extension ScoredQuestionView {
     }
     var addMyNoteButton: some View {
         Button {
-            let addNoteString = vm.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
+            let addNoteString = mainVM.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
             vm.addNoteText = addNoteString
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 withAnimation(.easeInOut) {

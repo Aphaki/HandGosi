@@ -10,42 +10,14 @@ import Combine
 
 class MyNoteSubjectSelectVM: ObservableObject {
     
-    @Published var myKoreanNote: [MyNoteQuestion] = []
-    @Published var myEnglishNote: [MyNoteQuestion] = []
-    @Published var myHistoryNote: [MyNoteQuestion] = []
-    
-    var noteService = MyNoteService.shared
+    @Published var myNotes: [MyNoteQuestion] = []
+    @Published var selectedMyNotes: [MyNoteQuestion] = []
     
     private var subscription = Set<AnyCancellable>()
     
-    init() {
-        subscribeKorean()
-        subscribeEnglish()
-        subscribeHistory()
+    init(myNotes: [MyNoteQuestion]) {
+        self.myNotes = myNotes
     }
     
-    func subscribeKorean() {
-        noteService.$myNoteKorean
-            .receive(on: DispatchQueue.main)
-            .sink { myNoteQuestions in
-                self.myKoreanNote = myNoteQuestions
-            }
-            .store(in: &subscription)
-    }
-    func subscribeEnglish() {
-        noteService.$myNoteEnglish
-            .receive(on: DispatchQueue.main)
-            .sink { myNoteQuestions in
-                self.myEnglishNote = myNoteQuestions
-            }
-            .store(in: &subscription)
-    }
-    func subscribeHistory() {
-        noteService.$myNoteHistory
-            .receive(on: DispatchQueue.main)
-            .sink { myNoteQuestions in
-                self.myHistoryNote = myNoteQuestions
-            }
-            .store(in: &subscription)
-    }
+    
 }

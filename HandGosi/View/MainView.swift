@@ -26,13 +26,11 @@ extension View {
 
 struct MainView: View {
     
-    @StateObject var vm = MainVM()
+    @EnvironmentObject var vm: MainVM
     
     @State private var isClicked: Bool = false
-    @State private var showMyNote: Bool = false
     @State private var goToNextView: Bool = false
-    
-//    @State var selectedYear: Int?
+    @State private var goToMyNote: Bool = false
     
     var body: some View {
         NavigationView {
@@ -106,8 +104,9 @@ struct MainView: View {
                     if isClicked {
                         HStack {
                             Spacer()
-                            NavigationLink(isActive: $showMyNote) {
-                                MyNoteSubjectSelectView()
+                            Button {
+                                vm.myNotes = vm.changedMyNotes
+                                goToMyNote.toggle()
                             } label: {
                                 Text("오답노트")
                                     .font(.title3)
@@ -116,9 +115,9 @@ struct MainView: View {
                                     .padding(10)
                                     .background(RoundedRectangle(cornerRadius: 20).foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
                                     .padding(.trailing, 15)
-                                }
+                            }
+
                         }
-                        
                         
                         
                         }
@@ -196,6 +195,11 @@ struct MainView: View {
             .background(
                 NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams) },
                                label: { EmptyView() })
+            )
+            .background(
+                NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.myNotes) }, label: {
+                    EmptyView()
+                })
             )
             .navigationBarHidden(true)
         } // NavigationView

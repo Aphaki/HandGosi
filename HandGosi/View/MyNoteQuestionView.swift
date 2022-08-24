@@ -10,6 +10,7 @@ import SwiftUI
 struct MyNoteQuestionView: View {
     
     @StateObject var vm: MyNoteQuestionVM
+    @EnvironmentObject var mainVM: MainVM
     
     init(myNoteQuestion: MyNoteQuestion) {
         _vm = StateObject(wrappedValue: MyNoteQuestionVM(myNoteQuestion: myNoteQuestion))
@@ -27,7 +28,7 @@ struct MyNoteQuestionView: View {
                             .font(.headline)
                         Spacer()
                         Button {
-                            vm.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)
+                            mainVM.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)
                             vm.isDeleted.toggle()
                         } label: {
                             Text("오답노트에서 제거")

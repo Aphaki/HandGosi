@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct HandGosiApp: App {
+    
+    @StateObject var mainVM = MainVM()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(MainVM())
         }
     }
 }

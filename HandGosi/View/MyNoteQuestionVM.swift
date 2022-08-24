@@ -11,13 +11,10 @@ class MyNoteQuestionVM: ObservableObject {
     
     @Published var myNoteQuestion: MyNoteQuestion
     @Published var isDeleted: Bool = false
-    var myNoteService = MyNoteService.shared
     
     init(myNoteQuestion: MyNoteQuestion) {
         self.myNoteQuestion = myNoteQuestion
     }
     
-    func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
-        myNoteService.deleteMyNote(myNoteQuestion: myNoteQuestion)
-    }
+    
 }

@@ -11,12 +11,17 @@ import Combine
 class MainVM: ObservableObject {
     @Published var allExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
+    @Published var myNotes: [MyNoteQuestion] = []
+    @Published var changedMyNotes: [MyNoteQuestion] = []
+    
     let examStoreDataService = ExamStoreDataService()
+    let myNoteStoreService = MyNoteService()
+    
     private var subscription = Set<AnyCancellable>()
     
     init() {
         subscribeAllExams()
-        fetchAllExams()
+        subscribeMyNote()
     }
     
     
@@ -29,8 +34,19 @@ class MainVM: ObservableObject {
             }
             .store(in: &subscription)
     }
-    
-    private func fetchAllExams() {
-        examStoreDataService.saveAllExam()
+    private func subscribeMyNote() {
+        myNoteStoreService.$myNotes
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] myNotesInService in
+                guard let self = self else { return }
+                self.changedMyNotes = myNotesInService
+            }
+            .store(in: &subscription)
+    }
+    func saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion) -> String {
+        return myNoteStoreService.myNoteSave(myNoteQuestion: myNoteQuestion)
+    }
+    func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
+        myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
 }

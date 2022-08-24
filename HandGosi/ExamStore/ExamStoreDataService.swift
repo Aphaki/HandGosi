@@ -18,6 +18,10 @@ class ExamStoreDataService {
     var examStore2018 = ExamStore2018()
     var examStore2017 = ExamStore2017()
     
+    init() {
+        saveAllExam()
+    }
+    
     //MARK: - 시험지 저장
     func saveAllExam() {
         saveExam2017()
