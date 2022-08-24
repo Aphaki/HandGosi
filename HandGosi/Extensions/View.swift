@@ -10,6 +10,7 @@ struct YearTextViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding(15)
+            .font(.title)
             .background(
                 Capsule().opacity(0.3)
                     .shadow(color: .black, radius: 10, x: 0, y: 10)
