@@ -159,6 +159,9 @@ class ExamStore2016 {
         saveExam201612()
         saveExam201613()
         
+        saveExam201621()
+        saveExam201622()
+        saveExam201623()
         
     }
     //국가직
@@ -704,7 +707,7 @@ class ExamStore2016 {
                           answer: 4),
             QuestionModel(num: 6,
                           questionText: "밑줄 친 부분의 예로 가장 적절한 것은?",
-                          reference: "  생각은 큰 그릇이고 말은 생각 속에 들어가는 작은 그릇이어서 생각에는 말 외에도 다른 것이 더 있다. 그러나 아무리 생각이 말보다 범위가 넓고 큰 것이라고 하여도 그것을 말로 바꾸어 놓지 않으면 그 생각의 위대함이나 오묘함이 다른 사람에게 전달되지 않는다. 그 때문에 생각이 형님이요, 말이 동생이라고 할지라도 생각은 동생의 신세를 지지 않을 수가 없게 되어 있다.",
+                          reference: "  "+"생각은 큰 그릇이고 말은 생각 속에 들어가는 작은 그릇이어서 생각에는 말 외에도 다른 것이 더 있다.".underLined+" 그러나 아무리 생각이 말보다 범위가 넓고 큰 것이라고 하여도 그것을 말로 바꾸어 놓지 않으면 그 생각의 위대함이나 오묘함이 다른 사람에게 전달되지 않는다. 그 때문에 생각이 형님이요, 말이 동생이라고 할지라도 생각은 동생의 신세를 지지 않을 수가 없게 되어 있다.",
                           num1Text: "‘사과’는 언제부터 ‘사과’라고 부르기 시작했는지 알 수 없어.",
                           num2Text: "동일한 사물을 두고 영국에서는 [tri:], 한국에서는 [nɑmu]라 표현해.",
                           num3Text: "이 소설은 정말 감동적이야. 내가 받은 감동은 말로는 설명이 안 돼.",
@@ -796,7 +799,7 @@ class ExamStore2016 {
                           answer: 2),
             QuestionModel(num: 18,
                           questionText: "다음 글의 ㉠∼ ㉣에 대한 설명으로 적절하지 않은 것은?",
-                          reference: "  금와는 그때 한 여자를 태백산 남쪽 우발수에서 만났는데, 그녀가 이렇게 말했다. “㉠"+"하백의 딸 유화입니다. 동생들과 놀러 나왔을 때 한 남자가 나타나 자신이 천제의 아들 해모수라고 하며 웅신산 아래 압록강 가에 있는 집으로 유인하여 사통하였습니다.".underLined+" 그러고는 저를 떠나가서 돌아오지 않았습니다. 부모는 제가 중매도 없이 다른 사람을 따라간 것을 꾸짖어 이곳으로 귀양을 보내 살도록 했습니다.” ㉡"+"금와가 괴이하게 여겨 유화를 방 안에 남몰래 가두어 두었더니, 햇빛이 비추었다.".underLined+" 그녀가 피하자 햇빛이 따라와 또 비추었다. 이로 인해 임신하여 알을 하나 낳았는데, 크기가 다섯 되쯤 되었다. …(중략)… 금와에게는 아들이 일곱 있었는데, 항상 주몽과 함께 놀았다. 그러나 그들의 기예가 주몽에게 미치지 못하자 ㉢"+"맏아들 대소가 말했다. “주몽은 사람에게서 태어난 것이 아니니 일찍이 도모하지 않으면 후환이 있을 것입니다.” 왕은 듣지 않고 주몽에게 말을 기르도록 했다.".underLined+" 주몽은 준마를 알아보고 먹이를 조금씩 주어 마르게 하고, 늙고 병든 말은 잘 먹여 살찌게 했다. 왕은 살찐 말은 자기가 타고 주몽에게는 마른 말을 주었다. 왕의 아들들과 여러 신하들이 함께 주몽을 해치려 하자, 그 사실을 알게 된 주몽의 어머니가 아들에게 말했다. “나라 사람들이 너를 해치려고 하는데, 너의 재략이라면 어디 간들 살지 못하겠느냐? 빨리 떠나거라.” 그래서 주몽은 오이 등 세 사람과 벗을 삼아 떠나 개사수에 이르렀으나 건널 배가 없었다. ㉣"+"추격하는 병사들이 문득 닥칠까 두려워서 이에 채찍으로 하늘을 가리키며 빌었다. “나는 천제의 손자이고, 하백의 외손이다. 황천후토 (皇天后土)는 나를 불쌍히 여겨 급히 주교(舟橋)를 내려 주소서.” 하고 활로 물을 쳤다. 그러자 물고기와 자라가 다리를 만들어 주어 강을 건너게 했다.".underLined+" 그러고는 다리를 풀어 버렸으므로 뒤쫓던 기병은 건너지 못했다.\n\n-작자 미상, 〖주몽신화〗중에서 -",
+                          reference: "  금와는 그때 한 여자를 태백산 남쪽 우발수에서 만났는데, 그녀가 이렇게 말했다. “㉠"+"하백의 딸 유화입니다. 동생들과 놀러 나왔을 때 한 남자가 나타나 자신이 천제의 아들 해모수라고 하며 웅신산 아래 압록강 가에 있는 집으로 유인하여 사통하였습니다.".underLined+" 그러고는 저를 떠나가서 돌아오지 않았습니다. 부모는 제가 중매도 없이 다른 사람을 따라간 것을 꾸짖어 이곳으로 귀양을 보내 살도록 했습니다.” ㉡"+"금와가 괴이하게 여겨 유화를 방 안에 남몰래 가두어 두었더니, 햇빛이 비추었다.".underLined+" 그녀가 피하자 햇빛이 따라와 또 비추었다. 이로 인해 임신하여 알을 하나 낳았는데, 크기가 다섯 되쯤 되었다. …(중략)… 금와에게는 아들이 일곱 있었는데, 항상 주몽과 함께 놀았다. 그러나 그들의 기예가 주몽에게 미치지 못하자 ㉢"+"맏아들 대소가 말했다. “주몽은 사람에게서 태어난 것이 아니니 일찍이 도모하지 않으면 후환이 있을 것입니다.” 왕은 듣지 않고 주몽에게 말을 기르도록 했다.".underLined+" 주몽은 준마를 알아보고 먹이를 조금씩 주어 마르게 하고, 늙고 병든 말은 잘 먹여 살찌게 했다. 왕은 살찐 말은 자기가 타고 주몽에게는 마른 말을 주었다. 왕의 아들들과 여러 신하들이 함께 주몽을 해치려 하자, 그 사실을 알게 된 주몽의 어머니가 아들에게 말했다. “나라 사람들이 너를 해치려고 하는데, 너의 재략이라면 어디 간들 살지 못하겠느냐? 빨리 떠나거라.\n  그래서 주몽은 오이 등 세 사람과 벗을 삼아 떠나 개사수에 이르렀으나 건널 배가 없었다. ㉣"+"추격하는 병사들이 문득 닥칠까 두려워서 이에 채찍으로 하늘을 가리키며 빌었다. “나는 천제의 손자이고, 하백의 외손이다. 황천후토 (皇天后土)는 나를 불쌍히 여겨 급히 주교(舟橋)를 내려 주소서.” 하고 활로 물을 쳤다. 그러자 물고기와 자라가 다리를 만들어 주어 강을 건너게 했다.".underLined+" 그러고는 다리를 풀어 버렸으므로 뒤쫓던 기병은 건너지 못했다.\n\n-작자 미상, 〖주몽신화〗중에서 -",
                           num1Text: "㉠: ‘유화’가 귀양에 처해진 이유를 알 수 있다.",
                           num2Text: "㉡: ‘유화’가 임신을 하게 된 이유를 알 수 있다.",
                           num3Text: "㉢: ‘주몽’이 준마를 얻기 위해 ‘대소’와 모의했음을 알 수 있다.",
@@ -898,7 +901,7 @@ class ExamStore2016 {
                       answer: 3),
         QuestionModel(num: 10,
                       questionText: "밑줄 친 부분에 들어갈 말로 가장 적절한 것은?",
-                      reference: "In an early demonstration of the mere exposure effect, participants in an experiment were exposed to a set of alphabets from the Japanese language. As most people know, Japanese alphabets look like drawings and are called ideograms. In the experiment, the duration of exposure to each ideogram was deliberately kept as short as 30 milliseconds. At such short durations of exposure-known as subliminal exposure-people cannot register the stimuli and hence, participants in the experiment were not expected to recall seeing the ideograms. Nevertheless, when participants were shown two sets of alphabets, one to which they had been previously exposed and another to which they hadn't, participants reported greater liking for the former even though they couldn't recall seeing them! These results have been replicated numerous times and across a variety of types of stimuli, so they are robust. What the mere exposure results show is that _______________________________________________.",
+                      reference: "In an early demonstration of the mere exposure effect, participants in an experiment were exposed to a set of alphabets from the Japanese language. As most people know, Japanese alphabets look like drawings and are called ideograms. In the experiment, the duration of exposure to each ideogram was deliberately kept as short as 30 milliseconds. At such short durations of exposure-known as subliminal exposure-people cannot register the stimuli and hence, participants in the experiment were not expected to recall seeing the ideograms. Nevertheless, when participants were shown two sets of alphabets, one to which they had been previously exposed and another to which they hadn't, participants reported greater liking for the former even though they couldn't recall seeing them! These results have been replicated numerous times and across a variety of types of stimuli, so they are robust. What the mere exposure results show is that __________________________.",
                       num1Text: "we can learn the Japanese language with extensive exposure.",
                       num2Text: "duration is responsible for the robust results across studies.",
                       num3Text: "it is impossible to register the stimuli at short durations.",
@@ -1039,7 +1042,7 @@ class ExamStore2016 {
                       answer: 3),
         QuestionModel(num: 7,
                       questionText: "밑줄 친 ‘왕’의 재위 기간에 있었던 사실로 옳은 것은?",
-                      reference: "주전도감에서 왕에게 아뢰기를 “백성들이 화폐를 사용하는 유익함을 이해하고 그것을 편리하게 생각하고 있으니 이 사실을 종묘에 알리십시오.”라고 하였다. 이 해에 또 은병을 만들어 화폐로 사용하였는데, 은 한 근으로 우리나라의 지형을 본떠서 만들었고 민간에서는 활구라고 불렀다.",
+                      reference: "주전도감에서 "+"왕".underLined+"에게 아뢰기를 “백성들이 화폐를 사용하는 유익함을 이해하고 그것을 편리하게 생각하고 있으니 이 사실을 종묘에 알리십시오.”라고 하였다. 이 해에 또 은병을 만들어 화폐로 사용하였는데, 은 한 근으로 우리나라의 지형을 본떠서 만들었고 민간에서는 활구라고 불렀다.",
                       num1Text: "주요 지역에 12목을 설치하고 목사를 파견하였다.",
                       num2Text: "여진 정벌을 위해 윤관이 건의한 별무반을 설치하였다.",
                       num3Text: "지방 호족을 견제하기 위해 사심관과 기인 제도를 도입하였다.",
