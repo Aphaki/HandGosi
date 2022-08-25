@@ -27,7 +27,7 @@ struct LoadingView: View {
                     Text(loadingText[index])
                         .font(.headline)
                         .foregroundColor(Color.theme.myAccentColor)
-                        .offset(y: index == count ? -5 : 0)
+                        .offset(y: index == count ? -15 : 0)
                 }
             }.onReceive(timer) { _ in
                 withAnimation {
