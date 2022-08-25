@@ -19,6 +19,7 @@ struct MainView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color.theme.myBackgroundColor.ignoresSafeArea()
                 VStack(spacing: 30) {
                     if isClicked {
                         HStack(spacing: 30) {
@@ -50,20 +51,28 @@ struct MainView: View {
                             }
                     }
                     ZStack {
-                        Image("HandGosiRed")
-                            .resizable()
-                            .frame(width: 100, height: 180)
-                            .scaleEffect(isClicked ? 0.2 : 1.0)
-                            .onTapGesture {
-                                withAnimation(.easeInOut) {
-                                    isClicked.toggle()
-                                }
+                        ZStack {
+                            Image("HandGosiRed")
+                                .resizable()
+                            Text("c l i c k".uppercased())
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .shadow(color: .white, radius: 10, x: 0, y: 5)
+                        }
+                        .frame(width: 100, height: 180)
+                        .shadow(color: .red, radius: 10, x: 0, y: 5)
+                        .onTapGesture {
+                            withAnimation(.easeInOut) {
+                                isClicked.toggle()
                             }
+                        }
+                        .scaleEffect(isClicked ? 0.2 : 1.0)
+                        
                         if isClicked {
                             HStack {
                                 Spacer()
                                 Button {
-                                    vm.myNotes = vm.changedMyNotes
+                                    vm.filteredNotes = vm.myNotes
                                     goToMyNote.toggle()
                                 } label: {
                                     Text("오답노트")
@@ -116,7 +125,7 @@ struct MainView: View {
                                    label: { EmptyView() })
                 )
                 .background(
-                    NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.myNotes) }, label: {
+                    NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
                         EmptyView()
                     })
                 )

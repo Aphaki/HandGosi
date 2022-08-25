@@ -12,7 +12,7 @@ class MainVM: ObservableObject {
     @Published var allExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
     @Published var myNotes: [MyNoteQuestion] = []
-    @Published var changedMyNotes: [MyNoteQuestion] = []
+    @Published var filteredNotes: [MyNoteQuestion] = []
     
     let examStoreDataService = ExamStoreDataService()
     let myNoteStoreService = MyNoteService()
@@ -39,7 +39,7 @@ class MainVM: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] myNotesInService in
                 guard let self = self else { return }
-                self.changedMyNotes = myNotesInService
+                self.myNotes = myNotesInService
             }
             .store(in: &subscription)
     }

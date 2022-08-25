@@ -13,7 +13,7 @@ struct YearTextViewModifier: ViewModifier {
             .font(.title)
             .background(
                 Capsule().opacity(0.3)
-                    .shadow(color: .black, radius: 10, x: 0, y: 10)
+                    .shadow(color: .secondary, radius: 10, x: 0, y: 10)
             )
         
     }

@@ -28,7 +28,7 @@ struct SubjectSelectView: View {
                 showNextView.toggle()
             } label: {
                 Text("국  어")
-                    .myNoteButton(color: .black)
+                    .myNoteButton(color: Color.theme.myAccentColor)
             }
             HStack {
                 Spacer()
@@ -39,7 +39,7 @@ struct SubjectSelectView: View {
                     showNextView.toggle()
                 } label: {
                     Text("영  어")
-                        .myNoteButton(color: .black)
+                        .myNoteButton(color: Color.theme.myAccentColor)
                 }
                 Button {
                     vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
@@ -48,7 +48,7 @@ struct SubjectSelectView: View {
                     showNextView.toggle()
                 } label: {
                     Text("한국사")
-                        .myNoteButton(color: .black)
+                        .myNoteButton(color: Color.theme.myAccentColor)
                 }
                 Spacer()
             }
