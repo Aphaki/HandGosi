@@ -419,7 +419,7 @@ class ExamStore2021 {
                       answer: 3),
         QuestionModel(num: 9,
                       questionText: "다음은 발해 수도에 대한 답사 계획이다. 각 수도에 소재하는 유적에 대한 탐구 내용으로 옳은 것만을 모두 고르면?",
-                      imgModel: ImageModel(imageString: "2021History9", imgWidth: 330, imgHeight: 660),
+                      imgModel: ImageModel(imageString: "202113-9", imgWidth: 330, imgHeight: 660),
                       num1Text: "㉠,㉡",
                       num2Text: "㉠,㉣",
                       num3Text: "㉡,㉢",

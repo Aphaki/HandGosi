@@ -17,18 +17,20 @@ struct ExamSelectView: View {
     
     
     var body: some View {
-        List {
-            ForEach(vm.yearSubjectFilteredExam) { exam in
-                NavigationLink {
-                    ExamView(exam: exam)
-                } label: {
-                    Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
-                        .font(.headline)
+        
+            
+            List {
+                ForEach(vm.yearSubjectFilteredExam) { exam in
+                    NavigationLink {
+                        ExamView(exam: exam)
+                    } label: {
+                        Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+                            .font(.headline)
+                    }
                 }
             }
-        }
-        .listStyle(.automatic)
-        .navigationTitle(vm.yearSubjectFilteredExam.first?.subjectID ?? "실패야 실패라고")
+            .listStyle(.automatic)
+            .navigationTitle(vm.yearSubjectFilteredExam.first?.subjectID ?? "실패야 실패라고")
     }
 }
 

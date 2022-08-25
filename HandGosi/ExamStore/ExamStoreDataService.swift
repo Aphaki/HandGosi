@@ -17,6 +17,7 @@ class ExamStoreDataService {
     var examStore2019 = ExamStore2019()
     var examStore2018 = ExamStore2018()
     var examStore2017 = ExamStore2017()
+    var examStore2016 = ExamStore2016()
     
     init() {
         saveAllExam()
@@ -24,6 +25,7 @@ class ExamStoreDataService {
     
     //MARK: - 시험지 저장
     func saveAllExam() {
+        saveExam2016()
         saveExam2017()
         saveExam2018()
         saveExam2019()
@@ -55,6 +57,10 @@ class ExamStoreDataService {
     func saveExam2017() {
         let exam2017 = examStore2017.exam2017
         allExams.append(contentsOf: exam2017)
+    }
+    func saveExam2016() {
+        let exam2016 = examStore2016.exam2016
+        allExams.append(contentsOf: exam2016)
     }
 }
     

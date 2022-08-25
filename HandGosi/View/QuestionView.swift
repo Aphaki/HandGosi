@@ -23,6 +23,15 @@ struct QuestionView: View {
                     Text("\(vm.question.num)" + ".")
                     Text(vm.question.questionText)
                 }
+                if vm.question.imgModel != nil {
+                    HStack {
+                        Spacer()
+                        Image(vm.question.imgModel!.imageString)
+                            .resizable()
+                            .frame(width: vm.question.imgModel!.imgWidth, height: vm.question.imgModel!.imgHeight)
+                        Spacer()
+                    }
+                }
                 if vm.question.reference != nil {
                     Text(vm.question.reference!)
                         .lineSpacing(5)
@@ -37,15 +46,7 @@ struct QuestionView: View {
                         .font(.custom("NanumMyeongjo-YetHangul", size: 16))
                         .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                 }
-                if vm.question.imgModel != nil {
-                    HStack {
-                        Spacer()
-                        Image(vm.question.imgModel!.imageString)
-                            .resizable()
-                            .frame(width: vm.question.imgModel!.imgWidth, height: vm.question.imgModel!.imgHeight)
-                        Spacer()
-                    }
-                }
+                
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
