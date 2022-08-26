@@ -67,7 +67,7 @@ struct MainView: View {
                                 .resizable()
                             Text("c l i c k".uppercased())
                                 .fontWeight(.bold)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color.theme.myAccentColor)
                                 .shadow(color: .white, radius: 10, x: 0, y: 5)
                         }
                         .frame(width: 100, height: 180)

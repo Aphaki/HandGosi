@@ -17,31 +17,35 @@ struct ExamView: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack(alignment: .leading) {
-                ForEach(vm.finalExam.questions) { question in
-                    if vm.isScored == false {
-                        QuestionView(question: question)
-                    } else {
-                        ScoredQuestionView(question: question,
-                                           year: vm.finalExam.year,
-                                           type: vm.finalExam.examTypeID,
-                                           subject: vm.finalExam.subjectID)
+        ZStack {
+            Color.theme.myBackgroundColor.ignoresSafeArea()
+            ScrollView {
+                VStack(alignment: .leading) {
+                    ForEach(vm.finalExam.questions) { question in
+                        if vm.isScored == false {
+                            QuestionView(question: question)
+                        } else {
+                            ScoredQuestionView(question: question,
+                                               year: vm.finalExam.year,
+                                               type: vm.finalExam.examTypeID,
+                                               subject: vm.finalExam.subjectID)
+                        }
                     }
                 }
             }
-        }
-        .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Text(vm.isScored ? "시험지로" : "채점하기")
-                    .padding(8)
-                    .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
-                    .onTapGesture {
-                        vm.isScored.toggle()
-                    }
+            .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Text(vm.isScored ? "시험지로" : "채점하기")
+                        .padding(8)
+                        .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
+                        .onTapGesture {
+                            vm.isScored.toggle()
+                        }
+                }
             }
         }
+        
         
         
     }

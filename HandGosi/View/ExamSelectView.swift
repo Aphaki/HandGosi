@@ -29,8 +29,13 @@ struct ExamSelectView: View {
                     }
                 }
             }
+            .background(Color.theme.myBackgroundColor)
+            .onAppear {
+                UITableView.appearance().backgroundColor = .clear
+            }
             .listStyle(.automatic)
             .navigationTitle(vm.yearSubjectFilteredExam.first?.subjectID ?? "실패야 실패라고")
+            
     }
 }
 
