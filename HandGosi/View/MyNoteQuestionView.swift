@@ -40,6 +40,15 @@ struct MyNoteQuestionView: View {
                         Text("\(vm.myNoteQuestion.question.num)" + ".")
                         Text(vm.myNoteQuestion.question.questionText)
                     }
+                    if vm.myNoteQuestion.question.imgModel != nil {
+                        HStack {
+                            Spacer()
+                            Image(vm.myNoteQuestion.question.imgModel!.imageString)
+                                .resizable()
+                                .frame(width: vm.myNoteQuestion.question.imgModel!.imgWidth, height: vm.myNoteQuestion.question.imgModel!.imgHeight)
+                            Spacer()
+                        }
+                    }
                     if vm.myNoteQuestion.question.reference != nil {
                         Text(vm.myNoteQuestion.question.reference!)
                             .lineSpacing(5)
@@ -54,15 +63,7 @@ struct MyNoteQuestionView: View {
                             .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                             .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                     }
-                    if vm.myNoteQuestion.question.imgModel != nil {
-                        HStack {
-                            Spacer()
-                            Image(vm.myNoteQuestion.question.imgModel!.imageString)
-                                .resizable()
-                                .frame(width: vm.myNoteQuestion.question.imgModel!.imgWidth, height: vm.myNoteQuestion.question.imgModel!.imgHeight)
-                            Spacer()
-                        }
-                    }
+                    
                     NumberButtonView(selectedNum: $vm.myNoteQuestion.question.selectedNum, number: "①", numberInt: 1, text: vm.myNoteQuestion.question.num1Text)
                     NumberButtonView(selectedNum: $vm.myNoteQuestion.question.selectedNum, number: "②",numberInt: 2, text: vm.myNoteQuestion.question.num2Text)
                     NumberButtonView(selectedNum: $vm.myNoteQuestion.question.selectedNum, number: "③", numberInt: 3, text: vm.myNoteQuestion.question.num3Text)
