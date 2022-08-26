@@ -103,15 +103,15 @@ struct MainView: View {
                         
                     }
                     if isClicked {
-                        Text("2018")
-                            .yearText()
-                            .onTapGesture {
-                                vm.filteredExams = vm.allExams.filter { exam in
-                                    return exam.year == 2018
-                                }
-                                goToNextView.toggle()
-                            }
                         HStack(spacing: 30) {
+                            Text("2018")
+                                .yearText()
+                                .onTapGesture {
+                                    vm.filteredExams = vm.allExams.filter { exam in
+                                        return exam.year == 2018
+                                    }
+                                    goToNextView.toggle()
+                                }
                             Text("2017")
                                 .yearText()
                                 .onTapGesture {
@@ -120,11 +120,21 @@ struct MainView: View {
                                     }
                                     goToNextView.toggle()
                                 }
+                        }
+                        HStack(spacing: 30) {
                             Text("2016")
                                 .yearText()
                                 .onTapGesture {
                                     vm.filteredExams = vm.allExams.filter { exam in
                                         return exam.year == 2016
+                                    }
+                                    goToNextView.toggle()
+                                }
+                            Text("2015")
+                                .yearText()
+                                .onTapGesture {
+                                    vm.filteredExams = vm.allExams.filter { exam in
+                                        return exam.year == 2015
                                     }
                                     goToNextView.toggle()
                                 }
