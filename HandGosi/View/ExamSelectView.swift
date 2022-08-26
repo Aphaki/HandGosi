@@ -10,6 +10,7 @@ import SwiftUI
 struct ExamSelectView: View {
     
     @StateObject var vm: ExamSelectVM
+//    @State var showNextView: Bool = false
     
     init(exams: [ExamModel]) {
         _vm = StateObject(wrappedValue: ExamSelectVM(exams: exams))
@@ -24,12 +25,18 @@ struct ExamSelectView: View {
                     NavigationLink {
                         ExamView(exam: exam)
                     } label: {
-                        Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+                        HStack {
+                            Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+                            Spacer()
+                            Text(exam.progressCount.description + "/20")
+                        }
+
                             .font(.headline)
                     }
                 }
             }
             .background(Color.theme.myBackgroundColor)
+            
             .onAppear {
                 UITableView.appearance().backgroundColor = .clear
             }

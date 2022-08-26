@@ -9,7 +9,7 @@ import Foundation
 
 class ExamSelectVM: ObservableObject {
     @Published var yearSubjectFilteredExam: [ExamModel]
-    @Published var selectedExam: ExamModel?
+//    @Published var selectedExam: ExamModel?
     
     init(exams: [ExamModel]) {
         self.yearSubjectFilteredExam = exams

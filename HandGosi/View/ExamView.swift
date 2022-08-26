@@ -19,6 +19,7 @@ struct ExamView: View {
         
         ZStack {
             Color.theme.myBackgroundColor.ignoresSafeArea()
+            
             ScrollView {
                 VStack(alignment: .leading) {
                     ForEach(vm.finalExam.questions) { question in
