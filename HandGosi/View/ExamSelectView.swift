@@ -18,8 +18,6 @@ struct ExamSelectView: View {
     
     
     var body: some View {
-        
-            
             List {
                 ForEach(vm.yearSubjectFilteredExam) { exam in
                     NavigationLink {
@@ -30,13 +28,11 @@ struct ExamSelectView: View {
                             Spacer()
                             Text(exam.progressCount.description + "/20")
                         }
-
                             .font(.headline)
                     }
                 }
             }
             .background(Color.theme.myBackgroundColor)
-            
             .onAppear {
                 UITableView.appearance().backgroundColor = .clear
             }

@@ -17,3 +17,4 @@ class SubjectSelectVM: ObservableObject {
         self.yearFilteredExams = exams
     }
 }
+
