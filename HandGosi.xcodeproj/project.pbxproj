@@ -48,6 +48,7 @@
 		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
 		7FE038B6289EC26C008E629B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE038B5289EC26C008E629B /* Color.swift */; };
 		7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0757A28B61BD600B94828 /* LoadingView.swift */; };
+		7FE9995E28BBE0D500279C6D /* ExamLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FE0757A28B61BD600B94828 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				7F49086028A14FC8002896DB /* SubjectSelectVM.swift */,
 				7F88E7F428A62C13001C0463 /* ExamSelectView.swift */,
 				7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */,
+				7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */,
 				7F88E7F628A636C8001C0463 /* ExamView.swift */,
 				7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
@@ -318,6 +321,7 @@
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
 				7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
+				7FE9995E28BBE0D500279C6D /* ExamLoadingView.swift in Sources */,
 				7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */,
 				7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */,
 				7F5634FA28B36409008AD29E /* ExamStore2022.swift in Sources */,
