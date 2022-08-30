@@ -10,8 +10,7 @@ import SwiftUI
 struct ExamSelectView: View {
     
     @StateObject var vm: ExamSelectVM
-//    @State var showNextView: Bool = false
-    
+    @State private var progressInt = 0
     @State private var showExamView: Bool = false
     
     init(exams: [ExamModel]) {
@@ -22,37 +21,41 @@ struct ExamSelectView: View {
     var body: some View {
             List {
                 ForEach(vm.yearSubjectFilteredExam) { exam in
-//                    NavigationLink {
-//                        ExamView(exam: exam)
-//                    } label: {
-//                        HStack {
-//                            Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
-//                            Spacer()
-//                            Text(exam.progressCount.description + "/20")
-//                        }
-//                            .font(.headline)
-//                    }
-                    
-                    Button {
-                        vm.selectedExam = exam
-                        showExamView.toggle()
+                    NavigationLink {
+                        ExamView(exam: exam)
                     } label: {
                         HStack {
                             Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
                             Spacer()
                             Text(exam.progressCount.description + "/20")
+                                
                         }
+                            .font(.headline)
                     }
+
+                    
+//                    Button {
+//                        vm.selectedExam = exam
+//                        showExamView.toggle()
+//                    } label: {
+//                        HStack {
+//                            Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
+//                            Spacer()
+//                            Text(exam.questions.filter({ question in
+//                                return question.selectedNum != 0
+//                            }).count.description + "/20")
+//                        }
+//                    }
                 }
             }
             .background(Color.theme.myBackgroundColor)
-            .background(
-                NavigationLink(isActive: $showExamView, destination: {
-                    ExamLoadingView(exam: $vm.selectedExam)
-                }, label: {
-                    EmptyView()
-                })
-            )
+//            .background(
+//                NavigationLink(isActive: $showExamView, destination: {
+//                    ExamLoadingView(exam: $vm.selectedExam)
+//                }, label: {
+//                    EmptyView()
+//                })
+//            )
             .onAppear {
                 UITableView.appearance().backgroundColor = .clear
             }

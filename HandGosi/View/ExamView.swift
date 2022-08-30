@@ -19,7 +19,6 @@ struct ExamView: View {
         
         ZStack {
             Color.theme.myBackgroundColor.ignoresSafeArea()
-            
             ScrollView {
                 VStack(alignment: .leading) {
                     ForEach(vm.finalExam.questions) { question in
@@ -46,12 +45,8 @@ struct ExamView: View {
                 }
             }
         }
-        
-        
-        
     }
 }
-
 struct ExamView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
