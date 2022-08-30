@@ -10,6 +10,7 @@ import SwiftUI
 struct ExamView: View {
     
     @StateObject var vm: ExamVM
+    @Environment(\.dismiss) var dismiss
     
     init(exam: ExamModel) {
         _vm = StateObject(wrappedValue: ExamVM(exam: exam))
@@ -34,6 +35,7 @@ struct ExamView: View {
                 }
             }
             .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
+            .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Text(vm.isScored ? "시험지로" : "채점하기")
@@ -43,7 +45,17 @@ struct ExamView: View {
                             vm.isScored.toggle()
                         }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        dismiss()
+                        dismiss()
+                    } label: {
+                        Text("back")
+                    }
+
+                }
             }
+            
         }
     }
 }

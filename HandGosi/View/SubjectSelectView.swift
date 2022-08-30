@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SubjectSelectView: View {
     
-    @State var showNextView: Bool = false
     @StateObject var vm: SubjectSelectVM
     
     init(exams: [ExamModel]) {
@@ -23,31 +22,24 @@ struct SubjectSelectView: View {
             VStack(spacing: 20) {
                 Spacer()
                 Spacer()
-                Button {
-                    vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                        return exam.subjectID == "국어"
-                    }
-                    showNextView.toggle()
+                NavigationLink {
+                    ExamSelectView(exams: vm.koreanExams)
                 } label: {
                     Text("국  어")
                         .myNoteButton(color: Color.theme.myAccentColor)
                 }
+
+                
                 HStack {
                     Spacer()
-                    Button {
-                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                            return exam.subjectID == "영어"
-                        }
-                        showNextView.toggle()
+                    NavigationLink {
+                        ExamSelectView(exams: vm.englishExams)
                     } label: {
                         Text("영  어")
                             .myNoteButton(color: Color.theme.myAccentColor)
                     }
-                    Button {
-                        vm.yearSubjectFilteredExams = vm.yearFilteredExams.filter { exam in
-                            return exam.subjectID == "한국사"
-                        }
-                        showNextView.toggle()
+                    NavigationLink {
+                        ExamSelectView(exams: vm.historyExams)
                     } label: {
                         Text("한국사")
                             .myNoteButton(color: Color.theme.myAccentColor)
@@ -58,11 +50,6 @@ struct SubjectSelectView: View {
                 Spacer()
                 Spacer()
             }
-            .background(
-                NavigationLink(isActive: $showNextView,
-                               destination: { ExamSelectView(exams: vm.yearSubjectFilteredExams)},
-                               label: { EmptyView() })
-            )
             .navigationTitle(vm.yearFilteredExams.first?.year.description ?? "")
         }
         

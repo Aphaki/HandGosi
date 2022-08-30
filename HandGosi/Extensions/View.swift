@@ -6,14 +6,27 @@
 //
 import SwiftUI
 
+extension View {
+    func yearText() -> some View{
+        modifier(YearTextViewModifier())
+    }
+    
+    func myNoteButton(color: Color) -> some View {
+        modifier(MyNoteButtonViewModifier(color: color))
+    }
+    
+}
+
 struct YearTextViewModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(15)
-            .font(.title)
+            .font(.headline)
+            .foregroundColor(Color.theme.myBackgroundColor)
+            .frame(width: 75, height: 75)
             .background(
-                Capsule().opacity(0.3)
-                    .shadow(color: .secondary, radius: 10, x: 0, y: 10)
+                Circle()
+                    .foregroundColor(Color.theme.myAccentColor)
+                    
             )
         
     }
@@ -34,15 +47,14 @@ struct MyNoteButtonViewModifier: ViewModifier {
             )
     }
 }
+struct ProgressCircle: Shape {
+    let degree: Double
+    
+    func path(in rect: CGRect) -> Path {
+        Path { path in
+            path.move(to: CGPoint(x: rect.midX, y: rect.midY))
+            path.addArc(center: CGPoint(x: rect.midX, y: rect.midY), radius: rect.height, startAngle: Angle(degrees: 270), endAngle: Angle(degrees: degree + 270), clockwise: false)
+        }
+    }
 
-extension View {
-    func yearText() -> some View{
-        modifier(YearTextViewModifier())
-    }
-    
-    func myNoteButton(color: Color) -> some View {
-        modifier(MyNoteButtonViewModifier(color: color))
-    }
-    
 }
-
