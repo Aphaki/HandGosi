@@ -21,10 +21,9 @@ class MainVM: ObservableObject {
     @Published var exams2021: [ExamModel] = []
     @Published var exams2022: [ExamModel] = []
     
-    @Published var progress2022: Double?
-    
-    
     @Published var myNotes: [MyNoteQuestion] = []
+    
+    @Published var myNoteSaveData: [MyNoteQuSaveModel] = []
     @Published var filteredNotes: [MyNoteQuestion] = []
     
     let examStoreDataService = ExamStoreDataService()
@@ -34,6 +33,7 @@ class MainVM: ObservableObject {
     
     init() {
         subscribeAllExams()
+        subscribeMySaveData()
         subscribeMyNote()
         subscribe2015Exam()
         subscribe2016Exam()
@@ -129,30 +129,43 @@ class MainVM: ObservableObject {
         .store(in: &subscription)
     }
     
-    private func subscribe2022Progress() {
-        $exams2022.sink { [weak self] exams in
-            guard let self = self else { return }
-           let total = exams.map { exam in
-               return exam.questions.count
-            }.reduce(0, +)
-            let progress = exams.map { exam in
-                return exam.progressCount
-            }.reduce(0, +)
-            self.progress2022 = Double(progress / total * 100) * 3.6
-        }
-        .store(in: &subscription)
-    }
     
-    
-    private func subscribeMyNote() {
-        myNoteStoreService.$myNotes
+    private func subscribeMySaveData() {
+        myNoteStoreService.$myNoteSaveData
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] myNotesInService in
+            .sink { [weak self] returnedData in
                 guard let self = self else { return }
-                self.myNotes = myNotesInService
+                self.myNoteSaveData = returnedData
             }
             .store(in: &subscription)
     }
+    private func subscribeMyNote() {
+        $allExams.combineLatest($myNoteSaveData)
+            .map { (exams, allSaveData) -> [MyNoteQuestion] in
+//                if allSaveData.isEmpty {
+//                    return []
+//                } else {
+                    let allQuestions = exams.flatMap { $0.questions }
+                    let myNoteQuestions = allSaveData.map { aSaveModel -> MyNoteQuestion in
+                        if let question = allQuestions.filter({ aQuestion in
+                            return aQuestion.id == aSaveModel.questionID
+                        }).first {
+                            let myNoteQuestion = MyNoteQuestion(year: aSaveModel.year, type: aSaveModel.type, subject: aSaveModel.subject, question: question)
+                            return myNoteQuestion
+                        }
+                        return MyNoteQuestion(year: 0, type: "", subject: "", question: QuestionModel(num: 0, questionText: "", num1Text: "", num2Text: "", num3Text: "", num4Text: "", answer: 0))
+                     }
+                    return myNoteQuestions
+//                }
+            }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] returnedMyNoteQuestions in
+                guard let self = self else { return }
+                self.myNotes = returnedMyNoteQuestions
+            }
+            .store(in: &subscription)
+    }
+    
     func saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion) -> String {
         return myNoteStoreService.myNoteSave(myNoteQuestion: myNoteQuestion)
     }

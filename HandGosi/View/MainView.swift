@@ -28,9 +28,9 @@ struct MainView: View {
                                 SubjectSelectView(exams: vm.exams2022)
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: vm.progress2022 ?? 0)
-                                        .foregroundColor(.green)
-                                        .frame(width: 45, height: 45)
+//                                    ProgressCircle(degree: vm.progress2022 ?? 0)
+//                                        .foregroundColor(.green)
+//                                        .frame(width: 45, height: 45)
                                     Text("2022")
                                         .yearText()
                                 }
