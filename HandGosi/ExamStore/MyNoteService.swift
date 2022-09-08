@@ -27,7 +27,7 @@ class MyNoteService {
                 return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
                 
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num)
                 myNoteSaveData.append(saveData)
                 return "국어 오답노트에 추가되었습니다."
             } else {
@@ -38,7 +38,7 @@ class MyNoteService {
                 return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
                 
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num)
                 myNoteSaveData.append(saveData)
                 return "영어 오답노트에 추가되었습니다."
             } else {
@@ -49,7 +49,7 @@ class MyNoteService {
                 return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
                 
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num)
                 myNoteSaveData.append(saveData)
                 return "한국사 오답노트에 추가되었습니다."
             } else {

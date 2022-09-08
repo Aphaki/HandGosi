@@ -28,9 +28,9 @@ struct MainView: View {
                                 SubjectSelectView(exams: vm.exams2022)
                             } label: {
                                 ZStack {
-//                                    ProgressCircle(degree: vm.progress2022 ?? 0)
-//                                        .foregroundColor(.green)
-//                                        .frame(width: 45, height: 45)
+                                    ProgressCircle(degree: 90)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
                                     Text("2022")
                                         .yearText()
                                 }
@@ -41,7 +41,7 @@ struct MainView: View {
                                 SubjectSelectView(exams: vm.exams2021)
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 280)
+                                    ProgressCircle(degree: 180)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2021")
@@ -55,7 +55,7 @@ struct MainView: View {
                                 SubjectSelectView(exams: vm.exams2020)
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 280)
+                                    ProgressCircle(degree: 270)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2020")
@@ -65,8 +65,13 @@ struct MainView: View {
                             NavigationLink {
                                 SubjectSelectView(exams: vm.exams2019)
                             } label: {
-                                Text("2019")
-                                    .yearText()
+                                ZStack {
+                                    ProgressCircle(degree: 360)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
+                                    Text("2019")
+                                        .yearText()
+                                }
                             }
                         }
                         
@@ -119,8 +124,13 @@ struct MainView: View {
                             NavigationLink {
                                 SubjectSelectView(exams: vm.exams2018)
                             } label: {
-                                Text("2018")
-                                    .yearText()
+                                ZStack {
+                                    ProgressCircle(degree: 45)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
+                                    Text("2018")
+                                        .yearText()
+                                }
                             }
                             NavigationLink {
                                 SubjectSelectView(exams: vm.exams2017)

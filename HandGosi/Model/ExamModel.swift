@@ -18,6 +18,7 @@ class ExamModel: Identifiable {
            return question.selectedNum != 0
         }.count
     }
+    var totalCount: Int { return questions.count }
     
     init(id: Int, year: Int, examTypeID: String, subjectID: String, questions: [QuestionModel]) {
         self.id = id

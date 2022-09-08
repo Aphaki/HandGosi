@@ -23,7 +23,6 @@ class MainVM: ObservableObject {
     
     @Published var myNotes: [MyNoteQuestion] = []
     
-//    @Published var myNoteSaveData: [MyNoteQuSaveModel] = []
     @Published var filteredNotes: [MyNoteQuestion] = []
     
     let examStoreDataService = ExamStoreDataService()
@@ -33,7 +32,6 @@ class MainVM: ObservableObject {
     
     init() {
         subscribeAllExams()
-//        subscribeMySaveData()
         subscribeMyNote()
         subscribe2015Exam()
         subscribe2016Exam()
