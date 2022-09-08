@@ -48,7 +48,6 @@ struct ExamView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         dismiss()
-                        dismiss()
                     } label: {
                         Text("back")
                     }
