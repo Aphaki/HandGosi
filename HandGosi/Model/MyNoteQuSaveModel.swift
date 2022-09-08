@@ -11,6 +11,7 @@ struct MyNoteQuSaveModel: Codable {
     let year: Int
     let type: String
     let subject: String
-    let questionID: UUID
+//    let questionID: String
+    let questionNum: Int
     var selectedNum: Int
 }

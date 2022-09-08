@@ -15,8 +15,6 @@ class MyNoteService {
             print("세이브데이터 갯수: " + myNoteSaveData.count.description)
         }
     }
-    
-    
     let saveDataKey = "save_key"
     init() {
         fetchData()
@@ -26,9 +24,10 @@ class MyNoteService {
     func myNoteSave(myNoteQuestion: MyNoteQuestion) -> String {
         if myNoteQuestion.subject == "국어" {
             if myNoteSaveData.filter({ aSaveData in
-                return aSaveData.questionID == myNoteQuestion.question.id
+                return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
+                
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionID: myNoteQuestion.question.id, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
                 myNoteSaveData.append(saveData)
                 return "국어 오답노트에 추가되었습니다."
             } else {
@@ -36,9 +35,10 @@ class MyNoteService {
             }
         } else if myNoteQuestion.subject == "영어" {
             if myNoteSaveData.filter({ aSaveData in
-                return aSaveData.questionID == myNoteQuestion.question.id
+                return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
+                
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionID: myNoteQuestion.question.id, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
                 myNoteSaveData.append(saveData)
                 return "영어 오답노트에 추가되었습니다."
             } else {
@@ -46,9 +46,10 @@ class MyNoteService {
             }
         } else {
             if myNoteSaveData.filter({ aSaveData in
-                return aSaveData.questionID == myNoteQuestion.question.id
+                return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
+                
             }).isEmpty {
-                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionID: myNoteQuestion.question.id, selectedNum: myNoteQuestion.question.selectedNum)
+                let saveData = MyNoteQuSaveModel(year: myNoteQuestion.year, type: myNoteQuestion.type, subject: myNoteQuestion.subject, questionNum: myNoteQuestion.question.num, selectedNum: myNoteQuestion.question.selectedNum)
                 myNoteSaveData.append(saveData)
                 return "한국사 오답노트에 추가되었습니다."
             } else {
@@ -59,7 +60,7 @@ class MyNoteService {
     
     func deleteMyNote(myNoteQuestion: MyNoteQuestion) {
         myNoteSaveData.removeAll { aSaveData in
-            return aSaveData.questionID == myNoteQuestion.question.id
+            return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
         }
     }
     

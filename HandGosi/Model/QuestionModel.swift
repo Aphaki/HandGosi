@@ -8,7 +8,7 @@
 import Foundation
 
 class QuestionModel: Identifiable {
-    let id = UUID()
+    let id = UUID().uuidString
     let num: Int
     let questionText: AttributedString
     let reference: AttributedString?

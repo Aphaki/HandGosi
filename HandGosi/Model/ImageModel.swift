@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ImageModel: Codable {
+struct ImageModel {
     let imageString: String
     let imgWidth: CGFloat
     let imgHeight: CGFloat
