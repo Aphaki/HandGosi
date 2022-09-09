@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ExamModel: Identifiable {
+class ExamModel: Identifiable, ObservableObject {
     let id: Int // 연도 + 타입 + 과목 (ex. 202211 = 22년도 국가직 국어)
     let year: Int
     let examTypeID: String

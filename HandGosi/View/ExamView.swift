@@ -47,6 +47,7 @@ struct ExamView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
+                        vm.resetQuestions()
                         dismiss()
                     } label: {
                         Text("back")
