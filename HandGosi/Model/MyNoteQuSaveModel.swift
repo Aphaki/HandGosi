@@ -18,7 +18,7 @@ struct ExamProgressModel {
     let year: Int
     let type: String
     let subject: String
-    let selectedNumArray: [Int]
+    var selectedNumArray: [Int]
     var progressCount: Int {
         return selectedNumArray.filter{ $0 != 0 }.count
     }

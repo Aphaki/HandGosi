@@ -13,7 +13,7 @@ struct MainView: View {
     
     @State private var isloading = true
     @State private var isClicked: Bool = false
-//    @State private var goToNextView: Bool = false
+    @State private var goToNextView: Bool = false
     @State private var goToMyNote: Bool = false
     
     var body: some View {
@@ -23,25 +23,30 @@ struct MainView: View {
                 VStack(spacing: 30) {
                     if isClicked {
                         HStack(spacing: 30) {
-                            
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2022)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2022
+                                })
+                                goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 90)
+                                    ProgressCircle(degree: 45)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2022")
                                         .yearText()
                                 }
                             }
+
                             
-                            
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2021)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2021
+                                })
+                                goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 180)
+                                    ProgressCircle(degree: 90)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2021")
@@ -51,22 +56,28 @@ struct MainView: View {
                             
                         }
                         HStack(spacing: 30) {
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2020)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2020
+                                })
+                                goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 270)
+                                    ProgressCircle(degree: 135)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2020")
                                         .yearText()
                                 }
                             }
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2019)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2019
+                                })
+                                goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 360)
+                                    ProgressCircle(degree: 180)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2019")
@@ -121,36 +132,63 @@ struct MainView: View {
                     }
                     if isClicked {
                         HStack(spacing: 30) {
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2018)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2018
+                                })
+                                goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 45)
+                                    ProgressCircle(degree: 225)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2018")
                                         .yearText()
                                 }
                             }
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2017)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2017
+                                })
+                                goToNextView.toggle()
                             } label: {
-                                Text("2017")
-                                    .yearText()
+                                ZStack {
+                                    ProgressCircle(degree: 260)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
+                                    Text("2017")
+                                        .yearText()
+                                }
                             }
                         }
                         HStack(spacing: 30) {
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2016)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2016
+                                })
+                                goToNextView.toggle()
                             } label: {
-                                Text("2016")
-                                    .yearText()
+                                ZStack {
+                                    ProgressCircle(degree: 305)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
+                                    Text("2016")
+                                        .yearText()
+                                }
                             }
-                            NavigationLink {
-                                SubjectSelectView(exams: vm.exams2015)
+                            Button {
+                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                    return aExam.year == 2015
+                                })
+                                goToNextView.toggle()
                             } label: {
-                                Text("2015")
-                                    .yearText()
+                                ZStack {
+                                    ProgressCircle(degree: 350)
+                                        .foregroundColor(.green)
+                                        .frame(width: 45, height: 45)
+                                    Text("2015")
+                                        .yearText()
+                                }
                             }
                         }
                     }
@@ -159,6 +197,9 @@ struct MainView: View {
                     NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
                         EmptyView()
                     })
+                )
+                .background(
+                    NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams) }, label: { EmptyView() })
                 )
                 .navigationBarHidden(true)
                 

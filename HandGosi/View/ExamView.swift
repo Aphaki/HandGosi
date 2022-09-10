@@ -10,6 +10,8 @@ import SwiftUI
 struct ExamView: View {
     
     @StateObject var vm: ExamVM
+    @EnvironmentObject var mainVM: MainVM
+    @State var showAlert = false
     @Environment(\.dismiss) var dismiss
     
     init(exam: ExamModel) {
@@ -34,11 +36,13 @@ struct ExamView: View {
                     }
                 }
             }
+            
             .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
             .navigationBarBackButtonHidden(true)
+            
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text(vm.isScored ? "시험지로" : "채점하기")
+                    Text(vm.isScored ? "시험지로" : "채점모드")
                         .padding(8)
                         .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
                         .onTapGesture {
@@ -47,10 +51,27 @@ struct ExamView: View {
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        vm.resetQuestions()
-                        dismiss()
+                        showAlert.toggle()
+//                        vm.resetQuestions()
+//                        dismiss()
                     } label: {
                         Text("back")
+                    }
+                    .alert("입력된 답안 기록을 어떻게 할까요?", isPresented: $showAlert) {
+                        Button(role: .destructive) {
+                            vm.resetQuestions()
+                            dismiss()
+                        } label: {
+                            Text("초기화")
+                        }
+                        Button {
+                            let selectedNumArray = vm.finalExam.questions.map { $0.selectedNum }
+                            let examProgressModel = ExamProgressModel(year: vm.finalExam.year, type: vm.finalExam.examTypeID, subject: vm.finalExam.subjectID, selectedNumArray: selectedNumArray)
+                            mainVM.saveExamProgressModel(saveModel: examProgressModel)
+                        } label: {
+                            Text("저장")
+                        }
+
                     }
 
                 }
@@ -63,6 +84,7 @@ struct ExamView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ExamView(exam: dev.examSample)
+                .environmentObject(MainVM())
         }
     }
 }
