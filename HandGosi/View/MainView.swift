@@ -30,7 +30,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 45)
+                                    ProgressCircle(degree: vm.percentage2022 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2022")
@@ -46,7 +46,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 90)
+                                    ProgressCircle(degree: vm.percentage2021 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2021")
@@ -63,7 +63,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 135)
+                                    ProgressCircle(degree: vm.percentage2020 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2020")
@@ -77,7 +77,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 180)
+                                    ProgressCircle(degree: vm.percentage2019 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2019")
@@ -139,7 +139,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 225)
+                                    ProgressCircle(degree: vm.percentage2018 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2018")
@@ -153,7 +153,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 260)
+                                    ProgressCircle(degree: vm.percentage2017 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2017")
@@ -169,7 +169,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 305)
+                                    ProgressCircle(degree: vm.percentage2016 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2016")
@@ -183,7 +183,7 @@ struct MainView: View {
                                 goToNextView.toggle()
                             } label: {
                                 ZStack {
-                                    ProgressCircle(degree: 350)
+                                    ProgressCircle(degree: vm.percentage2015 * 3.6)
                                         .foregroundColor(.green)
                                         .frame(width: 45, height: 45)
                                     Text("2015")

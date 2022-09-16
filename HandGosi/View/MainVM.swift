@@ -13,6 +13,15 @@ class MainVM: ObservableObject {
     @Published var currentExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
     
+    @Published var percentage2022: Double = 0
+    @Published var percentage2021: Double = 0
+    @Published var percentage2020: Double = 0
+    @Published var percentage2019: Double = 0
+    @Published var percentage2018: Double = 0
+    @Published var percentage2017: Double = 0
+    @Published var percentage2016: Double = 0
+    @Published var percentage2015: Double = 0
+    
     @Published var myNotes: [MyNoteQuestion] = []
     @Published var filteredNotes: [MyNoteQuestion] = []
     
@@ -26,6 +35,7 @@ class MainVM: ObservableObject {
         subscribeAllExams()
         subscribeMyNote()
         subscribeSavingExams()
+        subscribeProgressModel()
     }
     
     
@@ -77,7 +87,6 @@ class MainVM: ObservableObject {
                     savingExams.forEach({ aSavingModel in
                        let indices =
                         exams.indices.filter({
-//                            exams[$0].year == aSavingModel.year && exams[$0].examTypeID == aSavingModel.examTypeID && exams[$0].subjectID == aSavingModel.subjectID
                             exams[$0].id == aSavingModel.id
                         })
                         if let index = indices.first {
@@ -98,6 +107,186 @@ class MainVM: ObservableObject {
             .store(in: &subscription)
     }
     
+    private func subscribeProgressModel2022() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2022 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2022 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2021() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2021 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2021 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2020() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2020 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2020 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2019() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2019 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2019 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2018() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2018 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2018 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2017() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2017 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2017 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2016() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2016 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2016 = percentage
+        }
+        .store(in: &subscription)
+    }
+    private func subscribeProgressModel2015() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2015 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2015 = percentage
+        }
+        .store(in: &subscription)
+    }
+    
+    private func subscribeProgressModel() {
+        subscribeProgressModel2015()
+        subscribeProgressModel2016()
+        subscribeProgressModel2017()
+        subscribeProgressModel2018()
+        subscribeProgressModel2019()
+        subscribeProgressModel2020()
+        subscribeProgressModel2021()
+        subscribeProgressModel2022()
+    }
+    
     func saveCurrentExam(exam: ExamModel) {
         savingExamService.saveCurrentExam(exam: exam)
     }
@@ -105,6 +294,7 @@ class MainVM: ObservableObject {
     func saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion) -> String {
         return myNoteStoreService.myNoteSave(myNoteQuestion: myNoteQuestion)
     }
+    
     func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }

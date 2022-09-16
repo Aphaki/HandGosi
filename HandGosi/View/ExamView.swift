@@ -55,7 +55,7 @@ struct ExamView: View {
                     Button {
                         showAlert.toggle()
                     } label: {
-                        Text("back")
+                        Image(systemName: "xmark.circle")
                     }
                     .alert("입력된 답안 기록을 어떻게 할까요?", isPresented: $showAlert) {
                         Button(role: .destructive) {

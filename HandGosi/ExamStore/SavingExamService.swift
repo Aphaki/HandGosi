@@ -26,7 +26,6 @@ class SavingExamService {
         } else {
            let currentIndices =
             savingExams.indices.filter {
-//                savingExams[$0].year == exam.year && savingExams[$0].examTypeID == exam.examTypeID && savingExams[$0].subjectID == exam.subjectID
                 (savingExams[$0].id == exam.id)
             }
             if let currentIndex = currentIndices.first {
