@@ -7,8 +7,8 @@
 
 import Foundation
 
-class QuestionModel: Identifiable, ObservableObject {
-    let id = UUID().uuidString
+class QuestionModel: Identifiable, Codable {
+    var id = UUID().uuidString
     let num: Int
     let questionText: AttributedString
     let reference: AttributedString?
@@ -19,7 +19,7 @@ class QuestionModel: Identifiable, ObservableObject {
     let num3Text: AttributedString
     let num4Text: AttributedString
     let answer: Int
-    @Published var selectedNum: Int
+    var selectedNum: Int
     
     init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, reference2: AttributedString? = nil, imgModel: ImageModel? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString, answer: Int, selectedNum: Int = 0) {
         self.num = num

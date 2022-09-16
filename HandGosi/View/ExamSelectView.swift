@@ -10,9 +10,11 @@ import SwiftUI
 struct ExamSelectView: View {
     
     @StateObject var vm: ExamSelectVM
+    @Binding var navigationBool: Bool
     
-    init(exams: [ExamModel]) {
+    init(exams: [ExamModel], navigationBool: Binding<Bool>) {
         _vm = StateObject(wrappedValue: ExamSelectVM(exams: exams))
+        _navigationBool = navigationBool
     }
     
     
@@ -20,7 +22,7 @@ struct ExamSelectView: View {
             List {
                 ForEach(vm.yearSubjectFilteredExam) { exam in
                     NavigationLink {
-                        ExamView(exam: exam)
+                        ExamView(exam: exam, navigationBool: $navigationBool)
                     } label: {
                         HStack {
                             Text(exam.year.description + " " + exam.examTypeID + " " + exam.subjectID)
@@ -44,7 +46,7 @@ struct ExamSelectView: View {
 struct ExamSelectView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ExamSelectView(exams: dev.exams)
+            ExamSelectView(exams: dev.exams, navigationBool: .constant(true))
         }
     }
 }

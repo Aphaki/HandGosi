@@ -12,7 +12,7 @@ class MyNoteService {
     @Published var myNoteSaveData: [MyNoteQuSaveModel] = [] {
         didSet {
             saveData()
-            print("세이브데이터 갯수: " + myNoteSaveData.count.description)
+            print("오답노트 갯수: " + myNoteSaveData.count.description)
         }
     }
     let saveDataKey = "save_key"
@@ -63,7 +63,7 @@ class MyNoteService {
             return aSaveData.year == myNoteQuestion.year && aSaveData.type == myNoteQuestion.type && aSaveData.subject == myNoteQuestion.subject && aSaveData.questionNum == myNoteQuestion.question.num
         }
     }
-    
+    //MARK: - UserDefault 세이브
     private func saveData() {
         if let encodedData = try? JSONEncoder().encode(myNoteSaveData) {
             UserDefaults.standard.set(encodedData, forKey: saveDataKey)

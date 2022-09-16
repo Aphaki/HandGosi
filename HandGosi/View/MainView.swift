@@ -13,7 +13,7 @@ struct MainView: View {
     
     @State private var isloading = true
     @State private var isClicked: Bool = false
-    @State private var goToNextView: Bool = false
+    @State var goToNextView: Bool = false
     @State private var goToMyNote: Bool = false
     
     var body: some View {
@@ -24,7 +24,7 @@ struct MainView: View {
                     if isClicked {
                         HStack(spacing: 30) {
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2022
                                 })
                                 goToNextView.toggle()
@@ -40,7 +40,7 @@ struct MainView: View {
 
                             
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2021
                                 })
                                 goToNextView.toggle()
@@ -57,7 +57,7 @@ struct MainView: View {
                         }
                         HStack(spacing: 30) {
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2020
                                 })
                                 goToNextView.toggle()
@@ -71,7 +71,7 @@ struct MainView: View {
                                 }
                             }
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2019
                                 })
                                 goToNextView.toggle()
@@ -133,7 +133,7 @@ struct MainView: View {
                     if isClicked {
                         HStack(spacing: 30) {
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2018
                                 })
                                 goToNextView.toggle()
@@ -147,7 +147,7 @@ struct MainView: View {
                                 }
                             }
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2017
                                 })
                                 goToNextView.toggle()
@@ -163,7 +163,7 @@ struct MainView: View {
                         }
                         HStack(spacing: 30) {
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2016
                                 })
                                 goToNextView.toggle()
@@ -177,7 +177,7 @@ struct MainView: View {
                                 }
                             }
                             Button {
-                                vm.filteredExams = vm.allExams.filter({ aExam in
+                                vm.filteredExams = vm.currentExams.filter({ aExam in
                                     return aExam.year == 2015
                                 })
                                 goToNextView.toggle()
@@ -199,7 +199,7 @@ struct MainView: View {
                     })
                 )
                 .background(
-                    NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams) }, label: { EmptyView() })
+                    NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams, navigationBool: $goToNextView) }, label: { EmptyView() })
                 )
                 .navigationBarHidden(true)
                 

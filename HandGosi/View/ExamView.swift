@@ -11,11 +11,13 @@ struct ExamView: View {
     
     @StateObject var vm: ExamVM
     @EnvironmentObject var mainVM: MainVM
+    @Binding var navigationBool: Bool
     @State var showAlert = false
     @Environment(\.dismiss) var dismiss
     
-    init(exam: ExamModel) {
+    init(exam: ExamModel, navigationBool: Binding<Bool>) {
         _vm = StateObject(wrappedValue: ExamVM(exam: exam))
+        _navigationBool = navigationBool
     }
     
     var body: some View {
@@ -52,24 +54,20 @@ struct ExamView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         showAlert.toggle()
-//                        vm.resetQuestions()
-//                        dismiss()
                     } label: {
                         Text("back")
                     }
                     .alert("입력된 답안 기록을 어떻게 할까요?", isPresented: $showAlert) {
                         Button(role: .destructive) {
                             vm.resetQuestions()
-                            dismiss()
+                            mainVM.saveCurrentExam(exam: vm.finalExam)
+                            navigationBool.toggle()
                         } label: {
                             Text("초기화")
                         }
-                        Button {
-                            let selectedNumArray = vm.finalExam.questions.map { $0.selectedNum }
-                            let examProgressModel = ExamProgressModel(year: vm.finalExam.year, type: vm.finalExam.examTypeID, subject: vm.finalExam.subjectID, selectedNumArray: selectedNumArray)
-                            mainVM.saveExamProgressModel(saveModel: examProgressModel)
-                        } label: {
-                            Text("저장")
+                        Button("저장") {
+                            mainVM.saveCurrentExam(exam: vm.finalExam)
+                            navigationBool.toggle()
                         }
 
                     }
@@ -83,7 +81,7 @@ struct ExamView: View {
 struct ExamView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ExamView(exam: dev.examSample)
+            ExamView(exam: dev.examSample, navigationBool: .constant(true))
                 .environmentObject(MainVM())
         }
     }

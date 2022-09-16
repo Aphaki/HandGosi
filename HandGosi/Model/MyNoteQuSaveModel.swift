@@ -14,13 +14,13 @@ struct MyNoteQuSaveModel: Codable {
     let questionNum: Int
 }
 
-struct ExamProgressModel {
-    let year: Int
-    let type: String
-    let subject: String
-    var selectedNumArray: [Int]
-    var progressCount: Int {
-        return selectedNumArray.filter{ $0 != 0 }.count
-    }
-    let totalCount: Int = 20
-}
+//struct ExamProgressModel {
+//    let year: Int
+//    let type: String
+//    let subject: String
+//    var selectedNumArray: [Int]
+//    var progressCount: Int {
+//        return selectedNumArray.filter{ $0 != 0 }.count
+//    }
+//    let totalCount: Int = 20
+//}

@@ -23,10 +23,9 @@
 		7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FF28B36E07008AD29E /* ExamStore2019.swift */; };
 		7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350128B36F3D008AD29E /* ExamStore2018.swift */; };
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
-		7F6AC76128CC7E91009D2113 /* progressModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* progressModelService.swift */; };
+		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */; };
-		7F71A79928CA5AC4007F4A08 /* ProgressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71A79828CA5AC4007F4A08 /* ProgressService.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
@@ -51,7 +50,6 @@
 		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
 		7FE038B6289EC26C008E629B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE038B5289EC26C008E629B /* Color.swift */; };
 		7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0757A28B61BD600B94828 /* LoadingView.swift */; };
-		7FE9995E28BBE0D500279C6D /* ExamLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,11 +69,10 @@
 		7F5634FF28B36E07008AD29E /* ExamStore2019.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2019.swift; sourceTree = "<group>"; };
 		7F56350128B36F3D008AD29E /* ExamStore2018.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2018.swift; sourceTree = "<group>"; };
 		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
-		7F6AC76028CC7E91009D2113 /* progressModelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressModelService.swift; sourceTree = "<group>"; };
+		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuSaveModel.swift; sourceTree = "<group>"; };
-		7F71A79828CA5AC4007F4A08 /* ProgressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressService.swift; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FE0757A28B61BD600B94828 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +116,7 @@
 			children = (
 				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
 				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
-				7F6AC76028CC7E91009D2113 /* progressModelService.swift */,
+				7F6AC76028CC7E91009D2113 /* SavingExamService.swift */,
 				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
 				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
 				7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */,
@@ -129,7 +125,6 @@
 				7F56350328B37040008AD29E /* ExamStore2017.swift */,
 				7FA573AC28B74F9D00234059 /* ExamStore2016.swift */,
 				7FC91D0F28B89DB300454811 /* ExamStore2015.swift */,
-				7F71A79828CA5AC4007F4A08 /* ProgressService.swift */,
 			);
 			path = ExamStore;
 			sourceTree = "<group>";
@@ -152,7 +147,6 @@
 				7F49086028A14FC8002896DB /* SubjectSelectVM.swift */,
 				7F88E7F428A62C13001C0463 /* ExamSelectView.swift */,
 				7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */,
-				7FE9995D28BBE0D500279C6D /* ExamLoadingView.swift */,
 				7F88E7F628A636C8001C0463 /* ExamView.swift */,
 				7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */,
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
@@ -327,13 +321,11 @@
 				7FC4643C28B5C56F00C024A0 /* View.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
 				7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */,
-				7F6AC76128CC7E91009D2113 /* progressModelService.swift in Sources */,
+				7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
 				7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
-				7FE9995E28BBE0D500279C6D /* ExamLoadingView.swift in Sources */,
-				7F71A79928CA5AC4007F4A08 /* ProgressService.swift in Sources */,
 				7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */,
 				7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */,
 				7F5634FA28B36409008AD29E /* ExamStore2022.swift in Sources */,
