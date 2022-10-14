@@ -18,7 +18,7 @@ struct MainView: View {
     
     var body: some View {
         
-        ZStack {
+        VStack {
             NavigationView {
                 ZStack {
                     Color.theme.myBackgroundColor.ignoresSafeArea()
@@ -208,7 +208,7 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
-            BannerAdView(adPosition: .bottom, adUnitId: "ca-app-pub-3940256099942544/2934735716")
+            BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
         }
         
     }

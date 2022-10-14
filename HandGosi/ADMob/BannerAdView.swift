@@ -11,24 +11,24 @@ import GoogleMobileAds
 struct BannerAdView: View {
     @State var height: CGFloat = 0
     @State var width: CGFloat = 0
-    @State var adPosition: AdPosition
+//    @State var adPosition: AdPosition
     let adUnitId: String
     
-    init(adPosition: AdPosition, adUnitId: String) {
-        self.adPosition = adPosition
+    init(adUnitId: String) {
+//        self.adPosition = adPosition
         self.adUnitId = adUnitId
     }
     
-    enum AdPosition {
-        case top
-        case bottom
-    }
+//    enum AdPosition {
+//        case top
+//        case bottom
+//    }
     var body: some View {
         VStack {
-            if adPosition == .bottom {
-                Spacer()
-            }
-            
+//            if adPosition == .bottom {
+//                Spacer()
+//            }
+//
             BannerAd(adUnitId: adUnitId)
                 .frame(width: width, height: height, alignment: .center)
                 .onAppear {
@@ -37,9 +37,9 @@ struct BannerAdView: View {
                 .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
                     setFrame()
                 }
-            if adPosition == .top {
-                Spacer()
-            }
+//            if adPosition == .top {
+//                Spacer()
+//            }
         }
     }
     
