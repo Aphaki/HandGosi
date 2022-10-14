@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; };
 		7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE028AF61FF008F601D /* MyNoteService.swift */; };
 		7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE228AF72BE008F601D /* MyNoteVM.swift */; };
 		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
 		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
 		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
+		7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD628F7FAB20008006B /* BannerAdVC.swift */; };
+		7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD828F7FB390008006B /* BannerAdView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
 		7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */; };
 		7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */; };
@@ -58,6 +61,8 @@
 		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
 		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
+		7F291CD628F7FAB20008006B /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
+		7F291CD828F7FB390008006B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestion.swift; sourceTree = "<group>"; };
 		7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
@@ -98,6 +103,9 @@
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FE0757A28B61BD600B94828 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.release.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.release.xcconfig"; sourceTree = "<group>"; };
+		CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.debug.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.debug.xcconfig"; sourceTree = "<group>"; };
+		D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandGosi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +113,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F291CD528F7FA830008006B /* ADMob */ = {
+			isa = PBXGroup;
+			children = (
+				7F291CD628F7FAB20008006B /* BannerAdVC.swift */,
+				7F291CD828F7FB390008006B /* BannerAdView.swift */,
+			);
+			path = ADMob;
+			sourceTree = "<group>";
+		};
 		7F56350528B3719F008AD29E /* ExamStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +217,8 @@
 			children = (
 				7FDDF223289CFDCB00EE3FB7 /* HandGosi */,
 				7FDDF222289CFDCB00EE3FB7 /* Products */,
+				BDE3382377FDEC6B84E82C0B /* Pods */,
+				DFB04FD8B172253B8CDACC05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +235,7 @@
 			children = (
 				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
+				7F291CD528F7FA830008006B /* ADMob */,
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F87FB4128AB8FDC00E57AC9 /* View */,
 				7F56350528B3719F008AD29E /* ExamStore */,
@@ -234,6 +255,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BDE3382377FDEC6B84E82C0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */,
+				91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFB04FD8B172253B8CDACC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FDDF22F289CFDCD00EE3FB7 /* Build configuration list for PBXNativeTarget "HandGosi" */;
 			buildPhases = (
+				12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */,
 				7FDDF21D289CFDCB00EE3FB7 /* Sources */,
 				7FDDF21E289CFDCB00EE3FB7 /* Frameworks */,
 				7FDDF21F289CFDCB00EE3FB7 /* Resources */,
+				78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,6 +340,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandGosi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FDDF21D289CFDCB00EE3FB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -308,6 +390,7 @@
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
+				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
 				7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */,
 				7F4E199128AEB49100BB6FDE /* MyNoteQuestionVM.swift in Sources */,
@@ -339,6 +422,7 @@
 				7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */,
 				7F5634FC28B36B28008AD29E /* ExamStore2021.swift in Sources */,
 				7F4E198F28AEB32300BB6FDE /* MyNoteQuestionView.swift in Sources */,
+				7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */,
 				7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */,
 				7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
@@ -467,6 +551,7 @@
 		};
 		7FDDF230289CFDCD00EE3FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,6 +582,7 @@
 		};
 		7FDDF231289CFDCD00EE3FB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
