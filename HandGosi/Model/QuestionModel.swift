@@ -7,7 +7,8 @@
 
 import Foundation
 
-class QuestionModel: Identifiable {
+class QuestionModel: Identifiable, Codable {
+    var id = UUID().uuidString
     let num: Int
     let questionText: AttributedString
     let reference: AttributedString?

@@ -7,9 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F19CFBE28AAAB8000FD1DF9 /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F19CFBD28AAAB8000FD1DF9 /* NanumMyeongjo-YetHangul.ttf */; };
+		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; };
+		7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE028AF61FF008F601D /* MyNoteService.swift */; };
+		7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE228AF72BE008F601D /* MyNoteVM.swift */; };
+		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
+		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
+		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
+		7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD628F7FAB20008006B /* BannerAdVC.swift */; };
+		7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD828F7FB390008006B /* BannerAdView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
+		7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */; };
+		7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */; };
+		7F4E198F28AEB32300BB6FDE /* MyNoteQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E198E28AEB32300BB6FDE /* MyNoteQuestionView.swift */; };
+		7F4E199128AEB49100BB6FDE /* MyNoteQuestionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E199028AEB49100BB6FDE /* MyNoteQuestionVM.swift */; };
+		7F5634FA28B36409008AD29E /* ExamStore2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634F928B36409008AD29E /* ExamStore2022.swift */; };
+		7F5634FC28B36B28008AD29E /* ExamStore2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FB28B36B28008AD29E /* ExamStore2021.swift */; };
+		7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */; };
+		7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FF28B36E07008AD29E /* ExamStore2019.swift */; };
+		7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350128B36F3D008AD29E /* ExamStore2018.swift */; };
+		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
+		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
+		7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
@@ -20,7 +39,10 @@
 		7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08328A0DA1100776238 /* QuestionVM.swift */; };
 		7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08928A0F81300776238 /* ExamModel.swift */; };
 		7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */; };
+		7FA573AD28B74F9D00234059 /* ExamStore2016.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA573AC28B74F9D00234059 /* ExamStore2016.swift */; };
 		7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB7399628A937EB008E4E3A /* ImageModel.swift */; };
+		7FC4643C28B5C56F00C024A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4643B28B5C56E00C024A0 /* View.swift */; };
+		7FC91D1028B89DB300454811 /* ExamStore2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC91D0F28B89DB300454811 /* ExamStore2015.swift */; };
 		7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7728AC139E0070B0A4 /* MainVM.swift */; };
 		7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */; };
 		7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */; };
@@ -30,13 +52,32 @@
 		7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */; };
 		7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */; };
 		7FE038B6289EC26C008E629B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE038B5289EC26C008E629B /* Color.swift */; };
+		7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0757A28B61BD600B94828 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F19CFBD28AAAB8000FD1DF9 /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
+		7F09EFE028AF61FF008F601D /* MyNoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteService.swift; sourceTree = "<group>"; };
+		7F09EFE228AF72BE008F601D /* MyNoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteVM.swift; sourceTree = "<group>"; };
+		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
+		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
+		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
+		7F291CD628F7FAB20008006B /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
+		7F291CD828F7FB390008006B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
+		7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestion.swift; sourceTree = "<group>"; };
+		7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
+		7F4E198E28AEB32300BB6FDE /* MyNoteQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestionView.swift; sourceTree = "<group>"; };
+		7F4E199028AEB49100BB6FDE /* MyNoteQuestionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestionVM.swift; sourceTree = "<group>"; };
+		7F5634F928B36409008AD29E /* ExamStore2022.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2022.swift; sourceTree = "<group>"; };
+		7F5634FB28B36B28008AD29E /* ExamStore2021.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2021.swift; sourceTree = "<group>"; };
+		7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2020.swift; sourceTree = "<group>"; };
+		7F5634FF28B36E07008AD29E /* ExamStore2019.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2019.swift; sourceTree = "<group>"; };
+		7F56350128B36F3D008AD29E /* ExamStore2018.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2018.swift; sourceTree = "<group>"; };
+		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
+		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuSaveModel.swift; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
@@ -47,7 +88,10 @@
 		7F8CD08328A0DA1100776238 /* QuestionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVM.swift; sourceTree = "<group>"; };
 		7F8CD08928A0F81300776238 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
 		7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStoreDataService.swift; sourceTree = "<group>"; };
+		7FA573AC28B74F9D00234059 /* ExamStore2016.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2016.swift; sourceTree = "<group>"; };
 		7FB7399628A937EB008E4E3A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		7FC4643B28B5C56E00C024A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7FC91D0F28B89DB300454811 /* ExamStore2015.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2015.swift; sourceTree = "<group>"; };
 		7FD21D7728AC139E0070B0A4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		7FD21D7928AC27840070B0A4 /* ExamSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSelectVM.swift; sourceTree = "<group>"; };
 		7FD21D7B28ACBED30070B0A4 /* ExamVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamVM.swift; sourceTree = "<group>"; };
@@ -58,6 +102,10 @@
 		7FDDF22B289CFDCD00EE3FB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7FE0757A28B61BD600B94828 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.release.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.release.xcconfig"; sourceTree = "<group>"; };
+		CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.debug.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.debug.xcconfig"; sourceTree = "<group>"; };
+		D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandGosi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,23 +113,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F291CD528F7FA830008006B /* ADMob */ = {
+			isa = PBXGroup;
+			children = (
+				7F291CD628F7FAB20008006B /* BannerAdVC.swift */,
+				7F291CD828F7FB390008006B /* BannerAdView.swift */,
+			);
+			path = ADMob;
+			sourceTree = "<group>";
+		};
+		7F56350528B3719F008AD29E /* ExamStore */ = {
+			isa = PBXGroup;
+			children = (
+				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
+				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
+				7F6AC76028CC7E91009D2113 /* SavingExamService.swift */,
+				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
+				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
+				7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */,
+				7F5634FF28B36E07008AD29E /* ExamStore2019.swift */,
+				7F56350128B36F3D008AD29E /* ExamStore2018.swift */,
+				7F56350328B37040008AD29E /* ExamStore2017.swift */,
+				7FA573AC28B74F9D00234059 /* ExamStore2016.swift */,
+				7FC91D0F28B89DB300454811 /* ExamStore2015.swift */,
+			);
+			path = ExamStore;
+			sourceTree = "<group>";
+		};
 		7F70B51028A23F4C00148779 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7F19CFBD28AAAB8000FD1DF9 /* NanumMyeongjo-YetHangul.ttf */,
+				7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		7F87FB4128AB8FDC00E57AC9 /* Core */ = {
+		7F87FB4128AB8FDC00E57AC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7FE0757A28B61BD600B94828 /* LoadingView.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
 				7FD21D7728AC139E0070B0A4 /* MainVM.swift */,
 				7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */,
@@ -93,9 +170,15 @@
 				7F7EEF5B289D09C800471BDB /* QuestionView.swift */,
 				7FD21D7D28AD2F720070B0A4 /* ScoredQuestionView.swift */,
 				7F8CD08328A0DA1100776238 /* QuestionVM.swift */,
+				7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */,
+				7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */,
+				7F17A20F28AF281F006B3B21 /* MyNoteView.swift */,
+				7F09EFE228AF72BE008F601D /* MyNoteVM.swift */,
+				7F4E198E28AEB32300BB6FDE /* MyNoteQuestionView.swift */,
+				7F4E199028AEB49100BB6FDE /* MyNoteQuestionVM.swift */,
 				7F87FB4228AB904D00E57AC9 /* Configuration */,
 			);
-			path = Core;
+			path = View;
 			sourceTree = "<group>";
 		};
 		7F87FB4228AB904D00E57AC9 /* Configuration */ = {
@@ -109,9 +192,11 @@
 		7F8CD08028A0CE6500776238 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */,
 				7F8CD08928A0F81300776238 /* ExamModel.swift */,
+				7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */,
+				7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */,
 				7FB7399628A937EB008E4E3A /* ImageModel.swift */,
+				7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +207,7 @@
 				7FE038B5289EC26C008E629B /* Color.swift */,
 				7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */,
 				7F70B51628A2D08800148779 /* String.swift */,
+				7FC4643B28B5C56E00C024A0 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +217,8 @@
 			children = (
 				7FDDF223289CFDCB00EE3FB7 /* HandGosi */,
 				7FDDF222289CFDCB00EE3FB7 /* Products */,
+				BDE3382377FDEC6B84E82C0B /* Pods */,
+				DFB04FD8B172253B8CDACC05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +235,10 @@
 			children = (
 				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
+				7F291CD528F7FA830008006B /* ADMob */,
 				7F8CD08028A0CE6500776238 /* Model */,
-				7F87FB4128AB8FDC00E57AC9 /* Core */,
-				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
+				7F87FB4128AB8FDC00E57AC9 /* View */,
+				7F56350528B3719F008AD29E /* ExamStore */,
 				7F70B51028A23F4C00148779 /* Fonts */,
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
@@ -166,6 +255,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BDE3382377FDEC6B84E82C0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */,
+				91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFB04FD8B172253B8CDACC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +279,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FDDF22F289CFDCD00EE3FB7 /* Build configuration list for PBXNativeTarget "HandGosi" */;
 			buildPhases = (
+				12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */,
 				7FDDF21D289CFDCB00EE3FB7 /* Sources */,
 				7FDDF21E289CFDCB00EE3FB7 /* Frameworks */,
 				7FDDF21F289CFDCB00EE3FB7 /* Resources */,
+				78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,11 +334,53 @@
 			files = (
 				7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */,
 				7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */,
-				7F19CFBE28AAAB8000FD1DF9 /* NanumMyeongjo-YetHangul.ttf in Resources */,
+				7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandGosi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7FDDF21D289CFDCB00EE3FB7 /* Sources */ = {
@@ -238,7 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
+				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
+				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
+				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
+				7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */,
+				7F4E199128AEB49100BB6FDE /* MyNoteQuestionVM.swift in Sources */,
 				7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */,
 				7F88E7F528A62C13001C0463 /* ExamSelectView.swift in Sources */,
 				7F88E7F128A577EB001C0463 /* MainView.swift in Sources */,
@@ -246,16 +401,33 @@
 				7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */,
 				7FE038B6289EC26C008E629B /* Color.swift in Sources */,
 				7FD21D7A28AC27840070B0A4 /* ExamSelectVM.swift in Sources */,
+				7FC4643C28B5C56F00C024A0 /* View.swift in Sources */,
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
+				7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */,
+				7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
+				7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
+				7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */,
+				7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */,
+				7F5634FA28B36409008AD29E /* ExamStore2022.swift in Sources */,
+				7FC91D1028B89DB300454811 /* ExamStore2015.swift in Sources */,
+				7FA573AD28B74F9D00234059 /* ExamStore2016.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
 				7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */,
+				7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */,
+				7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */,
+				7F5634FC28B36B28008AD29E /* ExamStore2021.swift in Sources */,
+				7F4E198F28AEB32300BB6FDE /* MyNoteQuestionView.swift in Sources */,
+				7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */,
+				7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */,
+				7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
 				7F88E7F728A636C8001C0463 /* ExamView.swift in Sources */,
+				7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */,
 				7F70B51728A2D08800148779 /* String.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +551,7 @@
 		};
 		7FDDF230289CFDCD00EE3FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -403,12 +576,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7FDDF231289CFDCD00EE3FB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,7 +607,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
