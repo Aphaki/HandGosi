@@ -12,9 +12,12 @@ struct MainView: View {
     @EnvironmentObject var vm: MainVM
     
     @State private var isloading = true
+    
+    // View Changer
     @State private var isClicked: Bool = false
     @State var goToNextView: Bool = false
     @State private var goToMyNote: Bool = false
+    @State private var goToSettingView: Bool = false
     
     var body: some View {
         
@@ -53,7 +56,6 @@ struct MainView: View {
                                             .yearText()
                                     }
                                 }
-                                
                             }
                             HStack(spacing: 30) {
                                 Button {
@@ -110,6 +112,7 @@ struct MainView: View {
                             if isClicked {
                                 HStack {
                                     Spacer()
+                                        .frame(width: 40)
                                     Button {
                                         vm.filteredNotes = vm.myNotes
                                         goToMyNote.toggle()
@@ -120,6 +123,18 @@ struct MainView: View {
                                             .foregroundColor(.white)
                                             .padding(20)
                                             .background(Circle().foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
+                                    }
+                                    Spacer()
+                                    Button {
+                                        goToSettingView.toggle()
+                                    } label: {
+                                        VStack {
+                                            Image(systemName: "gear")
+                                                .resizable()
+                                                .foregroundColor(.gray)
+                                                .frame(width: 50, height: 50, alignment: .center)
+                                        }
+                                        
                                     }
                                     Spacer()
                                         .frame(width: 40)
@@ -192,6 +207,14 @@ struct MainView: View {
                             }
                         }
                     } // VStack
+                    // Next View Setting
+                    .background(
+                        NavigationLink(isActive: $goToSettingView, destination: {
+                            SettingView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
                     .background(
                         NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
                             EmptyView()

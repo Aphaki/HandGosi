@@ -10,6 +10,7 @@
 		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; };
 		7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE028AF61FF008F601D /* MyNoteService.swift */; };
 		7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE228AF72BE008F601D /* MyNoteVM.swift */; };
+		7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12CEC629F28C6A003DA963 /* SettingView.swift */; };
 		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
 		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
 		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		7F09EFE028AF61FF008F601D /* MyNoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteService.swift; sourceTree = "<group>"; };
 		7F09EFE228AF72BE008F601D /* MyNoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteVM.swift; sourceTree = "<group>"; };
+		7F12CEC629F28C6A003DA963 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
 		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				7FE0757A28B61BD600B94828 /* LoadingView.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
 				7FD21D7728AC139E0070B0A4 /* MainVM.swift */,
+				7F12CEC629F28C6A003DA963 /* SettingView.swift */,
 				7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */,
 				7F49086028A14FC8002896DB /* SubjectSelectVM.swift */,
 				7F88E7F428A62C13001C0463 /* ExamSelectView.swift */,
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
+				7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
 				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
