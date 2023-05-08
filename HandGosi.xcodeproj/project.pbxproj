@@ -14,6 +14,7 @@
 		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
 		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
 		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
+		7F242DAD2A08F5B700D62CA6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F242DAC2A08F5B700D62CA6 /* Constants.swift */; };
 		7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD628F7FAB20008006B /* BannerAdVC.swift */; };
 		7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD828F7FB390008006B /* BannerAdView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
@@ -41,6 +42,8 @@
 		7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8CD08928A0F81300776238 /* ExamModel.swift */; };
 		7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */; };
 		7FA573AD28B74F9D00234059 /* ExamStore2016.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA573AC28B74F9D00234059 /* ExamStore2016.swift */; };
+		7FB4038B29F3DAB900837EDF /* SaveContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4038929F3DAB900837EDF /* SaveContainer.xcdatamodeld */; };
+		7FB4038D29F3DBC100837EDF /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB4038C29F3DBC100837EDF /* CoreDataService.swift */; };
 		7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB7399628A937EB008E4E3A /* ImageModel.swift */; };
 		7FC4643C28B5C56F00C024A0 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC4643B28B5C56E00C024A0 /* View.swift */; };
 		7FC91D1028B89DB300454811 /* ExamStore2015.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC91D0F28B89DB300454811 /* ExamStore2015.swift */; };
@@ -63,6 +66,8 @@
 		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
 		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
+		7F242DAC2A08F5B700D62CA6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F242DAE2A08FBCE00D62CA6 /* StoreKitConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfig.storekit; sourceTree = "<group>"; };
 		7F291CD628F7FAB20008006B /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
 		7F291CD828F7FB390008006B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
@@ -91,6 +96,8 @@
 		7F8CD08928A0F81300776238 /* ExamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamModel.swift; sourceTree = "<group>"; };
 		7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStoreDataService.swift; sourceTree = "<group>"; };
 		7FA573AC28B74F9D00234059 /* ExamStore2016.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2016.swift; sourceTree = "<group>"; };
+		7FB4038A29F3DAB900837EDF /* SaveModelEntity.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SaveModelEntity.xcdatamodel; sourceTree = "<group>"; };
+		7FB4038C29F3DBC100837EDF /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		7FB7399628A937EB008E4E3A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		7FC4643B28B5C56E00C024A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7FC91D0F28B89DB300454811 /* ExamStore2015.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2015.swift; sourceTree = "<group>"; };
@@ -145,6 +152,7 @@
 				7F56350328B37040008AD29E /* ExamStore2017.swift */,
 				7FA573AC28B74F9D00234059 /* ExamStore2016.swift */,
 				7FC91D0F28B89DB300454811 /* ExamStore2015.swift */,
+				7FB4038C29F3DBC100837EDF /* CoreDataService.swift */,
 			);
 			path = ExamStore;
 			sourceTree = "<group>";
@@ -200,6 +208,8 @@
 				7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */,
 				7FB7399628A937EB008E4E3A /* ImageModel.swift */,
 				7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */,
+				7FB4038929F3DAB900837EDF /* SaveContainer.xcdatamodeld */,
+				7F242DAC2A08F5B700D62CA6 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 				7F8CD08C28A14A1200776238 /* Extensions */,
 				7FDDF228289CFDCD00EE3FB7 /* Assets.xcassets */,
 				7FDDF22A289CFDCD00EE3FB7 /* Preview Content */,
+				7F242DAE2A08FBCE00D62CA6 /* StoreKitConfig.storekit */,
 			);
 			path = HandGosi;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
 				7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */,
+				7FB4038D29F3DBC100837EDF /* CoreDataService.swift in Sources */,
 				7F4E199128AEB49100BB6FDE /* MyNoteQuestionVM.swift in Sources */,
 				7FD21D7828AC139E0070B0A4 /* MainVM.swift in Sources */,
 				7F88E7F528A62C13001C0463 /* ExamSelectView.swift in Sources */,
@@ -411,12 +423,14 @@
 				7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
+				7FB4038B29F3DAB900837EDF /* SaveContainer.xcdatamodeld in Sources */,
 				7FE0757B28B61BD600B94828 /* LoadingView.swift in Sources */,
 				7F8CD08A28A0F81300776238 /* ExamModel.swift in Sources */,
 				7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */,
 				7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */,
 				7F5634FA28B36409008AD29E /* ExamStore2022.swift in Sources */,
 				7FC91D1028B89DB300454811 /* ExamStore2015.swift in Sources */,
+				7F242DAD2A08F5B700D62CA6 /* Constants.swift in Sources */,
 				7FA573AD28B74F9D00234059 /* ExamStore2016.swift in Sources */,
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
@@ -637,6 +651,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7FB4038929F3DAB900837EDF /* SaveContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7FB4038A29F3DAB900837EDF /* SaveModelEntity.xcdatamodel */,
+			);
+			currentVersion = 7FB4038A29F3DAB900837EDF /* SaveModelEntity.xcdatamodel */;
+			path = SaveContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7FDDF219289CFDCB00EE3FB7 /* Project object */;
 }

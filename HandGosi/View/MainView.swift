@@ -122,7 +122,7 @@ struct MainView: View {
                                             .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .padding(20)
-                                            .background(Circle().foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
+                                            .background(Circle().foregroundColor(.red))
                                     }
                                     Spacer()
                                     Button {
@@ -231,6 +231,9 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
+            .onAppear {
+                print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "URL Not Found")
+            }
             BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
         }
         

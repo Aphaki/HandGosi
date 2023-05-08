@@ -21,7 +21,6 @@ struct ExamView: View {
     }
     
     var body: some View {
-        
         ZStack {
             Color.theme.myBackgroundColor.ignoresSafeArea()
             ScrollView {

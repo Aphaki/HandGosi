@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import StoreKit
 
 class MainVM: ObservableObject {
     @Published var allExams: [ExamModel] = []
@@ -36,9 +37,11 @@ class MainVM: ObservableObject {
         subscribeMyNote()
         subscribeSavingExams()
         subscribeProgressModel()
+        
+        fetchProducts()
     }
     
-    
+    // MARK: - 구독
     private func subscribeAllExams() {
         examStoreDataService.$allExams
             .receive(on: DispatchQueue.main)
@@ -287,6 +290,7 @@ class MainVM: ObservableObject {
         subscribeProgressModel2022()
     }
     
+    //MARK: - 저장 관련 기능
     func saveCurrentExam(exam: ExamModel) {
         savingExamService.saveCurrentExam(exam: exam)
     }
@@ -298,4 +302,31 @@ class MainVM: ObservableObject {
     func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
+    
+    var products: [Product] = []
+    
+    //MARK: - 구매 관련 기능
+    func fetchProducts() {
+        Task {
+            do {
+                let products = try await Product.products(for: [Constants.productID])
+                self.products = products
+            } catch {
+                print(error)
+            }
+        }
+    }
+    func purchase() {
+        Task {
+            guard let product = products.first else { return }
+            do {
+                let result = try await product.purchase()
+            }
+            catch {
+                print(error)
+            }
+            
+        }
+    }
+    
 }
