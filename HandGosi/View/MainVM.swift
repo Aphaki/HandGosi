@@ -303,14 +303,20 @@ class MainVM: ObservableObject {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
     
-    var products: [Product] = []
+    
     
     //MARK: - 구매 관련 기능
+    
+    @Published var products: [Product] = []
+    @Published var purchasedIds: [String] = []
+    
     func fetchProducts() {
         Task {
             do {
                 let products = try await Product.products(for: [Constants.productID])
-                self.products = products
+                await MainActor.run {
+                    self.products = products
+                }
             } catch {
                 print(error)
             }
@@ -321,12 +327,47 @@ class MainVM: ObservableObject {
             guard let product = products.first else { return }
             do {
                 let result = try await product.purchase()
+                switch result {
+                case .success(let verification):
+                    switch verification {
+                    case .unverified(_, _):
+                        break
+                    case .verified(let transaction):
+                        await MainActor.run(body: {
+                            self.purchasedIds.append(transaction.productID)
+                        })
+                        print(transaction.productID)
+                    }
+                case .userCancelled:
+                    print("user Cancelled")
+                case .pending:
+                    print("pending purchase")
+                @unknown default: break
+                    
+                }
             }
             catch {
                 print(error)
             }
             
         }
+    }
+    
+    func isPurchased() {
+        guard let product = products.first else {
+            return
+        }
+        Task {
+            guard let state = await product.currentEntitlement else { return }
+            switch state {
+            case .unverified(_, _):
+                print("Product current Entitlement: unverified")
+            case .verified(_):
+                print("Product current Entitlement: verified")
+            }
+            
+        }
+        
     }
     
 }

@@ -210,7 +210,7 @@ struct MainView: View {
                     // Next View Setting
                     .background(
                         NavigationLink(isActive: $goToSettingView, destination: {
-                            SettingView()
+                            SettingView(purchasedIds: $vm.purchasedIds)
                         }, label: {
                             EmptyView()
                         })
@@ -234,7 +234,11 @@ struct MainView: View {
             .onAppear {
                 print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? "URL Not Found")
             }
-            BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+            if vm.purchasedIds.isEmpty {
+                BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+            } else {
+                EmptyView()
+            }
         }
         
     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingView: View {
     @EnvironmentObject var mainVM: MainVM
     
-    @Binding var isPurchased: Bool
+    @Binding var purchasedIds: [String]
     
     var body: some View {
         List {
@@ -25,12 +25,14 @@ struct SettingView: View {
                 }
             }
             Section {
-                if !isPurchased {
-                    Button("광고 제거(0.99$)") {
+                if !purchasedIds.isEmpty {
+                    Button("광고 제거 \(mainVM.products.first!.displayPrice)") {
                         mainVM.purchase()
                     }
                 }
                 Button("구매 복원") {
+                    print("\(purchasedIds)")
+                    mainVM.purchase()
                     print("구매 복원 액선")
                 }
             }
@@ -44,13 +46,13 @@ struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         if #available(iOS 16.0, *) {
             NavigationStack {
-                SettingView(isPurchased: .constant(false))
+                SettingView(purchasedIds: .constant([]))
                     .navigationTitle("Setting")
                     .navigationBarTitleDisplayMode(.large)
             }
         } else {
             NavigationView {
-                SettingView(isPurchased: .constant(false))
+                SettingView(purchasedIds: .constant([]))
                     .navigationTitle("Setting")
                     .navigationBarTitleDisplayMode(.inline)
             }
