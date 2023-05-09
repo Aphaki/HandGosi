@@ -13,6 +13,15 @@ class ExamModel: Identifiable, Codable {
     let examTypeID: String
     let subjectID: String
     var questions: [QuestionModel]
+    
+    var score: Int {
+        let count =
+        questions.filter { question in
+           return question.selectedNum == question.answer
+        }.count
+        return count * 5
+    }
+    
     var progressCount: Int {
        return questions.filter { question in
            return question.selectedNum != 0

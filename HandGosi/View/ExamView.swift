@@ -25,22 +25,32 @@ struct ExamView: View {
             Color.theme.myBackgroundColor.ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(vm.finalExam.questions) { question in
-                        if vm.isScored == false {
+                    if vm.isScored == false {
+                        ForEach(vm.finalExam.questions){ question in
                             QuestionView(question: question)
-                        } else {
-                            ScoredQuestionView(question: question,
-                                               year: vm.finalExam.year,
-                                               type: vm.finalExam.examTypeID,
-                                               subject: vm.finalExam.subjectID)
+                        }
+                    } else {
+                        ForEach(vm.finalExam.questions){ question in
+                            ScoredQuestionView(question: question, year: vm.finalExam.year, type: vm.finalExam.examTypeID, subject: vm.finalExam.subjectID)
                         }
                     }
+                    
+//                    ForEach(vm.finalExam.questions) { question in
+//                        if vm.isScored == false {
+//                            QuestionView(question: question)
+//                        } else {
+//                            ScoredQuestionView(question: question,
+//                                               year: vm.finalExam.year,
+//                                               type: vm.finalExam.examTypeID,
+//                                               subject: vm.finalExam.subjectID)
+//
+//
+//                        }
+//                    }
                 }
             }
-            
             .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
             .navigationBarBackButtonHidden(true)
-            
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Text(vm.isScored ? "시험지로" : "채점모드")
@@ -72,6 +82,11 @@ struct ExamView: View {
                     }
 
                 }
+            }
+            if vm.isScored {
+                Text("\(vm.finalExam.score)")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.red)
             }
             
         }

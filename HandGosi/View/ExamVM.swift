@@ -11,7 +11,7 @@ import Combine
 class ExamVM: ObservableObject {
     @Published var finalExam: ExamModel
     @Published var isScored: Bool = false
-    
+
     init(exam: ExamModel) {
         self.finalExam = exam
     }
