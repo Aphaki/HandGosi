@@ -317,6 +317,9 @@ class MainVM: ObservableObject {
                 await MainActor.run {
                     self.products = products
                 }
+                if let product = products.first {
+                    await isPurchased(product: product)
+                }
             } catch {
                 print(error)
             }
@@ -353,21 +356,19 @@ class MainVM: ObservableObject {
         }
     }
     
-    func isPurchased() {
-        guard let product = products.first else {
-            return
-        }
-        Task {
-            guard let state = await product.currentEntitlement else { return }
-            switch state {
-            case .unverified(_, _):
-                print("Product current Entitlement: unverified")
-            case .verified(_):
-                print("Product current Entitlement: verified")
-            }
-            
-        }
+    func isPurchased(product: Product) async {
         
+        guard let state = await product.currentEntitlement else {
+            return }
+        switch state {
+        case .unverified(_, _):
+            print("Product current Entitlement: unverified")
+        case .verified(let transaction):
+            await MainActor.run {
+                self.purchasedIds.append(transaction.productID)
+            }
+            print("Product current Entitlement: verified")
+        }
     }
     
 }

@@ -25,15 +25,14 @@ struct SettingView: View {
                 }
             }
             Section {
-                if !purchasedIds.isEmpty {
+                if purchasedIds.isEmpty {
                     Button("광고 제거 \(mainVM.products.first!.displayPrice)") {
                         mainVM.purchase()
                     }
-                }
-                Button("구매 복원") {
-                    print("\(purchasedIds)")
-                    mainVM.purchase()
-                    print("구매 복원 액선")
+                    Button("구매 복원") {
+                        print("\(purchasedIds)")
+                        mainVM.fetchProducts()
+                    }
                 }
             }
         }
