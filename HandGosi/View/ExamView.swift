@@ -30,7 +30,8 @@ struct ExamView: View {
                             QuestionView(question: question)
                         }
                     } else {
-                        ForEach(vm.finalExam.questions){ question in
+                        ForEach($vm.finalExam.questions){ question in
+//                            ScoredQuestionView(question: question, year: vm.finalExam.year, type: vm.finalExam.examTypeID, subject: vm.finalExam.subjectID)
                             ScoredQuestionView(question: question, year: vm.finalExam.year, type: vm.finalExam.examTypeID, subject: vm.finalExam.subjectID)
                         }
                     }

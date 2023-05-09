@@ -9,15 +9,22 @@ import SwiftUI
 
 struct ScoredQuestionView: View {
     
-    @StateObject var vm: QuestionVM
+//    @StateObject var vm: QuestionVM
+    @Binding var question: QuestionModel
+    let year: Int
+    let type: String
+    let subject: String
+    @State var addNoteText: String?
+    
     @EnvironmentObject var mainVM: MainVM
     
-    init(question: QuestionModel, year: Int, type: String, subject: String) {
-        _vm = StateObject(wrappedValue: QuestionVM(question: question,
-                                                  year: year,
-                                                  type: type,
-                                                  subject: subject))
-    }
+//    init(question: QuestionModel, year: Int, type: String, subject: String) {
+//        _vm = StateObject(wrappedValue: QuestionVM(question: question,
+//                                                  year: year,
+//                                                  type: type,
+//                                                  subject: subject))
+//        _question =
+//    }
     
     var body: some View {
         ScrollView {
@@ -25,47 +32,47 @@ struct ScoredQuestionView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Spacer()
-                        if vm.addNoteText != nil {
+                        if addNoteText != nil {
                             myNoteAddPopUpText
                         }
                         addMyNoteButton
                     }
                     
                     HStack {
-                        Text("\(vm.question.num)" + ".")
-                        Text(vm.question.questionText)
+                        Text("\(question.num)" + ".")
+                        Text(question.questionText)
                     }
-                    if vm.question.reference != nil {
-                        Text(vm.question.reference!)
+                    if question.reference != nil {
+                        Text(question.reference!)
                             .lineSpacing(5)
                             .padding(8)
                             .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                             .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                     }
-                    if vm.question.reference2 != nil {
-                        Text(vm.question.reference2!)
+                    if question.reference2 != nil {
+                        Text(question.reference2!)
                             .lineSpacing(5)
                             .padding(8)
                             .font(.custom("NanumMyeongjo-YetHangul", size: 15))
                             .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                     }
-                    if vm.question.imgModel != nil {
+                    if question.imgModel != nil {
                         HStack {
                             Spacer()
-                            Image(vm.question.imgModel!.imageString)
+                            Image(question.imgModel!.imageString)
                                 .resizable()
-                                .frame(width: vm.question.imgModel!.imgWidth, height: vm.question.imgModel!.imgHeight)
+                                .frame(width: question.imgModel!.imgWidth, height: question.imgModel!.imgHeight)
                             Spacer()
                         }
                     }
-                    NumberButtonView(selectedNum: $vm.question.selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
-                    NumberButtonView(selectedNum: $vm.question.selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
-                    NumberButtonView(selectedNum: $vm.question.selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
-                    NumberButtonView(selectedNum: $vm.question.selectedNum, number: "④", numberInt: 4, text: vm.question.num4Text)
+                    NumberButtonView(selectedNum: $question.selectedNum, number: "①", numberInt: 1, text: question.num1Text)
+                    NumberButtonView(selectedNum: $question.selectedNum, number: "②",numberInt: 2, text: question.num2Text)
+                    NumberButtonView(selectedNum: $question.selectedNum, number: "③", numberInt: 3, text: question.num3Text)
+                    NumberButtonView(selectedNum: $question.selectedNum, number: "④", numberInt: 4, text: question.num4Text)
                 }
                 VStack {
                     HStack {
-                        if vm.question.selectedNum == vm.question.answer {
+                        if question.selectedNum == question.answer {
                             redCircle
                         } else {
                             redFalseMark
@@ -96,7 +103,7 @@ extension ScoredQuestionView {
     var myNoteAddPopUpText: some View {
         HStack {
             Spacer()
-            Text(vm.addNoteText!)
+            Text(addNoteText!)
                 .padding(8)
                 .font(.caption)
                 .foregroundColor(.white)
@@ -106,11 +113,11 @@ extension ScoredQuestionView {
     }
     var addMyNoteButton: some View {
         Button {
-            let addNoteString = mainVM.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: vm.year, type: vm.type, subject: vm.subject, question: vm.question)) // String
-            vm.addNoteText = addNoteString
+            let addNoteString = mainVM.saveMyNoteAndReturnMessage(myNoteQuestion: MyNoteQuestion(year: year, type: type, subject: subject, question: question)) // String
+            addNoteText = addNoteString
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 withAnimation(.easeInOut) {
-                    vm.addNoteText = nil
+                    addNoteText = nil
                 }
             }
         } label: {
@@ -126,6 +133,7 @@ struct ScoredQuestionView_Previews: PreviewProvider {
     @StateObject var vm: QuestionVM
     
     static var previews: some View {
-        ScoredQuestionView(question: dev.questionSample, year: 2022, type: "국가직", subject: "국어")
+//        ScoredQuestionView(question: dev.questionSample, year: 2022, type: "국가직", subject: "국어")
+        ScoredQuestionView(question: .constant(dev.questionSample), year: 2022, type: "국가직", subject: "국어")
     }
 }
