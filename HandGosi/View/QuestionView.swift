@@ -11,7 +11,7 @@ struct QuestionView: View {
     
     @StateObject var vm: QuestionVM
     
-    init(question: QuestionModel) {
+    init(question: Binding<QuestionModel>) {
         _vm = StateObject(wrappedValue: QuestionVM(question: question))
 
     }
@@ -56,8 +56,8 @@ struct QuestionView: View {
     }
 }
 
-struct QuestionView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuestionView(question: dev.questionSample)
-    }
-}
+//struct QuestionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuestionView(question: dev.questionSample)
+//    }
+//}

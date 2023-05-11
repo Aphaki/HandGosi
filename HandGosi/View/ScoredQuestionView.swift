@@ -12,7 +12,7 @@ struct ScoredQuestionView: View {
     @StateObject var vm: QuestionVM
     @EnvironmentObject var mainVM: MainVM
     
-    init(question: QuestionModel, year: Int, type: String, subject: String) {
+    init(question: Binding<QuestionModel>, year: Int, type: String, subject: String) {
         _vm = StateObject(wrappedValue: QuestionVM(question: question,
                                                   year: year,
                                                   type: type,
@@ -121,11 +121,11 @@ extension ScoredQuestionView {
     }
 }
 
-struct ScoredQuestionView_Previews: PreviewProvider {
-    
-    @StateObject var vm: QuestionVM
-    
-    static var previews: some View {
-        ScoredQuestionView(question: dev.questionSample, year: 2022, type: "국가직", subject: "국어")
-    }
-}
+//struct ScoredQuestionView_Previews: PreviewProvider {
+//    
+//    @StateObject var vm: QuestionVM
+//    
+//    static var previews: some View {
+//        ScoredQuestionView(question: dev.questionSample, year: 2022, type: "국가직", subject: "국어")
+//    }
+//}

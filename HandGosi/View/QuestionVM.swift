@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 class QuestionVM: ObservableObject {
     
-    @Published var question: QuestionModel
+    @Binding var question: QuestionModel
     
     @Published var year: Int
     @Published var type: String
@@ -17,8 +18,8 @@ class QuestionVM: ObservableObject {
     
     @Published var addNoteText: String?
     
-    init(question: QuestionModel, year: Int = 0, type: String = "", subject: String = "") {
-        self.question = question
+    init(question: Binding<QuestionModel>, year: Int = 0, type: String = "", subject: String = "") {
+        _question = question
         self.year = year
         self.type = type
         self.subject = subject

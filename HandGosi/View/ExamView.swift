@@ -15,18 +15,18 @@ struct ExamView: View {
     @State var showAlert = false
     @Environment(\.dismiss) var dismiss
     
+    
     init(exam: ExamModel, navigationBool: Binding<Bool>) {
         _vm = StateObject(wrappedValue: ExamVM(exam: exam))
         _navigationBool = navigationBool
     }
     
     var body: some View {
-        
         ZStack {
             Color.theme.myBackgroundColor.ignoresSafeArea()
             ScrollView {
                 VStack(alignment: .leading) {
-                    ForEach(vm.finalExam.questions) { question in
+                    ForEach($vm.finalExam.questions) { question in
                         if vm.isScored == false {
                             QuestionView(question: question)
                         } else {
@@ -38,10 +38,8 @@ struct ExamView: View {
                     }
                 }
             }
-            
             .navigationTitle( vm.finalExam.year.description + " " + vm.finalExam.examTypeID + " " + vm.finalExam.subjectID)
             .navigationBarBackButtonHidden(true)
-            
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Text(vm.isScored ? "시험지로" : "채점모드")
@@ -73,8 +71,21 @@ struct ExamView: View {
                     }
 
                 }
+            } // toolbar
+            if vm.isScored {
+                VStack {
+                    HStack {
+                        Spacer()
+                        Text(vm.finalExam.score)
+                            .font(.system(size:50))
+                            .underline()
+                            .bold()
+                            .foregroundColor(.red)
+                            .opacity(0.5)
+                    }
+                    Spacer()
+                }
             }
-            
         }
     }
 }
