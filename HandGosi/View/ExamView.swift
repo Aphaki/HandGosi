@@ -42,7 +42,7 @@ struct ExamView: View {
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Text(vm.isScored ? "시험지로" : "채점모드")
+                    Text(vm.isScored ? "시험지로" : "채점지로")
                         .padding(8)
                         .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
                         .onTapGesture {

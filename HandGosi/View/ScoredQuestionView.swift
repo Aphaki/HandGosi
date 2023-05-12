@@ -30,24 +30,9 @@ struct ScoredQuestionView: View {
                         }
                         addMyNoteButton
                     }
-                    
                     HStack {
                         Text("\(vm.question.num)" + ".")
                         Text(vm.question.questionText)
-                    }
-                    if vm.question.reference != nil {
-                        Text(vm.question.reference!)
-                            .lineSpacing(5)
-                            .padding(8)
-                            .font(.custom("NanumMyeongjo-YetHangul", size: 15))
-                            .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
-                    }
-                    if vm.question.reference2 != nil {
-                        Text(vm.question.reference2!)
-                            .lineSpacing(5)
-                            .padding(8)
-                            .font(.custom("NanumMyeongjo-YetHangul", size: 15))
-                            .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                     }
                     if vm.question.imgModel != nil {
                         HStack {
@@ -57,6 +42,20 @@ struct ScoredQuestionView: View {
                                 .frame(width: vm.question.imgModel!.imgWidth, height: vm.question.imgModel!.imgHeight)
                             Spacer()
                         }
+                    }
+                    if vm.question.reference != nil {
+                        Text(vm.question.reference!)
+                            .lineSpacing(5)
+                            .padding(8)
+                            .font(.custom("NanumMyeongjo-YetHangul", size: 16))
+                            .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
+                    }
+                    if vm.question.reference2 != nil {
+                        Text(vm.question.reference2!)
+                            .lineSpacing(5)
+                            .padding(8)
+                            .font(.custom("NanumMyeongjo-YetHangul", size: 16))
+                            .overlay( RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1))
                     }
                     NumberButtonView(selectedNum: $vm.question.selectedNum, number: "①", numberInt: 1, text: vm.question.num1Text)
                     NumberButtonView(selectedNum: $vm.question.selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)

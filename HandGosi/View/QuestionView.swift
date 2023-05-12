@@ -19,6 +19,10 @@ struct QuestionView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
+                Text("칸수용임")
+                    .padding(5)
+                    .foregroundColor(.clear)
+                    .background(.clear)
                 HStack {
                     Text("\(vm.question.num)" + ".")
                     Text(vm.question.questionText)
