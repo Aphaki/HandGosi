@@ -89,8 +89,6 @@ struct MainView: View {
                             }
                             
                         }
-                        
-                    
                         ZStack {
                             ZStack {
                                 Image("HandGosiRed")
@@ -140,8 +138,6 @@ struct MainView: View {
                                         .frame(width: 40)
                                     
                                 }
-                                
-                                
                             }
                         }
                         if isClicked {
@@ -210,7 +206,7 @@ struct MainView: View {
                     // Next View Setting
                     .background(
                         NavigationLink(isActive: $goToSettingView, destination: {
-                            SettingView()
+                            SettingView(products: vm.products, productOne: vm.productOne)
                         }, label: {
                             EmptyView()
                         })
@@ -232,6 +228,7 @@ struct MainView: View {
                 }
             } // NavigationView
             BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+//            BannerAdView(adUnitId: "pub-1837011492216327")
         }
         
     }

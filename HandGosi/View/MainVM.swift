@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import StoreKit
 
 class MainVM: ObservableObject {
     @Published var allExams: [ExamModel] = []
@@ -30,15 +31,17 @@ class MainVM: ObservableObject {
     let savingExamService = SavingExamService()
     
     private var subscription = Set<AnyCancellable>()
-    
+    //MARK: - init()
     init() {
         subscribeAllExams()
         subscribeMyNote()
         subscribeSavingExams()
         subscribeProgressModel()
+        productSub()
+        productOneSub()
     }
     
-    
+    // MARK: - 서비스 데이터와 연결 (모든 시험, 오답 노트, 시험 진행사항)
     private func subscribeAllExams() {
         examStoreDataService.$allExams
             .receive(on: DispatchQueue.main)
@@ -106,7 +109,7 @@ class MainVM: ObservableObject {
             }
             .store(in: &subscription)
     }
-    
+    //MARK: - 진행 정도 관련
     private func subscribeProgressModel2022() {
         $currentExams.map { exams -> Double in
             let examsFiltering =
@@ -287,6 +290,7 @@ class MainVM: ObservableObject {
         subscribeProgressModel2022()
     }
     
+    //MARK: - 저장 관련 (현재 시험 진행사항, 오답노트 저장, 오답노트 제거)
     func saveCurrentExam(exam: ExamModel) {
         savingExamService.saveCurrentExam(exam: exam)
     }
@@ -298,4 +302,43 @@ class MainVM: ObservableObject {
     func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
+    
+    //MARK: - 앱내 구매 관련
+    let productService = ProductService()
+    @Published var products: [Product] = []
+    @Published var productOne: Bool = false
+    
+    func productSub() {
+        productService.$currentProducts
+            .sink { value in
+                self.products = value
+            }
+            .store(in: &subscription)
+    }
+    
+    func productOneSub() {
+        productService.$purchasedIds
+            .receive(on: DispatchQueue.main)
+            .sink { ids in
+                if ids.isEmpty {
+                    self.productOne = false
+                } else {
+                    self.productOne = true
+                }
+            }
+            .store(in: &subscription)
+    }
+    
+    func checkProduct() {
+        Task {
+            await productService.checkProduct()
+        }
+    }
+    
+    func purchaseProduct() {
+        Task {
+           try await productService.purchaseProduct()
+        }
+    }
+    
 }

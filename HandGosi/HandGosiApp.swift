@@ -40,7 +40,7 @@ struct HandGosiApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(MainVM())
+                .environmentObject(mainVM)
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     ATTrackingManager.requestTrackingAuthorization { _ in
                     }
