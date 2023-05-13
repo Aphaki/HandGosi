@@ -12,8 +12,8 @@ struct SettingView: View {
     
     @EnvironmentObject var mainVM: MainVM
     
-    @State var products: [Product]
-    @State var productOne: Bool
+    @Binding var products: [Product]
+    @Binding var productOne: Bool
     
     var body: some View {
         List {
@@ -30,23 +30,27 @@ struct SettingView: View {
             Section {
                 if !productOne {
                     Button {
-                        mainVM.purchaseProduct()
+                        if let product = self.products.first {
+                            mainVM.purchaseProduct(product: product)
+                        }
                     } label: {
                         Text("광고 제거 (\(products.first?.displayPrice ?? "none"))")
                     }
                 }
                 if !productOne{
                     Button("구매 복원") {
-                        mainVM.checkProduct()
+                        if let product = self.products.first {
+                            mainVM.checkProduct(product: product)
+                        }
                         print("구매 복원 액선")
                     }
                 }
-                Button("products 값") {
-                    print("products 값 : \(self.products)")
-                }
-                Button("productOne 값") {
-                    print("productOne 값 : \(self.productOne)")
-                }
+//                Button("products 값") {
+//                    print("products 값 : \(self.products)")
+//                }
+//                Button("productOne 값") {
+//                    print("productOne 값 : \(self.productOne)")
+//                }
             }
         }
         .navigationTitle("Setting")

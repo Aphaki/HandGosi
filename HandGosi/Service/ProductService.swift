@@ -18,36 +18,41 @@ class ProductService {
     
     init() {
         
-        Task(priority: .high) {
-            try await fetchProducts()
+        Task {
+            let product = try await fetchProducts()
+            let checkProduct = await checkProduct(product: product)
+            print("ProductService - init() - checkProduct Result : \(checkProduct)")
         }
-        Task(priority: .low) {
-            await checkProduct()
-        }
-//        updates = observeTransactionUpdates()
         
     }
     
-    func fetchProducts() async throws {
+    func fetchProducts() async throws -> Product {
         let products = try await Product.products(for: [productIdOne])
         print("Fetch Products() complete : \(products)")
         DispatchQueue.main.async {
             self.currentProducts = products
         }
-//        guard let product = products.first else { fatalError("fetchProducts() - 상품이 없습니다.") }
+        guard let product = products.first else {
+            fatalError("fetchProducts() - 상품이 없습니다.")
+        }
+        return product
+
+        
+
     }
     
-    func purchaseProduct() async throws ->  StoreKit.Transaction {
-        guard let product = currentProducts.first else {
-            fatalError("상품이 없습니다.")
-        }
+    func purchaseProduct(product: Product) async throws ->  StoreKit.Transaction {
+//        guard let product = currentProducts.first else {
+//            fatalError("상품이 없습니다.")
+//        }
         let result = try await product.purchase()
         switch result {
         case .success(let verification):
             switch verification {
             case .verified(let transaction):
                 await transaction.finish()
-                await self.checkProduct()
+                let checkProductResult = await self.checkProduct(product: product)
+                print("ProductService - purchaseProduct() - checkProductResult: \(checkProductResult)")
                 print("유효한 구매: \(transaction.productID)")
                 return transaction
             case .unverified(_ , let error):
@@ -65,11 +70,10 @@ class ProductService {
         
     }
     
-    func checkProduct() async {
-        guard let product = self.currentProducts.first else {
-            print("ProductService - product is empty")
-            return
-        }
+    func checkProduct(product: Product) async -> Bool {
+//        guard let product = self.currentProducts.first else {
+//            fatalError("ProductService - product is empty")
+//        }
         
         let state = await product.currentEntitlement
         switch state {
@@ -80,27 +84,30 @@ class ProductService {
                 }
             }
             print("이미 \(transaction.productID) 상품을 보유하고있습니다.")
+            return true
         case .none:
             print("checkProduct() - none 상태입니다.")
+            return false
         case .some(.unverified(_, _)):
             print("checkProduct() - unverified 상태입니다.")
+            return false
         }
         
     }
     
-    private func observeTransactionUpdates() -> Task<Void, Never> {
-            Task(priority: .background) { [unowned self] in
-                for await verificationResult in Transaction.updates {
-                    
-                    let value = verificationResult.deviceVerification
-                    
-                    print("observeTransactionUpdates() - \(value)")
+//    private func observeTransactionUpdates() -> Task<Void, Never> {
+//            Task(priority: .background) { [unowned self] in
+//                for await verificationResult in Transaction.updates {
+//
+//                    let value = verificationResult.deviceVerification
+//
+//                    print("observeTransactionUpdates() - \(value)")
 //                    guard let product = self.currentProducts.first else { fatalError("지불작업 업데이트 에러") }
-                    
-                    await self.checkProduct()
-                }
-            }
-        }
+//
+//                    await self.checkProduct()
+//                }
+//            }
+//        }
     
     enum PurchaseError: Error {
         case pending, fail, cancelled

@@ -1,0 +1,33 @@
+{
+  "identifier" : "04FBE232",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "3FAF26E4",
+      "localizations" : [
+        {
+          "description" : "배너 광고 제거 기능",
+          "displayName" : "광고 제거",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.maru.handgosi",
+      "referenceName" : "NO AD",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

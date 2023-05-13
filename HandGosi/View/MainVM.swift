@@ -310,6 +310,7 @@ class MainVM: ObservableObject {
     
     func productSub() {
         productService.$currentProducts
+            .receive(on: DispatchQueue.main)
             .sink { value in
                 self.products = value
             }
@@ -329,15 +330,16 @@ class MainVM: ObservableObject {
             .store(in: &subscription)
     }
     
-    func checkProduct() {
+    func checkProduct(product: Product) {
         Task {
-            await productService.checkProduct()
+            await productService.checkProduct(product: product)
         }
     }
     
-    func purchaseProduct() {
+    func purchaseProduct(product: Product) {
         Task {
-           try await productService.purchaseProduct()
+            let purchase = try await productService.purchaseProduct(product: product)
+            print("ProductService - purchaseProduct() - \(purchase)")
         }
     }
     
