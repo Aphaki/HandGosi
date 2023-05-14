@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; };
+		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE028AF61FF008F601D /* MyNoteService.swift */; };
 		7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE228AF72BE008F601D /* MyNoteVM.swift */; };
 		7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12CEC629F28C6A003DA963 /* SettingView.swift */; };

@@ -330,10 +330,9 @@ class MainVM: ObservableObject {
             .store(in: &subscription)
     }
     
-    func checkProduct(product: Product) {
-        Task {
-            await productService.checkProduct(product: product)
-        }
+    func checkProduct(product: Product) async -> Bool {
+        let result = await productService.checkProduct(product: product)
+        return result
     }
     
     func purchaseProduct(product: Product) {

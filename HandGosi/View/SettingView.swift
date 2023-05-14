@@ -12,8 +12,8 @@ struct SettingView: View {
     
     @EnvironmentObject var mainVM: MainVM
     
-    @Binding var products: [Product]
-    @Binding var productOne: Bool
+    @State var products: [Product]
+    @State var productOne: Bool
     
     var body: some View {
         List {
@@ -40,7 +40,15 @@ struct SettingView: View {
                 if !productOne{
                     Button("구매 복원") {
                         if let product = self.products.first {
-                            mainVM.checkProduct(product: product)
+                            Task {
+                               let result = await mainVM.checkProduct(product: product)
+                                switch result {
+                                case true:
+                                    self.productOne = true
+                                case false:
+                                    self.productOne = false
+                                }
+                            }
                         }
                         print("구매 복원 액선")
                     }
@@ -55,10 +63,6 @@ struct SettingView: View {
         }
         .navigationTitle("Setting")
         .listStyle(.grouped)
-        .onAppear {
-            print("settingView appear and productOne: \(mainVM.productOne)")
-            
-        }
     }
 }
 

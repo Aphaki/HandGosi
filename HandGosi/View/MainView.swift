@@ -204,13 +204,13 @@ struct MainView: View {
                         }
                     } // VStack
                     // Next View Setting
-//                    .background(
-//                        NavigationLink(isActive: $goToSettingView, destination: {
-//                            SettingView(products: $vm.products, productOne: $vm.productOne)
-//                        }, label: {
-//                            EmptyView()
-//                        })
-//                    )
+                    .background(
+                        NavigationLink(isActive: $goToSettingView, destination: {
+                            SettingView(products: vm.products, productOne: vm.productOne)
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
                     .background(
                         NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
                             EmptyView()
@@ -227,9 +227,9 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
-//            if !vm.productOne {
+            if !vm.productOne {
                 BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
-//            }
+            }
 //            BannerAdView(adUnitId: "pub-1837011492216327")
         }
         
