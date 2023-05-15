@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var vm: MainVM
+    @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State private var isloading = true
     
@@ -206,7 +207,7 @@ struct MainView: View {
                     // Next View Setting
                     .background(
                         NavigationLink(isActive: $goToSettingView, destination: {
-                            SettingView(products: vm.products, productOne: vm.productOne)
+                            SettingView()
                         }, label: {
                             EmptyView()
                         })
@@ -227,10 +228,18 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
-            if !vm.productOne {
+            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
                 BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
             }
 //            BannerAdView(adUnitId: "pub-1837011492216327")
+        }
+        .task {
+            do {
+                try await purchaseManager.loadProducts()
+            }
+            catch {
+                print(error)
+            }
         }
         
     }
@@ -240,5 +249,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(MainVM())
+            .environmentObject(PurchaseManager())
     }
 }

@@ -10,10 +10,9 @@ import StoreKit
 
 struct SettingView: View {
     
-    @EnvironmentObject var mainVM: MainVM
+//    @EnvironmentObject var mainVM: MainVM
     
-    @State var products: [Product]
-    @State var productOne: Bool
+    @EnvironmentObject var purchaseManager: PurchaseManager
     
     var body: some View {
         List {
@@ -28,31 +27,34 @@ struct SettingView: View {
                 }
             }
             Section {
-                if !productOne {
-                    Button {
-                        if let product = self.products.first {
-                            mainVM.purchaseProduct(product: product)
-                        }
-                    } label: {
-                        Text("광고 제거 (\(products.first?.displayPrice ?? "none"))")
-                    }
-                }
-                if !productOne{
-                    Button("구매 복원") {
-                        if let product = self.products.first {
+                ForEach(purchaseManager.products) { (product) in
+                    if !purchaseManager.purchasedProductIDs.contains(product.id) {
+                        Button {
                             Task {
-                               let result = await mainVM.checkProduct(product: product)
-                                switch result {
-                                case true:
-                                    self.productOne = true
-                                case false:
-                                    self.productOne = false
+                                do {
+                                    try await purchaseManager.purchase(product)
+                                } catch {
+                                    print(error)
                                 }
                             }
+                        } label: {
+                            Text("\(product.displayName) - \(product.displayPrice)")
                         }
-                        print("구매 복원 액선")
                     }
                 }
+                Button("구매 복원") {
+                    Task {
+                        do {
+                            try await AppStore.sync()
+                        }
+                        catch {
+                            print(error)
+                        }
+                        
+                    }
+                    print("구매 복원 액선")
+                }
+                
 //                Button("products 값") {
 //                    print("products 값 : \(self.products)")
 //                }

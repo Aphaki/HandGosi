@@ -37,8 +37,8 @@ class MainVM: ObservableObject {
         subscribeMyNote()
         subscribeSavingExams()
         subscribeProgressModel()
-        productSub()
-        productOneSub()
+//        productSub()
+//        productOneSub()
     }
     
     // MARK: - 서비스 데이터와 연결 (모든 시험, 오답 노트, 시험 진행사항)
@@ -304,42 +304,42 @@ class MainVM: ObservableObject {
     }
     
     //MARK: - 앱내 구매 관련
-    let productService = ProductService()
-    @Published var products: [Product] = []
-    @Published var productOne: Bool = false
-    
-    func productSub() {
-        productService.$currentProducts
-            .receive(on: DispatchQueue.main)
-            .sink { value in
-                self.products = value
-            }
-            .store(in: &subscription)
-    }
-    
-    func productOneSub() {
-        productService.$purchasedIds
-            .receive(on: DispatchQueue.main)
-            .sink { ids in
-                if ids.isEmpty {
-                    self.productOne = false
-                } else {
-                    self.productOne = true
-                }
-            }
-            .store(in: &subscription)
-    }
-    
-    func checkProduct(product: Product) async -> Bool {
-        let result = await productService.checkProduct(product: product)
-        return result
-    }
-    
-    func purchaseProduct(product: Product) {
-        Task {
-            let purchase = try await productService.purchaseProduct(product: product)
-            print("ProductService - purchaseProduct() - \(purchase)")
-        }
-    }
+//    let productService = ProductService()
+//    @Published var products: [Product] = []
+//    @Published var productOne: Bool = false
+//
+//    func productSub() {
+//        productService.$currentProducts
+//            .receive(on: DispatchQueue.main)
+//            .sink { value in
+//                self.products = value
+//            }
+//            .store(in: &subscription)
+//    }
+//
+//    func productOneSub() {
+//        productService.$purchasedIds
+//            .receive(on: DispatchQueue.main)
+//            .sink { ids in
+//                if ids.isEmpty {
+//                    self.productOne = false
+//                } else {
+//                    self.productOne = true
+//                }
+//            }
+//            .store(in: &subscription)
+//    }
+//
+//    func checkProduct(product: Product) async -> Bool {
+//        let result = await productService.checkProduct(product: product)
+//        return result
+//    }
+//
+//    func purchaseProduct(product: Product) {
+//        Task {
+//            let purchase = try await productService.purchaseProduct(product: product)
+//            print("ProductService - purchaseProduct() - \(purchase)")
+//        }
+//    }
     
 }

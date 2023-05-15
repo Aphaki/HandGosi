@@ -14,7 +14,7 @@ class ProductService {
     
     private var updates: Task<Void, Never>? = nil
     
-    let productIdOne: String = "com.maru.handgosi"
+    let productIdOne: String = "com.maru.handgosi2"
     
     init() {
         

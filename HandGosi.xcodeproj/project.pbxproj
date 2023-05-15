@@ -33,6 +33,7 @@
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
+		7F80FBC62A12162300E03A56 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80FBC52A12162300E03A56 /* PurchaseManager.swift */; };
 		7F88E7F128A577EB001C0463 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F028A577EB001C0463 /* MainView.swift */; };
 		7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */; };
 		7F88E7F528A62C13001C0463 /* ExamSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F428A62C13001C0463 /* ExamSelectView.swift */; };
@@ -84,6 +85,7 @@
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
+		7F80FBC52A12162300E03A56 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		7F88E7F028A577EB001C0463 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectView.swift; sourceTree = "<group>"; };
 		7F88E7F428A62C13001C0463 /* ExamSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamSelectView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				7F56350528B3719F008AD29E /* ExamStore */,
 				7FB8D30B2A0E28DA006A19D9 /* ProductService.swift */,
+				7F80FBC52A12162300E03A56 /* PurchaseManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
 				7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */,
 				7FB8D30C2A0E28DA006A19D9 /* ProductService.swift in Sources */,
+				7F80FBC62A12162300E03A56 /* PurchaseManager.swift in Sources */,
 				7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,

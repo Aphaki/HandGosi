@@ -5,18 +5,33 @@
   ],
   "products" : [
     {
-      "displayPrice" : "2.99",
+      "displayPrice" : "1.99",
       "familyShareable" : false,
-      "internalID" : "3FAF26E4",
+      "internalID" : "B09E6064",
       "localizations" : [
         {
-          "description" : "배너 광고 제거 기능",
-          "displayName" : "광고 제거",
+          "description" : "앱내 배너 광고 제거",
+          "displayName" : "광고제거3",
           "locale" : "ko"
         }
       ],
-      "productID" : "com.maru.handgosi",
-      "referenceName" : "NO AD",
+      "productID" : "com.maru.handgosi3",
+      "referenceName" : "NO AD3",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "19B2131A",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.maru.handgosi4",
+      "referenceName" : "NO AD4",
       "type" : "NonConsumable"
     }
   ],
