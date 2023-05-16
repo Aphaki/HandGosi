@@ -14,6 +14,7 @@
 		7F17A20C28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */; };
 		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
 		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
+		7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2479962A136FA800E7D384 /* ExamStore2023.swift */; };
 		7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD628F7FAB20008006B /* BannerAdVC.swift */; };
 		7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD828F7FB390008006B /* BannerAdView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
@@ -64,6 +65,7 @@
 		7F17A20B28AF20CD006B3B21 /* MyNoteSubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectView.swift; sourceTree = "<group>"; };
 		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
+		7F2479962A136FA800E7D384 /* ExamStore2023.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2023.swift; sourceTree = "<group>"; };
 		7F291CD628F7FAB20008006B /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
 		7F291CD828F7FB390008006B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				7F09EFE028AF61FF008F601D /* MyNoteService.swift */,
 				7F9F0FEB28A4DA4000D2ABE5 /* ExamStoreDataService.swift */,
 				7F6AC76028CC7E91009D2113 /* SavingExamService.swift */,
+				7F2479962A136FA800E7D384 /* ExamStore2023.swift */,
 				7F5634F928B36409008AD29E /* ExamStore2022.swift */,
 				7F5634FB28B36B28008AD29E /* ExamStore2021.swift */,
 				7F5634FD28B36CDD008AD29E /* ExamStore2020.swift */,
@@ -407,6 +410,7 @@
 				7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
+				7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */,
 				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
 				7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */,

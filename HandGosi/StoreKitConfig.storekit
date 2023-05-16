@@ -25,9 +25,9 @@
       "internalID" : "19B2131A",
       "localizations" : [
         {
-          "description" : "",
-          "displayName" : "",
-          "locale" : "en_US"
+          "description" : "앱내 배너광고 제거",
+          "displayName" : "배너광고 제거",
+          "locale" : "ko"
         }
       ],
       "productID" : "com.maru.handgosi4",

@@ -9,9 +9,7 @@ import SwiftUI
 import StoreKit
 
 struct SettingView: View {
-    
-//    @EnvironmentObject var mainVM: MainVM
-    
+        
     @EnvironmentObject var purchaseManager: PurchaseManager
     
     var body: some View {
