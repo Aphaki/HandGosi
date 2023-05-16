@@ -14,6 +14,7 @@ class MainVM: ObservableObject {
     @Published var currentExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
     
+    @Published var percentage2023: Double = 0
     @Published var percentage2022: Double = 0
     @Published var percentage2021: Double = 0
     @Published var percentage2020: Double = 0
@@ -37,8 +38,6 @@ class MainVM: ObservableObject {
         subscribeMyNote()
         subscribeSavingExams()
         subscribeProgressModel()
-//        productSub()
-//        productOneSub()
     }
     
     // MARK: - 서비스 데이터와 연결 (모든 시험, 오답 노트, 시험 진행사항)
@@ -110,6 +109,28 @@ class MainVM: ObservableObject {
             .store(in: &subscription)
     }
     //MARK: - 진행 정도 관련
+    private func subscribeProgressModel2023() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2023 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2023 = percentage
+        }
+        .store(in: &subscription)
+    }
+    
     private func subscribeProgressModel2022() {
         $currentExams.map { exams -> Double in
             let examsFiltering =
@@ -288,6 +309,7 @@ class MainVM: ObservableObject {
         subscribeProgressModel2020()
         subscribeProgressModel2021()
         subscribeProgressModel2022()
+        subscribeProgressModel2023()
     }
     
     //MARK: - 저장 관련 (현재 시험 진행사항, 오답노트 저장, 오답노트 제거)
@@ -302,44 +324,5 @@ class MainVM: ObservableObject {
     func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
-    
-    //MARK: - 앱내 구매 관련
-//    let productService = ProductService()
-//    @Published var products: [Product] = []
-//    @Published var productOne: Bool = false
-//
-//    func productSub() {
-//        productService.$currentProducts
-//            .receive(on: DispatchQueue.main)
-//            .sink { value in
-//                self.products = value
-//            }
-//            .store(in: &subscription)
-//    }
-//
-//    func productOneSub() {
-//        productService.$purchasedIds
-//            .receive(on: DispatchQueue.main)
-//            .sink { ids in
-//                if ids.isEmpty {
-//                    self.productOne = false
-//                } else {
-//                    self.productOne = true
-//                }
-//            }
-//            .store(in: &subscription)
-//    }
-//
-//    func checkProduct(product: Product) async -> Bool {
-//        let result = await productService.checkProduct(product: product)
-//        return result
-//    }
-//
-//    func purchaseProduct(product: Product) {
-//        Task {
-//            let purchase = try await productService.purchaseProduct(product: product)
-//            print("ProductService - purchaseProduct() - \(purchase)")
-//        }
-//    }
     
 }

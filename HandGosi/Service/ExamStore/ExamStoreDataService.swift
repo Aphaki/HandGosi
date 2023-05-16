@@ -11,6 +11,7 @@ class ExamStoreDataService {
     
     @Published var allExams: [ExamModel] = []
     
+    var examStore2023 = ExamStore2023()
     var examStore2022 = ExamStore2022()
     var examStore2021 = ExamStore2021()
     var examStore2020 = ExamStore2020()
@@ -34,8 +35,13 @@ class ExamStoreDataService {
         saveExam2020()
         saveExam2021()
         saveExam2022()
+        saveExam2023()
     }
     
+    func saveExam2023() {
+       let exams2023 = examStore2023.exams2023
+        allExams.append(contentsOf: exams2023)
+    }
     func saveExam2022() {
        let exams2022 = examStore2022.exams2022
         allExams.append(contentsOf: exams2022)

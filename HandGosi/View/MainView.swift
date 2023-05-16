@@ -31,6 +31,20 @@ struct MainView: View {
                             HStack(spacing: 30) {
                                 Button {
                                     vm.filteredExams = vm.currentExams.filter({ aExam in
+                                        return aExam.year == 2023
+                                    })
+                                    goToNextView.toggle()
+                                } label: {
+                                    ZStack {
+                                        ProgressCircle(degree: vm.percentage2023 * 3.6)
+                                            .foregroundColor(.green)
+                                            .frame(width: 45, height: 45)
+                                        Text("2023")
+                                            .yearText()
+                                    }
+                                }
+                                Button {
+                                    vm.filteredExams = vm.currentExams.filter({ aExam in
                                         return aExam.year == 2022
                                     })
                                     goToNextView.toggle()
