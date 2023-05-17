@@ -67,7 +67,6 @@ struct ExamView: View {
                             mainVM.saveCurrentExam(exam: vm.finalExam)
                             navigationBool.toggle()
                         }
-
                     }
 
                 }
@@ -75,7 +74,6 @@ struct ExamView: View {
             if vm.isScored {
                 VStack {
                     HStack {
-                        Spacer()
                         Text(vm.finalExam.score)
                             .font(.system(size:50))
                             .underline()
