@@ -7,12 +7,14 @@
 
 import Foundation
 import Combine
+import StoreKit
 
 class MainVM: ObservableObject {
     @Published var allExams: [ExamModel] = []
     @Published var currentExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
     
+    @Published var percentage2023: Double = 0
     @Published var percentage2022: Double = 0
     @Published var percentage2021: Double = 0
     @Published var percentage2020: Double = 0
@@ -30,7 +32,7 @@ class MainVM: ObservableObject {
     let savingExamService = SavingExamService()
     
     private var subscription = Set<AnyCancellable>()
-    
+    //MARK: - init()
     init() {
         subscribeAllExams()
         subscribeMyNote()
@@ -38,7 +40,7 @@ class MainVM: ObservableObject {
         subscribeProgressModel()
     }
     
-    
+    // MARK: - 서비스 데이터와 연결 (모든 시험, 오답 노트, 시험 진행사항)
     private func subscribeAllExams() {
         examStoreDataService.$allExams
             .receive(on: DispatchQueue.main)
@@ -105,6 +107,28 @@ class MainVM: ObservableObject {
                 self.currentExams = returnedExams
             }
             .store(in: &subscription)
+    }
+    //MARK: - 진행 정도 관련
+    private func subscribeProgressModel2023() {
+        $currentExams.map { exams -> Double in
+            let examsFiltering =
+            exams.filter({ $0.year == 2023 })
+            let examTotalCount =
+            examsFiltering.map { aExam -> Int in
+               return aExam.totalCount
+            }.reduce(0, +)
+            let examProgressCount =
+            examsFiltering.map { aExam -> Int in
+                return aExam.progressCount
+            }.reduce(0, +)
+            return Double(examProgressCount) / Double(examTotalCount) * 100
+        }
+        .receive(on: DispatchQueue.main)
+        .sink { [weak self] percentage in
+            guard let self = self else { return }
+            self.percentage2023 = percentage
+        }
+        .store(in: &subscription)
     }
     
     private func subscribeProgressModel2022() {
@@ -285,8 +309,10 @@ class MainVM: ObservableObject {
         subscribeProgressModel2020()
         subscribeProgressModel2021()
         subscribeProgressModel2022()
+        subscribeProgressModel2023()
     }
     
+    //MARK: - 저장 관련 (현재 시험 진행사항, 오답노트 저장, 오답노트 제거)
     func saveCurrentExam(exam: ExamModel) {
         savingExamService.saveCurrentExam(exam: exam)
     }
@@ -298,4 +324,5 @@ class MainVM: ObservableObject {
     func deleteNoteQuestion(myNoteQuestion: MyNoteQuestion) {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
+    
 }

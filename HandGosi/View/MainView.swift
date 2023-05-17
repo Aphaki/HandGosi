@@ -10,11 +10,15 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var vm: MainVM
+    @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State private var isloading = true
+    
+    // View Changer
     @State private var isClicked: Bool = false
     @State var goToNextView: Bool = false
     @State private var goToMyNote: Bool = false
+    @State private var goToSettingView: Bool = false
     
     var body: some View {
         
@@ -25,6 +29,20 @@ struct MainView: View {
                     VStack(spacing: 30) {
                         if isClicked {
                             HStack(spacing: 30) {
+                                Button {
+                                    vm.filteredExams = vm.currentExams.filter({ aExam in
+                                        return aExam.year == 2023
+                                    })
+                                    goToNextView.toggle()
+                                } label: {
+                                    ZStack {
+                                        ProgressCircle(degree: vm.percentage2023 * 3.6)
+                                            .foregroundColor(.green)
+                                            .frame(width: 45, height: 45)
+                                        Text("2023")
+                                            .yearText()
+                                    }
+                                }
                                 Button {
                                     vm.filteredExams = vm.currentExams.filter({ aExam in
                                         return aExam.year == 2022
@@ -53,7 +71,6 @@ struct MainView: View {
                                             .yearText()
                                     }
                                 }
-                                
                             }
                             HStack(spacing: 30) {
                                 Button {
@@ -87,8 +104,6 @@ struct MainView: View {
                             }
                             
                         }
-                        
-                    
                         ZStack {
                             ZStack {
                                 Image("HandGosiRed")
@@ -110,6 +125,7 @@ struct MainView: View {
                             if isClicked {
                                 HStack {
                                     Spacer()
+                                        .frame(width: 40)
                                     Button {
                                         vm.filteredNotes = vm.myNotes
                                         goToMyNote.toggle()
@@ -122,11 +138,21 @@ struct MainView: View {
                                             .background(Circle().foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
                                     }
                                     Spacer()
+                                    Button {
+                                        goToSettingView.toggle()
+                                    } label: {
+                                        VStack {
+                                            Image(systemName: "gear")
+                                                .resizable()
+                                                .foregroundColor(.gray)
+                                                .frame(width: 50, height: 50, alignment: .center)
+                                        }
+                                        
+                                    }
+                                    Spacer()
                                         .frame(width: 40)
                                     
                                 }
-                                
-                                
                             }
                         }
                         if isClicked {
@@ -192,6 +218,14 @@ struct MainView: View {
                             }
                         }
                     } // VStack
+                    // Next View Setting
+                    .background(
+                        NavigationLink(isActive: $goToSettingView, destination: {
+                            SettingView()
+                        }, label: {
+                            EmptyView()
+                        })
+                    )
                     .background(
                         NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
                             EmptyView()
@@ -208,7 +242,18 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
-            BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
+                BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+            }
+//            BannerAdView(adUnitId: "pub-1837011492216327")
+        }
+        .task {
+            do {
+                try await purchaseManager.loadProducts()
+            }
+            catch {
+                print(error)
+            }
         }
         
     }
@@ -218,5 +263,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(MainVM())
+            .environmentObject(PurchaseManager())
     }
 }

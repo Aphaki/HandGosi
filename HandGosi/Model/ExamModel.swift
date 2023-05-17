@@ -19,6 +19,15 @@ class ExamModel: Identifiable, Codable {
         }.count
     }
     var totalCount: Int { return questions.count }
+    var score: String {
+        let correctCounts =
+        questions.filter { aQuestionModel in
+           return aQuestionModel.answer == aQuestionModel.selectedNum
+        }.count
+        
+        let thisScore = correctCounts * 5
+        return "\(thisScore)"
+    }
     
     init(id: Int, year: Int, examTypeID: String, subjectID: String, questions: [QuestionModel]) {
         self.id = id

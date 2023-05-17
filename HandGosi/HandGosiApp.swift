@@ -35,15 +35,20 @@ struct HandGosiApp: App {
 //        }
 //    }
     
-    @StateObject var mainVM = MainVM()
+    @StateObject private var mainVM = MainVM()
+    @StateObject private var purchaseManager = PurchaseManager()
     
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environmentObject(MainVM())
+                .environmentObject(mainVM)
+                .environmentObject(purchaseManager)
                 .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
                     ATTrackingManager.requestTrackingAuthorization { _ in
                     }
+                }
+                .task {
+                    await purchaseManager.updatePurchasedProducts()
                 }
         }
     }
