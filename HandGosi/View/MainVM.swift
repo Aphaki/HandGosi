@@ -10,6 +10,8 @@ import Combine
 import StoreKit
 
 class MainVM: ObservableObject {
+    @Published var firstLoad: Bool = true
+    
     @Published var allExams: [ExamModel] = []
     @Published var currentExams: [ExamModel] = []
     @Published var filteredExams: [ExamModel] = []
@@ -38,6 +40,7 @@ class MainVM: ObservableObject {
         subscribeMyNote()
         subscribeSavingExams()
         subscribeProgressModel()
+        subsccribeFirstBool()
     }
     
     // MARK: - 서비스 데이터와 연결 (모든 시험, 오답 노트, 시험 진행사항)
@@ -325,4 +328,16 @@ class MainVM: ObservableObject {
         myNoteStoreService.deleteMyNote(myNoteQuestion: myNoteQuestion)
     }
     
+    //MARK: - First Load Bool Save
+    func saveFirstLoad(_ firstLoadBool: Bool) {
+        myNoteStoreService.saveFirstLoad(firstLoadBool)
+    }
+    func subsccribeFirstBool() {
+        myNoteStoreService.$firstLoad
+            .receive(on: DispatchQueue.main)
+            .sink { bool in
+                self.firstLoad = bool
+            }
+            .store(in: &subscription)
+    }
 }

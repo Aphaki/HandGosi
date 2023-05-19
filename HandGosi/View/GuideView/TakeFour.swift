@@ -9,11 +9,39 @@ import SwiftUI
 
 struct TakeFour: View {
     
+    @EnvironmentObject var mainVM: MainVM
     @State private var animate = false
+    var toMain: Bool
     
     var body: some View {
         ZStack {
             VStack {
+                HStack {
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Text("Guide (4/4)")
+                        .font(.title)
+                    Spacer()
+                    if toMain {
+                        Button {
+                            print("가이드 종료 클릭")
+                            mainVM.saveFirstLoad(false)
+                            mainVM.firstLoad.toggle()
+                        } label: {
+                            Text("가이드 종료")
+                                .foregroundColor(.red)
+                                .padding(5)
+                                .background( RoundedRectangle(cornerRadius: 5).opacity(0.2).foregroundColor(.red) )
+                        }
+                    } else {
+                        Text("빈공간 채워")
+                            .foregroundColor(.clear)
+                            .padding(5)
+                            .background( RoundedRectangle(cornerRadius: 5).opacity(0.2).foregroundColor(.clear) )
+                    }
+                    
+                }
                 Image("Take3")
                     .resizable()
                     .frame(width: 350, height: 500)
@@ -27,8 +55,8 @@ struct TakeFour: View {
             Image(systemName: "hand.point.up")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .scaleEffect(animate ? 1.2 : 0.6)
-                .offset(x: -145, y: -210)
+                .scaleEffect(animate ? 1.2 : 0.8)
+                .offset(x: -145, y: -190)
                 .foregroundColor(.black)
                 .opacity(0.5)
         }
@@ -38,10 +66,10 @@ struct TakeFour: View {
     
     func addAnimation() {
             guard !animate else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
-                        .easeInOut(duration: 2.0)
+                        .easeInOut(duration: 1.5)
                         .repeatForever()
                 ) {
                     animate.toggle()
@@ -52,6 +80,6 @@ struct TakeFour: View {
 
 struct TakeFour_Previews: PreviewProvider {
     static var previews: some View {
-        TakeFour()
+        TakeFour(toMain: true)
     }
 }

@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct GuideView: View {
+    
+    var toMain: Bool
+    
     var body: some View {
         TabView {
             TakeOne()
             TakeTwo()
             TakeThree()
-            TakeFour()
+            TakeFour(toMain: toMain)
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .background(Color.theme.mySecondary.opacity(0.3))
+        .background(Color.theme.mySecondary.opacity(0.2))
     }
 }
 
 
 struct GuideView_Previews: PreviewProvider {
     static var previews: some View {
-        GuideView()
+        GuideView(toMain: true)
     }
 }

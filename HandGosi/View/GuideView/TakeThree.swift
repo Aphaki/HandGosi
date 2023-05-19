@@ -14,6 +14,8 @@ struct TakeThree: View {
     var body: some View {
         ZStack {
             VStack {
+                Text("Guide (3/4)")
+                    .font(.title)
                 Image("Take3")
                     .resizable()
                     .frame(width: 350, height: 500)
@@ -27,8 +29,8 @@ struct TakeThree: View {
             Image(systemName: "hand.point.up")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .scaleEffect(animate ? 1.2 : 0.6)
-                .offset(x: 120, y: -170)
+                .scaleEffect(animate ? 1.2 : 0.8)
+                .offset(x: 120, y: -150)
                 .foregroundColor(.black)
                 .opacity(0.5)
         }
@@ -38,7 +40,7 @@ struct TakeThree: View {
     
     func addAnimation() {
             guard !animate else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
                         .easeInOut(duration: 2.0)

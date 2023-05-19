@@ -23,6 +23,7 @@ struct MainView: View {
     var body: some View {
         
         VStack {
+            // Main View Contents
             NavigationView {
                 ZStack {
                     Color.theme.myBackgroundColor.ignoresSafeArea()
@@ -121,6 +122,9 @@ struct MainView: View {
                                 }
                             }
                             .scaleEffect(isClicked ? 0.2 : 1.0)
+                            if vm.firstLoad {
+                                GuideView(toMain: true)
+                            }
                             
                             if isClicked {
                                 HStack {
@@ -242,11 +246,12 @@ struct MainView: View {
                     }
                 }
             } // NavigationView
+            // AD Banner
             if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
                 BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
             }
-//            BannerAdView(adUnitId: "pub-1837011492216327")
         }
+        // Store Kit Task
         .task {
             do {
                 try await purchaseManager.loadProducts()

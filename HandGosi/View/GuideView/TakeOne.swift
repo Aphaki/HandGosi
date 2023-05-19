@@ -14,13 +14,15 @@ struct TakeOne: View {
     var body: some View {
         ZStack {
             VStack {
+                Text("Guide (1/4)")
+                    .font(.title)
                 Image("Take1")
                     .resizable()
                     .frame(width: 350, height: 400)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.theme.myAccentColor))
                 Text("번호를 탭하여 답안 체크")
-                    .font(.title)
+                    .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(Color.theme.myAccentColor)
             }
@@ -28,7 +30,7 @@ struct TakeOne: View {
                 .resizable()
                 .frame(width: 50, height: 50)
                 .scaleEffect(animate ? 1.2 : 0.6)
-                .offset(x: -100, y: 40)
+                .offset(x: -110, y: 65)
                 .foregroundColor(.black)
                 .opacity(0.5)
         }
@@ -38,7 +40,7 @@ struct TakeOne: View {
     
     func addAnimation() {
             guard !animate else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
                         .easeInOut(duration: 2.0)

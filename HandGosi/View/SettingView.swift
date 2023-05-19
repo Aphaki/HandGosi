@@ -27,7 +27,7 @@ struct SettingView: View {
                 }
             }
             .background(
-                NavigationLink(destination: GuideView(), isActive: $goToGuideView, label: {
+                NavigationLink(destination: GuideView(toMain: false), isActive: $goToGuideView, label: {
                     EmptyView()
                 })
             )

@@ -15,9 +15,12 @@ class MyNoteService {
             print("오답노트 갯수: " + myNoteSaveData.count.description)
         }
     }
+    @Published var firstLoad: Bool = true
     let saveDataKey = "save_key"
+    let saveFirstLoadKey = "first_load_key"
     init() {
         fetchData()
+        fetchFirstLoad()
     }
     
     //MARK: - 오답노트 저장
@@ -79,5 +82,18 @@ class MyNoteService {
             return
         }
         self.myNoteSaveData = savedData
+    }
+    
+    //MARK: - UserDefault 세이브 - First Load Bool
+    func saveFirstLoad(_ firstLoadBool: Bool) {
+        UserDefaults.standard.setValue(firstLoadBool, forKey: saveFirstLoadKey)
+    }
+    private func fetchFirstLoad() {
+        guard
+            let value = UserDefaults.standard.value(forKey: saveFirstLoadKey) as? Bool else {
+                print("MyNoteService - fetchFirstLoad() 에러")
+            return
+        }
+        self.firstLoad = value
     }
 }
