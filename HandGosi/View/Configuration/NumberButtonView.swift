@@ -14,7 +14,6 @@ struct NumberButtonView: View {
     let numberInt: Int
     let text: AttributedString
     
-    
     var body: some View {
         VStack {
             HStack {
@@ -40,6 +39,5 @@ struct NumberButtonView: View {
 struct NumberButton_Previews: PreviewProvider {
     static var previews: some View {
         NumberButtonView(selectedNum: .constant(1), number: "①", numberInt: 1, text: "1번입니다.")
-        
     }
 }

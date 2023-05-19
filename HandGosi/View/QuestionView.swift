@@ -11,13 +11,15 @@ struct QuestionView: View {
     
     @StateObject var vm: QuestionVM
     
+    var animate: Bool = false
+    
     init(question: Binding<QuestionModel>) {
         _vm = StateObject(wrappedValue: QuestionVM(question: question))
 
     }
     
     var body: some View {
-        ScrollView {
+//        ScrollView {
             VStack(alignment: .leading, spacing: 10) {
                 Text("칸수용임")
                     .padding(5)
@@ -55,8 +57,8 @@ struct QuestionView: View {
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "②",numberInt: 2, text: vm.question.num2Text)
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "③", numberInt: 3, text: vm.question.num3Text)
                 NumberButtonView(selectedNum: $vm.question.selectedNum, number: "④", numberInt: 4, text: vm.question.num4Text)
-            }
-        }.padding(15)
+            }.padding(15)
+//        }
     }
 }
 
