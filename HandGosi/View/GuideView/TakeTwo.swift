@@ -14,7 +14,7 @@ struct TakeTwo: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Guide (2/4)")
+                Text("앱 가이드 (2/4)")
                     .font(.title)
                 Image("Take1")
                     .resizable()

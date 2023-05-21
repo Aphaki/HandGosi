@@ -20,7 +20,7 @@ struct TakeFour: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    Text("Guide (4/4)")
+                    Text("앱 가이드 (4/4)")
                         .font(.title)
                     Spacer()
                     if toMain {
