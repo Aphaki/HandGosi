@@ -19,7 +19,7 @@ struct GuideView: View {
             TakeFour(toMain: toMain)
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        .background(Color.theme.mySecondary.opacity(0.2))
+        .background(Color.theme.mySecondary.opacity(0.3))
     }
 }
 

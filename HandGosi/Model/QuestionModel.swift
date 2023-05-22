@@ -20,8 +20,9 @@ class QuestionModel: Identifiable, Codable {
     let num4Text: AttributedString
     let answer: Int
     var selectedNum: Int
+    let exception: String?
     
-    init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, reference2: AttributedString? = nil, imgModel: ImageModel? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString, answer: Int, selectedNum: Int = 0) {
+    init(num: Int, questionText: AttributedString, reference: AttributedString? = nil, reference2: AttributedString? = nil, imgModel: ImageModel? = nil, num1Text: AttributedString, num2Text: AttributedString, num3Text: AttributedString, num4Text: AttributedString, answer: Int, selectedNum: Int = 0, exception: String? = nil) {
         self.num = num
         self.questionText = questionText
         self.reference = reference
@@ -33,5 +34,6 @@ class QuestionModel: Identifiable, Codable {
         self.num4Text = num4Text
         self.answer = answer
         self.selectedNum = selectedNum
+        self.exception = exception
     }
 }

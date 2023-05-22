@@ -19,8 +19,9 @@ struct TakeOne: View {
                 Image("Take1")
                     .resizable()
                     .frame(width: 350, height: 400)
+                    .opacity(0.5)
                     .padding(5)
-                    .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.theme.myAccentColor))
+                    .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5).foregroundColor(Color.theme.myAccentColor))
                 Text("번호를 탭하여 답안 체크")
                     .font(.title3)
                     .fontWeight(.bold)
@@ -39,7 +40,7 @@ struct TakeOne: View {
     }
     
     func addAnimation() {
-            guard !animate else { return }
+//            guard !animate else { return }
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
