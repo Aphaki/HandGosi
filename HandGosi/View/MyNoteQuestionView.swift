@@ -24,8 +24,12 @@ struct MyNoteQuestionView: View {
             ZStack(alignment: .leading) {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
+                        
                         Text("[\(vm.myNoteQuestion.year.description) \(vm.myNoteQuestion.type) \(vm.myNoteQuestion.subject) ]")
                             .font(.headline)
+                        if vm.myNoteQuestion.question.exception != nil {
+                            Text(vm.myNoteQuestion.question.exception!)
+                        }
                         Spacer()
                         Button {
                             mainVM.deleteNoteQuestion(myNoteQuestion: vm.myNoteQuestion)

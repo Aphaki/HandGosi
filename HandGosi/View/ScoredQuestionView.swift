@@ -28,7 +28,7 @@ struct ScoredQuestionView: View {
                         if vm.addNoteText != nil {
                             myNoteAddPopUpText
                                 .padding(5)
-                                .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.theme.myAccentColor).opacity(0.2))
+//                                .background(RoundedRectangle(cornerRadius: 5).foregroundColor(Color.theme.myAccentColor).opacity(0.2))
                         }
                         if vm.question.exception != nil {
                             Text(vm.question.exception!)
