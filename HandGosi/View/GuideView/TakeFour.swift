@@ -10,7 +10,6 @@ import SwiftUI
 struct TakeFour: View {
     
     @EnvironmentObject var mainVM: MainVM
-    @State private var animate = false
     var toMain: Bool
     
     var body: some View {
@@ -45,7 +44,7 @@ struct TakeFour: View {
                 Image("Take3")
                     .resizable()
                     .frame(width: 350, height: 500)
-                    .opacity(0.5)
+                    .opacity(0.8)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5).foregroundColor(Color.theme.myAccentColor))
                 Text("표기답안 저장, 초기화 선택 가능")
@@ -56,27 +55,15 @@ struct TakeFour: View {
             Image(systemName: "hand.point.up")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .scaleEffect(animate ? 1.2 : 0.8)
+//                .scaleEffect(animate ? 1.2 : 0.8)
                 .offset(x: -145, y: -190)
                 .foregroundColor(.black)
                 .opacity(0.5)
         }
         .padding()
-        .onAppear(perform: addAnimation)
     }
     
-    func addAnimation() {
-//            guard !animate else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now()) {
-                withAnimation(
-                    Animation
-                        .easeInOut(duration: 1.5)
-                        .repeatForever()
-                ) {
-                    animate.toggle()
-                }
-            }
-        }
+    
 }
 
 struct TakeFour_Previews: PreviewProvider {

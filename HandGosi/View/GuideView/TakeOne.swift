@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TakeOne: View {
     
-    @State private var animate = false
+//    @State private var animate = false
+    @State private var animate: CGFloat = 0
     
     var body: some View {
         ZStack {
@@ -19,7 +20,7 @@ struct TakeOne: View {
                 Image("Take1")
                     .resizable()
                     .frame(width: 350, height: 400)
-                    .opacity(0.5)
+                    .opacity(0.8)
                     .padding(5)
                     .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5).foregroundColor(Color.theme.myAccentColor))
                 Text("번호를 탭하여 답안 체크")
@@ -30,24 +31,36 @@ struct TakeOne: View {
             Image(systemName: "hand.point.left")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .scaleEffect(animate ? 1.2 : 0.6)
-                .offset(x: -110, y: 65)
+                .offset(x: -100, y: 65)
                 .foregroundColor(.black)
                 .opacity(0.5)
+            HStack {
+                Spacer()
+                Image(systemName: "hand.tap.fill")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .offset(x: -animate)
+                    .foregroundColor(.black)
+                    .opacity(0.2)
+            }
+                
         }
         .padding()
         .onAppear(perform: addAnimation)
     }
     
     func addAnimation() {
-//            guard !animate else { return }
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
-                        .easeInOut(duration: 2.0)
+                        .easeOut(duration: 1.0)
                         .repeatForever()
                 ) {
-                    animate.toggle()
+                    if animate > 100 {
+                        animate = 0
+                    } else {
+                        animate += 30
+                    }
                 }
             }
         }
