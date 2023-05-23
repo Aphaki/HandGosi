@@ -13,6 +13,7 @@ struct SettingView: View {
     @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State var goToGuideView: Bool = false
+    @State var restoreAlert: Bool = false
     
     var body: some View {
         List {
@@ -51,17 +52,21 @@ struct SettingView: View {
                     Task {
                         do {
                             try await AppStore.sync()
+                            restoreAlert.toggle()
                         }
                         catch {
                             print(error)
+                            print("구매복원 에러 실패")
                         }
-                        
                     }
-                    print("구매 복원 액선")
+                    
                 }
             }
         }
         .navigationTitle("Setting")
         .listStyle(.grouped)
+        .alert("구매 복원 완료", isPresented: $restoreAlert) {
+            
+        }
     }
 }
