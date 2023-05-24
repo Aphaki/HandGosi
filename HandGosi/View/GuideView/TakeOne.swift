@@ -10,7 +10,7 @@ import SwiftUI
 struct TakeOne: View {
     
 //    @State private var animate = false
-    @State private var animate: CGFloat = 0
+    @State private var animate: Bool = false
     
     var body: some View {
         ZStack {
@@ -39,7 +39,7 @@ struct TakeOne: View {
                 Image(systemName: "hand.tap.fill")
                     .resizable()
                     .frame(width: 50, height: 50)
-                    .offset(x: -animate)
+                    .offset(x: animate ? -30 : 0)
                     .foregroundColor(.black)
                     .opacity(0.2)
             }
@@ -56,11 +56,7 @@ struct TakeOne: View {
                         .easeOut(duration: 1.0)
                         .repeatForever()
                 ) {
-                    if animate > 100 {
-                        animate = 0
-                    } else {
-                        animate += 30
-                    }
+                    animate.toggle()
                 }
             }
         }
