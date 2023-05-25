@@ -32,42 +32,42 @@ struct SettingView: View {
                     EmptyView()
                 })
             )
-            Section {
-                ForEach(purchaseManager.products) { (product) in
-                    if !purchaseManager.purchasedProductIDs.contains(product.id) {
-                        Button {
-                            Task {
-                                do {
-                                    try await purchaseManager.purchase(product)
-                                } catch {
-                                    print(error)
-                                }
-                            }
-                        } label: {
-                            Text("\(product.displayName) - \(product.displayPrice)")
-                        }
-                    }
-                }
-                Button("구매 복원") {
-                    Task {
-                        do {
-                            try await AppStore.sync()
-//                            await purchaseManager.updatePurchasedProducts()
-                            restoreAlert.toggle()
-                        }
-                        catch {
-                            print(error)
-                            print("구매복원 에러 실패")
-                        }
-                    }
-                    
-                }
-            }
+//            Section {
+//                ForEach(purchaseManager.products) { (product) in
+//                    if !purchaseManager.purchasedProductIDs.contains(product.id) {
+//                        Button {
+//                            Task {
+//                                do {
+//                                    try await purchaseManager.purchase(product)
+//                                } catch {
+//                                    print(error)
+//                                }
+//                            }
+//                        } label: {
+//                            Text("\(product.displayName) - \(product.displayPrice)")
+//                        }
+//                    }
+//                }
+//                Button("구매 복원") {
+//                    Task {
+//                        do {
+//                            try await AppStore.sync()
+////                            await purchaseManager.updatePurchasedProducts()
+//                            restoreAlert.toggle()
+//                        }
+//                        catch {
+//                            print(error)
+//                            print("구매복원 에러 실패")
+//                        }
+//                    }
+//
+//                }
+//            }
         }
         .navigationTitle("Setting")
         .listStyle(.grouped)
-        .alert("구매 복원 완료", isPresented: $restoreAlert) {
-            
-        }
+//        .alert("구매 복원 완료", isPresented: $restoreAlert) {
+//
+//        }
     }
 }

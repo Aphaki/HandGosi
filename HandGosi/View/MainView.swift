@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var vm: MainVM
-    @EnvironmentObject var purchaseManager: PurchaseManager
+//    @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State private var isloading = true
     
@@ -247,19 +247,19 @@ struct MainView: View {
                 }
             } // NavigationView
             // AD Banner
-            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
-                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
-            }
+//            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
+//                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
+//            }
         }
         // Store Kit Task
-        .task {
-            do {
-                try await purchaseManager.loadProducts()
-            }
-            catch {
-                print(error)
-            }
-        }
+//        .task {
+//            do {
+//                try await purchaseManager.loadProducts()
+//            }
+//            catch {
+//                print(error)
+//            }
+//        }
         
     }
 }
