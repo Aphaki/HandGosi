@@ -31,6 +31,8 @@
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */; };
+		7F75C8B22A1F58E000F2E302 /* StoreKitConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 7F75C8B12A1F58E000F2E302 /* StoreKitConfig.storekit */; };
+		7F75C8B42A1F647A00F2E302 /* StoreKitConfigTest.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 7F75C8B32A1F647A00F2E302 /* StoreKitConfigTest.storekit */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
@@ -89,6 +91,8 @@
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuSaveModel.swift; sourceTree = "<group>"; };
+		7F75C8B12A1F58E000F2E302 /* StoreKitConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfig.storekit; sourceTree = "<group>"; };
+		7F75C8B32A1F647A00F2E302 /* StoreKitConfigTest.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfigTest.storekit; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
@@ -108,7 +112,6 @@
 		7FA573AC28B74F9D00234059 /* ExamStore2016.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2016.swift; sourceTree = "<group>"; };
 		7FB38C212A13EFF8005CAAB9 /* ProgressCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircle.swift; sourceTree = "<group>"; };
 		7FB7399628A937EB008E4E3A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		7FB8D30D2A0E3033006A19D9 /* StoreKitConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitConfig.storekit; sourceTree = "<group>"; };
 		7FC4643B28B5C56E00C024A0 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7FC91D0F28B89DB300454811 /* ExamStore2015.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2015.swift; sourceTree = "<group>"; };
 		7FD21D7728AC139E0070B0A4 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
@@ -279,7 +282,8 @@
 			children = (
 				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
-				7FB8D30D2A0E3033006A19D9 /* StoreKitConfig.storekit */,
+				7F75C8B32A1F647A00F2E302 /* StoreKitConfigTest.storekit */,
+				7F75C8B12A1F58E000F2E302 /* StoreKitConfig.storekit */,
 				7F291CD528F7FA830008006B /* ADMob */,
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F87FB4128AB8FDC00E57AC9 /* View */,
@@ -378,8 +382,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */,
+				7F75C8B22A1F58E000F2E302 /* StoreKitConfig.storekit in Resources */,
 				7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */,
 				7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */,
+				7F75C8B42A1F647A00F2E302 /* StoreKitConfigTest.storekit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,7 +622,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "앱의 추적을 허락하시겠습니까?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 구글의 배너광고를 포함하고 있습니다. 맞춤 광고를 위한 사용 추적을 허락하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -652,7 +658,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "앱의 추적을 허락하시겠습니까?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 구글의 배너광고를 포함하고 있습니다. 맞춤 광고를 위한 사용 추적을 허락하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

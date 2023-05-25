@@ -1,0 +1,33 @@
+{
+  "identifier" : "7797875F",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "0BC02F93",
+      "localizations" : [
+        {
+          "description" : "앱내 하단 배너 광고 제거하기",
+          "displayName" : "하단 배너 광고 제거",
+          "locale" : "ko"
+        }
+      ],
+      "productID" : "com.maru.handgosi",
+      "referenceName" : "NO AD Product",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

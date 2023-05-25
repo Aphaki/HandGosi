@@ -248,7 +248,7 @@ struct MainView: View {
             } // NavigationView
             // AD Banner
             if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
-                BannerAdView(adUnitId: "ca-app-pub-3940256099942544/2934735716")
+                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
             }
         }
         // Store Kit Task

@@ -1,5 +1,5 @@
 {
-  "identifier" : "04FBE232",
+  "identifier" : "0CC55F82",
   "nonRenewingSubscriptions" : [
 
   ],
@@ -7,36 +7,23 @@
     {
       "displayPrice" : "1.99",
       "familyShareable" : false,
-      "internalID" : "B09E6064",
+      "internalID" : "6449468624",
       "localizations" : [
         {
-          "description" : "앱내 배너 광고 제거",
-          "displayName" : "광고제거3",
-          "locale" : "ko"
-        }
-      ],
-      "productID" : "com.maru.handgosi3",
-      "referenceName" : "NO AD3",
-      "type" : "NonConsumable"
-    },
-    {
-      "displayPrice" : "0.99",
-      "familyShareable" : false,
-      "internalID" : "19B2131A",
-      "localizations" : [
-        {
-          "description" : "앱내 배너광고 제거",
-          "displayName" : "배너광고 제거",
+          "description" : "앱 하단의 배너광고를 제거합니다.",
+          "displayName" : "앱 내 배너광고 제거",
           "locale" : "ko"
         }
       ],
       "productID" : "com.maru.handgosi4",
-      "referenceName" : "NO AD4",
+      "referenceName" : "앱내 배너광고 제거",
       "type" : "NonConsumable"
     }
   ],
   "settings" : {
-
+    "_applicationInternalID" : "6449248974",
+    "_developerTeamID" : "JSZ2KS27AG",
+    "_lastSynchronizedDate" : 706697443.83396006
   },
   "subscriptionGroups" : [
 

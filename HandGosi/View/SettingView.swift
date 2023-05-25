@@ -52,6 +52,7 @@ struct SettingView: View {
                     Task {
                         do {
                             try await AppStore.sync()
+//                            await purchaseManager.updatePurchasedProducts()
                             restoreAlert.toggle()
                         }
                         catch {
