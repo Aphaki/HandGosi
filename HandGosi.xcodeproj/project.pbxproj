@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE028AF61FF008F601D /* MyNoteService.swift */; };
 		7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09EFE228AF72BE008F601D /* MyNoteVM.swift */; };
 		7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12CEC629F28C6A003DA963 /* SettingView.swift */; };
@@ -121,9 +120,6 @@
 		7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		7FE038B5289EC26C008E629B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7FE0757A28B61BD600B94828 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.release.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.release.xcconfig"; sourceTree = "<group>"; };
-		CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandGosi.debug.xcconfig"; path = "Target Support Files/Pods-HandGosi/Pods-HandGosi.debug.xcconfig"; sourceTree = "<group>"; };
-		D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HandGosi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38987A4C338AC1EE6285AD79 /* Pods_HandGosi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +255,6 @@
 			children = (
 				7FDDF223289CFDCB00EE3FB7 /* HandGosi */,
 				7FDDF222289CFDCB00EE3FB7 /* Products */,
-				BDE3382377FDEC6B84E82C0B /* Pods */,
-				DFB04FD8B172253B8CDACC05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,23 +291,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BDE3382377FDEC6B84E82C0B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */,
-				91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		DFB04FD8B172253B8CDACC05 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D3EBBC41E6FDC7B67110123D /* Pods_HandGosi.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,11 +298,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FDDF22F289CFDCD00EE3FB7 /* Build configuration list for PBXNativeTarget "HandGosi" */;
 			buildPhases = (
-				12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */,
 				7FDDF21D289CFDCB00EE3FB7 /* Sources */,
 				7FDDF21E289CFDCB00EE3FB7 /* Frameworks */,
 				7FDDF21F289CFDCB00EE3FB7 /* Resources */,
-				78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -382,48 +356,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		12EDFADF7CBF52B22A4360B6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HandGosi-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78896D84983DB3243B863DDF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HandGosi/Pods-HandGosi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7FDDF21D289CFDCB00EE3FB7 /* Sources */ = {
@@ -603,7 +535,6 @@
 		};
 		7FDDF230289CFDCD00EE3FB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC57035E7B772363117CB677 /* Pods-HandGosi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -639,7 +570,6 @@
 		};
 		7FDDF231289CFDCD00EE3FB7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91771C2FFD0073F5101B9E64 /* Pods-HandGosi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

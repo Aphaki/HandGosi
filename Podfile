@@ -6,5 +6,4 @@ target 'HandGosi' do
   use_frameworks!
 
   # Pods for HandGosi
- pod 'Google-Mobile-Ads-SDK'
 end
