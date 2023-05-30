@@ -545,7 +545,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 구글의 배너광고를 포함하고 있습니다. 맞춤 광고를 위한 사용 추적을 허락하시겠습니까?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -580,7 +580,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "이 앱은 구글의 배너광고를 포함하고 있습니다. 맞춤 광고를 위한 사용 추적을 허락하시겠습니까?";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
