@@ -212,6 +212,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>NanumMyeongjo-YetHangul.ttf</string>
+		<string>NotoSansKR-Bold.otf</string>
+		<string>NotoSansKR-Regular.otf</string>
+		<string>GangwonEduPowerExtraBold.otf</string>
 	</array>
 </dict>
 </plist>

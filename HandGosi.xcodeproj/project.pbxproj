@@ -29,6 +29,10 @@
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
+		7F70C8952A792CC900F95500 /* LoadingViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */; };
+		7F70C8972A792D9C00F95500 /* GangwonEduPowerExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */; };
+		7F70C8992A7931FA00F95500 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8982A7931FA00F95500 /* NotoSansKR-Bold.otf */; };
+		7F70C89B2A79320700F95500 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C89A2A79320700F95500 /* NotoSansKR-Regular.otf */; };
 		7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */; };
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
@@ -87,6 +91,10 @@
 		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewTwo.swift; sourceTree = "<group>"; };
+		7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GangwonEduPowerExtraBold.otf; sourceTree = "<group>"; };
+		7F70C8982A7931FA00F95500 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		7F70C89A2A79320700F95500 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		7F71A79628C746CC007F4A08 /* MyNoteQuSaveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuSaveModel.swift; sourceTree = "<group>"; };
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
@@ -164,7 +172,10 @@
 		7F70B51028A23F4C00148779 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */,
+				7F70C8982A7931FA00F95500 /* NotoSansKR-Bold.otf */,
 				7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */,
+				7F70C89A2A79320700F95500 /* NotoSansKR-Regular.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				7FE0757A28B61BD600B94828 /* LoadingView.swift */,
+				7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
 				7FD21D7728AC139E0070B0A4 /* MainVM.swift */,
 				7F12CEC629F28C6A003DA963 /* SettingView.swift */,
@@ -349,9 +361,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F70C8972A792D9C00F95500 /* GangwonEduPowerExtraBold.otf in Resources */,
 				7FDDF22C289CFDCD00EE3FB7 /* Preview Assets.xcassets in Resources */,
 				7FDDF229289CFDCD00EE3FB7 /* Assets.xcassets in Resources */,
 				7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */,
+				7F70C89B2A79320700F95500 /* NotoSansKR-Regular.otf in Resources */,
+				7F70C8992A7931FA00F95500 /* NotoSansKR-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +379,7 @@
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
 				7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */,
+				7F70C8952A792CC900F95500 /* LoadingViewTwo.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
 				7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */,

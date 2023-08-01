@@ -9,40 +9,60 @@ import SwiftUI
 
 struct LoadingView: View {
     @Binding var isLoading: Bool
-    @State var loadingText = "now loading...".uppercased().map { one in
+    @State var loadingText = "...".uppercased().map { one in
         return String(one)
     }
     @State var count = 0
     @State var loop = 0
     
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     var body: some View {
         ZStack {
+            //배경
             Color.theme.myBackgroundColor.ignoresSafeArea()
-            Image("HandGosiRed")
-                .resizable()
-                .frame(width: 100, height: 180)
-            HStack(spacing: 0){
-                ForEach(loadingText.indices, id: \.self) { index in
-                    Text(loadingText[index])
-                        .font(.headline)
-                        .foregroundColor(Color.theme.myAccentColor)
-                        .offset(y: index == count ? -15 : 0)
-                }
-            }.onReceive(timer) { _ in
-                withAnimation {
-                    let lastIndex = loadingText.count - 1
-                    if count == lastIndex {
-                        count = 0
-                        loop += 1
-                        if loop >= 2 {
-                            isLoading = false
+            
+            //아이콘
+            VStack {
+                Spacer()
+                ZStack {
+                    Image("handgosi_logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 115, height: 115, alignment: .center)
+                    // ...
+                    HStack(spacing: 0){
+                        ForEach(loadingText.indices, id: \.self) { index in
+                            Text(loadingText[index])
+                                .font(.custom("NotoSansKR-Bold", size: 50))
+                                .foregroundColor(Color.theme.myGray)
+                                .offset(y: index == count ? -6 : 0)
                         }
-                    } else {
-                        count += 1
+                    }.onReceive(timer) { _ in
+                        withAnimation {
+                            let lastIndex = loadingText.count - 1
+                            if count == lastIndex {
+                                count = 0
+                                loop += 1
+                                if loop >= 2 {
+                                    isLoading = false
+                                }
+                            } else {
+                                count += 1
+                            }
+                        }
                     }
                 }
+                Spacer()
+                Text("공무원 시험 기출문제가 내 손안에")
+                    .font(.custom("NotoSansKR-Bold", size: 13))
+                    .padding(.bottom, 2)
+                Text("HandGosi")
+                    .font(.custom("GangwonEduPowerExtraBold", size: 35))
+                    .foregroundColor(Color.theme.myFontColorTwo)
+                    .padding(.bottom, 90)
             }
+            
+            
         }
     }
 }

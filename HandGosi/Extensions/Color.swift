@@ -17,4 +17,8 @@ struct MyColor {
     let myAccentColor = Color("MyAccentColor")
     let myBackgroundColor = Color("MyBackgroundColor")
     let mySecondary = Color("MySecondary")
+    let myFontColorTwo = Color("MyFontColorTwo")
+    let myRed = Color("MyRed")
+    let myBlack = Color("MyBlack")
+    let myGray = Color("MyGray")
 }
