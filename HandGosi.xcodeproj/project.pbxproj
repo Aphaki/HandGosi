@@ -29,6 +29,7 @@
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
 		7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */; };
 		7F67317B2A7A7FFA00F8858F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67317A2A7A7FFA00F8858F /* Int.swift */; };
+		7F67317D2A7A9C2000F8858F /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67317C2A7A9C2000F8858F /* ProgressCircleView.swift */; };
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F70C8972A792D9C00F95500 /* GangwonEduPowerExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */; };
@@ -91,6 +92,7 @@
 		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
 		7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTwo.swift; sourceTree = "<group>"; };
 		7F67317A2A7A7FFA00F8858F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		7F67317C2A7A9C2000F8858F /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				7FDDF232289CFE2300EE3FB7 /* NumberButtonView.swift */,
 				7FB38C212A13EFF8005CAAB9 /* ProgressCircle.swift */,
+				7F67317C2A7A9C2000F8858F /* ProgressCircleView.swift */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */,
 				7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */,
 				7FB38C222A13EFF8005CAAB9 /* ProgressCircle.swift in Sources */,
+				7F67317D2A7A9C2000F8858F /* ProgressCircleView.swift in Sources */,
 				7F8CD08428A0DA1100776238 /* QuestionVM.swift in Sources */,
 				7F88E7F728A636C8001C0463 /* ExamView.swift in Sources */,
 				7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */,

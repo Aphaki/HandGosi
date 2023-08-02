@@ -22,6 +22,8 @@ struct SettingView: View {
                     Text("앱 가이드")
                     Spacer()
                     Image(systemName: "chevron.right")
+                        .foregroundColor(Color.theme.chevronColor)
+                        .scaleEffect(0.8)
                 }
                 .onTapGesture {
                     goToGuideView.toggle()

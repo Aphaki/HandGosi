@@ -18,50 +18,63 @@ struct MyNoteSubjectSelectView: View {
     }
     
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
-            Spacer()
+        List {
             Button {
                 vm.selectedMyNotes = vm.myNotes.filter({ element in
                     return element.subject == "국어"
                 })
                 showNextView.toggle()
             } label: {
-                Text("국  어")
-                    .myNoteButton(color: .red)
-            }
-            HStack {
-                Spacer()
-                Button {
-                    vm.selectedMyNotes = vm.myNotes.filter({ element in
-                        return element.subject == "영어"
-                    })
-                    showNextView.toggle()
-                } label: {
-                    Text("영  어")
-                        .myNoteButton(color: .red)
+                HStack {
+                    Text("국어 오답노트")
+                        .foregroundColor(Color.theme.myAccentColor)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.theme.chevronColor)
+                        .scaleEffect(0.8)
                 }
-                Button {
-                    vm.selectedMyNotes = vm.myNotes.filter({ element in
-                        return element.subject == "한국사"
-                    })
-                    showNextView.toggle()
-                } label: {
-                    Text("한국사")
-                        .myNoteButton(color: .red)
-                }
-                Spacer()
+
+                    
             }
-            Spacer()
-            Spacer()
-            Spacer()
+            Button {
+                vm.selectedMyNotes = vm.myNotes.filter({ element in
+                    return element.subject == "영어"
+                })
+                showNextView.toggle()
+            } label: {
+                HStack {
+                    Text("영어 오답노트")
+                        .foregroundColor(Color.theme.myAccentColor)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.theme.chevronColor)
+                        .scaleEffect(0.8)
+                }
+            }
+            Button {
+                vm.selectedMyNotes = vm.myNotes.filter({ element in
+                    return element.subject == "한국사"
+                })
+                showNextView.toggle()
+            } label: {
+                HStack {
+                    Text("한국사 오답노트")
+                        .foregroundColor(Color.theme.myAccentColor)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(Color.theme.chevronColor)
+                        .scaleEffect(0.8)
+                }
+
+            }
+            
+            
+            .navigationTitle("오답노트")
         }
         .background(
             NavigationLink(isActive: $showNextView,
                            destination: { MyNoteView(myNotes: vm.selectedMyNotes)},
                            label: { EmptyView() })
         )
-        .navigationTitle("오답노트")
     }
 }
-

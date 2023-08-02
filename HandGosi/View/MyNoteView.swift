@@ -22,7 +22,7 @@ struct MyNoteView: View {
                     MyNoteQuestionView(myNoteQuestion: myNoteQuestion)
                 }
             }
-        }.navigationTitle(vm.myNotes.first?.subject ?? "노트가 비어있습니다.")
+        }.navigationTitle(vm.myNotes.first?.subject ?? "빈 노트")
     }
 }
 

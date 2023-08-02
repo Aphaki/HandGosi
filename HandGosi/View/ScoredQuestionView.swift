@@ -99,10 +99,10 @@ extension ScoredQuestionView {
         HStack {
             Spacer()
             Text(vm.addNoteText!)
-                .padding(8)
-                .font(.caption)
+                .padding(5)
+                .font(.custom("NotoSansKR-Bold", size: 10))
                 .foregroundColor(.white)
-                .background( RoundedRectangle(cornerRadius: 20).opacity(0.8) )
+                .background( RoundedRectangle(cornerRadius: 10).opacity(0.8) )
             Spacer()
         }
     }
@@ -117,8 +117,11 @@ extension ScoredQuestionView {
             }
         } label: {
             Text("오답노트 추가")
+                .font(.custom("NotoSansKR-Bold", size: 10))
+                .foregroundColor(Color.theme.addMyNoteColor)
                 .padding(5)
-                .background(RoundedRectangle(cornerRadius: 5).opacity(0.2))
+                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.theme.addMyNoteColor).opacity(0.2)
+                )
         }
     }
 }

@@ -43,8 +43,11 @@ struct ExamView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Text(vm.isScored ? "시험지로" : "채점지로")
-                        .padding(8)
-                        .background(RoundedRectangle(cornerRadius: 10).opacity(0.3))
+                        .font(.custom("NotoSansKR-Bold", size: 10))
+                        .foregroundColor(Color.theme.myAccentColor)
+                        .padding(5)
+                        .background(RoundedRectangle(cornerRadius: 10).opacity(0.1)
+                        )
                         .onTapGesture {
                             vm.isScored.toggle()
                         }

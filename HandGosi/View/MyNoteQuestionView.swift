@@ -36,8 +36,11 @@ struct MyNoteQuestionView: View {
                             vm.isDeleted.toggle()
                         } label: {
                             Text("오답노트에서 제거")
+                                .font(.custom("NotoSansKR-Bold", size: 10))
+                                .foregroundColor(Color.theme.addMyNoteColor)
                                 .padding(5)
-                                .background(RoundedRectangle(cornerRadius: 10).opacity(0.2).shadow(color: .black, radius: 10, x: 0, y: 10))
+                                .background(RoundedRectangle(cornerRadius: 10).foregroundColor(Color.theme.addMyNoteColor).opacity(0.2)
+                                )
                         }
                     }
                     HStack {

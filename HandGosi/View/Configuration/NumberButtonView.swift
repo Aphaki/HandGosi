@@ -19,7 +19,7 @@ struct NumberButtonView: View {
             HStack {
                 Text(number)
                     .font(.largeTitle)
-                    .overlay(Circle().opacity(selectedNum == numberInt ? 1 : 0))
+                    .overlay(Circle().opacity(selectedNum == numberInt ? 0.5 : 0))
                     .onTapGesture {
                         if selectedNum != numberInt {
                         selectedNum = numberInt

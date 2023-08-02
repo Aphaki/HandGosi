@@ -27,10 +27,10 @@ struct HandGosiApp: App {
 //        }
     init() {
             UINavigationBar.appearance().largeTitleTextAttributes =
-            [.font : UIFont(name: "GangwonEduPowerExtraBold", size: 25) as Any ,
+            [.font : UIFont(name: "NotoSansKR-Bold", size: 25) as Any ,
              .foregroundColor : UIColor(Color.theme.myAccentColor)]
             UINavigationBar.appearance().titleTextAttributes =
-            [.font : UIFont(name: "GangwonEduPowerExtraBold", size: 25) as Any ,
+            [.font : UIFont(name: "NotoSansKR-Bold", size: 25) as Any ,
              .foregroundColor : UIColor(Color.theme.myAccentColor)]
         }
     
