@@ -25,6 +25,14 @@ struct HandGosiApp: App {
 //                }
 //            }
 //        }
+    init() {
+            UINavigationBar.appearance().largeTitleTextAttributes =
+            [.font : UIFont(name: "GangwonEduPowerExtraBold", size: 25) as Any ,
+             .foregroundColor : UIColor(Color.theme.myAccentColor)]
+            UINavigationBar.appearance().titleTextAttributes =
+            [.font : UIFont(name: "GangwonEduPowerExtraBold", size: 25) as Any ,
+             .foregroundColor : UIColor(Color.theme.myAccentColor)]
+        }
     
     @StateObject private var mainVM = MainVM()
 //    @StateObject private var purchaseManager = PurchaseManager()

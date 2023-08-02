@@ -28,6 +28,7 @@
 		7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350128B36F3D008AD29E /* ExamStore2018.swift */; };
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
 		7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */; };
+		7F67317B2A7A7FFA00F8858F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67317A2A7A7FFA00F8858F /* Int.swift */; };
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
 		7F70C8972A792D9C00F95500 /* GangwonEduPowerExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */; };
@@ -89,6 +90,7 @@
 		7F56350128B36F3D008AD29E /* ExamStore2018.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2018.swift; sourceTree = "<group>"; };
 		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
 		7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTwo.swift; sourceTree = "<group>"; };
+		7F67317A2A7A7FFA00F8858F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */,
 				7F70B51628A2D08800148779 /* String.swift */,
 				7FC4643B28B5C56E00C024A0 /* View.swift */,
+				7F67317A2A7A7FFA00F8858F /* Int.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				7FDDF225289CFDCB00EE3FB7 /* HandGosiApp.swift in Sources */,
 				7FDDF233289CFE2300EE3FB7 /* NumberButtonView.swift in Sources */,
 				7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */,
+				7F67317B2A7A7FFA00F8858F /* Int.swift in Sources */,
 				7FB7399728A937EB008E4E3A /* ImageModel.swift in Sources */,
 				7F09EFE128AF61FF008F601D /* MyNoteService.swift in Sources */,
 				7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */,

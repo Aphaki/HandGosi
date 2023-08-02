@@ -25,227 +25,123 @@ struct MainView: View {
         VStack {
             // Main View Contents
             NavigationView {
-                ZStack {
-                    Color.theme.myBackgroundColor.ignoresSafeArea()
-                    VStack(spacing: 30) {
-                        if isClicked {
-                            HStack(spacing: 30) {
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2023
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2023 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2023")
-                                            .yearText()
-                                    }
-                                }
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2022
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2022 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2022")
-                                            .yearText()
-                                    }
-                                }
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2021
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2021 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2021")
-                                            .yearText()
-                                    }
-                                }
-                            }
-                            HStack(spacing: 30) {
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2020
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2020 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2020")
-                                            .yearText()
-                                    }
-                                }
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2019
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2019 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2019")
-                                            .yearText()
-                                    }
-                                }
-                            }
+                List {
+                    Section {
+                        topView
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    .padding(0)
+                    Section {
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2023
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2023)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2022
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2022)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2021
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2021)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2020
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2020)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2019
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2019)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2018
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2018)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2017
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2017)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2016
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2016)
+                        }
+                        Button {
+                            vm.filteredExams = vm.currentExams.filter({ aExam in
+                                return aExam.year == 2015
+                            })
+                            goToNextView.toggle()
+                        } label: {
+                            YearCell(year: 2015)
                             
                         }
-                        ZStack {
-                            ZStack {
-                                Image("HandGosiRed")
-                                    .resizable()
-                                Text("Click")
-                                    .fontWeight(.bold)
-                                    .foregroundColor(Color.theme.myAccentColor)
-                                    .shadow(color: .white, radius: 10, x: 0, y: 5)
-                            }
-                            .frame(width: 100, height: 180)
-                            .shadow(color: .red, radius: 10, x: 0, y: 5)
-                            .onTapGesture {
-                                withAnimation(.easeInOut) {
-                                    isClicked.toggle()
-                                }
-                            }
-                            .scaleEffect(isClicked ? 0.2 : 1.0)
-                            if vm.firstLoad {
-                                GuideView(toMain: true)
-                            }
+                        
+                        
+                    } header: {
+                        Text("연도별 기출문제")
+                            .font(.custom("NotoSansKR-Bold", size: 23))
+                            .foregroundColor(Color.theme.myAccentColor)
+                    }
+                    .listStyle(.automatic)
+                    .padding(0)
+                }
+                .padding(0)
+                .background(
+                    NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams, navigationBool: $goToNextView) }, label: { EmptyView() })
+                )
+                .navigationBarTitle("HandGosi")
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Image("NoteIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50, height: 30)
                             
-                            if isClicked {
-                                HStack {
-                                    Spacer()
-                                        .frame(width: 40)
-                                    Button {
-                                        vm.filteredNotes = vm.myNotes
-                                        goToMyNote.toggle()
-                                    } label: {
-                                        Text("오답\n노트")
-                                            .font(.title3)
-                                            .fontWeight(.bold)
-                                            .foregroundColor(.white)
-                                            .padding(20)
-                                            .background(Circle().foregroundColor(.red).shadow(color: .red, radius: 10, x: 0, y: 10))
-                                    }
-                                    Spacer()
-                                    Button {
-                                        goToSettingView.toggle()
-                                    } label: {
-                                        VStack {
-                                            Image(systemName: "gear")
-                                                .resizable()
-                                                .foregroundColor(.gray)
-                                                .frame(width: 50, height: 50, alignment: .center)
-                                        }
-                                        
-                                    }
-                                    Spacer()
-                                        .frame(width: 40)
-                                    
-                                }
-                            }
-                        }
-                        if isClicked {
-                            HStack(spacing: 30) {
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2018
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2018 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2018")
-                                            .yearText()
-                                    }
-                                }
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2017
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2017 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2017")
-                                            .yearText()
-                                    }
-                                }
-                            }
-                            HStack(spacing: 30) {
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2016
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2016 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2016")
-                                            .yearText()
-                                    }
-                                }
-                                Button {
-                                    vm.filteredExams = vm.currentExams.filter({ aExam in
-                                        return aExam.year == 2015
-                                    })
-                                    goToNextView.toggle()
-                                } label: {
-                                    ZStack {
-                                        ProgressCircle(degree: vm.percentage2015 * 3.6)
-                                            .foregroundColor(.green)
-                                            .frame(width: 45, height: 45)
-                                        Text("2015")
-                                            .yearText()
-                                    }
-                                }
-                            }
-                        }
-                    } // VStack
-                    // Next View Setting
-                    .background(
-                        NavigationLink(isActive: $goToSettingView, destination: {
-                            SettingView()
-                        }, label: {
-                            EmptyView()
-                        })
-                    )
-                    .background(
-                        NavigationLink(isActive: $goToMyNote, destination: { MyNoteSubjectSelectView(myNotes: vm.filteredNotes) }, label: {
-                            EmptyView()
-                        })
-                    )
-                    .background(
-                        NavigationLink(isActive: $goToNextView, destination: { SubjectSelectView(exams: vm.filteredExams, navigationBool: $goToNextView) }, label: { EmptyView() })
-                    )
-                    .navigationBarHidden(true)
-                    
-                    
-                    if isloading {
-                        LoadingView(isLoading: $isloading)
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Image("SettingIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30, height: 30)
                     }
                 }
-            } // NavigationView
+                
+            }
+            
+            
+            
+            
             // AD Banner
 //            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
 //                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
@@ -262,6 +158,30 @@ struct MainView: View {
 //        }
         
     }
+    
+    var topView: some View {
+        VStack {
+            ZStack {
+                Image("grabThePhone")
+                    .resizable()
+                    .scaledToFill()
+                Text("HandGosi")
+                    .font(.custom("GangwonEduPowerExtraBold", size: 40))
+                    .foregroundColor(Color.white)
+            }.listStyle(.plain)
+
+            HStack {
+                VStack(alignment: .leading, spacing: 7) {
+                    Text("핸드고시")
+                        .font(.custom("NotoSansKR-Bold", size: 23))
+                    Text("공무원 시험 기출문제가 내 손안에\n언제 어디서든 핸드고시로 문제를 풀어보세요.")
+                        .font(.custom("NotoSansKR-Regular", size: 16))
+                }
+                Spacer()
+            }
+            
+        }
+    }
 }
 
 struct MainView_Previews: PreviewProvider {
@@ -269,5 +189,21 @@ struct MainView_Previews: PreviewProvider {
         MainView()
             .environmentObject(MainVM())
             .environmentObject(PurchaseManager())
+    }
+}
+
+struct YearCell: View {
+    let year: Int
+    
+    var body: some View {
+        HStack {
+            Text("\(year.intToString())년")
+            Spacer()
+            Image(systemName: "chevron.right")
+                .foregroundColor(Color(hex: 0x535455))
+                .scaleEffect(0.8)
+        }
+        .foregroundColor(Color.theme.myAccentColor)
+
     }
 }

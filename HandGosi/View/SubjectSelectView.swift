@@ -21,40 +21,24 @@ struct SubjectSelectView: View {
     var body: some View {
         ZStack {
             Color.theme.myBackgroundColor.ignoresSafeArea()
-            VStack(spacing: 20) {
-                Spacer()
-                Spacer()
+            List {
                 NavigationLink {
                     ExamSelectView(exams: vm.koreanExams, navigationBool: $navigationBool)
                 } label: {
-                    Text("국  어")
-                        .myNoteButton(color: Color.theme.myAccentColor)
+                    Text("국어")
                 }
-
-                
-                HStack {
-                    Spacer()
-                    NavigationLink {
-                        ExamSelectView(exams: vm.englishExams, navigationBool: $navigationBool)
-                    } label: {
-                        Text("영  어")
-                            .myNoteButton(color: Color.theme.myAccentColor)
-                    }
-                    NavigationLink {
-                        ExamSelectView(exams: vm.historyExams, navigationBool: $navigationBool)
-                    } label: {
-                        Text("한국사")
-                            .myNoteButton(color: Color.theme.myAccentColor)
-                    }
-                    Spacer()
+                NavigationLink {
+                    ExamSelectView(exams: vm.englishExams, navigationBool: $navigationBool)
+                } label: {
+                    Text("영어")
                 }
-                Spacer()
-                Spacer()
-                Spacer()
-            }
-            .navigationTitle(vm.yearFilteredExams.first?.year.description ?? "")
+                NavigationLink {
+                    ExamSelectView(exams: vm.historyExams, navigationBool: $navigationBool)
+                } label: {
+                    Text("한국사")
+                }
+            }.navigationTitle(vm.yearFilteredExams.first?.year.description ?? "")
         }
-        
     }
 }
 

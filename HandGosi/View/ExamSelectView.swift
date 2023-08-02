@@ -29,7 +29,6 @@ struct ExamSelectView: View {
                             Spacer()
                             Text(exam.progressCount.description + "/20")
                         }
-                            .font(.headline)
                     }
                 }
             }
