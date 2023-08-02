@@ -15,31 +15,27 @@ struct TakeOne: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("앱 가이드 (1/4)")
-                    .font(.title)
-                Image("Take1")
+                Image("1")
                     .resizable()
-                    .frame(width: 350, height: 400)
-                    .opacity(0.8)
+                    .scaledToFit()
                     .padding(5)
-                    .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5).foregroundColor(Color.theme.myAccentColor))
-                Text("번호를 탭하여 답안 체크")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.theme.myAccentColor)
+//                    .background(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 5).foregroundColor(Color.theme.chevronColor))
+                    .scaleEffect(0.9)
+                Text("번호를 탭하여 답안을 체크하세요.")
+                    .font(.custom("NotoSansKR-Bold", size: 18))
+                    .foregroundColor(Color.theme.myWhite)
+                Text("빈공간 채워")
+                    .foregroundColor(.clear)
+                    .frame(width: 270, height: 50)
+                    .background( RoundedRectangle(cornerRadius: 5).opacity(0.0).foregroundColor(Color.clear) )
+                    .padding(.top, 20)
             }
-            Image(systemName: "hand.point.left")
-                .resizable()
-                .frame(width: 50, height: 50)
-                .offset(x: -100, y: 65)
-                .foregroundColor(.black)
-                .opacity(0.5)
             HStack {
                 Spacer()
                 Image(systemName: "hand.tap.fill")
                     .resizable()
-                    .frame(width: 50, height: 50)
-                    .offset(x: animate ? -30 : 0)
+                    .frame(width: 30, height: 35)
+                    .offset(x: animate ? -50 : 0)
                     .foregroundColor(.black)
                     .opacity(0.2)
             }
@@ -53,7 +49,7 @@ struct TakeOne: View {
             DispatchQueue.main.asyncAfter(deadline: .now()) {
                 withAnimation(
                     Animation
-                        .easeOut(duration: 1.0)
+                        .easeOut(duration: 1.2)
                         .repeatForever()
                 ) {
                     animate.toggle()

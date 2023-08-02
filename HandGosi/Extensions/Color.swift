@@ -26,6 +26,7 @@ struct MyColor {
     let myFontColorTwo = Color("MyFontColorTwo")
     let myRed = Color("MyRed")
     let myBlack = Color("MyBlack")
+    let myWhite = Color("MyWhite")
     let myGray = Color("MyGray")
     let circleCenterColor = Color("CircleCenterColor")
     let chevronColor = Color("ChevronColor")

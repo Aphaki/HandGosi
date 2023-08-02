@@ -66,7 +66,7 @@ struct SettingView: View {
 //                }
 //            }
         }
-        .navigationTitle("Setting")
+        .navigationTitle("설정")
         .listStyle(.grouped)
 //        .alert("구매 복원 완료", isPresented: $restoreAlert) {
 //

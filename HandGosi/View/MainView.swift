@@ -112,7 +112,7 @@ struct MainView: View {
                             
                         } header: {
                             Text("연도별 기출문제")
-                                .font(.custom("NotoSansKR-Bold", size: 23))
+                                .font(.custom("NotoSansKR-Bold", size: 22))
                                 .foregroundColor(Color.theme.myAccentColor)
                         }
                         .listStyle(.automatic)
@@ -135,7 +135,7 @@ struct MainView: View {
                         })
                     )
 
-                    .navigationBarTitle("HandGosi")
+                    .navigationBarTitle("핸드고시")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -173,6 +173,9 @@ struct MainView: View {
     //                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
     //            }
             }
+            if vm.firstLoad {
+                GuideView(toMain: true)
+            }
             if isloading {
                 LoadingView(isLoading: $isloading)
             }
@@ -202,9 +205,9 @@ struct MainView: View {
             }.listStyle(.plain)
             HStack {
                 VStack(alignment: .leading, spacing: 7) {
-                    Text("핸드고시")
-                        .font(.custom("NotoSansKR-Bold", size: 23))
-                    Text("공무원 시험 기출문제가 내 손안에\n언제 어디서든 핸드고시로 문제를 풀어보세요.")
+                    Text("공무원 시험 기출문제가 내 손안에")
+                        .font(.custom("NotoSansKR-Bold", size: 22))
+                    Text("핸드고시로 언제 어디서든 기출 문제를 풀고 틀린 문제는 오답노트에 저장해 보세요.")
                         .font(.custom("NotoSansKR-Regular", size: 16))
                 }
                 Spacer()
