@@ -27,9 +27,9 @@
 		7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FF28B36E07008AD29E /* ExamStore2019.swift */; };
 		7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350128B36F3D008AD29E /* ExamStore2018.swift */; };
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
+		7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */; };
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
 		7F70B51728A2D08800148779 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70B51628A2D08800148779 /* String.swift */; };
-		7F70C8952A792CC900F95500 /* LoadingViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */; };
 		7F70C8972A792D9C00F95500 /* GangwonEduPowerExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */; };
 		7F70C8992A7931FA00F95500 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C8982A7931FA00F95500 /* NotoSansKR-Bold.otf */; };
 		7F70C89B2A79320700F95500 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F70C89A2A79320700F95500 /* NotoSansKR-Regular.otf */; };
@@ -88,10 +88,10 @@
 		7F5634FF28B36E07008AD29E /* ExamStore2019.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2019.swift; sourceTree = "<group>"; };
 		7F56350128B36F3D008AD29E /* ExamStore2018.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2018.swift; sourceTree = "<group>"; };
 		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
+		7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTwo.swift; sourceTree = "<group>"; };
 		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
 		7F70B51328A2401D00148779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7F70B51628A2D08800148779 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewTwo.swift; sourceTree = "<group>"; };
 		7F70C8962A792D9C00F95500 /* GangwonEduPowerExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GangwonEduPowerExtraBold.otf; sourceTree = "<group>"; };
 		7F70C8982A7931FA00F95500 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		7F70C89A2A79320700F95500 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
@@ -196,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				7FE0757A28B61BD600B94828 /* LoadingView.swift */,
-				7F70C8942A792CC900F95500 /* LoadingViewTwo.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
+				7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */,
 				7FD21D7728AC139E0070B0A4 /* MainVM.swift */,
 				7F12CEC629F28C6A003DA963 /* SettingView.swift */,
 				7F81A8122A152B9B0023BEDC /* GuideView */,
@@ -379,7 +379,7 @@
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
 				7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */,
-				7F70C8952A792CC900F95500 /* LoadingViewTwo.swift in Sources */,
+				7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
 				7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */,
