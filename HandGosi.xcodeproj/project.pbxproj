@@ -27,7 +27,6 @@
 		7F56350028B36E07008AD29E /* ExamStore2019.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5634FF28B36E07008AD29E /* ExamStore2019.swift */; };
 		7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350128B36F3D008AD29E /* ExamStore2018.swift */; };
 		7F56350428B37040008AD29E /* ExamStore2017.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F56350328B37040008AD29E /* ExamStore2017.swift */; };
-		7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */; };
 		7F67317B2A7A7FFA00F8858F /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67317A2A7A7FFA00F8858F /* Int.swift */; };
 		7F67317D2A7A9C2000F8858F /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F67317C2A7A9C2000F8858F /* ProgressCircleView.swift */; };
 		7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6AC76028CC7E91009D2113 /* SavingExamService.swift */; };
@@ -90,7 +89,6 @@
 		7F5634FF28B36E07008AD29E /* ExamStore2019.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2019.swift; sourceTree = "<group>"; };
 		7F56350128B36F3D008AD29E /* ExamStore2018.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2018.swift; sourceTree = "<group>"; };
 		7F56350328B37040008AD29E /* ExamStore2017.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2017.swift; sourceTree = "<group>"; };
-		7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTwo.swift; sourceTree = "<group>"; };
 		7F67317A2A7A7FFA00F8858F /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		7F67317C2A7A9C2000F8858F /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		7F6AC76028CC7E91009D2113 /* SavingExamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingExamService.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 			children = (
 				7FE0757A28B61BD600B94828 /* LoadingView.swift */,
 				7F88E7F028A577EB001C0463 /* MainView.swift */,
-				7F6731782A7A4A0F00F8858F /* MainViewTwo.swift */,
 				7FD21D7728AC139E0070B0A4 /* MainVM.swift */,
 				7F12CEC629F28C6A003DA963 /* SettingView.swift */,
 				7F81A8122A152B9B0023BEDC /* GuideView */,
@@ -385,7 +382,6 @@
 			files = (
 				7FD21D7C28ACBED30070B0A4 /* ExamVM.swift in Sources */,
 				7F12CEC729F28C6A003DA963 /* SettingView.swift in Sources */,
-				7F6731792A7A4A0F00F8858F /* MainViewTwo.swift in Sources */,
 				7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */,
 				7F5634FE28B36CDD008AD29E /* ExamStore2020.swift in Sources */,
 				7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */,
@@ -563,7 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HandGosi/Preview Content\"";
 				DEVELOPMENT_TEAM = JSZ2KS27AG;
 				ENABLE_PREVIEWS = YES;
@@ -599,7 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"HandGosi/Preview Content\"";
 				DEVELOPMENT_TEAM = JSZ2KS27AG;
 				ENABLE_PREVIEWS = YES;

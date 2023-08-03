@@ -10,7 +10,7 @@ import StoreKit
 
 struct SettingView: View {
         
-    @EnvironmentObject var purchaseManager: PurchaseManager
+//    @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State var goToGuideView: Bool = false
     @State var restoreAlert: Bool = false
