@@ -11,7 +11,6 @@ import Combine
 class SubjectSelectVM: ObservableObject {
     
     @Published var yearFilteredExams: [ExamModel]
-//    @Published var yearSubjectFilteredExams: [ExamModel] = []
     
     @Published var koreanExams: [ExamModel] = []
     @Published var englishExams: [ExamModel] = []

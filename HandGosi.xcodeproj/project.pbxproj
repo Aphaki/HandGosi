@@ -14,8 +14,6 @@
 		7F17A20E28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */; };
 		7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F17A20F28AF281F006B3B21 /* MyNoteView.swift */; };
 		7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2479962A136FA800E7D384 /* ExamStore2023.swift */; };
-		7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD628F7FAB20008006B /* BannerAdVC.swift */; };
-		7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F291CD828F7FB390008006B /* BannerAdView.swift */; };
 		7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F49086028A14FC8002896DB /* SubjectSelectVM.swift */; };
 		7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */; };
 		7F4E198D28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */; };
@@ -38,7 +36,6 @@
 		7F7EEF5C289D09C800471BDB /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5B289D09C800471BDB /* QuestionView.swift */; };
 		7F7EEF5E289D0C4A00471BDB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */; };
 		7F7EEF60289D11B800471BDB /* PreviewProviders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */; };
-		7F80FBC62A12162300E03A56 /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F80FBC52A12162300E03A56 /* PurchaseManager.swift */; };
 		7F81A8112A1518B20023BEDC /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F81A8102A1518B20023BEDC /* GuideView.swift */; };
 		7F88E7F128A577EB001C0463 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F028A577EB001C0463 /* MainView.swift */; };
 		7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */; };
@@ -76,8 +73,6 @@
 		7F17A20D28AF2428006B3B21 /* MyNoteSubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteSubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F17A20F28AF281F006B3B21 /* MyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteView.swift; sourceTree = "<group>"; };
 		7F2479962A136FA800E7D384 /* ExamStore2023.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamStore2023.swift; sourceTree = "<group>"; };
-		7F291CD628F7FAB20008006B /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
-		7F291CD828F7FB390008006B /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		7F49086028A14FC8002896DB /* SubjectSelectVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectVM.swift; sourceTree = "<group>"; };
 		7F4E198628AE8BD100BB6FDE /* MyNoteQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNoteQuestion.swift; sourceTree = "<group>"; };
 		7F4E198C28AE941100BB6FDE /* NanumMyeongjo-YetHangul.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumMyeongjo-YetHangul.ttf"; sourceTree = "<group>"; };
@@ -101,7 +96,6 @@
 		7F7EEF5B289D09C800471BDB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		7F7EEF5D289D0C4A00471BDB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		7F7EEF5F289D11B800471BDB /* PreviewProviders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProviders.swift; sourceTree = "<group>"; };
-		7F80FBC52A12162300E03A56 /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		7F81A8102A1518B20023BEDC /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		7F88E7F028A577EB001C0463 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7F88E7F228A57EAD001C0463 /* SubjectSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectSelectView.swift; sourceTree = "<group>"; };
@@ -143,15 +137,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F291CD528F7FA830008006B /* ADMob */ = {
-			isa = PBXGroup;
-			children = (
-				7F291CD628F7FAB20008006B /* BannerAdVC.swift */,
-				7F291CD828F7FB390008006B /* BannerAdView.swift */,
-			);
-			path = ADMob;
-			sourceTree = "<group>";
-		};
 		7F56350528B3719F008AD29E /* ExamStore */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				7F56350528B3719F008AD29E /* ExamStore */,
-				7F80FBC52A12162300E03A56 /* PurchaseManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -286,7 +270,6 @@
 			children = (
 				7F70B51328A2401D00148779 /* Info.plist */,
 				7FDDF224289CFDCB00EE3FB7 /* HandGosiApp.swift */,
-				7F291CD528F7FA830008006B /* ADMob */,
 				7F8CD08028A0CE6500776238 /* Model */,
 				7F87FB4128AB8FDC00E57AC9 /* View */,
 				7FB8D30A2A0E289B006A19D9 /* Service */,
@@ -387,7 +370,6 @@
 				7F2479972A136FA800E7D384 /* ExamStore2023.swift in Sources */,
 				7F967E132A173796003C5B2C /* TakeOne.swift in Sources */,
 				7F967E172A175BC1003C5B2C /* TakeTwo.swift in Sources */,
-				7F291CD928F7FB390008006B /* BannerAdView.swift in Sources */,
 				7F9F0FEC28A4DA4000D2ABE5 /* ExamStoreDataService.swift in Sources */,
 				7F71A79728C746CC007F4A08 /* MyNoteQuSaveModel.swift in Sources */,
 				7F81A8112A1518B20023BEDC /* GuideView.swift in Sources */,
@@ -404,7 +386,6 @@
 				7F88E7F328A57EAD001C0463 /* SubjectSelectView.swift in Sources */,
 				7F967E152A175023003C5B2C /* TakeThree.swift in Sources */,
 				7F4E198728AE8BD100BB6FDE /* MyNoteQuestion.swift in Sources */,
-				7F80FBC62A12162300E03A56 /* PurchaseManager.swift in Sources */,
 				7F6AC76128CC7E91009D2113 /* SavingExamService.swift in Sources */,
 				7FD21D7E28AD2F720070B0A4 /* ScoredQuestionView.swift in Sources */,
 				7F49086128A14FC8002896DB /* SubjectSelectVM.swift in Sources */,
@@ -424,7 +405,6 @@
 				7F56350228B36F3D008AD29E /* ExamStore2018.swift in Sources */,
 				7F5634FC28B36B28008AD29E /* ExamStore2021.swift in Sources */,
 				7F4E198F28AEB32300BB6FDE /* MyNoteQuestionView.swift in Sources */,
-				7F291CD728F7FAB20008006B /* BannerAdVC.swift in Sources */,
 				7F17A21028AF281F006B3B21 /* MyNoteView.swift in Sources */,
 				7F09EFE328AF72BE008F601D /* MyNoteVM.swift in Sources */,
 				7FB38C222A13EFF8005CAAB9 /* ProgressCircle.swift in Sources */,
@@ -566,7 +546,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,7 +581,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HandGosi/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_NSUserTrackingUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

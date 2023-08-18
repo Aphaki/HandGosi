@@ -11,7 +11,6 @@ struct MainView: View {
     
     
     @EnvironmentObject var vm: MainVM
-//    @EnvironmentObject var purchaseManager: PurchaseManager
     
     @State private var isloading = true
     
@@ -168,10 +167,7 @@ struct MainView: View {
                 
                 
                 
-                // AD Banner
-    //            if !purchaseManager.purchasedProductIDs.contains("com.maru.handgosi4") {
-    //                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/2493086106")
-    //            }
+
             }
             if vm.firstLoad {
                 GuideView(toMain: true)
@@ -180,16 +176,6 @@ struct MainView: View {
                 LoadingView(isLoading: $isloading)
             }
         }
-        
-        // Store Kit Task
-//        .task {
-//            do {
-//                try await purchaseManager.loadProducts()
-//            }
-//            catch {
-//                print(error)
-//            }
-//        }
         
     }
     
@@ -224,7 +210,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .environmentObject(MainVM())
-//            .environmentObject(PurchaseManager())
     }
 }
 
@@ -248,6 +233,3 @@ struct YearCell: View {
     }
 }
 
-/*
-
- */
