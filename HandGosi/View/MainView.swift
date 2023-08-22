@@ -161,13 +161,11 @@ struct MainView: View {
                             
                         }
                     }
-                    
+                   
                 }
+                BannerAdView(adUnitId: "ca-app-pub-1837011492216327/1910659760")
+//                    .frame(maxHeight: 30)
                 
-                
-                
-                
-
             }
             if vm.firstLoad {
                 GuideView(toMain: true)
